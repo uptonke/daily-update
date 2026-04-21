@@ -1,70 +1,20 @@
-ARCHIVE_DIR = "data/archive"
 import json
 import logging
 import os
 import time
 from datetime import datetime, timedelta, timezone
 from typing import Any, Dict, List, Optional, Tuple
-from supabase import create_client, Client
+
 import requests
+from supabase import Client, create_client
+
+ARCHIVE_DIR = "data/archive"
+OUTPUT_FILE = "data/daily_data.json"
+LOG_LEVEL = os.getenv("LOG_LEVEL", "INFO").upper()
 
 SUPABASE_URL = os.getenv("SUPABASE_URL")
 SUPABASE_SERVICE_ROLE_KEY = os.getenv("SUPABASE_SERVICE_ROLE_KEY")
 SUPABASE_BUCKET = os.getenv("SUPABASE_BUCKET", "sentiment-archive")
-OUTPUT_FILE = "data/daily_data.json"
-LOG_LEVEL = os.getenv("LOG_LEVEL", "INFO").upper()
-
-def upload_archive_to_supabase(output: Dict[str, Any]) -> Optional[str]:
-    if not SUPABASE_URL or not SUPABASE_SERVICE_ROLE_KEY:
-        logging.info("Supabase env vars not set; skipping archive upload")
-        return None
-
-    try:
-        client: Client = create_client(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY)
-
-        date_str = output.get("date_utc", "unknown-date")
-        object_path = f"archive/{date_str}.json"
-
-        archive_snapshot = build_archive_snapshot(output)
-        payload_bytes = json.dumps(
-            archive_snapshot,
-            ensure_ascii=False,
-            indent=2
-        ).encode("utf-8")
-
-        client.storage.from_(SUPABASE_BUCKET).upload(
-            path=object_path,
-            file=payload_bytes,
-            file_options={
-                "content-type": "application/json",
-                "upsert": "true"
-            }
-        )
-
-        logging.info("Uploaded archive to Supabase Storage: %s/%s", SUPABASE_BUCKET, object_path)
-        return object_path
-
-    except Exception as e:
-        logging.warning("Supabase upload failed: %s", str(e))
-        return Nonedef build_archive_snapshot(output: Dict[str, Any]) -> Dict[str, Any]:
-    return {
-        "schema_version": output.get("schema_version"),
-        "date_utc": output.get("date_utc"),
-        "generated_at_utc": output.get("generated_at_utc"),
-        "source_health": output.get("source_health", {}),
-        "summary": output.get("summary", {}),
-        "top_signals": {
-            "polymarket": output.get("sources", {}).get("polymarket", {}).get("summary", {}).get("top_questions_by_volume_24h", [])[:5],
-            "google_trends": output.get("sources", {}).get("google_trends", {}).get("summary", {}).get("top_keywords_by_anchor_normalized_mean_24h", [])[:5],
-            "wikipedia_pageviews": output.get("sources", {}).get("wikipedia_pageviews", {}).get("summary", {}).get("top_pages_by_views", [])[:5],
-        },
-        "delta_summary": output.get("delta_vs_previous_day", {}).get("summary", {}),
-        "delta_top_signals": {
-            "polymarket": output.get("delta_vs_previous_day", {}).get("sources", {}).get("polymarket", {}).get("summary", {}),
-            "google_trends": output.get("delta_vs_previous_day", {}).get("sources", {}).get("google_trends", {}).get("summary", {}),
-            "wikipedia_pageviews": output.get("delta_vs_previous_day", {}).get("sources", {}).get("wikipedia_pageviews", {}).get("summary", {}),
-        },
-    }
 
 HEADERS = {
     "User-Agent": "daily-report-bot/1.0 (+https://github.com/uptonke/daily-update)"
@@ -990,6 +940,65 @@ def build_delta_vs_previous_day(
 
 
 # ----------------------------
+# Archive / Supabase
+# ----------------------------
+def build_archive_snapshot(output: Dict[str, Any]) -> Dict[str, Any]:
+    return {
+        "schema_version": output.get("schema_version"),
+        "date_utc": output.get("date_utc"),
+        "generated_at_utc": output.get("generated_at_utc"),
+        "source_health": output.get("source_health", {}),
+        "summary": output.get("summary", {}),
+        "top_signals": {
+            "polymarket": output.get("sources", {}).get("polymarket", {}).get("summary", {}).get("top_questions_by_volume_24h", [])[:5],
+            "google_trends": output.get("sources", {}).get("google_trends", {}).get("summary", {}).get("top_keywords_by_anchor_normalized_mean_24h", [])[:5],
+            "wikipedia_pageviews": output.get("sources", {}).get("wikipedia_pageviews", {}).get("summary", {}).get("top_pages_by_views", [])[:5],
+        },
+        "delta_summary": output.get("delta_vs_previous_day", {}).get("summary", {}),
+        "delta_top_signals": {
+            "polymarket": output.get("delta_vs_previous_day", {}).get("sources", {}).get("polymarket", {}).get("summary", {}),
+            "google_trends": output.get("delta_vs_previous_day", {}).get("sources", {}).get("google_trends", {}).get("summary", {}),
+            "wikipedia_pageviews": output.get("delta_vs_previous_day", {}).get("sources", {}).get("wikipedia_pageviews", {}).get("summary", {}),
+        },
+    }
+
+
+def upload_archive_to_supabase(output: Dict[str, Any]) -> Optional[str]:
+    if not SUPABASE_URL or not SUPABASE_SERVICE_ROLE_KEY:
+        logging.info("Supabase env vars not set; skipping archive upload")
+        return None
+
+    try:
+        client: Client = create_client(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY)
+
+        date_str = output.get("date_utc", "unknown-date")
+        object_path = f"archive/{date_str}.json"
+
+        archive_snapshot = build_archive_snapshot(output)
+        payload_bytes = json.dumps(
+            archive_snapshot,
+            ensure_ascii=False,
+            indent=2
+        ).encode("utf-8")
+
+        client.storage.from_(SUPABASE_BUCKET).upload(
+            path=object_path,
+            file=payload_bytes,
+            file_options={
+                "content-type": "application/json",
+                "upsert": "true",
+            },
+        )
+
+        logging.info("Uploaded archive to Supabase Storage: %s/%s", SUPABASE_BUCKET, object_path)
+        return object_path
+
+    except Exception as e:
+        logging.warning("Supabase upload failed: %s", str(e))
+        return None
+
+
+# ----------------------------
 # Data quality / summaries for LLM
 # ----------------------------
 def source_health(source_result: Dict[str, Any]) -> Dict[str, Any]:
@@ -1183,14 +1192,15 @@ def save_output(output: Dict[str, Any], output_file: str = OUTPUT_FILE) -> None:
     with open(output_file, "w", encoding="utf-8") as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
 
-    # 2. 存歷史快照（關鍵）
+    # 2. 存本地 archive 精簡版（可選，但保留方便 debug）
     os.makedirs(ARCHIVE_DIR, exist_ok=True)
 
     date_str = output.get("date_utc", "unknown-date")
     archive_file = os.path.join(ARCHIVE_DIR, f"{date_str}.json")
+    archive_snapshot = build_archive_snapshot(output)
 
     with open(archive_file, "w", encoding="utf-8") as f:
-        json.dump(output, f, ensure_ascii=False, indent=2)
+        json.dump(archive_snapshot, f, ensure_ascii=False, indent=2)
 
     logging.info("Saved archive snapshot: %s", archive_file)
 
