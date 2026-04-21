@@ -2,9 +2,9 @@ name: Daily Sentiment Data Fetch
 
 on:
   schedule:
-    # 每天 22:00 UTC = 台北時間 06:00
-    # 在 ChatGPT Task 跑報告前先備好數據
-    - cron: '0 22 * * *'
+    # 測試用：每 5 分鐘跑一次
+    # 測試完畢後改成：'0 22 * * *'（台北時間 06:00）
+    - cron: '*/5 * * * *'
   workflow_dispatch: # 允許手動觸發
 
 jobs:
@@ -21,11 +21,9 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install anthropic requests pytrends
+        run: pip install requests pytrends
 
       - name: Run fetch script
-        env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python fetch_data.py
 
       - name: Commit and push data
@@ -33,5 +31,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/daily_data.json
-          git diff --staged --quiet || git commit -m "data: $(date -u +%Y-%m-%d)"
+          git diff --staged --quiet || git commit -m "data: $(date -u +%Y-%m-%d %H:%M)"
           git push
