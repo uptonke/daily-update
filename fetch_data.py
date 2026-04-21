@@ -1,9 +1,12 @@
 import json
 import os
+import time
 import requests
 from datetime import datetime, timedelta
+from typing import Any, Dict, List, Optional
 
 OUTPUT_FILE = "data/daily_data.json"
+HEADERS = {"User-Agent": "daily-report-bot/1.0"}
 
 TRENDS_KEYWORDS = [
     "Iran war", "Ukraine war", "NATO",
@@ -18,20 +21,32 @@ TRENDS_KEYWORDS = [
 WIKI_PAGES = [
     "Strait_of_Hormuz",
     "Russo-Ukrainian_War",
-    "Federal_Reserve",
+    "Federal_Reserve_System",
     "Donald_Trump",
-    "2026_Iran-United_States_relations",
     "OPEC",
     "NATO",
     "Artificial_intelligence_regulation",
     "Kevin_Warsh",
-    "China-United_States_trade_war",
-    "Global_recession",
+    "China%E2%80%93United_States_trade_war",
     "Semiconductor"
 ]
 
-# --- 1. Polymarket ---
-def fetch_polymarket():
+
+def safe_get(url: str, params: Optional[dict] = None, timeout: int = 10, retries: int = 2):
+    last_err = None
+    for attempt in range(retries + 1):
+        try:
+            resp = requests.get(url, params=params, timeout=timeout, headers=HEADERS)
+            resp.raise_for_status()
+            return resp
+        except Exception as e:
+            last_err = e
+            if attempt < retries:
+                time.sleep(1.5 * (attempt + 1))
+    raise last_err
+
+
+def fetch_polymarket() -> Dict[str, Any]:
     url = "https://gamma-api.polymarket.com/markets"
     params = {
         "limit": 20,
@@ -39,87 +54,161 @@ def fetch_polymarket():
         "order": "volume24hr",
         "ascending": "false"
     }
-    resp = requests.get(url, params=params, timeout=10)
-    resp.raise_for_status()
-    markets = resp.json()
-    return [
-        {
-            "question": m.get("question", ""),
-            "yes_price": m.get("outcomePrices", ["?"])[0] if m.get("outcomePrices") else "?",
-            "volume_24h": m.get("volume24hr", 0),
-        }
-        for m in markets[:10]
-    ]
 
-# --- 2. Google Trends ---
-def fetch_google_trends():
-    from pytrends.request import TrendReq
-    pytrends = TrendReq(hl='en-US', tz=0)
-    results = {}
-    for i in range(0, len(TRENDS_KEYWORDS), 5):
-        chunk = TRENDS_KEYWORDS[i:i+5]
-        try:
-            pytrends.build_payload(chunk, timeframe='now 1-d', geo='')
-            data = pytrends.interest_over_time()
-            if not data.empty:
+    try:
+        resp = safe_get(url, params=params)
+        markets = resp.json()
+        cleaned = []
+
+        for m in markets[:20]:
+            question = m.get("question", "")
+            volume_24h = m.get("volume24hr")
+            outcomes = m.get("outcomes") or []
+            outcome_prices = m.get("outcomePrices") or []
+
+            yes_price = None
+            market_type = "unknown"
+
+            if len(outcomes) == len(outcome_prices) and outcomes:
+                market_type = "binary" if set(outcomes) >= {"Yes", "No"} else "non_binary"
+                for name, price in zip(outcomes, outcome_prices):
+                    if str(name).strip().lower() == "yes":
+                        try:
+                            yes_price = float(price)
+                        except Exception:
+                            yes_price = None
+                        break
+
+            try:
+                volume_24h = float(volume_24h) if volume_24h is not None else None
+            except Exception:
+                volume_24h = None
+
+            cleaned.append({
+                "question": question,
+                "yes_price": yes_price,
+                "volume_24h": volume_24h,
+                "market_type": market_type,
+                "status": "ok"
+            })
+
+        return {"status": "ok", "data": cleaned, "errors": []}
+
+    except Exception as e:
+        return {"status": "error", "data": [], "errors": [str(e)]}
+
+
+def fetch_google_trends() -> Dict[str, Any]:
+    try:
+        from pytrends.request import TrendReq
+        pytrends = TrendReq(hl="en-US", tz=0)
+
+        rows = []
+        errors = []
+
+        for i in range(0, len(TRENDS_KEYWORDS), 5):
+            chunk = TRENDS_KEYWORDS[i:i + 5]
+            try:
+                pytrends.build_payload(chunk, timeframe="now 1-d", geo="")
+                data = pytrends.interest_over_time()
+
                 for kw in chunk:
-                    if kw in data.columns:
-                        results[kw] = int(data[kw].mean())
+                    if not data.empty and kw in data.columns:
+                        series = data[kw]
+                        rows.append({
+                            "keyword": kw,
+                            "score_mean_24h": float(series.mean()),
+                            "score_last": int(series.iloc[-1]),
+                            "status": "ok",
+                            "note": "Scores are comparable within the same payload chunk, not perfectly across different chunks."
+                        })
                     else:
-                        results[kw] = 0
-        except Exception as e:
-            for kw in chunk:
-                results[kw] = f"error: {str(e)}"
-    return results
+                        rows.append({
+                            "keyword": kw,
+                            "score_mean_24h": None,
+                            "score_last": None,
+                            "status": "empty",
+                            "note": "No data returned."
+                        })
+            except Exception as e:
+                errors.append(f"chunk {chunk}: {str(e)}")
+                for kw in chunk:
+                    rows.append({
+                        "keyword": kw,
+                        "score_mean_24h": None,
+                        "score_last": None,
+                        "status": "error",
+                        "note": str(e)
+                    })
 
-# --- 3. Wikimedia pageviews ---
-def fetch_wikipedia_pageviews():
-    results = {}
+        return {"status": "ok", "data": rows, "errors": errors}
+
+    except Exception as e:
+        return {"status": "error", "data": [], "errors": [str(e)]}
+
+
+def fetch_wikipedia_pageviews() -> Dict[str, Any]:
     yesterday = (datetime.utcnow() - timedelta(days=1)).strftime("%Y%m%d")
-    headers = {"User-Agent": "daily-report-bot/1.0 (uptonke@github)"}
+    rows = []
+    errors = []
+
     for page in WIKI_PAGES:
         url = (
-            f"https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article"
+            "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article"
             f"/en.wikipedia/all-access/all-agents/{page}/daily/{yesterday}/{yesterday}"
         )
         try:
-            resp = requests.get(url, timeout=10, headers=headers)
-            if resp.status_code == 200:
-                results[page] = resp.json()["items"][0]["views"]
-            else:
-                results[page] = f"error: HTTP {resp.status_code}"
+            resp = safe_get(url)
+            items = resp.json().get("items", [])
+            views = items[0]["views"] if items else None
+
+            rows.append({
+                "page": page,
+                "views": views,
+                "date": yesterday,
+                "status": "ok" if views is not None else "empty"
+            })
         except Exception as e:
-            results[page] = f"error: {str(e)}"
-    return results
+            errors.append(f"{page}: {str(e)}")
+            rows.append({
+                "page": page,
+                "views": None,
+                "date": yesterday,
+                "status": "error",
+                "error": str(e)
+            })
 
-# --- Main ---
+    return {"status": "ok", "data": rows, "errors": errors}
+
+
 def main():
-    print("=== Step 1: Fetching Polymarket ===")
+    generated_at = datetime.utcnow().isoformat() + "Z"
+
     polymarket = fetch_polymarket()
-    print(f"Got {len(polymarket)} markets")
-
-    print("=== Step 2: Fetching Google Trends ===")
     trends = fetch_google_trends()
-    print(f"Got {len(trends)} keywords")
-
-    print("=== Step 3: Fetching Wikipedia pageviews ===")
-    pageviews = fetch_wikipedia_pageviews()
-    print(f"Got {len(pageviews)} pages")
+    wiki = fetch_wikipedia_pageviews()
 
     output = {
         "date": datetime.utcnow().strftime("%Y-%m-%d"),
-        "generated_at": datetime.utcnow().isoformat() + "Z",
-        "polymarket_top_markets": polymarket,
-        "google_trends": trends,
-        "wikipedia_pageviews": pageviews,
+        "generated_at": generated_at,
+        "sources": {
+            "polymarket": polymarket,
+            "google_trends": trends,
+            "wikipedia_pageviews": wiki
+        },
+        "data_quality": {
+            "polymarket_ok": sum(1 for x in polymarket["data"] if x.get("status") == "ok"),
+            "trends_ok": sum(1 for x in trends["data"] if x.get("status") == "ok"),
+            "wiki_ok": sum(1 for x in wiki["data"] if x.get("status") == "ok")
+        }
     }
 
     os.makedirs("data", exist_ok=True)
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
 
-    print(f"\n=== Done. Saved to {OUTPUT_FILE} ===")
     print(json.dumps(output, ensure_ascii=False, indent=2))
+
 
 if __name__ == "__main__":
     main()
