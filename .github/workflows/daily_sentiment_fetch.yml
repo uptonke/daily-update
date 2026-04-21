@@ -2,9 +2,7 @@ name: Daily Sentiment Data Fetch
 
 on:
   schedule:
-    # 測試用：每 5 分鐘跑一次
-    # 正式改成：'0 23 * * *'（UTC 23:00 = 台北時間 07:00）
-    - cron: '*/5 * * * *'
+  - cron: '7,17,27,37,47,57 * * * *'
   workflow_dispatch:
 
 permissions:
