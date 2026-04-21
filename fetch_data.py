@@ -1,3 +1,4 @@
+ARCHIVE_DIR = "data/archive"
 import json
 import logging
 import os
@@ -1122,8 +1123,21 @@ def build_output(
 
 def save_output(output: Dict[str, Any], output_file: str = OUTPUT_FILE) -> None:
     os.makedirs(os.path.dirname(output_file), exist_ok=True)
+
+    # 1. 覆蓋最新版本（給下一次 delta 用）
     with open(output_file, "w", encoding="utf-8") as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
+
+    # 2. 存歷史快照（關鍵）
+    os.makedirs(ARCHIVE_DIR, exist_ok=True)
+
+    date_str = output.get("date_utc", "unknown-date")
+    archive_file = os.path.join(ARCHIVE_DIR, f"{date_str}.json")
+
+    with open(archive_file, "w", encoding="utf-8") as f:
+        json.dump(output, f, ensure_ascii=False, indent=2)
+
+    logging.info("Saved archive snapshot: %s", archive_file)
 
 
 def main() -> None:
