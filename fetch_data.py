@@ -1140,6 +1140,74 @@ def build_llm_summary(
     }
 
 
+
+def build_json_health(
+    source_health_map: Dict[str, Any],
+    output: Optional[Dict[str, Any]] = None,
+) -> Dict[str, Any]:
+    """
+    Top-level JSON health marker for downstream LLM / scheduled-action readers.
+
+    Purpose:
+    - GitHub raw may serve this file as text/plain instead of application/json.
+    - Downstream readers should still parse the response body as JSON.
+    - Partial child sources should not invalidate the whole file.
+    """
+    required_top_level_fields = [
+        "schema_version",
+        "date_utc",
+        "generated_at_utc",
+        "source_health",
+        "sources",
+        "delta_vs_previous_day",
+        "summary",
+    ]
+
+    present_fields = []
+    missing_fields = []
+    if output is not None:
+        for field in required_top_level_fields:
+            if field in output:
+                present_fields.append(field)
+            else:
+                missing_fields.append(field)
+
+    usable_sources = [
+        name
+        for name, health in source_health_map.items()
+        if health.get("status") in {"ok", "partial"}
+    ]
+    failed_sources = [
+        name
+        for name, health in source_health_map.items()
+        if health.get("status") not in {"ok", "partial"}
+    ]
+
+    return {
+        "readable": True,
+        "valid_json": True,
+        "github_raw_content_type_note": (
+            "GitHub raw may return Content-Type: text/plain. "
+            "Downstream readers must parse the response body as JSON."
+        ),
+        "partial_sources_allowed": True,
+        "success_condition": (
+            "Valid if schema_version, source_health, and sources exist. "
+            "A partial/error child source does not invalidate the whole JSON."
+        ),
+        "required_top_level_fields": required_top_level_fields,
+        "present_top_level_fields": present_fields,
+        "missing_top_level_fields": missing_fields,
+        "usable_sources": usable_sources,
+        "failed_sources": failed_sources,
+        "source_status_rule": {
+            "ok": "Use normally.",
+            "partial": "Use available rows and clearly label limitations.",
+            "error": "Do not use that child source; use other available sources or web search fallback.",
+        },
+    }
+
+
 def build_output(
     polymarket: Dict[str, Any],
     google_trends: Dict[str, Any],
@@ -1156,7 +1224,7 @@ def build_output(
     }
 
     output = {
-        "schema_version": "1.1.0",
+        "schema_version": "1.2.0",
         "date_utc": date_utc,
         "generated_at_utc": generated_at,
         "pipeline": {
@@ -1181,6 +1249,10 @@ def build_output(
         wikipedia_pageviews,
         delta_vs_previous_day,
     )
+
+    # Explicit top-level health marker for ChatGPT / Gemini / scheduled-action readers.
+    # Important: child-source partial/error states do NOT mean the entire JSON failed.
+    output["json_health"] = build_json_health(source_health_map, output)
 
     return output
 
