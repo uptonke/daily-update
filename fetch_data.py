@@ -1,6 +1,7 @@
 import json
 import logging
 import os
+import re
 import time
 from datetime import datetime, timedelta, timezone
 from typing import Any, Dict, List, Optional, Tuple
@@ -21,7 +22,8 @@ HEADERS = {
 }
 
 POLYMARKET_URL = "https://gamma-api.polymarket.com/markets"
-POLYMARKET_LIMIT = 30
+POLYMARKET_FETCH_LIMIT = int(os.getenv("POLYMARKET_FETCH_LIMIT", "200"))
+POLYMARKET_KEEP_LIMIT = int(os.getenv("POLYMARKET_KEEP_LIMIT", "30"))
 
 # Google Trends: 每個 chunk 都帶同一個 anchor keyword，做粗略跨 chunk 校正
 ANCHOR_KEYWORD = "Federal Reserve"
@@ -41,8 +43,10 @@ TRENDS_KEYWORDS = [
     "China US",
     "OPEC",
 ]
+TRENDS_CHUNK_RETRIES = int(os.getenv("TRENDS_CHUNK_RETRIES", "2"))
+TRENDS_INTER_CHUNK_SLEEP_SECONDS = float(os.getenv("TRENDS_INTER_CHUNK_SLEEP_SECONDS", "3"))
 
-# 建議只放長期穩定、頁名明確的頁面
+# 固定核心頁
 WIKI_PAGES = [
     "Strait_of_Hormuz",
     "Russo-Ukrainian_War",
@@ -56,9 +60,86 @@ WIKI_PAGES = [
     "Semiconductor",
 ]
 
+# 依今日 relevant 題材動態補頁
+DYNAMIC_WIKI_PAGE_MAP = {
+    "hantavirus": "Hantavirus",
+    "michelle bowman": "Michelle_Bowman",
+    "judy shelton": "Judy_Shelton",
+    "starmer": "Keir_Starmer",
+}
+
 REQUEST_TIMEOUT = 15
 REQUEST_RETRIES = 3
 BACKOFF_BASE_SECONDS = 1.5
+
+POLYMARKET_PUBLIC_IMPACT_KEYWORDS = [
+    "iran",
+    "ukraine",
+    "nato",
+    "opec",
+    "oil",
+    "hormuz",
+    "federal reserve",
+    "fed chair",
+    "interest rate",
+    "inflation",
+    "recession",
+    "tariff",
+    "trade war",
+    "china",
+    "economy",
+    "chip",
+    "semiconductor",
+    "ai regulation",
+    "pandemic",
+    "hantavirus",
+    "election",
+    "starmer",
+    "trump",
+    "central bank",
+    "sanction",
+    "military",
+    "war",
+    "peace deal",
+    "jobs",
+    "unemployment",
+]
+
+POLYMARKET_NOISE_PATTERNS = [
+    r"\bvs\.?\b",
+    r"\bwin on\b",
+    r"\bend in a draw\b",
+    r"\bspread:?\b",
+    r"\bmoneyline\b",
+    r"\bworld cup\b",
+    r"\bnba\b",
+    r"\bnfl\b",
+    r"\bnhl\b",
+    r"\bmlb\b",
+    r"\bepl\b",
+    r"\bserie a\b",
+    r"\bla liga\b",
+    r"\batp\b",
+    r"\bfc\b",
+    r"\bhotspur\b",
+    r"\bcavaliers\b",
+    r"\blakers\b",
+    r"\bnapoli\b",
+    r"\btottenham\b",
+    r"\bpistons\b",
+    r"\bmillwall\b",
+    r"\bitalia:?\b",
+]
+
+POLYMARKET_GOSSIP_PATTERNS = [
+    r"\bepstein\b",
+    r"\bsuicide note\b",
+    r"\bcelebrit(?:y|ies)\b",
+    r"\bactor\b",
+    r"\bsinger\b",
+    r"\bdivorce\b",
+    r"\bdating\b",
+]
 
 
 def setup_logging() -> None:
@@ -92,6 +173,86 @@ def safe_int(value: Any) -> Optional[int]:
         return int(value)
     except (TypeError, ValueError):
         return None
+
+
+def parse_utc_datetime(value: Any) -> Optional[datetime]:
+    if value is None:
+        return None
+    try:
+        raw = str(value).strip()
+        if not raw:
+            return None
+        if raw.endswith("Z"):
+            raw = raw[:-1] + "+00:00"
+        return datetime.fromisoformat(raw).astimezone(timezone.utc)
+    except Exception:
+        return None
+
+
+def normalize_text_for_match(*parts: Any) -> str:
+    return " ".join(str(x) for x in parts if x is not None).strip().lower()
+
+
+def count_keyword_hits(text: str, keywords: List[str]) -> int:
+    return sum(1 for kw in keywords if kw in text)
+
+
+def first_matching_pattern(text: str, patterns: List[str]) -> Optional[str]:
+    for pattern in patterns:
+        if re.search(pattern, text):
+            return pattern
+    return None
+
+
+def classify_polymarket_exclusion(
+    *,
+    question: str,
+    slug: Optional[str],
+    end_date: Optional[str],
+    active: Any,
+    closed: Any,
+) -> Optional[str]:
+    now_utc = utc_now()
+    text = normalize_text_for_match(question, slug)
+
+    if active is False:
+        return "inactive"
+    if closed is True:
+        return "closed"
+
+    parsed_end = parse_utc_datetime(end_date)
+    if parsed_end is not None and parsed_end <= now_utc:
+        return "expired"
+
+    if first_matching_pattern(text, POLYMARKET_NOISE_PATTERNS):
+        return "sports_or_match_noise"
+
+    if first_matching_pattern(text, POLYMARKET_GOSSIP_PATTERNS):
+        return "gossip_or_scandal_noise"
+
+    relevance_hits = count_keyword_hits(text, POLYMARKET_PUBLIC_IMPACT_KEYWORDS)
+    if relevance_hits == 0:
+        return "low_public_impact_or_unclear_relevance"
+
+    return None
+
+
+def infer_dynamic_wiki_pages_from_polymarket(
+    polymarket_source: Dict[str, Any],
+    max_pages: int = 5,
+) -> List[str]:
+    rows = polymarket_source.get("data", [])
+    combined_text = normalize_text_for_match(
+        *[f"{row.get('question', '')} {row.get('slug', '')}" for row in rows]
+    )
+
+    extra_pages: List[str] = []
+    for needle, wiki_page in DYNAMIC_WIKI_PAGE_MAP.items():
+        if needle in combined_text and wiki_page not in WIKI_PAGES:
+            extra_pages.append(wiki_page)
+
+    deduped = list(dict.fromkeys(extra_pages))
+    return deduped[:max_pages]
 
 
 def request_json(
@@ -216,13 +377,14 @@ def extract_yes_no_prices(
 def fetch_polymarket() -> Dict[str, Any]:
     rows: List[Dict[str, Any]] = []
     errors: List[Dict[str, Any]] = []
+    excluded_rows: List[Dict[str, Any]] = []
 
     try:
         raw_markets = request_json(
             "GET",
             POLYMARKET_URL,
             params={
-                "limit": POLYMARKET_LIMIT,
+                "limit": POLYMARKET_FETCH_LIMIT,
                 "active": "true",
                 "order": "volume24hr",
                 "ascending": "false",
@@ -232,7 +394,9 @@ def fetch_polymarket() -> Dict[str, Any]:
         if not isinstance(raw_markets, list):
             raise ValueError("Polymarket response is not a list")
 
-        for idx, market in enumerate(raw_markets[:POLYMARKET_LIMIT]):
+        fetched_markets = raw_markets[:POLYMARKET_FETCH_LIMIT]
+
+        for idx, market in enumerate(fetched_markets):
             try:
                 question = str(market.get("question", "")).strip()
                 slug = market.get("slug")
@@ -246,25 +410,48 @@ def fetch_polymarket() -> Dict[str, Any]:
                 outcome_prices = normalize_outcome_prices(market.get("outcomePrices"))
                 yes_price, no_price, market_type = extract_yes_no_prices(outcomes, outcome_prices)
 
-                rows.append(
-                    {
-                        "source": "polymarket",
-                        "id": market.get("id"),
-                        "question": question,
-                        "slug": slug,
-                        "market_type": market_type,
-                        "yes_price": yes_price,
-                        "no_price": no_price,
-                        "outcomes": outcomes,
-                        "outcome_prices": outcome_prices,
-                        "volume_24h": volume_24h,
-                        "liquidity": liquidity,
-                        "active": active,
-                        "closed": closed,
-                        "end_date": end_date,
-                        "status": "ok",
-                    }
+                exclusion_reason = classify_polymarket_exclusion(
+                    question=question,
+                    slug=slug,
+                    end_date=end_date,
+                    active=active,
+                    closed=closed,
                 )
+
+                normalized_row = {
+                    "source": "polymarket",
+                    "id": market.get("id"),
+                    "question": question,
+                    "slug": slug,
+                    "market_type": market_type,
+                    "yes_price": yes_price,
+                    "no_price": no_price,
+                    "outcomes": outcomes,
+                    "outcome_prices": outcome_prices,
+                    "volume_24h": volume_24h,
+                    "liquidity": liquidity,
+                    "active": active,
+                    "closed": closed,
+                    "end_date": end_date,
+                    "status": "ok",
+                }
+
+                if exclusion_reason is not None:
+                    excluded_rows.append(
+                        {
+                            "question": question,
+                            "slug": slug,
+                            "market_type": market_type,
+                            "volume_24h": volume_24h,
+                            "yes_price": yes_price,
+                            "end_date": end_date,
+                            "reason": exclusion_reason,
+                        }
+                    )
+                    continue
+
+                rows.append(normalized_row)
+
             except Exception as e:
                 errors.append(
                     {
@@ -276,14 +463,28 @@ def fetch_polymarket() -> Dict[str, Any]:
                     }
                 )
 
-        top_by_volume = sorted(
+        rows = sorted(
             [x for x in rows if x.get("volume_24h") is not None],
+            key=lambda x: x["volume_24h"],
+            reverse=True,
+        )[:POLYMARKET_KEEP_LIMIT]
+
+        top_by_volume = rows[:5]
+        top_excluded = sorted(
+            [x for x in excluded_rows if x.get("volume_24h") is not None],
             key=lambda x: x["volume_24h"],
             reverse=True,
         )[:5]
 
+        exclusion_reason_breakdown: Dict[str, int] = {}
+        for row in excluded_rows:
+            reason = row["reason"]
+            exclusion_reason_breakdown[reason] = exclusion_reason_breakdown.get(reason, 0) + 1
+
         summary = {
-            "total_rows": len(rows),
+            "fetched_rows_before_filter": len(fetched_markets),
+            "kept_rows_after_filter": len(rows),
+            "excluded_rows_after_filter": len(excluded_rows),
             "top_questions_by_volume_24h": [
                 {
                     "question": x["question"],
@@ -293,6 +494,17 @@ def fetch_polymarket() -> Dict[str, Any]:
                 }
                 for x in top_by_volume
             ],
+            "top_excluded_by_volume_24h": [
+                {
+                    "question": x["question"],
+                    "volume_24h": x["volume_24h"],
+                    "yes_price": x["yes_price"],
+                    "market_type": x["market_type"],
+                    "reason": x["reason"],
+                }
+                for x in top_excluded
+            ],
+            "excluded_reason_breakdown": exclusion_reason_breakdown,
             "binary_markets": sum(1 for x in rows if x.get("market_type") == "binary"),
             "non_binary_markets": sum(1 for x in rows if x.get("market_type") == "non_binary"),
         }
@@ -301,7 +513,19 @@ def fetch_polymarket() -> Dict[str, Any]:
             "polymarket",
             rows,
             errors,
-            meta={"requested_limit": POLYMARKET_LIMIT},
+            meta={
+                "requested_limit": POLYMARKET_FETCH_LIMIT,
+                "kept_limit": POLYMARKET_KEEP_LIMIT,
+                "filter_policy_version": "2.0",
+                "filters": [
+                    "exclude_inactive",
+                    "exclude_closed",
+                    "exclude_expired",
+                    "exclude_sports",
+                    "exclude_gossip",
+                    "exclude_low_public_impact",
+                ],
+            },
             summary=summary,
         )
     except Exception as e:
@@ -317,7 +541,10 @@ def fetch_polymarket() -> Dict[str, Any]:
             "polymarket",
             [],
             errors,
-            meta={"requested_limit": POLYMARKET_LIMIT},
+            meta={
+                "requested_limit": POLYMARKET_FETCH_LIMIT,
+                "kept_limit": POLYMARKET_KEEP_LIMIT,
+            },
             summary={},
             status="error",
         )
@@ -331,10 +558,6 @@ def chunk_keywords_with_anchor(
     anchor_keyword: str,
     max_terms_per_payload: int = 5,
 ) -> List[List[str]]:
-    """
-    pytrends 每次 build_payload 最多 5 個字。
-    這裡保留 1 個位置給 anchor，所以每 chunk = 4 個目標詞 + 1 個 anchor。
-    """
     if max_terms_per_payload < 2:
         raise ValueError("max_terms_per_payload must be >= 2")
 
@@ -370,106 +593,41 @@ def fetch_google_trends() -> Dict[str, Any]:
         chunks = chunk_keywords_with_anchor(TRENDS_KEYWORDS, ANCHOR_KEYWORD, max_terms_per_payload=5)
 
         for chunk_index, chunk in enumerate(chunks):
-            try:
-                logging.info("Google Trends payload | chunk_index=%s | chunk=%s", chunk_index, chunk)
-                pytrends.build_payload(chunk, timeframe="now 1-d", geo="")
-                df = pytrends.interest_over_time()
+            df = None
+            last_error = None
 
-                if df.empty:
-                    for keyword in chunk:
-                        if keyword == ANCHOR_KEYWORD:
-                            continue
-                        rows.append(
-                            {
-                                "source": "google_trends",
-                                "keyword": keyword,
-                                "anchor_keyword": ANCHOR_KEYWORD,
-                                "chunk_index": chunk_index,
-                                "score_mean_24h_raw": None,
-                                "score_last_raw": None,
-                                "anchor_mean_24h_raw": None,
-                                "anchor_last_raw": None,
-                                "score_mean_24h_anchor_normalized": None,
-                                "score_last_anchor_normalized": None,
-                                "status": "empty",
-                                "error": None,
-                                "notes": "No data returned for this chunk.",
-                            }
-                        )
-                    continue
-
-                anchor_mean = None
-                anchor_last = None
-                if ANCHOR_KEYWORD in df.columns:
-                    anchor_series = df[ANCHOR_KEYWORD]
-                    anchor_mean = float(anchor_series.mean())
-                    anchor_last = float(anchor_series.iloc[-1])
-
-                for keyword in chunk:
-                    if keyword == ANCHOR_KEYWORD:
-                        continue
-
-                    if keyword not in df.columns:
-                        rows.append(
-                            {
-                                "source": "google_trends",
-                                "keyword": keyword,
-                                "anchor_keyword": ANCHOR_KEYWORD,
-                                "chunk_index": chunk_index,
-                                "score_mean_24h_raw": None,
-                                "score_last_raw": None,
-                                "anchor_mean_24h_raw": anchor_mean,
-                                "anchor_last_raw": anchor_last,
-                                "score_mean_24h_anchor_normalized": None,
-                                "score_last_anchor_normalized": None,
-                                "status": "empty",
-                                "error": None,
-                                "notes": "Keyword column missing in payload result.",
-                            }
-                        )
-                        continue
-
-                    series = df[keyword]
-                    score_mean = float(series.mean())
-                    score_last = float(series.iloc[-1])
-
-                    norm_mean = None
-                    norm_last = None
-                    if anchor_mean and anchor_mean > 0:
-                        norm_mean = round((score_mean / anchor_mean) * 100, 2)
-                    if anchor_last and anchor_last > 0:
-                        norm_last = round((score_last / anchor_last) * 100, 2)
-
-                    rows.append(
-                        {
-                            "source": "google_trends",
-                            "keyword": keyword,
-                            "anchor_keyword": ANCHOR_KEYWORD,
-                            "chunk_index": chunk_index,
-                            "score_mean_24h_raw": round(score_mean, 2),
-                            "score_last_raw": round(score_last, 2),
-                            "anchor_mean_24h_raw": round(anchor_mean, 2) if anchor_mean is not None else None,
-                            "anchor_last_raw": round(anchor_last, 2) if anchor_last is not None else None,
-                            "score_mean_24h_anchor_normalized": norm_mean,
-                            "score_last_anchor_normalized": norm_last,
-                            "status": "ok",
-                            "error": None,
-                            "notes": (
-                                "Anchor-normalized scores are rough cross-chunk calibration, "
-                                "not official globally comparable Google Trends scores."
-                            ),
-                        }
+            for attempt in range(TRENDS_CHUNK_RETRIES + 1):
+                try:
+                    logging.info(
+                        "Google Trends payload | chunk_index=%s | attempt=%s | chunk=%s",
+                        chunk_index,
+                        attempt + 1,
+                        chunk,
                     )
+                    pytrends.build_payload(chunk, timeframe="now 1-d", geo="")
+                    df = pytrends.interest_over_time()
+                    break
+                except Exception as e:
+                    last_error = e
+                    logging.warning(
+                        "Google Trends chunk failed | chunk_index=%s | attempt=%s | error=%s",
+                        chunk_index,
+                        attempt + 1,
+                        str(e),
+                    )
+                    if attempt < TRENDS_CHUNK_RETRIES:
+                        sleep_seconds = TRENDS_INTER_CHUNK_SLEEP_SECONDS * (2 ** attempt)
+                        time.sleep(sleep_seconds)
 
-            except Exception as e:
+            if df is None:
                 errors.append(
                     {
                         "source": "google_trends",
                         "chunk_index": chunk_index,
                         "chunk": chunk,
                         "status": "error",
-                        "error_type": type(e).__name__,
-                        "message": str(e),
+                        "error_type": type(last_error).__name__ if last_error else "UnknownError",
+                        "message": str(last_error) if last_error else "Unknown Google Trends error",
                     }
                 )
                 for keyword in chunk:
@@ -488,10 +646,100 @@ def fetch_google_trends() -> Dict[str, Any]:
                             "score_mean_24h_anchor_normalized": None,
                             "score_last_anchor_normalized": None,
                             "status": "error",
-                            "error": str(e),
-                            "notes": "Chunk-level request failed.",
+                            "error": str(last_error) if last_error else "Unknown error",
+                            "notes": "Chunk-level request failed after retries.",
                         }
                     )
+                continue
+
+            if df.empty:
+                for keyword in chunk:
+                    if keyword == ANCHOR_KEYWORD:
+                        continue
+                    rows.append(
+                        {
+                            "source": "google_trends",
+                            "keyword": keyword,
+                            "anchor_keyword": ANCHOR_KEYWORD,
+                            "chunk_index": chunk_index,
+                            "score_mean_24h_raw": None,
+                            "score_last_raw": None,
+                            "anchor_mean_24h_raw": None,
+                            "anchor_last_raw": None,
+                            "score_mean_24h_anchor_normalized": None,
+                            "score_last_anchor_normalized": None,
+                            "status": "empty",
+                            "error": None,
+                            "notes": "No data returned for this chunk.",
+                        }
+                    )
+                time.sleep(TRENDS_INTER_CHUNK_SLEEP_SECONDS)
+                continue
+
+            anchor_mean = None
+            anchor_last = None
+            if ANCHOR_KEYWORD in df.columns:
+                anchor_series = df[ANCHOR_KEYWORD]
+                anchor_mean = float(anchor_series.mean())
+                anchor_last = float(anchor_series.iloc[-1])
+
+            for keyword in chunk:
+                if keyword == ANCHOR_KEYWORD:
+                    continue
+
+                if keyword not in df.columns:
+                    rows.append(
+                        {
+                            "source": "google_trends",
+                            "keyword": keyword,
+                            "anchor_keyword": ANCHOR_KEYWORD,
+                            "chunk_index": chunk_index,
+                            "score_mean_24h_raw": None,
+                            "score_last_raw": None,
+                            "anchor_mean_24h_raw": anchor_mean,
+                            "anchor_last_raw": anchor_last,
+                            "score_mean_24h_anchor_normalized": None,
+                            "score_last_anchor_normalized": None,
+                            "status": "empty",
+                            "error": None,
+                            "notes": "Keyword column missing in payload result.",
+                        }
+                    )
+                    continue
+
+                series = df[keyword]
+                score_mean = float(series.mean())
+                score_last = float(series.iloc[-1])
+
+                norm_mean = None
+                norm_last = None
+                if anchor_mean and anchor_mean > 0:
+                    norm_mean = round((score_mean / anchor_mean) * 100, 2)
+                if anchor_last and anchor_last > 0:
+                    norm_last = round((score_last / anchor_last) * 100, 2)
+
+                rows.append(
+                    {
+                        "source": "google_trends",
+                        "keyword": keyword,
+                        "anchor_keyword": ANCHOR_KEYWORD,
+                        "chunk_index": chunk_index,
+                        "score_mean_24h_raw": round(score_mean, 2),
+                        "score_last_raw": round(score_last, 2),
+                        "anchor_mean_24h_raw": round(anchor_mean, 2) if anchor_mean is not None else None,
+                        "anchor_last_raw": round(anchor_last, 2) if anchor_last is not None else None,
+                        "score_mean_24h_anchor_normalized": norm_mean,
+                        "score_last_anchor_normalized": norm_last,
+                        "status": "ok",
+                        "error": None,
+                        "notes": (
+                            "Anchor-normalized scores are rough cross-chunk calibration, "
+                            "not official globally comparable Google Trends scores."
+                        ),
+                    }
+                )
+
+            time.sleep(TRENDS_INTER_CHUNK_SLEEP_SECONDS)
 
         normalized_ok = [
             x for x in rows
@@ -524,6 +772,8 @@ def fetch_google_trends() -> Dict[str, Any]:
                 "timeframe": "now 1-d",
                 "geo": "global",
                 "anchor_keyword": ANCHOR_KEYWORD,
+                "chunk_retries": TRENDS_CHUNK_RETRIES,
+                "inter_chunk_sleep_seconds": TRENDS_INTER_CHUNK_SLEEP_SECONDS,
             },
             summary=summary,
         )
@@ -542,13 +792,14 @@ def fetch_google_trends() -> Dict[str, Any]:
 # ----------------------------
 # Wikipedia pageviews
 # ----------------------------
-def fetch_wikipedia_pageviews() -> Dict[str, Any]:
+def fetch_wikipedia_pageviews(extra_pages: Optional[List[str]] = None) -> Dict[str, Any]:
     rows: List[Dict[str, Any]] = []
     errors: List[Dict[str, Any]] = []
 
     yesterday = (utc_now() - timedelta(days=1)).strftime("%Y%m%d")
+    pages_to_query = list(dict.fromkeys(WIKI_PAGES + (extra_pages or [])))
 
-    for page in WIKI_PAGES:
+    for page in pages_to_query:
         url = (
             "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article"
             f"/en.wikipedia/all-access/all-agents/{page}/daily/{yesterday}/{yesterday}"
@@ -608,7 +859,11 @@ def fetch_wikipedia_pageviews() -> Dict[str, Any]:
         "wikipedia_pageviews",
         rows,
         errors,
-        meta={"date": yesterday},
+        meta={
+            "date": yesterday,
+            "requested_pages": pages_to_query,
+            "dynamic_pages": extra_pages or [],
+        },
         summary=summary,
     )
 
@@ -1025,6 +1280,7 @@ def build_llm_summary(
     delta_vs_previous_day: Optional[Dict[str, Any]] = None,
 ) -> Dict[str, Any]:
     poly_top = polymarket.get("summary", {}).get("top_questions_by_volume_24h", [])[:3]
+    poly_noise_top = polymarket.get("summary", {}).get("top_excluded_by_volume_24h", [])[:3]
     trends_top = google_trends.get("summary", {}).get("top_keywords_by_anchor_normalized_mean_24h", [])[:5]
     wiki_top = wikipedia_pageviews.get("summary", {}).get("top_pages_by_views", [])[:5]
 
@@ -1043,6 +1299,7 @@ def build_llm_summary(
         "china": "China",
         "oil": "Oil",
         "iran": "Iran",
+        "hantavirus": "Hantavirus",
     }
 
     for key, label in candidate_map.items():
@@ -1077,6 +1334,8 @@ def build_llm_summary(
         narrative_hints.append("China / US-China attention is present.")
     if "Iran" in recurring_entities:
         narrative_hints.append("Iran-related geopolitical attention is present.")
+    if "Hantavirus" in recurring_entities:
+        narrative_hints.append("Pandemic / bio-risk attention is present.")
 
     momentum_hints: List[str] = []
     if delta_vs_previous_day and delta_vs_previous_day.get("available"):
@@ -1124,6 +1383,7 @@ def build_llm_summary(
 
     return {
         "top_polymarket_questions": poly_top,
+        "top_filtered_noise_candidates": poly_noise_top,
         "top_google_trends_keywords": trends_top,
         "top_wikipedia_pages": wiki_top,
         "recurring_entities_across_sources": recurring_entities,
@@ -1136,27 +1396,20 @@ def build_llm_summary(
             "Prefer entities that appear across at least 2 sources when writing the final sentiment brief.",
             "Use delta_vs_previous_day to identify rising vs cooling attention.",
             "If source health is partial or weak, explicitly say evidence is limited.",
+            "Use top_filtered_noise_candidates only for optional appendix / noise radar, not for the core macro radar.",
         ],
     }
-
 
 
 def build_json_health(
     source_health_map: Dict[str, Any],
     output: Optional[Dict[str, Any]] = None,
 ) -> Dict[str, Any]:
-    """
-    Top-level JSON health marker for downstream LLM / scheduled-action readers.
-
-    Purpose:
-    - GitHub raw may serve this file as text/plain instead of application/json.
-    - Downstream readers should still parse the response body as JSON.
-    - Partial child sources should not invalidate the whole file.
-    """
     required_top_level_fields = [
         "schema_version",
         "date_utc",
         "generated_at_utc",
+        "json_health",
         "source_health",
         "sources",
         "delta_vs_previous_day",
@@ -1192,8 +1445,12 @@ def build_json_health(
         ),
         "partial_sources_allowed": True,
         "success_condition": (
-            "Valid if schema_version, source_health, and sources exist. "
+            "Valid if schema_version, json_health, source_health, and sources exist. "
             "A partial/error child source does not invalidate the whole JSON."
+        ),
+        "freshness_note": (
+            "JSON parse success does not guarantee freshness. "
+            "Downstream readers should compare generated_at_utc against current time."
         ),
         "required_top_level_fields": required_top_level_fields,
         "present_top_level_fields": present_fields,
@@ -1233,6 +1490,7 @@ def build_output(
             "request_timeout_seconds": REQUEST_TIMEOUT,
             "request_retries": REQUEST_RETRIES,
         },
+        "json_health": {},
         "source_health": source_health_map,
         "sources": {
             "polymarket": polymarket,
@@ -1249,9 +1507,6 @@ def build_output(
         wikipedia_pageviews,
         delta_vs_previous_day,
     )
-
-    # Explicit top-level health marker for ChatGPT / Gemini / scheduled-action readers.
-    # Important: child-source partial/error states do NOT mean the entire JSON failed.
     output["json_health"] = build_json_health(source_health_map, output)
 
     return output
@@ -1260,11 +1515,9 @@ def build_output(
 def save_output(output: Dict[str, Any], output_file: str = OUTPUT_FILE) -> None:
     os.makedirs(os.path.dirname(output_file), exist_ok=True)
 
-    # 1. 覆蓋最新版本（給下一次 delta 用）
     with open(output_file, "w", encoding="utf-8") as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
 
-    # 2. 存本地 archive 精簡版（可選，但保留方便 debug）
     os.makedirs(ARCHIVE_DIR, exist_ok=True)
 
     date_str = output.get("date_utc", "unknown-date")
@@ -1285,7 +1538,11 @@ def main() -> None:
 
     polymarket = fetch_polymarket()
     google_trends = fetch_google_trends()
-    wikipedia_pageviews = fetch_wikipedia_pageviews()
+
+    dynamic_wiki_pages = infer_dynamic_wiki_pages_from_polymarket(polymarket)
+    logging.info("Dynamic Wikipedia pages inferred: %s", dynamic_wiki_pages)
+
+    wikipedia_pageviews = fetch_wikipedia_pageviews(extra_pages=dynamic_wiki_pages)
 
     output = build_output(
         polymarket,
