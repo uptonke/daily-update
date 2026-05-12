@@ -1,0 +1,310 @@
+{
+  "schema_version": "1.2.0",
+  "date_utc": "2026-05-12",
+  "generated_at_utc": "2026-05-12T22:01:29Z",
+  "source_health": {
+    "polymarket": {
+      "status": "ok",
+      "row_count": 30,
+      "ok_count": 30,
+      "empty_count": 0,
+      "error_count": 0
+    },
+    "google_trends": {
+      "status": "partial",
+      "row_count": 14,
+      "ok_count": 0,
+      "empty_count": 0,
+      "error_count": 18
+    },
+    "wikipedia_pageviews": {
+      "status": "ok",
+      "row_count": 14,
+      "ok_count": 14,
+      "empty_count": 0,
+      "error_count": 0
+    }
+  },
+  "summary": {
+    "top_polymarket_questions": [
+      {
+        "question": "Will Michelle Bowman be confirmed as Fed Chair?",
+        "volume_24h": 2513625.471,
+        "yes_price": 0.0005,
+        "market_type": "binary"
+      },
+      {
+        "question": "Starmer out by May 15, 2026?",
+        "volume_24h": 1446524.4527410017,
+        "yes_price": 0.0515,
+        "market_type": "binary"
+      },
+      {
+        "question": "Strait of Hormuz traffic returns to normal by May 15?",
+        "volume_24h": 1359730.3193060001,
+        "yes_price": 0.0025,
+        "market_type": "binary"
+      }
+    ],
+    "top_filtered_noise_candidates": [
+      {
+        "question": "Epstein suicide note released by May 8?",
+        "volume_24h": 7410646.819398,
+        "yes_price": 0.0005,
+        "market_type": "binary",
+        "reason": "gossip_or_scandal_noise"
+      },
+      {
+        "question": "Will Trump visit China by May 15?",
+        "volume_24h": 7283522.577780005,
+        "yes_price": 0.9985,
+        "market_type": "binary",
+        "reason": "expired"
+      },
+      {
+        "question": "Will Bitcoin hit $150k by June 30, 2026?",
+        "volume_24h": 5821652.894196,
+        "yes_price": 0.0135,
+        "market_type": "binary",
+        "reason": "low_public_impact_or_unclear_relevance"
+      }
+    ],
+    "top_google_trends_keywords": [],
+    "top_wikipedia_pages": [
+      {
+        "page": "Keir_Starmer",
+        "views": 54497
+      },
+      {
+        "page": "Donald_Trump",
+        "views": 47467
+      },
+      {
+        "page": "Strait_of_Hormuz",
+        "views": 9653
+      },
+      {
+        "page": "Hantavirus",
+        "views": 7934
+      },
+      {
+        "page": "NATO",
+        "views": 5387
+      }
+    ],
+    "recurring_entities_across_sources": [
+      "AI",
+      "Hantavirus",
+      "NATO",
+      "Trump"
+    ],
+    "signal_strength_by_source": {
+      "polymarket": "strong",
+      "google_trends": "weak",
+      "wikipedia_pageviews": "strong"
+    },
+    "narrative_hints": [
+      "Trump-related political / tariff attention is present.",
+      "Geopolitical / security attention is present.",
+      "AI / regulation / chip attention is present.",
+      "Pandemic / bio-risk attention is present."
+    ],
+    "momentum_hints": [
+      "Wikipedia risers: Donald_Trump (+0), OPEC (+0), NATO (+0)",
+      "Polymarket volume risers: Strait of Hormuz traffic returns to normal by May 15? (+698623.031), Starmer out by May 15, 2026? (+598392.4711), Will the Iranian regime fall by May 31? (+326400.8584)"
+    ],
+    "prompt_ready_notes": [
+      "Use recurring_entities_across_sources to identify themes confirmed by multiple datasets.",
+      "Treat Google Trends anchor-normalized values as rough cross-chunk calibration, not exact absolute ranking.",
+      "Prefer entities that appear across at least 2 sources when writing the final sentiment brief.",
+      "Use delta_vs_previous_day to identify rising vs cooling attention.",
+      "If source health is partial or weak, explicitly say evidence is limited.",
+      "Use top_filtered_noise_candidates only for optional appendix / noise radar, not for the core macro radar."
+    ]
+  },
+  "top_signals": {
+    "polymarket": [
+      {
+        "question": "Will Michelle Bowman be confirmed as Fed Chair?",
+        "volume_24h": 2513625.471,
+        "yes_price": 0.0005,
+        "market_type": "binary"
+      },
+      {
+        "question": "Starmer out by May 15, 2026?",
+        "volume_24h": 1446524.4527410017,
+        "yes_price": 0.0515,
+        "market_type": "binary"
+      },
+      {
+        "question": "Strait of Hormuz traffic returns to normal by May 15?",
+        "volume_24h": 1359730.3193060001,
+        "yes_price": 0.0025,
+        "market_type": "binary"
+      },
+      {
+        "question": "Hantavirus pandemic in 2026?",
+        "volume_24h": 1287092.09256,
+        "yes_price": 0.0855,
+        "market_type": "binary"
+      },
+      {
+        "question": "US x Iran permanent peace deal by May 15, 2026?",
+        "volume_24h": 919416.9667289999,
+        "yes_price": 0.0155,
+        "market_type": "binary"
+      }
+    ],
+    "google_trends": [],
+    "wikipedia_pageviews": [
+      {
+        "page": "Keir_Starmer",
+        "views": 54497
+      },
+      {
+        "page": "Donald_Trump",
+        "views": 47467
+      },
+      {
+        "page": "Strait_of_Hormuz",
+        "views": 9653
+      },
+      {
+        "page": "Hantavirus",
+        "views": 7934
+      },
+      {
+        "page": "NATO",
+        "views": 5387
+      }
+    ]
+  },
+  "delta_summary": {
+    "notes": [
+      "Comparison is against the previously committed output file in the repo.",
+      "If the workflow is re-run on the same UTC date, comparison_type may be same_day_rerun instead of true previous-day.",
+      "Use rise/fall signals as relative momentum indicators, not as causal proof."
+    ]
+  },
+  "delta_top_signals": {
+    "polymarket": {
+      "top_volume_risers": [
+        {
+          "question": "Strait of Hormuz traffic returns to normal by May 15?",
+          "absolute_change": 698623.031,
+          "pct_change": 105.67
+        },
+        {
+          "question": "Starmer out by May 15, 2026?",
+          "absolute_change": 598392.4711,
+          "pct_change": 70.55
+        },
+        {
+          "question": "Will the Iranian regime fall by May 31?",
+          "absolute_change": 326400.8584,
+          "pct_change": 85.21
+        },
+        {
+          "question": "US x Iran permanent peace deal by June 30, 2026?",
+          "absolute_change": 165286.3987,
+          "pct_change": 48.14
+        },
+        {
+          "question": "Strait of Hormuz traffic returns to normal by end of May?",
+          "absolute_change": 155178.7412,
+          "pct_change": 52.22
+        }
+      ],
+      "top_volume_fallers": [
+        {
+          "question": "US x Iran permanent peace deal by May 31, 2026?",
+          "absolute_change": -642096.2216,
+          "pct_change": -58.4
+        },
+        {
+          "question": "US x Iran permanent peace deal by May 15, 2026?",
+          "absolute_change": -526828.2558,
+          "pct_change": -36.43
+        },
+        {
+          "question": "Hantavirus pandemic in 2026?",
+          "absolute_change": -505463.315,
+          "pct_change": -28.2
+        },
+        {
+          "question": "Will Michelle Bowman be confirmed as Fed Chair?",
+          "absolute_change": -378067.9927,
+          "pct_change": -13.07
+        },
+        {
+          "question": "Will Judy Shelton be confirmed as Fed Chair?",
+          "absolute_change": -373072.58,
+          "pct_change": -39.45
+        }
+      ],
+      "new_markets_vs_previous": 11
+    },
+    "google_trends": {
+      "top_risers": [],
+      "top_fallers": [],
+      "new_keywords_vs_previous": 0
+    },
+    "wikipedia_pageviews": {
+      "top_risers": [
+        {
+          "page": "Donald_Trump",
+          "absolute_change": 0,
+          "pct_change": 0.0
+        },
+        {
+          "page": "OPEC",
+          "absolute_change": 0,
+          "pct_change": 0.0
+        },
+        {
+          "page": "NATO",
+          "absolute_change": 0,
+          "pct_change": 0.0
+        },
+        {
+          "page": "Kevin_Warsh",
+          "absolute_change": 0,
+          "pct_change": 0.0
+        },
+        {
+          "page": "China%E2%80%93United_States_trade_war",
+          "absolute_change": 0,
+          "pct_change": 0.0
+        }
+      ],
+      "top_fallers": [
+        {
+          "page": "Donald_Trump",
+          "absolute_change": 0,
+          "pct_change": 0.0
+        },
+        {
+          "page": "OPEC",
+          "absolute_change": 0,
+          "pct_change": 0.0
+        },
+        {
+          "page": "NATO",
+          "absolute_change": 0,
+          "pct_change": 0.0
+        },
+        {
+          "page": "Kevin_Warsh",
+          "absolute_change": 0,
+          "pct_change": 0.0
+        },
+        {
+          "page": "China%E2%80%93United_States_trade_war",
+          "absolute_change": 0,
+          "pct_change": 0.0
+        }
+      ],
+      "new_pages_vs_previous": 0
+    }
+  }
+}
