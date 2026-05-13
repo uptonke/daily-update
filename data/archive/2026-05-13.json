@@ -1,0 +1,308 @@
+{
+  "schema_version": "1.2.0",
+  "date_utc": "2026-05-13",
+  "generated_at_utc": "2026-05-13T22:01:22Z",
+  "source_health": {
+    "polymarket": {
+      "status": "ok",
+      "row_count": 30,
+      "ok_count": 30,
+      "empty_count": 0,
+      "error_count": 0
+    },
+    "google_trends": {
+      "status": "partial",
+      "row_count": 14,
+      "ok_count": 0,
+      "empty_count": 0,
+      "error_count": 18
+    },
+    "wikipedia_pageviews": {
+      "status": "ok",
+      "row_count": 14,
+      "ok_count": 14,
+      "empty_count": 0,
+      "error_count": 0
+    }
+  },
+  "summary": {
+    "top_polymarket_questions": [
+      {
+        "question": "Will Judy Shelton be confirmed as Fed Chair?",
+        "volume_24h": 2996133.63553,
+        "yes_price": 0.0005,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will Michelle Bowman be confirmed as Fed Chair?",
+        "volume_24h": 1839766.784,
+        "yes_price": 0.0005,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will Trump and Xi kiss at their summit?",
+        "volume_24h": 1059705.148083,
+        "yes_price": 0.0065,
+        "market_type": "binary"
+      }
+    ],
+    "top_filtered_noise_candidates": [
+      {
+        "question": "Will Manchester City FC win on 2026-03-21?",
+        "volume_24h": 7917280.209506003,
+        "yes_price": 0.9995,
+        "market_type": "binary",
+        "reason": "expired"
+      },
+      {
+        "question": "Will Bitcoin hit $150k by June 30, 2026?",
+        "volume_24h": 5821652.894196,
+        "yes_price": 0.0135,
+        "market_type": "binary",
+        "reason": "low_public_impact_or_unclear_relevance"
+      },
+      {
+        "question": "Indian Premier League: Royal Challengers Bangalore vs Kolkata Knight Riders",
+        "volume_24h": 2621876.283124001,
+        "yes_price": null,
+        "market_type": "non_binary",
+        "reason": "sports_or_match_noise"
+      }
+    ],
+    "top_google_trends_keywords": [],
+    "top_wikipedia_pages": [
+      {
+        "page": "Keir_Starmer",
+        "views": 73276
+      },
+      {
+        "page": "Donald_Trump",
+        "views": 47965
+      },
+      {
+        "page": "Kevin_Warsh",
+        "views": 9215
+      },
+      {
+        "page": "Strait_of_Hormuz",
+        "views": 8493
+      },
+      {
+        "page": "Hantavirus",
+        "views": 5488
+      }
+    ],
+    "recurring_entities_across_sources": [
+      "AI",
+      "Hantavirus",
+      "Trump"
+    ],
+    "signal_strength_by_source": {
+      "polymarket": "strong",
+      "google_trends": "weak",
+      "wikipedia_pageviews": "strong"
+    },
+    "narrative_hints": [
+      "Trump-related political / tariff attention is present.",
+      "AI / regulation / chip attention is present.",
+      "Pandemic / bio-risk attention is present."
+    ],
+    "momentum_hints": [
+      "Wikipedia risers: Keir_Starmer (+18779), Kevin_Warsh (+5328), Donald_Trump (+498)",
+      "Polymarket volume risers: Will Judy Shelton be confirmed as Fed Chair? (+2423555.4765), US x Iran permanent peace deal by May 31, 2026? (+257987.6729), Will the Fed increase interest rates by 25 bps after the June 2026 meeting? (+236142.8952)"
+    ],
+    "prompt_ready_notes": [
+      "Use recurring_entities_across_sources to identify themes confirmed by multiple datasets.",
+      "Treat Google Trends anchor-normalized values as rough cross-chunk calibration, not exact absolute ranking.",
+      "Prefer entities that appear across at least 2 sources when writing the final sentiment brief.",
+      "Use delta_vs_previous_day to identify rising vs cooling attention.",
+      "If source health is partial or weak, explicitly say evidence is limited.",
+      "Use top_filtered_noise_candidates only for optional appendix / noise radar, not for the core macro radar."
+    ]
+  },
+  "top_signals": {
+    "polymarket": [
+      {
+        "question": "Will Judy Shelton be confirmed as Fed Chair?",
+        "volume_24h": 2996133.63553,
+        "yes_price": 0.0005,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will Michelle Bowman be confirmed as Fed Chair?",
+        "volume_24h": 1839766.784,
+        "yes_price": 0.0005,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will Trump and Xi kiss at their summit?",
+        "volume_24h": 1059705.148083,
+        "yes_price": 0.0065,
+        "market_type": "binary"
+      },
+      {
+        "question": "Starmer out by May 15, 2026?",
+        "volume_24h": 1036933.3674609996,
+        "yes_price": 0.045,
+        "market_type": "binary"
+      },
+      {
+        "question": "Hantavirus pandemic in 2026?",
+        "volume_24h": 933664.2701469989,
+        "yes_price": 0.0725,
+        "market_type": "binary"
+      }
+    ],
+    "google_trends": [],
+    "wikipedia_pageviews": [
+      {
+        "page": "Keir_Starmer",
+        "views": 73276
+      },
+      {
+        "page": "Donald_Trump",
+        "views": 47965
+      },
+      {
+        "page": "Kevin_Warsh",
+        "views": 9215
+      },
+      {
+        "page": "Strait_of_Hormuz",
+        "views": 8493
+      },
+      {
+        "page": "Hantavirus",
+        "views": 5488
+      }
+    ]
+  },
+  "delta_summary": {
+    "notes": [
+      "Comparison is against the previously committed output file in the repo.",
+      "If the workflow is re-run on the same UTC date, comparison_type may be same_day_rerun instead of true previous-day.",
+      "Use rise/fall signals as relative momentum indicators, not as causal proof."
+    ]
+  },
+  "delta_top_signals": {
+    "polymarket": {
+      "top_volume_risers": [
+        {
+          "question": "Will Judy Shelton be confirmed as Fed Chair?",
+          "absolute_change": 2423555.4765,
+          "pct_change": 423.27
+        },
+        {
+          "question": "US x Iran permanent peace deal by May 31, 2026?",
+          "absolute_change": 257987.6729,
+          "pct_change": 56.41
+        },
+        {
+          "question": "Will the Fed increase interest rates by 25 bps after the June 2026 meeting?",
+          "absolute_change": 236142.8952,
+          "pct_change": 81.38
+        },
+        {
+          "question": "Strait of Hormuz traffic returns to normal by end of May?",
+          "absolute_change": 201952.0239,
+          "pct_change": 44.64
+        },
+        {
+          "question": "Will the Fed decrease interest rates by 25 bps after the June 2026 meeting?",
+          "absolute_change": 26294.4148,
+          "pct_change": 8.49
+        }
+      ],
+      "top_volume_fallers": [
+        {
+          "question": "Strait of Hormuz traffic returns to normal by May 15?",
+          "absolute_change": -846397.3517,
+          "pct_change": -62.25
+        },
+        {
+          "question": "Will Michelle Bowman be confirmed as Fed Chair?",
+          "absolute_change": -673858.687,
+          "pct_change": -26.81
+        },
+        {
+          "question": "Will Kevin Warsh be confirmed as Fed Chair?",
+          "absolute_change": -434720.2435,
+          "pct_change": -65.6
+        },
+        {
+          "question": "Starmer out by May 15, 2026?",
+          "absolute_change": -409591.0853,
+          "pct_change": -28.32
+        },
+        {
+          "question": "Will the Iranian regime fall by May 31?",
+          "absolute_change": -400917.0069,
+          "pct_change": -56.51
+        }
+      ],
+      "new_markets_vs_previous": 14
+    },
+    "google_trends": {
+      "top_risers": [],
+      "top_fallers": [],
+      "new_keywords_vs_previous": 0
+    },
+    "wikipedia_pageviews": {
+      "top_risers": [
+        {
+          "page": "Keir_Starmer",
+          "absolute_change": 18779,
+          "pct_change": 34.46
+        },
+        {
+          "page": "Kevin_Warsh",
+          "absolute_change": 5328,
+          "pct_change": 137.07
+        },
+        {
+          "page": "Donald_Trump",
+          "absolute_change": 498,
+          "pct_change": 1.05
+        },
+        {
+          "page": "Federal_Reserve",
+          "absolute_change": 229,
+          "pct_change": 11.12
+        },
+        {
+          "page": "China%E2%80%93United_States_trade_war",
+          "absolute_change": 166,
+          "pct_change": 13.42
+        }
+      ],
+      "top_fallers": [
+        {
+          "page": "Hantavirus",
+          "absolute_change": -2446,
+          "pct_change": -30.83
+        },
+        {
+          "page": "Strait_of_Hormuz",
+          "absolute_change": -1160,
+          "pct_change": -12.02
+        },
+        {
+          "page": "OPEC",
+          "absolute_change": -326,
+          "pct_change": -8.75
+        },
+        {
+          "page": "NATO",
+          "absolute_change": -223,
+          "pct_change": -4.14
+        },
+        {
+          "page": "Judy_Shelton",
+          "absolute_change": -14,
+          "pct_change": -16.87
+        }
+      ],
+      "new_pages_vs_previous": 0
+    }
+  }
+}
