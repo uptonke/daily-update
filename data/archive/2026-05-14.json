@@ -1,0 +1,363 @@
+{
+  "schema_version": "1.2.0",
+  "date_utc": "2026-05-14",
+  "generated_at_utc": "2026-05-14T22:01:22Z",
+  "source_health": {
+    "polymarket": {
+      "status": "ok",
+      "row_count": 22,
+      "ok_count": 22,
+      "empty_count": 0,
+      "error_count": 0
+    },
+    "google_trends": {
+      "status": "partial",
+      "row_count": 14,
+      "ok_count": 6,
+      "empty_count": 0,
+      "error_count": 10
+    },
+    "wikipedia_pageviews": {
+      "status": "ok",
+      "row_count": 12,
+      "ok_count": 12,
+      "empty_count": 0,
+      "error_count": 0
+    }
+  },
+  "summary": {
+    "top_polymarket_questions": [
+      {
+        "question": "Will Eduardo Leite win the 2026 Brazilian presidential election?",
+        "volume_24h": 1579396.018,
+        "yes_price": 0.0005,
+        "market_type": "binary"
+      },
+      {
+        "question": "Strait of Hormuz traffic returns to normal by May 15?",
+        "volume_24h": 1249848.6272830002,
+        "yes_price": 0.0015,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will Trump and Xi kiss at their summit?",
+        "volume_24h": 1238207.1403069997,
+        "yes_price": 0.0035,
+        "market_type": "binary"
+      }
+    ],
+    "top_filtered_noise_candidates": [
+      {
+        "question": "Will Bitcoin hit $150k by June 30, 2026?",
+        "volume_24h": 5821652.894196,
+        "yes_price": 0.0135,
+        "market_type": "binary",
+        "reason": "low_public_impact_or_unclear_relevance"
+      },
+      {
+        "question": "Internazionali BNL d'Italia: Martin Landaluce vs Daniil Medvedev",
+        "volume_24h": 1813512.9365199918,
+        "yes_price": null,
+        "market_type": "non_binary",
+        "reason": "sports_or_match_noise"
+      },
+      {
+        "question": "Will Real Madrid CF win on 2026-05-14?",
+        "volume_24h": 1561417.235633001,
+        "yes_price": 0.9995,
+        "market_type": "binary",
+        "reason": "expired"
+      }
+    ],
+    "top_google_trends_keywords": [
+      {
+        "keyword": "inflation",
+        "score_mean_24h_anchor_normalized": 429.19,
+        "score_last_anchor_normalized": 566.67
+      },
+      {
+        "keyword": "China US",
+        "score_mean_24h_anchor_normalized": 251.83,
+        "score_last_anchor_normalized": 300.0
+      },
+      {
+        "keyword": "OPEC",
+        "score_mean_24h_anchor_normalized": 32.89,
+        "score_last_anchor_normalized": 22.73
+      },
+      {
+        "keyword": "China economy",
+        "score_mean_24h_anchor_normalized": 28.23,
+        "score_last_anchor_normalized": 33.33
+      },
+      {
+        "keyword": "AI regulation",
+        "score_mean_24h_anchor_normalized": 27.58,
+        "score_last_anchor_normalized": 33.33
+      }
+    ],
+    "top_wikipedia_pages": [
+      {
+        "page": "Donald_Trump",
+        "views": 51534
+      },
+      {
+        "page": "Kevin_Warsh",
+        "views": 51013
+      },
+      {
+        "page": "Keir_Starmer",
+        "views": 49240
+      },
+      {
+        "page": "Strait_of_Hormuz",
+        "views": 7630
+      },
+      {
+        "page": "NATO",
+        "views": 5932
+      }
+    ],
+    "recurring_entities_across_sources": [
+      "AI",
+      "China",
+      "NATO",
+      "OPEC",
+      "Trump"
+    ],
+    "signal_strength_by_source": {
+      "polymarket": "strong",
+      "google_trends": "strong",
+      "wikipedia_pageviews": "strong"
+    },
+    "narrative_hints": [
+      "Trump-related political / tariff attention is present.",
+      "Geopolitical / security attention is present.",
+      "AI / regulation / chip attention is present.",
+      "China / US-China attention is present."
+    ],
+    "momentum_hints": [
+      "Wikipedia risers: Kevin_Warsh (+41798), Donald_Trump (+3569), Federal_Reserve (+863)",
+      "Polymarket volume risers: Strait of Hormuz traffic returns to normal by May 15? (+736515.6596), Strait of Hormuz traffic returns to normal by end of June? (+340081.8334), Will Trump and Xi kiss at their summit? (+178501.9922)"
+    ],
+    "prompt_ready_notes": [
+      "Use recurring_entities_across_sources to identify themes confirmed by multiple datasets.",
+      "Treat Google Trends anchor-normalized values as rough cross-chunk calibration, not exact absolute ranking.",
+      "Prefer entities that appear across at least 2 sources when writing the final sentiment brief.",
+      "Use delta_vs_previous_day to identify rising vs cooling attention.",
+      "If source health is partial or weak, explicitly say evidence is limited.",
+      "Use top_filtered_noise_candidates only for optional appendix / noise radar, not for the core macro radar."
+    ]
+  },
+  "top_signals": {
+    "polymarket": [
+      {
+        "question": "Will Eduardo Leite win the 2026 Brazilian presidential election?",
+        "volume_24h": 1579396.018,
+        "yes_price": 0.0005,
+        "market_type": "binary"
+      },
+      {
+        "question": "Strait of Hormuz traffic returns to normal by May 15?",
+        "volume_24h": 1249848.6272830002,
+        "yes_price": 0.0015,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will Trump and Xi kiss at their summit?",
+        "volume_24h": 1238207.1403069997,
+        "yes_price": 0.0035,
+        "market_type": "binary"
+      },
+      {
+        "question": "Starmer out by May 15, 2026?",
+        "volume_24h": 796850.0913559993,
+        "yes_price": 0.0075,
+        "market_type": "binary"
+      },
+      {
+        "question": "Hantavirus pandemic in 2026?",
+        "volume_24h": 732709.2268619984,
+        "yes_price": 0.0745,
+        "market_type": "binary"
+      }
+    ],
+    "google_trends": [
+      {
+        "keyword": "inflation",
+        "score_mean_24h_anchor_normalized": 429.19,
+        "score_last_anchor_normalized": 566.67
+      },
+      {
+        "keyword": "China US",
+        "score_mean_24h_anchor_normalized": 251.83,
+        "score_last_anchor_normalized": 300.0
+      },
+      {
+        "keyword": "OPEC",
+        "score_mean_24h_anchor_normalized": 32.89,
+        "score_last_anchor_normalized": 22.73
+      },
+      {
+        "keyword": "China economy",
+        "score_mean_24h_anchor_normalized": 28.23,
+        "score_last_anchor_normalized": 33.33
+      },
+      {
+        "keyword": "AI regulation",
+        "score_mean_24h_anchor_normalized": 27.58,
+        "score_last_anchor_normalized": 33.33
+      }
+    ],
+    "wikipedia_pageviews": [
+      {
+        "page": "Donald_Trump",
+        "views": 51534
+      },
+      {
+        "page": "Kevin_Warsh",
+        "views": 51013
+      },
+      {
+        "page": "Keir_Starmer",
+        "views": 49240
+      },
+      {
+        "page": "Strait_of_Hormuz",
+        "views": 7630
+      },
+      {
+        "page": "NATO",
+        "views": 5932
+      }
+    ]
+  },
+  "delta_summary": {
+    "notes": [
+      "Comparison is against the previously committed output file in the repo.",
+      "If the workflow is re-run on the same UTC date, comparison_type may be same_day_rerun instead of true previous-day.",
+      "Use rise/fall signals as relative momentum indicators, not as causal proof."
+    ]
+  },
+  "delta_top_signals": {
+    "polymarket": {
+      "top_volume_risers": [
+        {
+          "question": "Strait of Hormuz traffic returns to normal by May 15?",
+          "absolute_change": 736515.6596,
+          "pct_change": 143.48
+        },
+        {
+          "question": "Strait of Hormuz traffic returns to normal by end of June?",
+          "absolute_change": 340081.8334,
+          "pct_change": 169.8
+        },
+        {
+          "question": "Will Trump and Xi kiss at their summit?",
+          "absolute_change": 178501.9922,
+          "pct_change": 16.84
+        },
+        {
+          "question": "Will the Iranian regime fall by May 31?",
+          "absolute_change": 92342.6093,
+          "pct_change": 29.93
+        },
+        {
+          "question": "US x Iran diplomatic meeting by May 15, 2026?",
+          "absolute_change": 60923.8611,
+          "pct_change": 28.31
+        }
+      ],
+      "top_volume_fallers": [
+        {
+          "question": "Will Tarcisio de Freitas win the 2026 Brazilian presidential election?",
+          "absolute_change": -379452.7383,
+          "pct_change": -50.24
+        },
+        {
+          "question": "Will the Fed increase interest rates by 25 bps after the June 2026 meeting?",
+          "absolute_change": -270402.0195,
+          "pct_change": -51.38
+        },
+        {
+          "question": "Starmer out by May 15, 2026?",
+          "absolute_change": -240083.2761,
+          "pct_change": -23.15
+        },
+        {
+          "question": "Hantavirus pandemic in 2026?",
+          "absolute_change": -200955.0433,
+          "pct_change": -21.52
+        },
+        {
+          "question": "Strait of Hormuz traffic returns to normal by end of May?",
+          "absolute_change": -173255.568,
+          "pct_change": -26.48
+        }
+      ],
+      "new_markets_vs_previous": 7
+    },
+    "google_trends": {
+      "top_risers": [],
+      "top_fallers": [],
+      "new_keywords_vs_previous": 0
+    },
+    "wikipedia_pageviews": {
+      "top_risers": [
+        {
+          "page": "Kevin_Warsh",
+          "absolute_change": 41798,
+          "pct_change": 453.59
+        },
+        {
+          "page": "Donald_Trump",
+          "absolute_change": 3569,
+          "pct_change": 7.44
+        },
+        {
+          "page": "Federal_Reserve",
+          "absolute_change": 863,
+          "pct_change": 37.72
+        },
+        {
+          "page": "NATO",
+          "absolute_change": 768,
+          "pct_change": 14.87
+        },
+        {
+          "page": "China%E2%80%93United_States_trade_war",
+          "absolute_change": 126,
+          "pct_change": 8.98
+        }
+      ],
+      "top_fallers": [
+        {
+          "page": "Keir_Starmer",
+          "absolute_change": -24036,
+          "pct_change": -32.8
+        },
+        {
+          "page": "Hantavirus",
+          "absolute_change": -1341,
+          "pct_change": -24.44
+        },
+        {
+          "page": "Strait_of_Hormuz",
+          "absolute_change": -863,
+          "pct_change": -10.16
+        },
+        {
+          "page": "OPEC",
+          "absolute_change": -428,
+          "pct_change": -12.6
+        },
+        {
+          "page": "Russo-Ukrainian_War",
+          "absolute_change": -135,
+          "pct_change": -6.84
+        }
+      ],
+      "new_pages_vs_previous": 0
+    }
+  }
+}
