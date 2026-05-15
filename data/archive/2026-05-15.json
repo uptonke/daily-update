@@ -1,0 +1,407 @@
+{
+  "schema_version": "1.2.0",
+  "date_utc": "2026-05-15",
+  "generated_at_utc": "2026-05-15T22:01:10Z",
+  "source_health": {
+    "polymarket": {
+      "status": "ok",
+      "row_count": 22,
+      "ok_count": 22,
+      "empty_count": 0,
+      "error_count": 0
+    },
+    "google_trends": {
+      "status": "partial",
+      "row_count": 14,
+      "ok_count": 8,
+      "empty_count": 0,
+      "error_count": 8
+    },
+    "wikipedia_pageviews": {
+      "status": "ok",
+      "row_count": 12,
+      "ok_count": 12,
+      "empty_count": 0,
+      "error_count": 0
+    }
+  },
+  "summary": {
+    "top_polymarket_questions": [
+      {
+        "question": "US x Iran permanent peace deal by May 31, 2026?",
+        "volume_24h": 937076.0040979998,
+        "yes_price": 0.115,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will the next diplomatic US-Iran meeting be in Iraq?",
+        "volume_24h": 717114.3499999996,
+        "yes_price": 0.003,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will Donald Trump win the Nobel Peace Prize in 2026?",
+        "volume_24h": 653558.671271,
+        "yes_price": 0.105,
+        "market_type": "binary"
+      }
+    ],
+    "top_filtered_noise_candidates": [
+      {
+        "question": "Will Bitcoin hit $150k by June 30, 2026?",
+        "volume_24h": 5821652.894196,
+        "yes_price": 0.0135,
+        "market_type": "binary",
+        "reason": "low_public_impact_or_unclear_relevance"
+      },
+      {
+        "question": "Will Liverpool FC win on 2026-05-17?",
+        "volume_24h": 4892801.586843984,
+        "yes_price": 0.0005,
+        "market_type": "binary",
+        "reason": "sports_or_match_noise"
+      },
+      {
+        "question": "Xi meets with Iranian officials by May 15?",
+        "volume_24h": 4446437.762641001,
+        "yes_price": 0.0005,
+        "market_type": "binary",
+        "reason": "expired"
+      }
+    ],
+    "top_google_trends_keywords": [
+      {
+        "keyword": "gold price",
+        "score_mean_24h_anchor_normalized": 2001.0,
+        "score_last_anchor_normalized": 750.0
+      },
+      {
+        "keyword": "interest rate",
+        "score_mean_24h_anchor_normalized": 465.53,
+        "score_last_anchor_normalized": 300.0
+      },
+      {
+        "keyword": "inflation",
+        "score_mean_24h_anchor_normalized": 438.15,
+        "score_last_anchor_normalized": 333.33
+      },
+      {
+        "keyword": "recession",
+        "score_mean_24h_anchor_normalized": 74.95,
+        "score_last_anchor_normalized": 50.0
+      },
+      {
+        "keyword": "China economy",
+        "score_mean_24h_anchor_normalized": 26.99,
+        "score_last_anchor_normalized": 16.67
+      }
+    ],
+    "top_wikipedia_pages": [
+      {
+        "page": "Donald_Trump",
+        "views": 56538
+      },
+      {
+        "page": "Keir_Starmer",
+        "views": 45979
+      },
+      {
+        "page": "Kevin_Warsh",
+        "views": 40225
+      },
+      {
+        "page": "Strait_of_Hormuz",
+        "views": 8119
+      },
+      {
+        "page": "NATO",
+        "views": 7178
+      }
+    ],
+    "recurring_entities_across_sources": [
+      "AI",
+      "China",
+      "Iran",
+      "NATO",
+      "Trump"
+    ],
+    "signal_strength_by_source": {
+      "polymarket": "strong",
+      "google_trends": "strong",
+      "wikipedia_pageviews": "strong"
+    },
+    "narrative_hints": [
+      "Trump-related political / tariff attention is present.",
+      "Geopolitical / security attention is present.",
+      "AI / regulation / chip attention is present.",
+      "China / US-China attention is present.",
+      "Iran-related geopolitical attention is present."
+    ],
+    "momentum_hints": [
+      "Google Trends risers: inflation (+8.96), chip export (+0.32), China economy (-1.24)",
+      "Wikipedia risers: Donald_Trump (+5004), NATO (+1246), Strait_of_Hormuz (+489)",
+      "Polymarket volume risers: US x Iran permanent peace deal by May 31, 2026? (+228764.2634), Will the Fed decrease interest rates by 50+ bps after the June 2026 meeting? (+87503.0752), Will the Iranian regime fall by May 31? (+9336.6946)"
+    ],
+    "prompt_ready_notes": [
+      "Use recurring_entities_across_sources to identify themes confirmed by multiple datasets.",
+      "Treat Google Trends anchor-normalized values as rough cross-chunk calibration, not exact absolute ranking.",
+      "Prefer entities that appear across at least 2 sources when writing the final sentiment brief.",
+      "Use delta_vs_previous_day to identify rising vs cooling attention.",
+      "If source health is partial or weak, explicitly say evidence is limited.",
+      "Use top_filtered_noise_candidates only for optional appendix / noise radar, not for the core macro radar."
+    ]
+  },
+  "top_signals": {
+    "polymarket": [
+      {
+        "question": "US x Iran permanent peace deal by May 31, 2026?",
+        "volume_24h": 937076.0040979998,
+        "yes_price": 0.115,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will the next diplomatic US-Iran meeting be in Iraq?",
+        "volume_24h": 717114.3499999996,
+        "yes_price": 0.003,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will Donald Trump win the Nobel Peace Prize in 2026?",
+        "volume_24h": 653558.671271,
+        "yes_price": 0.105,
+        "market_type": "binary"
+      },
+      {
+        "question": "Trump renames Strait of Hormuz to \"Strait of Trump\" by May 31?",
+        "volume_24h": 587274.5805749996,
+        "yes_price": 0.0145,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will Ukraine recapture Crimean territory by June 30, 2026?",
+        "volume_24h": 580159.41909,
+        "yes_price": 0.013,
+        "market_type": "binary"
+      }
+    ],
+    "google_trends": [
+      {
+        "keyword": "gold price",
+        "score_mean_24h_anchor_normalized": 2001.0,
+        "score_last_anchor_normalized": 750.0
+      },
+      {
+        "keyword": "interest rate",
+        "score_mean_24h_anchor_normalized": 465.53,
+        "score_last_anchor_normalized": 300.0
+      },
+      {
+        "keyword": "inflation",
+        "score_mean_24h_anchor_normalized": 438.15,
+        "score_last_anchor_normalized": 333.33
+      },
+      {
+        "keyword": "recession",
+        "score_mean_24h_anchor_normalized": 74.95,
+        "score_last_anchor_normalized": 50.0
+      },
+      {
+        "keyword": "China economy",
+        "score_mean_24h_anchor_normalized": 26.99,
+        "score_last_anchor_normalized": 16.67
+      }
+    ],
+    "wikipedia_pageviews": [
+      {
+        "page": "Donald_Trump",
+        "views": 56538
+      },
+      {
+        "page": "Keir_Starmer",
+        "views": 45979
+      },
+      {
+        "page": "Kevin_Warsh",
+        "views": 40225
+      },
+      {
+        "page": "Strait_of_Hormuz",
+        "views": 8119
+      },
+      {
+        "page": "NATO",
+        "views": 7178
+      }
+    ]
+  },
+  "delta_summary": {
+    "notes": [
+      "Comparison is against the previously committed output file in the repo.",
+      "If the workflow is re-run on the same UTC date, comparison_type may be same_day_rerun instead of true previous-day.",
+      "Use rise/fall signals as relative momentum indicators, not as causal proof."
+    ]
+  },
+  "delta_top_signals": {
+    "polymarket": {
+      "top_volume_risers": [
+        {
+          "question": "US x Iran permanent peace deal by May 31, 2026?",
+          "absolute_change": 228764.2634,
+          "pct_change": 32.3
+        },
+        {
+          "question": "Will the Fed decrease interest rates by 50+ bps after the June 2026 meeting?",
+          "absolute_change": 87503.0752,
+          "pct_change": 24.04
+        },
+        {
+          "question": "Will the Iranian regime fall by May 31?",
+          "absolute_change": 9336.6946,
+          "pct_change": 2.33
+        },
+        {
+          "question": "Will China invade Taiwan by end of 2026?",
+          "absolute_change": 0.0,
+          "pct_change": 0.0
+        },
+        {
+          "question": "Starmer out by June 30, 2026?",
+          "absolute_change": -24599.1804,
+          "pct_change": -9.5
+        }
+      ],
+      "top_volume_fallers": [
+        {
+          "question": "Will Eduardo Leite win the 2026 Brazilian presidential election?",
+          "absolute_change": -1090434.3359,
+          "pct_change": -69.04
+        },
+        {
+          "question": "Starmer out by May 15, 2026?",
+          "absolute_change": -482721.1064,
+          "pct_change": -60.58
+        },
+        {
+          "question": "Hantavirus pandemic in 2026?",
+          "absolute_change": -319101.2684,
+          "pct_change": -43.55
+        },
+        {
+          "question": "US obtains Iranian enriched uranium by May 31?",
+          "absolute_change": -272726.949,
+          "pct_change": -49.48
+        },
+        {
+          "question": "Strait of Hormuz traffic returns to normal by end of June?",
+          "absolute_change": -114611.9095,
+          "pct_change": -21.21
+        }
+      ],
+      "new_markets_vs_previous": 10
+    },
+    "google_trends": {
+      "top_risers": [
+        {
+          "keyword": "inflation",
+          "absolute_change": 8.96,
+          "pct_change": 2.09
+        },
+        {
+          "keyword": "chip export",
+          "absolute_change": 0.32,
+          "pct_change": null
+        },
+        {
+          "keyword": "China economy",
+          "absolute_change": -1.24,
+          "pct_change": -4.39
+        },
+        {
+          "keyword": "AI regulation",
+          "absolute_change": -2.74,
+          "pct_change": -9.93
+        }
+      ],
+      "top_fallers": [
+        {
+          "keyword": "AI regulation",
+          "absolute_change": -2.74,
+          "pct_change": -9.93
+        },
+        {
+          "keyword": "China economy",
+          "absolute_change": -1.24,
+          "pct_change": -4.39
+        },
+        {
+          "keyword": "chip export",
+          "absolute_change": 0.32,
+          "pct_change": null
+        },
+        {
+          "keyword": "inflation",
+          "absolute_change": 8.96,
+          "pct_change": 2.09
+        }
+      ],
+      "new_keywords_vs_previous": 0
+    },
+    "wikipedia_pageviews": {
+      "top_risers": [
+        {
+          "page": "Donald_Trump",
+          "absolute_change": 5004,
+          "pct_change": 9.71
+        },
+        {
+          "page": "NATO",
+          "absolute_change": 1246,
+          "pct_change": 21.0
+        },
+        {
+          "page": "Strait_of_Hormuz",
+          "absolute_change": 489,
+          "pct_change": 6.41
+        },
+        {
+          "page": "China%E2%80%93United_States_trade_war",
+          "absolute_change": 447,
+          "pct_change": 29.23
+        },
+        {
+          "page": "OPEC",
+          "absolute_change": 337,
+          "pct_change": 11.35
+        }
+      ],
+      "top_fallers": [
+        {
+          "page": "Kevin_Warsh",
+          "absolute_change": -10788,
+          "pct_change": -21.15
+        },
+        {
+          "page": "Keir_Starmer",
+          "absolute_change": -3261,
+          "pct_change": -6.62
+        },
+        {
+          "page": "Hantavirus",
+          "absolute_change": -1522,
+          "pct_change": -36.7
+        },
+        {
+          "page": "Federal_Reserve",
+          "absolute_change": -125,
+          "pct_change": -3.97
+        },
+        {
+          "page": "Artificial_intelligence_regulation",
+          "absolute_change": 0,
+          "pct_change": 0.0
+        }
+      ],
+      "new_pages_vs_previous": 0
+    }
+  }
+}
