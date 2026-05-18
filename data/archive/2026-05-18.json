@@ -1,0 +1,310 @@
+{
+  "schema_version": "1.2.0",
+  "date_utc": "2026-05-18",
+  "generated_at_utc": "2026-05-18T22:01:19Z",
+  "source_health": {
+    "polymarket": {
+      "status": "ok",
+      "row_count": 27,
+      "ok_count": 27,
+      "empty_count": 0,
+      "error_count": 0
+    },
+    "google_trends": {
+      "status": "partial",
+      "row_count": 14,
+      "ok_count": 0,
+      "empty_count": 0,
+      "error_count": 18
+    },
+    "wikipedia_pageviews": {
+      "status": "ok",
+      "row_count": 12,
+      "ok_count": 12,
+      "empty_count": 0,
+      "error_count": 0
+    }
+  },
+  "summary": {
+    "top_polymarket_questions": [
+      {
+        "question": "Will Eric Trump win the 2028 US Presidential Election?",
+        "volume_24h": 2196666.845763,
+        "yes_price": 0.0065,
+        "market_type": "binary"
+      },
+      {
+        "question": "US x Iran permanent peace deal by May 31, 2026?",
+        "volume_24h": 1773787.0784710003,
+        "yes_price": 0.165,
+        "market_type": "binary"
+      },
+      {
+        "question": "Trump declassifies new UFO files by May 15?",
+        "volume_24h": 1246504.61,
+        "yes_price": 0.9995,
+        "market_type": "binary"
+      }
+    ],
+    "top_filtered_noise_candidates": [
+      {
+        "question": "Will Bitcoin hit $150k by June 30, 2026?",
+        "volume_24h": 5821652.894196,
+        "yes_price": 0.0135,
+        "market_type": "binary",
+        "reason": "low_public_impact_or_unclear_relevance"
+      },
+      {
+        "question": "Spread: Arsenal FC (-2.5)",
+        "volume_24h": 4211948.941324995,
+        "yes_price": null,
+        "market_type": "non_binary",
+        "reason": "expired"
+      },
+      {
+        "question": "Will Arsenal FC win on 2026-05-18?",
+        "volume_24h": 2439080.250340006,
+        "yes_price": 0.9995,
+        "market_type": "binary",
+        "reason": "expired"
+      }
+    ],
+    "top_google_trends_keywords": [],
+    "top_wikipedia_pages": [
+      {
+        "page": "Donald_Trump",
+        "views": 44164
+      },
+      {
+        "page": "Keir_Starmer",
+        "views": 28852
+      },
+      {
+        "page": "Hantavirus",
+        "views": 26917
+      },
+      {
+        "page": "Kevin_Warsh",
+        "views": 8252
+      },
+      {
+        "page": "Strait_of_Hormuz",
+        "views": 6955
+      }
+    ],
+    "recurring_entities_across_sources": [
+      "AI",
+      "Hantavirus",
+      "Iran",
+      "Trump"
+    ],
+    "signal_strength_by_source": {
+      "polymarket": "strong",
+      "google_trends": "weak",
+      "wikipedia_pageviews": "strong"
+    },
+    "narrative_hints": [
+      "Trump-related political / tariff attention is present.",
+      "AI / regulation / chip attention is present.",
+      "Iran-related geopolitical attention is present.",
+      "Pandemic / bio-risk attention is present."
+    ],
+    "momentum_hints": [
+      "Wikipedia risers: Keir_Starmer (+5456), Strait_of_Hormuz (+395), Russo-Ukrainian_War (+311)",
+      "Polymarket volume risers: US x Iran permanent peace deal by May 31, 2026? (+1253841.0136), US obtains Iranian enriched uranium by May 31? (+467828.9519), Trump declassifies new UFO files by May 15? (+374483.631)"
+    ],
+    "prompt_ready_notes": [
+      "Use recurring_entities_across_sources to identify themes confirmed by multiple datasets.",
+      "Treat Google Trends anchor-normalized values as rough cross-chunk calibration, not exact absolute ranking.",
+      "Prefer entities that appear across at least 2 sources when writing the final sentiment brief.",
+      "Use delta_vs_previous_day to identify rising vs cooling attention.",
+      "If source health is partial or weak, explicitly say evidence is limited.",
+      "Use top_filtered_noise_candidates only for optional appendix / noise radar, not for the core macro radar."
+    ]
+  },
+  "top_signals": {
+    "polymarket": [
+      {
+        "question": "Will Eric Trump win the 2028 US Presidential Election?",
+        "volume_24h": 2196666.845763,
+        "yes_price": 0.0065,
+        "market_type": "binary"
+      },
+      {
+        "question": "US x Iran permanent peace deal by May 31, 2026?",
+        "volume_24h": 1773787.0784710003,
+        "yes_price": 0.165,
+        "market_type": "binary"
+      },
+      {
+        "question": "Trump declassifies new UFO files by May 15?",
+        "volume_24h": 1246504.61,
+        "yes_price": 0.9995,
+        "market_type": "binary"
+      },
+      {
+        "question": "US obtains Iranian enriched uranium by May 31?",
+        "volume_24h": 848736.7609329997,
+        "yes_price": 0.045,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will Eric Trump win the 2028 Republican presidential nomination?",
+        "volume_24h": 812479.8608139999,
+        "yes_price": 0.0075,
+        "market_type": "binary"
+      }
+    ],
+    "google_trends": [],
+    "wikipedia_pageviews": [
+      {
+        "page": "Donald_Trump",
+        "views": 44164
+      },
+      {
+        "page": "Keir_Starmer",
+        "views": 28852
+      },
+      {
+        "page": "Hantavirus",
+        "views": 26917
+      },
+      {
+        "page": "Kevin_Warsh",
+        "views": 8252
+      },
+      {
+        "page": "Strait_of_Hormuz",
+        "views": 6955
+      }
+    ]
+  },
+  "delta_summary": {
+    "notes": [
+      "Comparison is against the previously committed output file in the repo.",
+      "If the workflow is re-run on the same UTC date, comparison_type may be same_day_rerun instead of true previous-day.",
+      "Use rise/fall signals as relative momentum indicators, not as causal proof."
+    ]
+  },
+  "delta_top_signals": {
+    "polymarket": {
+      "top_volume_risers": [
+        {
+          "question": "US x Iran permanent peace deal by May 31, 2026?",
+          "absolute_change": 1253841.0136,
+          "pct_change": 241.15
+        },
+        {
+          "question": "US obtains Iranian enriched uranium by May 31?",
+          "absolute_change": 467828.9519,
+          "pct_change": 122.82
+        },
+        {
+          "question": "Trump declassifies new UFO files by May 15?",
+          "absolute_change": 374483.631,
+          "pct_change": 42.94
+        },
+        {
+          "question": "Iran closes its airspace by May 24?",
+          "absolute_change": 212626.9807,
+          "pct_change": 78.2
+        },
+        {
+          "question": "Will the Iranian regime fall by May 31?",
+          "absolute_change": 185477.8463,
+          "pct_change": 30.69
+        }
+      ],
+      "top_volume_fallers": [
+        {
+          "question": "Strait of Hormuz traffic returns to normal by end of May?",
+          "absolute_change": -122570.3252,
+          "pct_change": -15.26
+        },
+        {
+          "question": "Starmer out by May 19, 2026?",
+          "absolute_change": -4959.9968,
+          "pct_change": -1.4
+        },
+        {
+          "question": "Will China invade Taiwan by end of 2026?",
+          "absolute_change": 0.0,
+          "pct_change": 0.0
+        },
+        {
+          "question": "Will the Iranian regime fall by May 31?",
+          "absolute_change": 185477.8463,
+          "pct_change": 30.69
+        },
+        {
+          "question": "Iran closes its airspace by May 24?",
+          "absolute_change": 212626.9807,
+          "pct_change": 78.2
+        }
+      ],
+      "new_markets_vs_previous": 19
+    },
+    "google_trends": {
+      "top_risers": [],
+      "top_fallers": [],
+      "new_keywords_vs_previous": 0
+    },
+    "wikipedia_pageviews": {
+      "top_risers": [
+        {
+          "page": "Keir_Starmer",
+          "absolute_change": 5456,
+          "pct_change": 23.32
+        },
+        {
+          "page": "Strait_of_Hormuz",
+          "absolute_change": 395,
+          "pct_change": 6.02
+        },
+        {
+          "page": "Russo-Ukrainian_War",
+          "absolute_change": 311,
+          "pct_change": 19.63
+        },
+        {
+          "page": "NATO",
+          "absolute_change": 1,
+          "pct_change": 0.02
+        },
+        {
+          "page": "Artificial_intelligence_regulation",
+          "absolute_change": -13,
+          "pct_change": -59.09
+        }
+      ],
+      "top_fallers": [
+        {
+          "page": "Donald_Trump",
+          "absolute_change": -4744,
+          "pct_change": -9.7
+        },
+        {
+          "page": "Kevin_Warsh",
+          "absolute_change": -3312,
+          "pct_change": -28.64
+        },
+        {
+          "page": "OPEC",
+          "absolute_change": -298,
+          "pct_change": -10.7
+        },
+        {
+          "page": "Federal_Reserve",
+          "absolute_change": -270,
+          "pct_change": -12.55
+        },
+        {
+          "page": "China%E2%80%93United_States_trade_war",
+          "absolute_change": -137,
+          "pct_change": -10.28
+        }
+      ],
+      "new_pages_vs_previous": 1
+    }
+  }
+}
