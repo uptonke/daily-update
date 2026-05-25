@@ -1,0 +1,364 @@
+{
+  "schema_version": "1.2.0",
+  "date_utc": "2026-05-25",
+  "generated_at_utc": "2026-05-25T22:01:03Z",
+  "source_health": {
+    "polymarket": {
+      "status": "ok",
+      "row_count": 30,
+      "ok_count": 30,
+      "empty_count": 0,
+      "error_count": 0
+    },
+    "google_trends": {
+      "status": "partial",
+      "row_count": 14,
+      "ok_count": 10,
+      "empty_count": 0,
+      "error_count": 5
+    },
+    "wikipedia_pageviews": {
+      "status": "ok",
+      "row_count": 10,
+      "ok_count": 10,
+      "empty_count": 0,
+      "error_count": 0
+    }
+  },
+  "summary": {
+    "top_polymarket_questions": [
+      {
+        "question": "US x Iran permanent peace deal by May 26, 2026?",
+        "volume_24h": 5248979.631661996,
+        "yes_price": 0.105,
+        "market_type": "binary"
+      },
+      {
+        "question": "US x Iran permanent peace deal by May 31, 2026?",
+        "volume_24h": 3229519.103807995,
+        "yes_price": 0.295,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will the Iran ceasefire continue through May 24?",
+        "volume_24h": 2365894.471026997,
+        "yes_price": 0.9835,
+        "market_type": "binary"
+      }
+    ],
+    "top_filtered_noise_candidates": [
+      {
+        "question": "Will Bitcoin hit $150k by June 30, 2026?",
+        "volume_24h": 5821652.894196,
+        "yes_price": 0.0135,
+        "market_type": "binary",
+        "reason": "low_public_impact_or_unclear_relevance"
+      },
+      {
+        "question": "Knicks vs. Cavaliers",
+        "volume_24h": 2796397.948620978,
+        "yes_price": null,
+        "market_type": "non_binary",
+        "reason": "sports_or_match_noise"
+      },
+      {
+        "question": "Will Congo DR win the 2026 FIFA World Cup?",
+        "volume_24h": 2392073.17,
+        "yes_price": 0.0005,
+        "market_type": "binary",
+        "reason": "sports_or_match_noise"
+      }
+    ],
+    "top_google_trends_keywords": [
+      {
+        "keyword": "gold price",
+        "score_mean_24h_anchor_normalized": 2124.07,
+        "score_last_anchor_normalized": 950.0
+      },
+      {
+        "keyword": "interest rate",
+        "score_mean_24h_anchor_normalized": 550.0,
+        "score_last_anchor_normalized": 300.0
+      },
+      {
+        "keyword": "inflation",
+        "score_mean_24h_anchor_normalized": 422.6,
+        "score_last_anchor_normalized": 395.45
+      },
+      {
+        "keyword": "China US",
+        "score_mean_24h_anchor_normalized": 134.93,
+        "score_last_anchor_normalized": 126.67
+      },
+      {
+        "keyword": "recession",
+        "score_mean_24h_anchor_normalized": 86.51,
+        "score_last_anchor_normalized": 75.0
+      }
+    ],
+    "top_wikipedia_pages": [
+      {
+        "page": "Donald_Trump",
+        "views": 51727
+      },
+      {
+        "page": "Kevin_Warsh",
+        "views": 10498
+      },
+      {
+        "page": "Strait_of_Hormuz",
+        "views": 7658
+      },
+      {
+        "page": "NATO",
+        "views": 4402
+      },
+      {
+        "page": "Federal_Reserve",
+        "views": 2015
+      }
+    ],
+    "recurring_entities_across_sources": [
+      "AI",
+      "China",
+      "Iran",
+      "NATO",
+      "Trump"
+    ],
+    "signal_strength_by_source": {
+      "polymarket": "strong",
+      "google_trends": "strong",
+      "wikipedia_pageviews": "strong"
+    },
+    "narrative_hints": [
+      "Trump-related political / tariff attention is present.",
+      "Geopolitical / security attention is present.",
+      "AI / regulation / chip attention is present.",
+      "China / US-China attention is present.",
+      "Iran-related geopolitical attention is present."
+    ],
+    "momentum_hints": [
+      "Google Trends risers: gold price (+620.57), interest rate (+113.45), inflation (+50.05)",
+      "Polymarket volume risers: Will the Iran ceasefire continue through May 24? (+1157751.6801), US announces new Iran agreement/ceasefire extension by May 25? (+456171.3442), US announces new Iran agreement/ceasefire extension by May 26? (+219213.0649)"
+    ],
+    "prompt_ready_notes": [
+      "Use recurring_entities_across_sources to identify themes confirmed by multiple datasets.",
+      "Treat Google Trends anchor-normalized values as rough cross-chunk calibration, not exact absolute ranking.",
+      "Prefer entities that appear across at least 2 sources when writing the final sentiment brief.",
+      "Use delta_vs_previous_day to identify rising vs cooling attention.",
+      "If source health is partial or weak, explicitly say evidence is limited.",
+      "Use top_filtered_noise_candidates only for optional appendix / noise radar, not for the core macro radar."
+    ]
+  },
+  "top_signals": {
+    "polymarket": [
+      {
+        "question": "US x Iran permanent peace deal by May 26, 2026?",
+        "volume_24h": 5248979.631661996,
+        "yes_price": 0.105,
+        "market_type": "binary"
+      },
+      {
+        "question": "US x Iran permanent peace deal by May 31, 2026?",
+        "volume_24h": 3229519.103807995,
+        "yes_price": 0.295,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will the Iran ceasefire continue through May 24?",
+        "volume_24h": 2365894.471026997,
+        "yes_price": 0.9835,
+        "market_type": "binary"
+      },
+      {
+        "question": "Strait of Hormuz traffic returns to normal by end of May?",
+        "volume_24h": 1037704.66848,
+        "yes_price": 0.0255,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will the Iranian regime fall by May 31?",
+        "volume_24h": 844529.0641100003,
+        "yes_price": 0.0035,
+        "market_type": "binary"
+      }
+    ],
+    "google_trends": [
+      {
+        "keyword": "gold price",
+        "score_mean_24h_anchor_normalized": 2124.07,
+        "score_last_anchor_normalized": 950.0
+      },
+      {
+        "keyword": "interest rate",
+        "score_mean_24h_anchor_normalized": 550.0,
+        "score_last_anchor_normalized": 300.0
+      },
+      {
+        "keyword": "inflation",
+        "score_mean_24h_anchor_normalized": 422.6,
+        "score_last_anchor_normalized": 395.45
+      },
+      {
+        "keyword": "China US",
+        "score_mean_24h_anchor_normalized": 134.93,
+        "score_last_anchor_normalized": 126.67
+      },
+      {
+        "keyword": "recession",
+        "score_mean_24h_anchor_normalized": 86.51,
+        "score_last_anchor_normalized": 75.0
+      }
+    ],
+    "wikipedia_pageviews": [
+      {
+        "page": "Donald_Trump",
+        "views": 51727
+      },
+      {
+        "page": "Kevin_Warsh",
+        "views": 10498
+      },
+      {
+        "page": "Strait_of_Hormuz",
+        "views": 7658
+      },
+      {
+        "page": "NATO",
+        "views": 4402
+      },
+      {
+        "page": "Federal_Reserve",
+        "views": 2015
+      }
+    ]
+  },
+  "delta_summary": {
+    "notes": [
+      "Comparison is against the previously committed output file in the repo.",
+      "If the workflow is re-run on the same UTC date, comparison_type may be same_day_rerun instead of true previous-day.",
+      "Use rise/fall signals as relative momentum indicators, not as causal proof."
+    ]
+  },
+  "delta_top_signals": {
+    "polymarket": {
+      "top_volume_risers": [
+        {
+          "question": "Will the Iran ceasefire continue through May 24?",
+          "absolute_change": 1157751.6801,
+          "pct_change": 95.83
+        },
+        {
+          "question": "US announces new Iran agreement/ceasefire extension by May 25?",
+          "absolute_change": 456171.3442,
+          "pct_change": 132.92
+        },
+        {
+          "question": "US announces new Iran agreement/ceasefire extension by May 26?",
+          "absolute_change": 219213.0649,
+          "pct_change": 72.15
+        },
+        {
+          "question": "US x Iran permanent peace deal by June 7, 2026?",
+          "absolute_change": 51113.702,
+          "pct_change": 17.4
+        },
+        {
+          "question": "Iran closes its airspace by May 31?",
+          "absolute_change": 9687.356,
+          "pct_change": 3.1
+        }
+      ],
+      "top_volume_fallers": [
+        {
+          "question": "US x Iran permanent peace deal by May 31, 2026?",
+          "absolute_change": -1969669.7995,
+          "pct_change": -37.88
+        },
+        {
+          "question": "US x Iran permanent peace deal by May 26, 2026?",
+          "absolute_change": -1930298.3855,
+          "pct_change": -26.89
+        },
+        {
+          "question": "Strait of Hormuz traffic returns to normal by end of May?",
+          "absolute_change": -1320673.3792,
+          "pct_change": -56.0
+        },
+        {
+          "question": "Will the Iranian regime fall by May 31?",
+          "absolute_change": -542548.1282,
+          "pct_change": -39.11
+        },
+        {
+          "question": "US x Iran permanent peace deal by June 30, 2026?",
+          "absolute_change": -484566.7746,
+          "pct_change": -58.22
+        }
+      ],
+      "new_markets_vs_previous": 10
+    },
+    "google_trends": {
+      "top_risers": [
+        {
+          "keyword": "gold price",
+          "absolute_change": 620.57,
+          "pct_change": 41.28
+        },
+        {
+          "keyword": "interest rate",
+          "absolute_change": 113.45,
+          "pct_change": 25.99
+        },
+        {
+          "keyword": "inflation",
+          "absolute_change": 50.05,
+          "pct_change": 13.43
+        },
+        {
+          "keyword": "recession",
+          "absolute_change": 19.08,
+          "pct_change": 28.3
+        },
+        {
+          "keyword": "OPEC",
+          "absolute_change": 9.0,
+          "pct_change": 40.82
+        }
+      ],
+      "top_fallers": [
+        {
+          "keyword": "China economy",
+          "absolute_change": -0.41,
+          "pct_change": -1.6
+        },
+        {
+          "keyword": "Trump tariffs",
+          "absolute_change": -0.17,
+          "pct_change": -1.11
+        },
+        {
+          "keyword": "chip export",
+          "absolute_change": 0.17,
+          "pct_change": 242.86
+        },
+        {
+          "keyword": "China US",
+          "absolute_change": 1.94,
+          "pct_change": 1.46
+        },
+        {
+          "keyword": "AI regulation",
+          "absolute_change": 2.48,
+          "pct_change": 7.46
+        }
+      ],
+      "new_keywords_vs_previous": 0
+    },
+    "wikipedia_pageviews": {
+      "top_risers": [],
+      "top_fallers": [],
+      "new_pages_vs_previous": 0
+    }
+  }
+}
