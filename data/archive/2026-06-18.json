@@ -1,0 +1,417 @@
+{
+  "schema_version": "1.2.0",
+  "date_utc": "2026-06-18",
+  "generated_at_utc": "2026-06-18T22:01:01Z",
+  "source_health": {
+    "polymarket": {
+      "status": "ok",
+      "row_count": 22,
+      "ok_count": 22,
+      "empty_count": 0,
+      "error_count": 0
+    },
+    "google_trends": {
+      "status": "partial",
+      "row_count": 14,
+      "ok_count": 10,
+      "empty_count": 0,
+      "error_count": 5
+    },
+    "wikipedia_pageviews": {
+      "status": "ok",
+      "row_count": 10,
+      "ok_count": 10,
+      "empty_count": 0,
+      "error_count": 0
+    }
+  },
+  "summary": {
+    "top_polymarket_questions": [
+      {
+        "question": "Strait of Hormuz traffic returns to normal by end of June?",
+        "volume_24h": 1197055.4671210023,
+        "yes_price": 0.15,
+        "market_type": "binary"
+      },
+      {
+        "question": "Iran agrees to end enrichment of uranium by June 30?",
+        "volume_24h": 1188960.5057860012,
+        "yes_price": 0.655,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will Trump agree to withdraw troops from the Iranian region by June 30?",
+        "volume_24h": 1173191.8672219994,
+        "yes_price": 0.9995,
+        "market_type": "binary"
+      }
+    ],
+    "top_filtered_noise_candidates": [
+      {
+        "question": "Will Canada win on 2026-06-18?",
+        "volume_24h": 10574134.949913926,
+        "yes_price": 0.785,
+        "market_type": "binary",
+        "reason": "expired"
+      },
+      {
+        "question": "Spread: Canada (-1.5)",
+        "volume_24h": 6266394.183923011,
+        "yes_price": null,
+        "market_type": "non_binary",
+        "reason": "expired"
+      },
+      {
+        "question": "Will Switzerland win the 2026 FIFA World Cup?",
+        "volume_24h": 4874669.717502,
+        "yes_price": 0.0095,
+        "market_type": "binary",
+        "reason": "sports_or_match_noise"
+      }
+    ],
+    "top_google_trends_keywords": [
+      {
+        "keyword": "gold price",
+        "score_mean_24h_anchor_normalized": 1028.68,
+        "score_last_anchor_normalized": 800.0
+      },
+      {
+        "keyword": "interest rate",
+        "score_mean_24h_anchor_normalized": 296.36,
+        "score_last_anchor_normalized": 314.29
+      },
+      {
+        "keyword": "inflation",
+        "score_mean_24h_anchor_normalized": 219.68,
+        "score_last_anchor_normalized": 322.58
+      },
+      {
+        "keyword": "China US",
+        "score_mean_24h_anchor_normalized": 56.83,
+        "score_last_anchor_normalized": 127.12
+      },
+      {
+        "keyword": "recession",
+        "score_mean_24h_anchor_normalized": 39.5,
+        "score_last_anchor_normalized": 57.14
+      }
+    ],
+    "top_wikipedia_pages": [
+      {
+        "page": "Donald_Trump",
+        "views": 52857
+      },
+      {
+        "page": "Kevin_Warsh",
+        "views": 40800
+      },
+      {
+        "page": "Strait_of_Hormuz",
+        "views": 6565
+      },
+      {
+        "page": "NATO",
+        "views": 4066
+      },
+      {
+        "page": "Federal_Reserve",
+        "views": 3174
+      }
+    ],
+    "recurring_entities_across_sources": [
+      "AI",
+      "China",
+      "Iran",
+      "NATO",
+      "Trump"
+    ],
+    "signal_strength_by_source": {
+      "polymarket": "strong",
+      "google_trends": "strong",
+      "wikipedia_pageviews": "strong"
+    },
+    "narrative_hints": [
+      "Trump-related political / tariff attention is present.",
+      "Geopolitical / security attention is present.",
+      "AI / regulation / chip attention is present.",
+      "China / US-China attention is present.",
+      "Iran-related geopolitical attention is present."
+    ],
+    "momentum_hints": [
+      "Google Trends risers: gold price (+230.4), interest rate (+38.38), inflation (+13.56)",
+      "Wikipedia risers: Kevin_Warsh (+33819), Federal_Reserve (+1477), OPEC (+1442)",
+      "Polymarket volume risers: Will Trump agree to withdraw troops from the Iranian region by June 30? (+696031.0764), US x Iran diplomatic meeting by June 19, 2026? (+595943.9878), Will Rebecca Shepherd win the 2026 Makerfield by-election? (+555362.4871)"
+    ],
+    "prompt_ready_notes": [
+      "Use recurring_entities_across_sources to identify themes confirmed by multiple datasets.",
+      "Treat Google Trends anchor-normalized values as rough cross-chunk calibration, not exact absolute ranking.",
+      "Prefer entities that appear across at least 2 sources when writing the final sentiment brief.",
+      "Use delta_vs_previous_day to identify rising vs cooling attention.",
+      "If source health is partial or weak, explicitly say evidence is limited.",
+      "Use top_filtered_noise_candidates only for optional appendix / noise radar, not for the core macro radar."
+    ]
+  },
+  "top_signals": {
+    "polymarket": [
+      {
+        "question": "Strait of Hormuz traffic returns to normal by end of June?",
+        "volume_24h": 1197055.4671210023,
+        "yes_price": 0.15,
+        "market_type": "binary"
+      },
+      {
+        "question": "Iran agrees to end enrichment of uranium by June 30?",
+        "volume_24h": 1188960.5057860012,
+        "yes_price": 0.655,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will Trump agree to withdraw troops from the Iranian region by June 30?",
+        "volume_24h": 1173191.8672219994,
+        "yes_price": 0.9995,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will Rebecca Shepherd win the 2026 Makerfield by-election?",
+        "volume_24h": 1031482.8052359988,
+        "yes_price": 0.0045,
+        "market_type": "binary"
+      },
+      {
+        "question": "US x Iran diplomatic meeting by June 19, 2026?",
+        "volume_24h": 927060.2558410004,
+        "yes_price": 0.459,
+        "market_type": "binary"
+      }
+    ],
+    "google_trends": [
+      {
+        "keyword": "gold price",
+        "score_mean_24h_anchor_normalized": 1028.68,
+        "score_last_anchor_normalized": 800.0
+      },
+      {
+        "keyword": "interest rate",
+        "score_mean_24h_anchor_normalized": 296.36,
+        "score_last_anchor_normalized": 314.29
+      },
+      {
+        "keyword": "inflation",
+        "score_mean_24h_anchor_normalized": 219.68,
+        "score_last_anchor_normalized": 322.58
+      },
+      {
+        "keyword": "China US",
+        "score_mean_24h_anchor_normalized": 56.83,
+        "score_last_anchor_normalized": 127.12
+      },
+      {
+        "keyword": "recession",
+        "score_mean_24h_anchor_normalized": 39.5,
+        "score_last_anchor_normalized": 57.14
+      }
+    ],
+    "wikipedia_pageviews": [
+      {
+        "page": "Donald_Trump",
+        "views": 52857
+      },
+      {
+        "page": "Kevin_Warsh",
+        "views": 40800
+      },
+      {
+        "page": "Strait_of_Hormuz",
+        "views": 6565
+      },
+      {
+        "page": "NATO",
+        "views": 4066
+      },
+      {
+        "page": "Federal_Reserve",
+        "views": 3174
+      }
+    ]
+  },
+  "delta_summary": {
+    "notes": [
+      "Comparison is against the previously committed output file in the repo.",
+      "If the workflow is re-run on the same UTC date, comparison_type may be same_day_rerun instead of true previous-day.",
+      "Use rise/fall signals as relative momentum indicators, not as causal proof."
+    ]
+  },
+  "delta_top_signals": {
+    "polymarket": {
+      "top_volume_risers": [
+        {
+          "question": "Will Trump agree to withdraw troops from the Iranian region by June 30?",
+          "absolute_change": 696031.0764,
+          "pct_change": 145.87
+        },
+        {
+          "question": "US x Iran diplomatic meeting by June 19, 2026?",
+          "absolute_change": 595943.9878,
+          "pct_change": 179.98
+        },
+        {
+          "question": "Will Rebecca Shepherd win the 2026 Makerfield by-election?",
+          "absolute_change": 555362.4871,
+          "pct_change": 116.64
+        },
+        {
+          "question": "Iran agrees to end enrichment of uranium by June 30?",
+          "absolute_change": 409483.9745,
+          "pct_change": 52.53
+        },
+        {
+          "question": "Strait of Hormuz traffic returns to normal by end of June?",
+          "absolute_change": 226895.2679,
+          "pct_change": 23.39
+        }
+      ],
+      "top_volume_fallers": [
+        {
+          "question": "Will the Iranian regime fall by June 30?",
+          "absolute_change": -2584865.6074,
+          "pct_change": -85.98
+        },
+        {
+          "question": "Israel x Iran permanent peace deal by June 30, 2026?",
+          "absolute_change": -630769.0965,
+          "pct_change": -61.46
+        },
+        {
+          "question": "Will Iran close its airspace by June 30?",
+          "absolute_change": -213238.3539,
+          "pct_change": -32.28
+        },
+        {
+          "question": "Will Trump agree to Iranian enrichment of uranium by June 30?",
+          "absolute_change": -74455.3107,
+          "pct_change": -24.45
+        },
+        {
+          "question": "Will there be no change in Fed interest rates after the July 2026 meeting?",
+          "absolute_change": -60783.1244,
+          "pct_change": -13.69
+        }
+      ],
+      "new_markets_vs_previous": 11
+    },
+    "google_trends": {
+      "top_risers": [
+        {
+          "keyword": "gold price",
+          "absolute_change": 230.4,
+          "pct_change": 28.86
+        },
+        {
+          "keyword": "interest rate",
+          "absolute_change": 38.38,
+          "pct_change": 14.88
+        },
+        {
+          "keyword": "inflation",
+          "absolute_change": 13.56,
+          "pct_change": 6.58
+        },
+        {
+          "keyword": "China US",
+          "absolute_change": 5.9,
+          "pct_change": 11.58
+        },
+        {
+          "keyword": "OPEC",
+          "absolute_change": 2.5,
+          "pct_change": 24.51
+        }
+      ],
+      "top_fallers": [
+        {
+          "keyword": "recession",
+          "absolute_change": -1.92,
+          "pct_change": -4.64
+        },
+        {
+          "keyword": "Trump tariffs",
+          "absolute_change": -1.02,
+          "pct_change": -10.89
+        },
+        {
+          "keyword": "chip export",
+          "absolute_change": 0.2,
+          "pct_change": 666.67
+        },
+        {
+          "keyword": "China economy",
+          "absolute_change": 1.5,
+          "pct_change": 16.63
+        },
+        {
+          "keyword": "AI regulation",
+          "absolute_change": 1.98,
+          "pct_change": 14.41
+        }
+      ],
+      "new_keywords_vs_previous": 0
+    },
+    "wikipedia_pageviews": {
+      "top_risers": [
+        {
+          "page": "Kevin_Warsh",
+          "absolute_change": 33819,
+          "pct_change": 484.44
+        },
+        {
+          "page": "Federal_Reserve",
+          "absolute_change": 1477,
+          "pct_change": 87.04
+        },
+        {
+          "page": "OPEC",
+          "absolute_change": 1442,
+          "pct_change": 101.26
+        },
+        {
+          "page": "NATO",
+          "absolute_change": 212,
+          "pct_change": 5.5
+        },
+        {
+          "page": "Semiconductor",
+          "absolute_change": 21,
+          "pct_change": 1.73
+        }
+      ],
+      "top_fallers": [
+        {
+          "page": "Donald_Trump",
+          "absolute_change": -12436,
+          "pct_change": -19.05
+        },
+        {
+          "page": "Strait_of_Hormuz",
+          "absolute_change": -2078,
+          "pct_change": -24.04
+        },
+        {
+          "page": "China%E2%80%93United_States_trade_war",
+          "absolute_change": -33,
+          "pct_change": -3.71
+        },
+        {
+          "page": "Russo-Ukrainian_War",
+          "absolute_change": -14,
+          "pct_change": -0.9
+        },
+        {
+          "page": "Artificial_intelligence_regulation",
+          "absolute_change": -1,
+          "pct_change": -11.11
+        }
+      ],
+      "new_pages_vs_previous": 0
+    }
+  }
+}
