@@ -1,0 +1,418 @@
+{
+  "schema_version": "1.2.0",
+  "date_utc": "2026-06-20",
+  "generated_at_utc": "2026-06-20T22:01:15Z",
+  "source_health": {
+    "polymarket": {
+      "status": "ok",
+      "row_count": 16,
+      "ok_count": 16,
+      "empty_count": 0,
+      "error_count": 0
+    },
+    "google_trends": {
+      "status": "partial",
+      "row_count": 14,
+      "ok_count": 6,
+      "empty_count": 0,
+      "error_count": 10
+    },
+    "wikipedia_pageviews": {
+      "status": "ok",
+      "row_count": 11,
+      "ok_count": 11,
+      "empty_count": 0,
+      "error_count": 0
+    }
+  },
+  "summary": {
+    "top_polymarket_questions": [
+      {
+        "question": "Strait of Hormuz traffic returns to normal by end of June?",
+        "volume_24h": 1693167.0494040002,
+        "yes_price": 0.065,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will Iran close its airspace by June 30?",
+        "volume_24h": 1221716.16,
+        "yes_price": 0.9995,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will Trump agree to withdraw troops from the Iranian region by June 30?",
+        "volume_24h": 1166183.14,
+        "yes_price": 0.9995,
+        "market_type": "binary"
+      }
+    ],
+    "top_filtered_noise_candidates": [
+      {
+        "question": "Will Germany win on 2026-06-20?",
+        "volume_24h": 27512457.859274603,
+        "yes_price": 0.125,
+        "market_type": "binary",
+        "reason": "expired"
+      },
+      {
+        "question": "Will Ivory Coast win the 2026 FIFA World Cup?",
+        "volume_24h": 6987268.361427019,
+        "yes_price": 0.0065,
+        "market_type": "binary",
+        "reason": "sports_or_match_noise"
+      },
+      {
+        "question": "Will USA win the 2026 FIFA World Cup?",
+        "volume_24h": 6483806.132151969,
+        "yes_price": 0.0355,
+        "market_type": "binary",
+        "reason": "sports_or_match_noise"
+      }
+    ],
+    "top_google_trends_keywords": [
+      {
+        "keyword": "inflation",
+        "score_mean_24h_anchor_normalized": 391.15,
+        "score_last_anchor_normalized": 360.0
+      },
+      {
+        "keyword": "China US",
+        "score_mean_24h_anchor_normalized": 103.57,
+        "score_last_anchor_normalized": 108.45
+      },
+      {
+        "keyword": "AI regulation",
+        "score_mean_24h_anchor_normalized": 22.79,
+        "score_last_anchor_normalized": 40.0
+      },
+      {
+        "keyword": "China economy",
+        "score_mean_24h_anchor_normalized": 18.75,
+        "score_last_anchor_normalized": 20.0
+      },
+      {
+        "keyword": "OPEC",
+        "score_mean_24h_anchor_normalized": 15.94,
+        "score_last_anchor_normalized": 22.54
+      }
+    ],
+    "top_wikipedia_pages": [
+      {
+        "page": "Donald_Trump",
+        "views": 53019
+      },
+      {
+        "page": "Keir_Starmer",
+        "views": 32577
+      },
+      {
+        "page": "Strait_of_Hormuz",
+        "views": 9112
+      },
+      {
+        "page": "Kevin_Warsh",
+        "views": 7276
+      },
+      {
+        "page": "NATO",
+        "views": 4171
+      }
+    ],
+    "recurring_entities_across_sources": [
+      "AI",
+      "China",
+      "Iran",
+      "NATO",
+      "OPEC",
+      "Trump"
+    ],
+    "signal_strength_by_source": {
+      "polymarket": "strong",
+      "google_trends": "strong",
+      "wikipedia_pageviews": "strong"
+    },
+    "narrative_hints": [
+      "Trump-related political / tariff attention is present.",
+      "Geopolitical / security attention is present.",
+      "AI / regulation / chip attention is present.",
+      "China / US-China attention is present.",
+      "Iran-related geopolitical attention is present."
+    ],
+    "momentum_hints": [
+      "Google Trends risers: inflation (+24.25), China economy (+2.79), China US (+0.54)",
+      "Wikipedia risers: Keir_Starmer (+16037), Strait_of_Hormuz (+683), Artificial_intelligence_regulation (+5)",
+      "Polymarket volume risers: Will Iran close its airspace by June 30? (+833467.65), US x Iran diplomatic meeting by June 21, 2026? (+692140.2488), Kharg Island no longer under Iranian control by June 30? (+303653.3803)"
+    ],
+    "prompt_ready_notes": [
+      "Use recurring_entities_across_sources to identify themes confirmed by multiple datasets.",
+      "Treat Google Trends anchor-normalized values as rough cross-chunk calibration, not exact absolute ranking.",
+      "Prefer entities that appear across at least 2 sources when writing the final sentiment brief.",
+      "Use delta_vs_previous_day to identify rising vs cooling attention.",
+      "If source health is partial or weak, explicitly say evidence is limited.",
+      "Use top_filtered_noise_candidates only for optional appendix / noise radar, not for the core macro radar."
+    ]
+  },
+  "top_signals": {
+    "polymarket": [
+      {
+        "question": "Strait of Hormuz traffic returns to normal by end of June?",
+        "volume_24h": 1693167.0494040002,
+        "yes_price": 0.065,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will Iran close its airspace by June 30?",
+        "volume_24h": 1221716.16,
+        "yes_price": 0.9995,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will Trump agree to withdraw troops from the Iranian region by June 30?",
+        "volume_24h": 1166183.14,
+        "yes_price": 0.9995,
+        "market_type": "binary"
+      },
+      {
+        "question": "US x Iran diplomatic meeting by June 21, 2026?",
+        "volume_24h": 1085823.7779980002,
+        "yes_price": 0.941,
+        "market_type": "binary"
+      },
+      {
+        "question": "Iran agrees to end enrichment of uranium by June 30?",
+        "volume_24h": 1085608.0720490015,
+        "yes_price": 0.0435,
+        "market_type": "binary"
+      }
+    ],
+    "google_trends": [
+      {
+        "keyword": "inflation",
+        "score_mean_24h_anchor_normalized": 391.15,
+        "score_last_anchor_normalized": 360.0
+      },
+      {
+        "keyword": "China US",
+        "score_mean_24h_anchor_normalized": 103.57,
+        "score_last_anchor_normalized": 108.45
+      },
+      {
+        "keyword": "AI regulation",
+        "score_mean_24h_anchor_normalized": 22.79,
+        "score_last_anchor_normalized": 40.0
+      },
+      {
+        "keyword": "China economy",
+        "score_mean_24h_anchor_normalized": 18.75,
+        "score_last_anchor_normalized": 20.0
+      },
+      {
+        "keyword": "OPEC",
+        "score_mean_24h_anchor_normalized": 15.94,
+        "score_last_anchor_normalized": 22.54
+      }
+    ],
+    "wikipedia_pageviews": [
+      {
+        "page": "Donald_Trump",
+        "views": 53019
+      },
+      {
+        "page": "Keir_Starmer",
+        "views": 32577
+      },
+      {
+        "page": "Strait_of_Hormuz",
+        "views": 9112
+      },
+      {
+        "page": "Kevin_Warsh",
+        "views": 7276
+      },
+      {
+        "page": "NATO",
+        "views": 4171
+      }
+    ]
+  },
+  "delta_summary": {
+    "notes": [
+      "Comparison is against the previously committed output file in the repo.",
+      "If the workflow is re-run on the same UTC date, comparison_type may be same_day_rerun instead of true previous-day.",
+      "Use rise/fall signals as relative momentum indicators, not as causal proof."
+    ]
+  },
+  "delta_top_signals": {
+    "polymarket": {
+      "top_volume_risers": [
+        {
+          "question": "Will Iran close its airspace by June 30?",
+          "absolute_change": 833467.65,
+          "pct_change": 214.67
+        },
+        {
+          "question": "US x Iran diplomatic meeting by June 21, 2026?",
+          "absolute_change": 692140.2488,
+          "pct_change": 175.81
+        },
+        {
+          "question": "Kharg Island no longer under Iranian control by June 30?",
+          "absolute_change": 303653.3803,
+          "pct_change": 114.75
+        },
+        {
+          "question": "Strait of Hormuz traffic returns to normal by end of June?",
+          "absolute_change": 112961.2006,
+          "pct_change": 7.15
+        },
+        {
+          "question": "Will Ivan Cepeda Castro win the 2026 Colombian presidential election?",
+          "absolute_change": 94213.6781,
+          "pct_change": 34.19
+        }
+      ],
+      "top_volume_fallers": [
+        {
+          "question": "Iran agrees to end enrichment of uranium by June 30?",
+          "absolute_change": -2900774.5416,
+          "pct_change": -72.77
+        },
+        {
+          "question": "Will Trump agree to withdraw troops from the Iranian region by June 30?",
+          "absolute_change": -286615.49,
+          "pct_change": -19.73
+        },
+        {
+          "question": "Starmer out by June 30, 2026?",
+          "absolute_change": -122346.8139,
+          "pct_change": -21.65
+        },
+        {
+          "question": "Strait of Hormuz traffic returns to normal by July 31?",
+          "absolute_change": -101870.9612,
+          "pct_change": -25.27
+        },
+        {
+          "question": "Strait of Hormuz traffic returns to normal by July 15?",
+          "absolute_change": -84261.9668,
+          "pct_change": -26.42
+        }
+      ],
+      "new_markets_vs_previous": 6
+    },
+    "google_trends": {
+      "top_risers": [
+        {
+          "keyword": "inflation",
+          "absolute_change": 24.25,
+          "pct_change": 6.61
+        },
+        {
+          "keyword": "China economy",
+          "absolute_change": 2.79,
+          "pct_change": 17.48
+        },
+        {
+          "keyword": "China US",
+          "absolute_change": 0.54,
+          "pct_change": 0.52
+        },
+        {
+          "keyword": "chip export",
+          "absolute_change": 0.06,
+          "pct_change": 46.15
+        },
+        {
+          "keyword": "OPEC",
+          "absolute_change": -1.07,
+          "pct_change": -6.29
+        }
+      ],
+      "top_fallers": [
+        {
+          "keyword": "AI regulation",
+          "absolute_change": -2.26,
+          "pct_change": -9.02
+        },
+        {
+          "keyword": "OPEC",
+          "absolute_change": -1.07,
+          "pct_change": -6.29
+        },
+        {
+          "keyword": "chip export",
+          "absolute_change": 0.06,
+          "pct_change": 46.15
+        },
+        {
+          "keyword": "China US",
+          "absolute_change": 0.54,
+          "pct_change": 0.52
+        },
+        {
+          "keyword": "China economy",
+          "absolute_change": 2.79,
+          "pct_change": 17.48
+        }
+      ],
+      "new_keywords_vs_previous": 0
+    },
+    "wikipedia_pageviews": {
+      "top_risers": [
+        {
+          "page": "Keir_Starmer",
+          "absolute_change": 16037,
+          "pct_change": 96.96
+        },
+        {
+          "page": "Strait_of_Hormuz",
+          "absolute_change": 683,
+          "pct_change": 8.1
+        },
+        {
+          "page": "Artificial_intelligence_regulation",
+          "absolute_change": 5,
+          "pct_change": 71.43
+        },
+        {
+          "page": "Russo-Ukrainian_War",
+          "absolute_change": -27,
+          "pct_change": -1.65
+        },
+        {
+          "page": "Semiconductor",
+          "absolute_change": -84,
+          "pct_change": -6.09
+        }
+      ],
+      "top_fallers": [
+        {
+          "page": "Kevin_Warsh",
+          "absolute_change": -18478,
+          "pct_change": -71.75
+        },
+        {
+          "page": "Donald_Trump",
+          "absolute_change": -2339,
+          "pct_change": -4.23
+        },
+        {
+          "page": "Federal_Reserve",
+          "absolute_change": -1133,
+          "pct_change": -38.24
+        },
+        {
+          "page": "OPEC",
+          "absolute_change": -618,
+          "pct_change": -32.66
+        },
+        {
+          "page": "NATO",
+          "absolute_change": -233,
+          "pct_change": -5.29
+        }
+      ],
+      "new_pages_vs_previous": 0
+    }
+  }
+}
