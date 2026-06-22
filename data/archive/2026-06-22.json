@@ -1,0 +1,415 @@
+{
+  "schema_version": "1.2.0",
+  "date_utc": "2026-06-22",
+  "generated_at_utc": "2026-06-22T22:01:14Z",
+  "source_health": {
+    "polymarket": {
+      "status": "ok",
+      "row_count": 9,
+      "ok_count": 9,
+      "empty_count": 0,
+      "error_count": 0
+    },
+    "google_trends": {
+      "status": "partial",
+      "row_count": 14,
+      "ok_count": 10,
+      "empty_count": 0,
+      "error_count": 5
+    },
+    "wikipedia_pageviews": {
+      "status": "ok",
+      "row_count": 11,
+      "ok_count": 11,
+      "empty_count": 0,
+      "error_count": 0
+    }
+  },
+  "summary": {
+    "top_polymarket_questions": [
+      {
+        "question": "Strait of Hormuz traffic returns to normal by end of June?",
+        "volume_24h": 678891.2512139996,
+        "yes_price": 0.065,
+        "market_type": "binary"
+      },
+      {
+        "question": "Strait of Hormuz traffic returns to normal by July 31?",
+        "volume_24h": 525208.23065,
+        "yes_price": 0.485,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will Keir Starmer be the next leader out before 2027?",
+        "volume_24h": 448052.0656030005,
+        "yes_price": 0.79,
+        "market_type": "binary"
+      }
+    ],
+    "top_filtered_noise_candidates": [
+      {
+        "question": "Will Cape Verde win the 2026 FIFA World Cup?",
+        "volume_24h": 22453720.767,
+        "yes_price": 0.0005,
+        "market_type": "binary",
+        "reason": "sports_or_match_noise"
+      },
+      {
+        "question": "Spread: France (-2.5)",
+        "volume_24h": 10016960.36635599,
+        "yes_price": null,
+        "market_type": "non_binary",
+        "reason": "expired"
+      },
+      {
+        "question": "Will Uruguay win the 2026 FIFA World Cup?",
+        "volume_24h": 8617589.644361,
+        "yes_price": 0.0015,
+        "market_type": "binary",
+        "reason": "sports_or_match_noise"
+      }
+    ],
+    "top_google_trends_keywords": [
+      {
+        "keyword": "gold price",
+        "score_mean_24h_anchor_normalized": 1455.19,
+        "score_last_anchor_normalized": 562.5
+      },
+      {
+        "keyword": "interest rate",
+        "score_mean_24h_anchor_normalized": 378.59,
+        "score_last_anchor_normalized": 187.5
+      },
+      {
+        "keyword": "inflation",
+        "score_mean_24h_anchor_normalized": 336.16,
+        "score_last_anchor_normalized": 200.0
+      },
+      {
+        "keyword": "China US",
+        "score_mean_24h_anchor_normalized": 80.48,
+        "score_last_anchor_normalized": 50.55
+      },
+      {
+        "keyword": "recession",
+        "score_mean_24h_anchor_normalized": 73.4,
+        "score_last_anchor_normalized": 50.0
+      }
+    ],
+    "top_wikipedia_pages": [
+      {
+        "page": "Keir_Starmer",
+        "views": 102820
+      },
+      {
+        "page": "Donald_Trump",
+        "views": 43643
+      },
+      {
+        "page": "Strait_of_Hormuz",
+        "views": 11962
+      },
+      {
+        "page": "Kevin_Warsh",
+        "views": 4262
+      },
+      {
+        "page": "NATO",
+        "views": 3995
+      }
+    ],
+    "recurring_entities_across_sources": [
+      "AI",
+      "China",
+      "NATO",
+      "Trump"
+    ],
+    "signal_strength_by_source": {
+      "polymarket": "strong",
+      "google_trends": "strong",
+      "wikipedia_pageviews": "strong"
+    },
+    "narrative_hints": [
+      "Trump-related political / tariff attention is present.",
+      "Geopolitical / security attention is present.",
+      "AI / regulation / chip attention is present.",
+      "China / US-China attention is present."
+    ],
+    "momentum_hints": [
+      "Google Trends risers: Trump tariffs (+0.16), chip export (+0.07), AI regulation (-0.97)",
+      "Wikipedia risers: Keir_Starmer (+70761), Donald_Trump (+583), NATO (+249)",
+      "Polymarket volume risers: Strait of Hormuz traffic returns to normal by July 31? (+271782.9746), Strait of Hormuz traffic returns to normal by July 15? (+108024.7529), Will the Fed decrease interest rates by 25 bps after the July 2026 meeting? (+93770.4384)"
+    ],
+    "prompt_ready_notes": [
+      "Use recurring_entities_across_sources to identify themes confirmed by multiple datasets.",
+      "Treat Google Trends anchor-normalized values as rough cross-chunk calibration, not exact absolute ranking.",
+      "Prefer entities that appear across at least 2 sources when writing the final sentiment brief.",
+      "Use delta_vs_previous_day to identify rising vs cooling attention.",
+      "If source health is partial or weak, explicitly say evidence is limited.",
+      "Use top_filtered_noise_candidates only for optional appendix / noise radar, not for the core macro radar."
+    ]
+  },
+  "top_signals": {
+    "polymarket": [
+      {
+        "question": "Strait of Hormuz traffic returns to normal by end of June?",
+        "volume_24h": 678891.2512139996,
+        "yes_price": 0.065,
+        "market_type": "binary"
+      },
+      {
+        "question": "Strait of Hormuz traffic returns to normal by July 31?",
+        "volume_24h": 525208.23065,
+        "yes_price": 0.485,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will Keir Starmer be the next leader out before 2027?",
+        "volume_24h": 448052.0656030005,
+        "yes_price": 0.79,
+        "market_type": "binary"
+      },
+      {
+        "question": "Strait of Hormuz traffic returns to normal by July 15?",
+        "volume_24h": 363118.87153500033,
+        "yes_price": 0.295,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will the Fed decrease interest rates by 25 bps after the July 2026 meeting?",
+        "volume_24h": 361750.75650499994,
+        "yes_price": 0.0145,
+        "market_type": "binary"
+      }
+    ],
+    "google_trends": [
+      {
+        "keyword": "gold price",
+        "score_mean_24h_anchor_normalized": 1455.19,
+        "score_last_anchor_normalized": 562.5
+      },
+      {
+        "keyword": "interest rate",
+        "score_mean_24h_anchor_normalized": 378.59,
+        "score_last_anchor_normalized": 187.5
+      },
+      {
+        "keyword": "inflation",
+        "score_mean_24h_anchor_normalized": 336.16,
+        "score_last_anchor_normalized": 200.0
+      },
+      {
+        "keyword": "China US",
+        "score_mean_24h_anchor_normalized": 80.48,
+        "score_last_anchor_normalized": 50.55
+      },
+      {
+        "keyword": "recession",
+        "score_mean_24h_anchor_normalized": 73.4,
+        "score_last_anchor_normalized": 50.0
+      }
+    ],
+    "wikipedia_pageviews": [
+      {
+        "page": "Keir_Starmer",
+        "views": 102820
+      },
+      {
+        "page": "Donald_Trump",
+        "views": 43643
+      },
+      {
+        "page": "Strait_of_Hormuz",
+        "views": 11962
+      },
+      {
+        "page": "Kevin_Warsh",
+        "views": 4262
+      },
+      {
+        "page": "NATO",
+        "views": 3995
+      }
+    ]
+  },
+  "delta_summary": {
+    "notes": [
+      "Comparison is against the previously committed output file in the repo.",
+      "If the workflow is re-run on the same UTC date, comparison_type may be same_day_rerun instead of true previous-day.",
+      "Use rise/fall signals as relative momentum indicators, not as causal proof."
+    ]
+  },
+  "delta_top_signals": {
+    "polymarket": {
+      "top_volume_risers": [
+        {
+          "question": "Strait of Hormuz traffic returns to normal by July 31?",
+          "absolute_change": 271782.9746,
+          "pct_change": 107.24
+        },
+        {
+          "question": "Strait of Hormuz traffic returns to normal by July 15?",
+          "absolute_change": 108024.7529,
+          "pct_change": 42.35
+        },
+        {
+          "question": "Will the Fed decrease interest rates by 25 bps after the July 2026 meeting?",
+          "absolute_change": 93770.4384,
+          "pct_change": 34.99
+        },
+        {
+          "question": "Will the Fed decrease interest rates by 50+ bps after the July 2026 meeting?",
+          "absolute_change": 78829.0506,
+          "pct_change": 41.02
+        },
+        {
+          "question": "Iran agrees to end enrichment of uranium by June 30?",
+          "absolute_change": -12384.1772,
+          "pct_change": -4.57
+        }
+      ],
+      "top_volume_fallers": [
+        {
+          "question": "Strait of Hormuz traffic returns to normal by end of June?",
+          "absolute_change": -378325.4809,
+          "pct_change": -35.79
+        },
+        {
+          "question": "Iran agrees to end enrichment of uranium by June 30?",
+          "absolute_change": -12384.1772,
+          "pct_change": -4.57
+        },
+        {
+          "question": "Will the Fed decrease interest rates by 50+ bps after the July 2026 meeting?",
+          "absolute_change": 78829.0506,
+          "pct_change": 41.02
+        },
+        {
+          "question": "Will the Fed decrease interest rates by 25 bps after the July 2026 meeting?",
+          "absolute_change": 93770.4384,
+          "pct_change": 34.99
+        },
+        {
+          "question": "Strait of Hormuz traffic returns to normal by July 15?",
+          "absolute_change": 108024.7529,
+          "pct_change": 42.35
+        }
+      ],
+      "new_markets_vs_previous": 3
+    },
+    "google_trends": {
+      "top_risers": [
+        {
+          "keyword": "Trump tariffs",
+          "absolute_change": 0.16,
+          "pct_change": 0.98
+        },
+        {
+          "keyword": "chip export",
+          "absolute_change": 0.07,
+          "pct_change": 58.33
+        },
+        {
+          "keyword": "AI regulation",
+          "absolute_change": -0.97,
+          "pct_change": -3.43
+        },
+        {
+          "keyword": "OPEC",
+          "absolute_change": -2.33,
+          "pct_change": -15.71
+        },
+        {
+          "keyword": "China economy",
+          "absolute_change": -5.54,
+          "pct_change": -27.18
+        }
+      ],
+      "top_fallers": [
+        {
+          "keyword": "gold price",
+          "absolute_change": -460.22,
+          "pct_change": -24.03
+        },
+        {
+          "keyword": "interest rate",
+          "absolute_change": -104.46,
+          "pct_change": -21.63
+        },
+        {
+          "keyword": "inflation",
+          "absolute_change": -71.06,
+          "pct_change": -17.45
+        },
+        {
+          "keyword": "China US",
+          "absolute_change": -27.26,
+          "pct_change": -25.3
+        },
+        {
+          "keyword": "recession",
+          "absolute_change": -5.8,
+          "pct_change": -7.32
+        }
+      ],
+      "new_keywords_vs_previous": 0
+    },
+    "wikipedia_pageviews": {
+      "top_risers": [
+        {
+          "page": "Keir_Starmer",
+          "absolute_change": 70761,
+          "pct_change": 220.72
+        },
+        {
+          "page": "Donald_Trump",
+          "absolute_change": 583,
+          "pct_change": 1.35
+        },
+        {
+          "page": "NATO",
+          "absolute_change": 249,
+          "pct_change": 6.65
+        },
+        {
+          "page": "Russo-Ukrainian_War",
+          "absolute_change": 87,
+          "pct_change": 5.83
+        },
+        {
+          "page": "Artificial_intelligence_regulation",
+          "absolute_change": 3,
+          "pct_change": 60.0
+        }
+      ],
+      "top_fallers": [
+        {
+          "page": "Strait_of_Hormuz",
+          "absolute_change": -1002,
+          "pct_change": -7.73
+        },
+        {
+          "page": "OPEC",
+          "absolute_change": -76,
+          "pct_change": -6.8
+        },
+        {
+          "page": "Federal_Reserve",
+          "absolute_change": -55,
+          "pct_change": -3.85
+        },
+        {
+          "page": "China%E2%80%93United_States_trade_war",
+          "absolute_change": -48,
+          "pct_change": -7.27
+        },
+        {
+          "page": "Semiconductor",
+          "absolute_change": -47,
+          "pct_change": -4.81
+        }
+      ],
+      "new_pages_vs_previous": 0
+    }
+  }
+}
