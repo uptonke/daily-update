@@ -1,0 +1,300 @@
+{
+  "schema_version": "1.2.0",
+  "date_utc": "2026-06-24",
+  "generated_at_utc": "2026-06-24T22:01:28Z",
+  "source_health": {
+    "polymarket": {
+      "status": "ok",
+      "row_count": 14,
+      "ok_count": 14,
+      "empty_count": 0,
+      "error_count": 0
+    },
+    "google_trends": {
+      "status": "partial",
+      "row_count": 14,
+      "ok_count": 0,
+      "empty_count": 0,
+      "error_count": 18
+    },
+    "wikipedia_pageviews": {
+      "status": "ok",
+      "row_count": 10,
+      "ok_count": 10,
+      "empty_count": 0,
+      "error_count": 0
+    }
+  },
+  "summary": {
+    "top_polymarket_questions": [
+      {
+        "question": "Will Benjamin Netanyahu enter Iran by June 30?",
+        "volume_24h": 2367633.058333,
+        "yes_price": 0.0015,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will JD Vance enter Iran by June 30?",
+        "volume_24h": 1783635.07,
+        "yes_price": 0.002,
+        "market_type": "binary"
+      },
+      {
+        "question": "Strait of Hormuz traffic returns to normal by end of June?",
+        "volume_24h": 1505348.8380139968,
+        "yes_price": 0.0505,
+        "market_type": "binary"
+      }
+    ],
+    "top_filtered_noise_candidates": [
+      {
+        "question": "Spread: Morocco (-1.5)",
+        "volume_24h": 8980851.584998991,
+        "yes_price": null,
+        "market_type": "non_binary",
+        "reason": "expired"
+      },
+      {
+        "question": "Will Bosnia-Herzegovina win the 2026 FIFA World Cup?",
+        "volume_24h": 8326884.467,
+        "yes_price": 0.0015,
+        "market_type": "binary",
+        "reason": "sports_or_match_noise"
+      },
+      {
+        "question": "Will Morocco win on 2026-06-24?",
+        "volume_24h": 4223176.808394993,
+        "yes_price": 0.745,
+        "market_type": "binary",
+        "reason": "expired"
+      }
+    ],
+    "top_google_trends_keywords": [],
+    "top_wikipedia_pages": [
+      {
+        "page": "Donald_Trump",
+        "views": 41964
+      },
+      {
+        "page": "Strait_of_Hormuz",
+        "views": 7752
+      },
+      {
+        "page": "Kevin_Warsh",
+        "views": 6446
+      },
+      {
+        "page": "NATO",
+        "views": 4109
+      },
+      {
+        "page": "Federal_Reserve",
+        "views": 2144
+      }
+    ],
+    "recurring_entities_across_sources": [
+      "AI",
+      "Iran",
+      "NATO",
+      "Trump"
+    ],
+    "signal_strength_by_source": {
+      "polymarket": "strong",
+      "google_trends": "weak",
+      "wikipedia_pageviews": "strong"
+    },
+    "narrative_hints": [
+      "Trump-related political / tariff attention is present.",
+      "Geopolitical / security attention is present.",
+      "AI / regulation / chip attention is present.",
+      "Iran-related geopolitical attention is present."
+    ],
+    "momentum_hints": [
+      "Wikipedia risers: China%E2%80%93United_States_trade_war (+215), Russo-Ukrainian_War (+124), OPEC (+97)",
+      "Polymarket volume risers: Strait of Hormuz traffic returns to normal by July 15? (+317858.4117), Strait of Hormuz traffic returns to normal by end of June? (+315382.9228), Strait of Hormuz traffic returns to normal by July 31? (+138451.1417)"
+    ],
+    "prompt_ready_notes": [
+      "Use recurring_entities_across_sources to identify themes confirmed by multiple datasets.",
+      "Treat Google Trends anchor-normalized values as rough cross-chunk calibration, not exact absolute ranking.",
+      "Prefer entities that appear across at least 2 sources when writing the final sentiment brief.",
+      "Use delta_vs_previous_day to identify rising vs cooling attention.",
+      "If source health is partial or weak, explicitly say evidence is limited.",
+      "Use top_filtered_noise_candidates only for optional appendix / noise radar, not for the core macro radar."
+    ]
+  },
+  "top_signals": {
+    "polymarket": [
+      {
+        "question": "Will Benjamin Netanyahu enter Iran by June 30?",
+        "volume_24h": 2367633.058333,
+        "yes_price": 0.0015,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will JD Vance enter Iran by June 30?",
+        "volume_24h": 1783635.07,
+        "yes_price": 0.002,
+        "market_type": "binary"
+      },
+      {
+        "question": "Strait of Hormuz traffic returns to normal by end of June?",
+        "volume_24h": 1505348.8380139968,
+        "yes_price": 0.0505,
+        "market_type": "binary"
+      },
+      {
+        "question": "US-Iran Final Nuclear Deal by August 31, 2026?",
+        "volume_24h": 989445.4827089999,
+        "yes_price": 0.235,
+        "market_type": "binary"
+      },
+      {
+        "question": "Strait of Hormuz traffic returns to normal by July 15?",
+        "volume_24h": 624019.9221460002,
+        "yes_price": 0.295,
+        "market_type": "binary"
+      }
+    ],
+    "google_trends": [],
+    "wikipedia_pageviews": [
+      {
+        "page": "Donald_Trump",
+        "views": 41964
+      },
+      {
+        "page": "Strait_of_Hormuz",
+        "views": 7752
+      },
+      {
+        "page": "Kevin_Warsh",
+        "views": 6446
+      },
+      {
+        "page": "NATO",
+        "views": 4109
+      },
+      {
+        "page": "Federal_Reserve",
+        "views": 2144
+      }
+    ]
+  },
+  "delta_summary": {
+    "notes": [
+      "Comparison is against the previously committed output file in the repo.",
+      "If the workflow is re-run on the same UTC date, comparison_type may be same_day_rerun instead of true previous-day.",
+      "Use rise/fall signals as relative momentum indicators, not as causal proof."
+    ]
+  },
+  "delta_top_signals": {
+    "polymarket": {
+      "top_volume_risers": [
+        {
+          "question": "Strait of Hormuz traffic returns to normal by July 15?",
+          "absolute_change": 317858.4117,
+          "pct_change": 103.82
+        },
+        {
+          "question": "Strait of Hormuz traffic returns to normal by end of June?",
+          "absolute_change": 315382.9228,
+          "pct_change": 26.5
+        },
+        {
+          "question": "Strait of Hormuz traffic returns to normal by July 31?",
+          "absolute_change": 138451.1417,
+          "pct_change": 42.2
+        },
+        {
+          "question": "Will the Iranian regime fall by June 30?",
+          "absolute_change": -32964.3555,
+          "pct_change": -5.67
+        }
+      ],
+      "top_volume_fallers": [
+        {
+          "question": "Will the Iranian regime fall by June 30?",
+          "absolute_change": -32964.3555,
+          "pct_change": -5.67
+        },
+        {
+          "question": "Strait of Hormuz traffic returns to normal by July 31?",
+          "absolute_change": 138451.1417,
+          "pct_change": 42.2
+        },
+        {
+          "question": "Strait of Hormuz traffic returns to normal by end of June?",
+          "absolute_change": 315382.9228,
+          "pct_change": 26.5
+        },
+        {
+          "question": "Strait of Hormuz traffic returns to normal by July 15?",
+          "absolute_change": 317858.4117,
+          "pct_change": 103.82
+        }
+      ],
+      "new_markets_vs_previous": 10
+    },
+    "google_trends": {
+      "top_risers": [],
+      "top_fallers": [],
+      "new_keywords_vs_previous": 0
+    },
+    "wikipedia_pageviews": {
+      "top_risers": [
+        {
+          "page": "China%E2%80%93United_States_trade_war",
+          "absolute_change": 215,
+          "pct_change": 29.7
+        },
+        {
+          "page": "Russo-Ukrainian_War",
+          "absolute_change": 124,
+          "pct_change": 7.88
+        },
+        {
+          "page": "OPEC",
+          "absolute_change": 97,
+          "pct_change": 7.44
+        },
+        {
+          "page": "Artificial_intelligence_regulation",
+          "absolute_change": -6,
+          "pct_change": -31.58
+        },
+        {
+          "page": "Semiconductor",
+          "absolute_change": -29,
+          "pct_change": -2.16
+        }
+      ],
+      "top_fallers": [
+        {
+          "page": "Kevin_Warsh",
+          "absolute_change": -5071,
+          "pct_change": -44.03
+        },
+        {
+          "page": "Strait_of_Hormuz",
+          "absolute_change": -2372,
+          "pct_change": -23.43
+        },
+        {
+          "page": "Donald_Trump",
+          "absolute_change": -916,
+          "pct_change": -2.14
+        },
+        {
+          "page": "Federal_Reserve",
+          "absolute_change": -892,
+          "pct_change": -29.38
+        },
+        {
+          "page": "NATO",
+          "absolute_change": -190,
+          "pct_change": -4.42
+        }
+      ],
+      "new_pages_vs_previous": 0
+    }
+  }
+}
