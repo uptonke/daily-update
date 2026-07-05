@@ -1,0 +1,338 @@
+{
+  "schema_version": "1.2.0",
+  "date_utc": "2026-07-05",
+  "generated_at_utc": "2026-07-05T22:01:08Z",
+  "source_health": {
+    "polymarket": {
+      "status": "ok",
+      "row_count": 2,
+      "ok_count": 2,
+      "empty_count": 0,
+      "error_count": 0
+    },
+    "google_trends": {
+      "status": "ok",
+      "row_count": 14,
+      "ok_count": 14,
+      "empty_count": 0,
+      "error_count": 0
+    },
+    "wikipedia_pageviews": {
+      "status": "ok",
+      "row_count": 10,
+      "ok_count": 10,
+      "empty_count": 0,
+      "error_count": 0
+    }
+  },
+  "summary": {
+    "top_polymarket_questions": [
+      {
+        "question": "Will Pete Hegseth win the 2028 US Presidential Election?",
+        "volume_24h": 309674.690589,
+        "yes_price": 0.0055,
+        "market_type": "binary"
+      },
+      {
+        "question": "Strait of Hormuz traffic returns to normal by December 31?",
+        "volume_24h": 290091.97824399994,
+        "yes_price": 0.725,
+        "market_type": "binary"
+      }
+    ],
+    "top_filtered_noise_candidates": [
+      {
+        "question": "Will Brazil win on 2026-07-05?",
+        "volume_24h": 12387195.601151025,
+        "yes_price": 0.0005,
+        "market_type": "binary",
+        "reason": "expired"
+      },
+      {
+        "question": "Brazil vs. Norway: Team to Advance",
+        "volume_24h": 9645043.369879924,
+        "yes_price": null,
+        "market_type": "non_binary",
+        "reason": "expired"
+      },
+      {
+        "question": "Mexico vs. England: Team to Advance",
+        "volume_24h": 8416358.891872708,
+        "yes_price": null,
+        "market_type": "non_binary",
+        "reason": "sports_or_match_noise"
+      }
+    ],
+    "top_google_trends_keywords": [
+      {
+        "keyword": "gold price",
+        "score_mean_24h_anchor_normalized": 1290.15,
+        "score_last_anchor_normalized": 680.0
+      },
+      {
+        "keyword": "NATO",
+        "score_mean_24h_anchor_normalized": 581.78,
+        "score_last_anchor_normalized": 570.0
+      },
+      {
+        "keyword": "interest rate",
+        "score_mean_24h_anchor_normalized": 356.64,
+        "score_last_anchor_normalized": 240.0
+      },
+      {
+        "keyword": "inflation",
+        "score_mean_24h_anchor_normalized": 340.47,
+        "score_last_anchor_normalized": 386.67
+      },
+      {
+        "keyword": "oil price",
+        "score_mean_24h_anchor_normalized": 317.89,
+        "score_last_anchor_normalized": 260.0
+      }
+    ],
+    "top_wikipedia_pages": [
+      {
+        "page": "Donald_Trump",
+        "views": 41060
+      },
+      {
+        "page": "NATO",
+        "views": 4539
+      },
+      {
+        "page": "Strait_of_Hormuz",
+        "views": 2993
+      },
+      {
+        "page": "Kevin_Warsh",
+        "views": 1794
+      },
+      {
+        "page": "Russo-Ukrainian_War",
+        "views": 1596
+      }
+    ],
+    "recurring_entities_across_sources": [
+      "AI",
+      "NATO",
+      "Oil",
+      "Trump"
+    ],
+    "signal_strength_by_source": {
+      "polymarket": "weak",
+      "google_trends": "strong",
+      "wikipedia_pageviews": "strong"
+    },
+    "narrative_hints": [
+      "Energy / oil-related attention is present.",
+      "Trump-related political / tariff attention is present.",
+      "Geopolitical / security attention is present.",
+      "AI / regulation / chip attention is present."
+    ],
+    "momentum_hints": [
+      "Google Trends risers: NATO (+208.45), gold price (+147.19), inflation (+53.75)",
+      "Wikipedia risers: Donald_Trump (+2987), Artificial_intelligence_regulation (-1), Semiconductor (-3)"
+    ],
+    "prompt_ready_notes": [
+      "Use recurring_entities_across_sources to identify themes confirmed by multiple datasets.",
+      "Treat Google Trends anchor-normalized values as rough cross-chunk calibration, not exact absolute ranking.",
+      "Prefer entities that appear across at least 2 sources when writing the final sentiment brief.",
+      "Use delta_vs_previous_day to identify rising vs cooling attention.",
+      "If source health is partial or weak, explicitly say evidence is limited.",
+      "Use top_filtered_noise_candidates only for optional appendix / noise radar, not for the core macro radar."
+    ]
+  },
+  "top_signals": {
+    "polymarket": [
+      {
+        "question": "Will Pete Hegseth win the 2028 US Presidential Election?",
+        "volume_24h": 309674.690589,
+        "yes_price": 0.0055,
+        "market_type": "binary"
+      },
+      {
+        "question": "Strait of Hormuz traffic returns to normal by December 31?",
+        "volume_24h": 290091.97824399994,
+        "yes_price": 0.725,
+        "market_type": "binary"
+      }
+    ],
+    "google_trends": [
+      {
+        "keyword": "gold price",
+        "score_mean_24h_anchor_normalized": 1290.15,
+        "score_last_anchor_normalized": 680.0
+      },
+      {
+        "keyword": "NATO",
+        "score_mean_24h_anchor_normalized": 581.78,
+        "score_last_anchor_normalized": 570.0
+      },
+      {
+        "keyword": "interest rate",
+        "score_mean_24h_anchor_normalized": 356.64,
+        "score_last_anchor_normalized": 240.0
+      },
+      {
+        "keyword": "inflation",
+        "score_mean_24h_anchor_normalized": 340.47,
+        "score_last_anchor_normalized": 386.67
+      },
+      {
+        "keyword": "oil price",
+        "score_mean_24h_anchor_normalized": 317.89,
+        "score_last_anchor_normalized": 260.0
+      }
+    ],
+    "wikipedia_pageviews": [
+      {
+        "page": "Donald_Trump",
+        "views": 41060
+      },
+      {
+        "page": "NATO",
+        "views": 4539
+      },
+      {
+        "page": "Strait_of_Hormuz",
+        "views": 2993
+      },
+      {
+        "page": "Kevin_Warsh",
+        "views": 1794
+      },
+      {
+        "page": "Russo-Ukrainian_War",
+        "views": 1596
+      }
+    ]
+  },
+  "delta_summary": {
+    "notes": [
+      "Comparison is against the previously committed output file in the repo.",
+      "If the workflow is re-run on the same UTC date, comparison_type may be same_day_rerun instead of true previous-day.",
+      "Use rise/fall signals as relative momentum indicators, not as causal proof."
+    ]
+  },
+  "delta_top_signals": {
+    "polymarket": {
+      "top_volume_risers": [],
+      "top_volume_fallers": [],
+      "new_markets_vs_previous": 2
+    },
+    "google_trends": {
+      "top_risers": [
+        {
+          "keyword": "NATO",
+          "absolute_change": 208.45,
+          "pct_change": 55.84
+        },
+        {
+          "keyword": "gold price",
+          "absolute_change": 147.19,
+          "pct_change": 12.88
+        },
+        {
+          "keyword": "inflation",
+          "absolute_change": 53.75,
+          "pct_change": 18.75
+        },
+        {
+          "keyword": "interest rate",
+          "absolute_change": 48.07,
+          "pct_change": 15.58
+        },
+        {
+          "keyword": "Iran war",
+          "absolute_change": 34.63,
+          "pct_change": 22.65
+        }
+      ],
+      "top_fallers": [
+        {
+          "keyword": "chip export",
+          "absolute_change": 0.19,
+          "pct_change": 55.88
+        },
+        {
+          "keyword": "recession",
+          "absolute_change": 1.43,
+          "pct_change": 3.17
+        },
+        {
+          "keyword": "AI regulation",
+          "absolute_change": 6.59,
+          "pct_change": 24.96
+        },
+        {
+          "keyword": "Trump tariffs",
+          "absolute_change": 6.66,
+          "pct_change": 47.91
+        },
+        {
+          "keyword": "OPEC",
+          "absolute_change": 14.26,
+          "pct_change": 124.11
+        }
+      ],
+      "new_keywords_vs_previous": 0
+    },
+    "wikipedia_pageviews": {
+      "top_risers": [
+        {
+          "page": "Donald_Trump",
+          "absolute_change": 2987,
+          "pct_change": 7.85
+        },
+        {
+          "page": "Artificial_intelligence_regulation",
+          "absolute_change": -1,
+          "pct_change": -10.0
+        },
+        {
+          "page": "Semiconductor",
+          "absolute_change": -3,
+          "pct_change": -0.25
+        },
+        {
+          "page": "China%E2%80%93United_States_trade_war",
+          "absolute_change": -18,
+          "pct_change": -2.81
+        },
+        {
+          "page": "Russo-Ukrainian_War",
+          "absolute_change": -68,
+          "pct_change": -4.09
+        }
+      ],
+      "top_fallers": [
+        {
+          "page": "Strait_of_Hormuz",
+          "absolute_change": -1235,
+          "pct_change": -29.21
+        },
+        {
+          "page": "Kevin_Warsh",
+          "absolute_change": -561,
+          "pct_change": -23.82
+        },
+        {
+          "page": "OPEC",
+          "absolute_change": -337,
+          "pct_change": -24.46
+        },
+        {
+          "page": "NATO",
+          "absolute_change": -276,
+          "pct_change": -5.73
+        },
+        {
+          "page": "Federal_Reserve",
+          "absolute_change": -206,
+          "pct_change": -12.25
+        }
+      ],
+      "new_pages_vs_previous": 0
+    }
+  }
+}
