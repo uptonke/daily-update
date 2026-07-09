@@ -1,7 +1,7 @@
 {
   "schema_version": "1.2.0",
-  "date_utc": "2026-07-08",
-  "generated_at_utc": "2026-07-08T22:01:18Z",
+  "date_utc": "2026-07-09",
+  "generated_at_utc": "2026-07-09T22:01:33Z",
   "pipeline": {
     "name": "daily_sentiment_data_fetch",
     "anchor_keyword": "Federal Reserve",
@@ -51,24 +51,24 @@
   "source_health": {
     "polymarket": {
       "status": "ok",
-      "row_count": 23,
-      "ok_count": 23,
-      "empty_count": 0,
-      "error_count": 0
-    },
-    "google_trends": {
-      "status": "ok",
-      "row_count": 14,
-      "ok_count": 14,
-      "empty_count": 0,
-      "error_count": 0
-    },
-    "wikipedia_pageviews": {
-      "status": "ok",
       "row_count": 10,
       "ok_count": 10,
       "empty_count": 0,
       "error_count": 0
+    },
+    "google_trends": {
+      "status": "partial",
+      "row_count": 14,
+      "ok_count": 6,
+      "empty_count": 0,
+      "error_count": 10
+    },
+    "wikipedia_pageviews": {
+      "status": "partial",
+      "row_count": 10,
+      "ok_count": 9,
+      "empty_count": 0,
+      "error_count": 2
     }
   },
   "sources": {
@@ -89,436 +89,91 @@
       },
       "summary": {
         "fetched_rows_before_filter": 100,
-        "kept_rows_after_filter": 23,
-        "excluded_rows_after_filter": 77,
+        "kept_rows_after_filter": 10,
+        "excluded_rows_after_filter": 90,
         "top_questions_by_volume_24h": [
           {
-            "question": "Will there be no change in Fed interest rates after the July 2026 meeting?",
-            "volume_24h": 1359825.4386120008,
-            "yes_price": 0.775,
+            "question": "Will Seyed Hossein Mousavian be head of state in Iran end of 2026?",
+            "volume_24h": 2390518.383333,
+            "yes_price": 0.002,
             "market_type": "binary"
           },
           {
-            "question": "Will Tucker Carlson win the 2028 US Presidential Election?",
-            "volume_24h": 907241.3480209992,
-            "yes_price": 0.0205,
+            "question": "Will there be no change in Fed interest rates after the July 2026 meeting?",
+            "volume_24h": 579601.7199620015,
+            "yes_price": 0.845,
+            "market_type": "binary"
+          },
+          {
+            "question": "Will the Fed decrease interest rates by 50+ bps after the July 2026 meeting?",
+            "volume_24h": 526177.638,
+            "yes_price": 0.0015,
             "market_type": "binary"
           },
           {
             "question": "Will Pete Buttigieg win the 2028 US Presidential Election?",
-            "volume_24h": 888667.1576409945,
+            "volume_24h": 261715.78782599978,
             "yes_price": 0.0235,
             "market_type": "binary"
           },
           {
-            "question": "Will Count Binface win the Clacton by-election?",
-            "volume_24h": 553280.8462400001,
-            "yes_price": 0.073,
-            "market_type": "binary"
-          },
-          {
-            "question": "Strait of Hormuz traffic returns to normal by July 31?",
-            "volume_24h": 536181.6158070004,
-            "yes_price": 0.045,
+            "question": "Will the Fed increase interest rates by 25 bps after the July 2026 meeting?",
+            "volume_24h": 226266.675404,
+            "yes_price": 0.1475,
             "market_type": "binary"
           }
         ],
         "top_excluded_by_volume_24h": [
           {
             "question": "Will Ronaldo Cry at the World Cup?",
-            "volume_24h": 33614182.201999985,
+            "volume_24h": 37984548.334032,
             "yes_price": 0.9995,
             "market_type": "binary",
             "reason": "sports_or_match_noise"
           },
           {
-            "question": "Will Switzerland win the 2026 FIFA World Cup?",
-            "volume_24h": 6165634.183407011,
-            "yes_price": 0.0215,
-            "market_type": "binary",
-            "reason": "sports_or_match_noise"
+            "question": "France vs. Morocco: O/U 2.5",
+            "volume_24h": 20280781.465056017,
+            "yes_price": null,
+            "market_type": "non_binary",
+            "reason": "expired"
           },
           {
-            "question": "Will Mahmoud Abbas be the next leader out before 2027?",
-            "volume_24h": 3887995.1322709997,
-            "yes_price": 0.008,
+            "question": "Will France win on 2026-07-09?",
+            "volume_24h": 18150985.460323084,
+            "yes_price": 0.99875,
             "market_type": "binary",
-            "reason": "low_public_impact_or_unclear_relevance"
+            "reason": "expired"
           },
           {
             "question": "Will Morocco win the 2026 FIFA World Cup?",
-            "volume_24h": 3702316.7739119944,
-            "yes_price": 0.0295,
+            "volume_24h": 10790433.119093012,
+            "yes_price": 0.0005,
             "market_type": "binary",
             "reason": "sports_or_match_noise"
           },
           {
-            "question": "Will Argentina win the 2026 FIFA World Cup?",
-            "volume_24h": 3137937.7006279994,
-            "yes_price": 0.2005,
-            "market_type": "binary",
-            "reason": "sports_or_match_noise"
+            "question": "France vs. Morocco: Team to Advance",
+            "volume_24h": 8412794.109564995,
+            "yes_price": null,
+            "market_type": "non_binary",
+            "reason": "expired"
           }
         ],
         "excluded_reason_breakdown": {
-          "sports_or_match_noise": 40,
-          "low_public_impact_or_unclear_relevance": 32,
-          "expired": 5
+          "sports_or_match_noise": 29,
+          "expired": 50,
+          "low_public_impact_or_unclear_relevance": 11
         },
-        "binary_markets": 23,
+        "binary_markets": 10,
         "non_binary_markets": 0
       },
       "data": [
         {
           "source": "polymarket",
-          "id": "1654958",
-          "question": "Will there be no change in Fed interest rates after the July 2026 meeting?",
-          "slug": "will-there-be-no-change-in-fed-interest-rates-after-the-july-2026-meeting",
-          "market_type": "binary",
-          "yes_price": 0.775,
-          "no_price": 0.225,
-          "outcomes": [
-            "Yes",
-            "No"
-          ],
-          "outcome_prices": [
-            0.775,
-            0.225
-          ],
-          "volume_24h": 1359825.4386120008,
-          "liquidity": 480126.7134,
-          "active": true,
-          "closed": false,
-          "end_date": "2026-07-29T00:00:00Z",
-          "status": "ok"
-        },
-        {
-          "source": "polymarket",
-          "id": "561253",
-          "question": "Will Tucker Carlson win the 2028 US Presidential Election?",
-          "slug": "will-tucker-carlson-win-the-2028-us-presidential-election",
-          "market_type": "binary",
-          "yes_price": 0.0205,
-          "no_price": 0.9795,
-          "outcomes": [
-            "Yes",
-            "No"
-          ],
-          "outcome_prices": [
-            0.0205,
-            0.9795
-          ],
-          "volume_24h": 907241.3480209992,
-          "liquidity": 301556.51028,
-          "active": true,
-          "closed": false,
-          "end_date": "2028-11-07T00:00:00Z",
-          "status": "ok"
-        },
-        {
-          "source": "polymarket",
-          "id": "561232",
-          "question": "Will Pete Buttigieg win the 2028 US Presidential Election?",
-          "slug": "will-pete-buttigieg-win-the-2028-us-presidential-election",
-          "market_type": "binary",
-          "yes_price": 0.0235,
-          "no_price": 0.9765,
-          "outcomes": [
-            "Yes",
-            "No"
-          ],
-          "outcome_prices": [
-            0.0235,
-            0.9765
-          ],
-          "volume_24h": 888667.1576409945,
-          "liquidity": 504464.00289,
-          "active": true,
-          "closed": false,
-          "end_date": "2028-11-07T00:00:00Z",
-          "status": "ok"
-        },
-        {
-          "source": "polymarket",
-          "id": "2832147",
-          "question": "Will Count Binface win the Clacton by-election?",
-          "slug": "will-count-binface-win-the-clacton-by-election-20260707211451133",
-          "market_type": "binary",
-          "yes_price": 0.073,
-          "no_price": 0.927,
-          "outcomes": [
-            "Yes",
-            "No"
-          ],
-          "outcome_prices": [
-            0.073,
-            0.927
-          ],
-          "volume_24h": 553280.8462400001,
-          "liquidity": 188362.04509,
-          "active": true,
-          "closed": false,
-          "end_date": "2027-06-30T23:59:00Z",
-          "status": "ok"
-        },
-        {
-          "source": "polymarket",
-          "id": "2176262",
-          "question": "Strait of Hormuz traffic returns to normal by July 31?",
-          "slug": "strait-of-hormuz-traffic-returns-to-normal-by-july-31",
-          "market_type": "binary",
-          "yes_price": 0.045,
-          "no_price": 0.955,
-          "outcomes": [
-            "Yes",
-            "No"
-          ],
-          "outcome_prices": [
-            0.045,
-            0.955
-          ],
-          "volume_24h": 536181.6158070004,
-          "liquidity": 784983.2528,
-          "active": true,
-          "closed": false,
-          "end_date": "2026-07-31T00:00:00Z",
-          "status": "ok"
-        },
-        {
-          "source": "polymarket",
-          "id": "2643400",
-          "question": "Will Iran announce withdrawal from MOU negotiations by July 31?",
-          "slug": "will-iran-announce-withdrawal-from-mou-negotiations-by-july-31-20260622191733846-586-829",
-          "market_type": "binary",
-          "yes_price": 0.235,
-          "no_price": 0.765,
-          "outcomes": [
-            "Yes",
-            "No"
-          ],
-          "outcome_prices": [
-            0.235,
-            0.765
-          ],
-          "volume_24h": 420659.18521299964,
-          "liquidity": 87758.2213,
-          "active": true,
-          "closed": false,
-          "end_date": "2026-07-31T23:59:00Z",
-          "status": "ok"
-        },
-        {
-          "source": "polymarket",
-          "id": "1654959",
-          "question": "Will the Fed increase interest rates by 25 bps after the July 2026 meeting?",
-          "slug": "will-the-fed-increase-interest-rates-by-25-bps-after-the-july-2026-meeting",
-          "market_type": "binary",
-          "yes_price": 0.2185,
-          "no_price": 0.7815,
-          "outcomes": [
-            "Yes",
-            "No"
-          ],
-          "outcome_prices": [
-            0.2185,
-            0.7815
-          ],
-          "volume_24h": 407331.80085399986,
-          "liquidity": 324175.5855,
-          "active": true,
-          "closed": false,
-          "end_date": "2026-07-29T00:00:00Z",
-          "status": "ok"
-        },
-        {
-          "source": "polymarket",
-          "id": "2633430",
-          "question": "US-Iran Final Nuclear Deal by August 31, 2026?",
-          "slug": "us-iran-final-nuclear-deal-by-august-31-2026-20260621201255154",
-          "market_type": "binary",
-          "yes_price": 0.125,
-          "no_price": 0.875,
-          "outcomes": [
-            "Yes",
-            "No"
-          ],
-          "outcome_prices": [
-            0.125,
-            0.875
-          ],
-          "volume_24h": 402615.2817800001,
-          "liquidity": 258144.6832,
-          "active": true,
-          "closed": false,
-          "end_date": "2026-08-31T23:59:00Z",
-          "status": "ok"
-        },
-        {
-          "source": "polymarket",
-          "id": "2686769",
-          "question": "Iran full airspace closure by July 15?",
-          "slug": "iran-full-airspace-closure-by-july-15-20260625195254149",
-          "market_type": "binary",
-          "yes_price": 0.2065,
-          "no_price": 0.7935,
-          "outcomes": [
-            "Yes",
-            "No"
-          ],
-          "outcome_prices": [
-            0.2065,
-            0.7935
-          ],
-          "volume_24h": 373547.02645599993,
-          "liquidity": 24131.7931,
-          "active": true,
-          "closed": false,
-          "end_date": "2026-07-15T23:59:00Z",
-          "status": "ok"
-        },
-        {
-          "source": "polymarket",
-          "id": "2535468",
-          "question": "Strait of Hormuz traffic returns to normal by July 15?",
-          "slug": "strait-of-hormuz-traffic-returns-to-normal-by-july-15",
-          "market_type": "binary",
-          "yes_price": 0.0065,
-          "no_price": 0.9935,
-          "outcomes": [
-            "Yes",
-            "No"
-          ],
-          "outcome_prices": [
-            0.0065,
-            0.9935
-          ],
-          "volume_24h": 354819.84320300014,
-          "liquidity": 480799.22983,
-          "active": true,
-          "closed": false,
-          "end_date": "2026-07-15T00:00:00Z",
-          "status": "ok"
-        },
-        {
-          "source": "polymarket",
-          "id": "2633429",
-          "question": "US-Iran Final Nuclear Deal by August 18, 2026?",
-          "slug": "us-iran-final-nuclear-deal-by-august-18-2026-20260621201255153",
-          "market_type": "binary",
-          "yes_price": 0.105,
-          "no_price": 0.895,
-          "outcomes": [
-            "Yes",
-            "No"
-          ],
-          "outcome_prices": [
-            0.105,
-            0.895
-          ],
-          "volume_24h": 334444.0131189998,
-          "liquidity": 335638.5888,
-          "active": true,
-          "closed": false,
-          "end_date": "2026-08-18T23:59:00Z",
-          "status": "ok"
-        },
-        {
-          "source": "polymarket",
-          "id": "665374",
-          "question": "Will the U.S. invade Iran before 2027?",
-          "slug": "will-the-us-invade-iran-before-2027",
-          "market_type": "binary",
-          "yes_price": 0.155,
-          "no_price": 0.845,
-          "outcomes": [
-            "Yes",
-            "No"
-          ],
-          "outcome_prices": [
-            0.155,
-            0.845
-          ],
-          "volume_24h": 294990.6194479998,
-          "liquidity": 522555.4177,
-          "active": true,
-          "closed": false,
-          "end_date": "2026-12-31T00:00:00Z",
-          "status": "ok"
-        },
-        {
-          "source": "polymarket",
-          "id": "2832140",
-          "question": "Will Nigel Farage win the Clacton by-election?",
-          "slug": "will-nigel-farage-win-the-clacton-by-election-20260707144027825",
-          "market_type": "binary",
-          "yes_price": 0.9025,
-          "no_price": 0.0975,
-          "outcomes": [
-            "Yes",
-            "No"
-          ],
-          "outcome_prices": [
-            0.9025,
-            0.0975
-          ],
-          "volume_24h": 294279.5283190001,
-          "liquidity": 105466.52661,
-          "active": true,
-          "closed": false,
-          "end_date": "2027-06-30T23:59:00Z",
-          "status": "ok"
-        },
-        {
-          "source": "polymarket",
-          "id": "2643405",
-          "question": "Will the US announce a blockade on Iran by July 31?",
-          "slug": "will-the-us-announce-a-blockade-on-iran-by-july-31-20260622191116912",
-          "market_type": "binary",
-          "yes_price": 0.235,
-          "no_price": 0.765,
-          "outcomes": [
-            "Yes",
-            "No"
-          ],
-          "outcome_prices": [
-            0.235,
-            0.765
-          ],
-          "volume_24h": 276883.7934700002,
-          "liquidity": 54618.2755,
-          "active": true,
-          "closed": false,
-          "end_date": "2026-07-31T23:59:00Z",
-          "status": "ok"
-        },
-        {
-          "source": "polymarket",
-          "id": "1654960",
-          "question": "Will the Fed increase interest rates by 50+ bps after the July 2026 meeting?",
-          "slug": "will-the-fed-increase-interest-rates-by-50-bps-after-the-july-2026-meeting",
-          "market_type": "binary",
-          "yes_price": 0.0035,
-          "no_price": 0.9965,
-          "outcomes": [
-            "Yes",
-            "No"
-          ],
-          "outcome_prices": [
-            0.0035,
-            0.9965
-          ],
-          "volume_24h": 275789.36819,
-          "liquidity": 363765.82956,
-          "active": true,
-          "closed": false,
-          "end_date": "2026-07-29T00:00:00Z",
-          "status": "ok"
-        },
-        {
-          "source": "polymarket",
-          "id": "1469749",
-          "question": "Will Mostafa Pourmohammadi be head of state in Iran end of 2026?",
-          "slug": "will-mostafa-pourmohammadi-be-head-of-state-in-iran-end-of-2026",
+          "id": "1469743",
+          "question": "Will Seyed Hossein Mousavian be head of state in Iran end of 2026?",
+          "slug": "will-seyed-hossein-mousavian-be-head-of-state-in-iran-end-of-2026",
           "market_type": "binary",
           "yes_price": 0.002,
           "no_price": 0.998,
@@ -530,8 +185,8 @@
             0.002,
             0.998
           ],
-          "volume_24h": 273900.798333,
-          "liquidity": 52872.60216,
+          "volume_24h": 2390518.383333,
+          "liquidity": 57941.16505,
           "active": true,
           "closed": false,
           "end_date": "2026-12-31T00:00:00Z",
@@ -539,91 +194,22 @@
         },
         {
           "source": "polymarket",
-          "id": "2176270",
-          "question": "Strait of Hormuz traffic returns to normal by December 31?",
-          "slug": "strait-of-hormuz-traffic-returns-to-normal-by-december-31",
+          "id": "1654958",
+          "question": "Will there be no change in Fed interest rates after the July 2026 meeting?",
+          "slug": "will-there-be-no-change-in-fed-interest-rates-after-the-july-2026-meeting",
           "market_type": "binary",
-          "yes_price": 0.585,
-          "no_price": 0.415,
+          "yes_price": 0.845,
+          "no_price": 0.155,
           "outcomes": [
             "Yes",
             "No"
           ],
           "outcome_prices": [
-            0.585,
-            0.415
+            0.845,
+            0.155
           ],
-          "volume_24h": 215962.8971980001,
-          "liquidity": 264727.9589,
-          "active": true,
-          "closed": false,
-          "end_date": "2026-12-31T00:00:00Z",
-          "status": "ok"
-        },
-        {
-          "source": "polymarket",
-          "id": "1469755",
-          "question": "Will Mohammad Khatami be head of state in Iran end of 2026?",
-          "slug": "will-mohammad-khatami-be-head-of-state-in-iran-end-of-2026",
-          "market_type": "binary",
-          "yes_price": 0.0015,
-          "no_price": 0.9985,
-          "outcomes": [
-            "Yes",
-            "No"
-          ],
-          "outcome_prices": [
-            0.0015,
-            0.9985
-          ],
-          "volume_24h": 208589.86099999995,
-          "liquidity": 60993.61738,
-          "active": true,
-          "closed": false,
-          "end_date": "2026-12-31T00:00:00Z",
-          "status": "ok"
-        },
-        {
-          "source": "polymarket",
-          "id": "1469754",
-          "question": "Will Mahmoud Ahmadinejad be head of state in Iran end of 2026?",
-          "slug": "will-mahmoud-ahmadinejad-be-head-of-state-in-iran-end-of-2026",
-          "market_type": "binary",
-          "yes_price": 0.0025,
-          "no_price": 0.9975,
-          "outcomes": [
-            "Yes",
-            "No"
-          ],
-          "outcome_prices": [
-            0.0025,
-            0.9975
-          ],
-          "volume_24h": 204734.77933299995,
-          "liquidity": 60311.80916,
-          "active": true,
-          "closed": false,
-          "end_date": "2026-12-31T00:00:00Z",
-          "status": "ok"
-        },
-        {
-          "source": "polymarket",
-          "id": "1654957",
-          "question": "Will the Fed decrease interest rates by 25 bps after the July 2026 meeting?",
-          "slug": "will-the-fed-decrease-interest-rates-by-25-bps-after-the-july-2026-meeting",
-          "market_type": "binary",
-          "yes_price": 0.0055,
-          "no_price": 0.9945,
-          "outcomes": [
-            "Yes",
-            "No"
-          ],
-          "outcome_prices": [
-            0.0055,
-            0.9945
-          ],
-          "volume_24h": 192047.960813,
-          "liquidity": 602799.84838,
+          "volume_24h": 579601.7199620015,
+          "liquidity": 462482.9546,
           "active": true,
           "closed": false,
           "end_date": "2026-07-29T00:00:00Z",
@@ -645,8 +231,8 @@
             0.0015,
             0.9985
           ],
-          "volume_24h": 178751.95100000003,
-          "liquidity": 1334153.48905,
+          "volume_24h": 526177.638,
+          "liquidity": 1486377.3513,
           "active": true,
           "closed": false,
           "end_date": "2026-07-29T00:00:00Z",
@@ -654,22 +240,114 @@
         },
         {
           "source": "polymarket",
-          "id": "2686765",
-          "question": "Iran charges Hormuz fees by July 15?",
-          "slug": "iran-charges-hormuz-fees-by-july-15-20260625175039061",
+          "id": "561232",
+          "question": "Will Pete Buttigieg win the 2028 US Presidential Election?",
+          "slug": "will-pete-buttigieg-win-the-2028-us-presidential-election",
           "market_type": "binary",
-          "yes_price": 0.0445,
-          "no_price": 0.9555,
+          "yes_price": 0.0235,
+          "no_price": 0.9765,
           "outcomes": [
             "Yes",
             "No"
           ],
           "outcome_prices": [
-            0.0445,
-            0.9555
+            0.0235,
+            0.9765
           ],
-          "volume_24h": 174371.20250199994,
-          "liquidity": 57770.10364,
+          "volume_24h": 261715.78782599978,
+          "liquidity": 492800.59733,
+          "active": true,
+          "closed": false,
+          "end_date": "2028-11-07T00:00:00Z",
+          "status": "ok"
+        },
+        {
+          "source": "polymarket",
+          "id": "1654959",
+          "question": "Will the Fed increase interest rates by 25 bps after the July 2026 meeting?",
+          "slug": "will-the-fed-increase-interest-rates-by-25-bps-after-the-july-2026-meeting",
+          "market_type": "binary",
+          "yes_price": 0.1475,
+          "no_price": 0.8525,
+          "outcomes": [
+            "Yes",
+            "No"
+          ],
+          "outcome_prices": [
+            0.1475,
+            0.8525
+          ],
+          "volume_24h": 226266.675404,
+          "liquidity": 364409.57534,
+          "active": true,
+          "closed": false,
+          "end_date": "2026-07-29T00:00:00Z",
+          "status": "ok"
+        },
+        {
+          "source": "polymarket",
+          "id": "2176262",
+          "question": "Strait of Hormuz traffic returns to normal by July 31?",
+          "slug": "strait-of-hormuz-traffic-returns-to-normal-by-july-31",
+          "market_type": "binary",
+          "yes_price": 0.045,
+          "no_price": 0.955,
+          "outcomes": [
+            "Yes",
+            "No"
+          ],
+          "outcome_prices": [
+            0.045,
+            0.955
+          ],
+          "volume_24h": 216043.74423699998,
+          "liquidity": 786865.7433,
+          "active": true,
+          "closed": false,
+          "end_date": "2026-07-31T00:00:00Z",
+          "status": "ok"
+        },
+        {
+          "source": "polymarket",
+          "id": "2832147",
+          "question": "Will Count Binface win the Clacton by-election?",
+          "slug": "will-count-binface-win-the-clacton-by-election-20260707211451133",
+          "market_type": "binary",
+          "yes_price": 0.0825,
+          "no_price": 0.9175,
+          "outcomes": [
+            "Yes",
+            "No"
+          ],
+          "outcome_prices": [
+            0.0825,
+            0.9175
+          ],
+          "volume_24h": 199624.111672,
+          "liquidity": 193090.56809,
+          "active": true,
+          "closed": false,
+          "end_date": "2027-06-30T23:59:00Z",
+          "status": "ok"
+        },
+        {
+          "source": "polymarket",
+          "id": "2686769",
+          "question": "Iran full airspace closure by July 15?",
+          "slug": "iran-full-airspace-closure-by-july-15-20260625195254149",
+          "market_type": "binary",
+          "yes_price": 0.1315,
+          "no_price": 0.8685,
+          "outcomes": [
+            "Yes",
+            "No"
+          ],
+          "outcome_prices": [
+            0.1315,
+            0.8685
+          ],
+          "volume_24h": 192298.98696100005,
+          "liquidity": 44534.49746,
           "active": true,
           "closed": false,
           "end_date": "2026-07-15T23:59:00Z",
@@ -677,22 +355,45 @@
         },
         {
           "source": "polymarket",
-          "id": "663583",
-          "question": "Will the Iranian regime fall before 2027?",
-          "slug": "will-the-iranian-regime-fall-by-the-end-of-2026",
+          "id": "1654957",
+          "question": "Will the Fed decrease interest rates by 25 bps after the July 2026 meeting?",
+          "slug": "will-the-fed-decrease-interest-rates-by-25-bps-after-the-july-2026-meeting",
           "market_type": "binary",
-          "yes_price": 0.085,
-          "no_price": 0.915,
+          "yes_price": 0.0055,
+          "no_price": 0.9945,
           "outcomes": [
             "Yes",
             "No"
           ],
           "outcome_prices": [
-            0.085,
-            0.915
+            0.0055,
+            0.9945
           ],
-          "volume_24h": 148969.26289799996,
-          "liquidity": 443764.6186,
+          "volume_24h": 183681.43524099997,
+          "liquidity": 572518.63284,
+          "active": true,
+          "closed": false,
+          "end_date": "2026-07-29T00:00:00Z",
+          "status": "ok"
+        },
+        {
+          "source": "polymarket",
+          "id": "665374",
+          "question": "Will the U.S. invade Iran before 2027?",
+          "slug": "will-the-us-invade-iran-before-2027",
+          "market_type": "binary",
+          "yes_price": 0.155,
+          "no_price": 0.845,
+          "outcomes": [
+            "Yes",
+            "No"
+          ],
+          "outcome_prices": [
+            0.155,
+            0.845
+          ],
+          "volume_24h": 177761.08989900036,
+          "liquidity": 621437.0446,
           "active": true,
           "closed": false,
           "end_date": "2026-12-31T00:00:00Z",
@@ -702,7 +403,7 @@
       "errors": []
     },
     "google_trends": {
-      "status": "ok",
+      "status": "partial",
       "meta": {
         "timeframe": "now 1-d",
         "geo": "global",
@@ -715,29 +416,29 @@
         "total_rows": 14,
         "top_keywords_by_anchor_normalized_mean_24h": [
           {
-            "keyword": "gold price",
-            "score_mean_24h_anchor_normalized": 1341.73,
-            "score_last_anchor_normalized": 742.86
+            "keyword": "inflation",
+            "score_mean_24h_anchor_normalized": 312.69,
+            "score_last_anchor_normalized": 275.0
           },
           {
-            "keyword": "NATO",
-            "score_mean_24h_anchor_normalized": 1033.66,
-            "score_last_anchor_normalized": 825.0
+            "keyword": "China US",
+            "score_mean_24h_anchor_normalized": 96.89,
+            "score_last_anchor_normalized": 76.09
           },
           {
-            "keyword": "oil price",
-            "score_mean_24h_anchor_normalized": 629.07,
-            "score_last_anchor_normalized": 400.0
+            "keyword": "AI regulation",
+            "score_mean_24h_anchor_normalized": 34.23,
+            "score_last_anchor_normalized": 0.0
           },
           {
-            "keyword": "Iran war",
-            "score_mean_24h_anchor_normalized": 505.07,
-            "score_last_anchor_normalized": 425.0
+            "keyword": "China economy",
+            "score_mean_24h_anchor_normalized": 17.66,
+            "score_last_anchor_normalized": 15.0
           },
           {
-            "keyword": "interest rate",
-            "score_mean_24h_anchor_normalized": 345.99,
-            "score_last_anchor_normalized": 271.43
+            "keyword": "OPEC",
+            "score_mean_24h_anchor_normalized": 12.74,
+            "score_last_anchor_normalized": 0.0
           }
         ]
       },
@@ -747,132 +448,132 @@
           "keyword": "Iran war",
           "anchor_keyword": "Federal Reserve",
           "chunk_index": 0,
-          "score_mean_24h_raw": 28.76,
-          "score_last_raw": 34.0,
-          "anchor_mean_24h_raw": 5.69,
-          "anchor_last_raw": 8.0,
-          "score_mean_24h_anchor_normalized": 505.07,
-          "score_last_anchor_normalized": 425.0,
-          "status": "ok",
-          "error": null,
-          "notes": "Anchor-normalized scores are rough cross-chunk calibration, not official globally comparable Google Trends scores."
+          "score_mean_24h_raw": null,
+          "score_last_raw": null,
+          "anchor_mean_24h_raw": null,
+          "anchor_last_raw": null,
+          "score_mean_24h_anchor_normalized": null,
+          "score_last_anchor_normalized": null,
+          "status": "error",
+          "error": "The request failed: Google returned a response with code 429",
+          "notes": "Chunk-level request failed after retries."
         },
         {
           "source": "google_trends",
           "keyword": "Ukraine war",
           "anchor_keyword": "Federal Reserve",
           "chunk_index": 0,
-          "score_mean_24h_raw": 6.18,
-          "score_last_raw": 7.0,
-          "anchor_mean_24h_raw": 5.69,
-          "anchor_last_raw": 8.0,
-          "score_mean_24h_anchor_normalized": 108.49,
-          "score_last_anchor_normalized": 87.5,
-          "status": "ok",
-          "error": null,
-          "notes": "Anchor-normalized scores are rough cross-chunk calibration, not official globally comparable Google Trends scores."
+          "score_mean_24h_raw": null,
+          "score_last_raw": null,
+          "anchor_mean_24h_raw": null,
+          "anchor_last_raw": null,
+          "score_mean_24h_anchor_normalized": null,
+          "score_last_anchor_normalized": null,
+          "status": "error",
+          "error": "The request failed: Google returned a response with code 429",
+          "notes": "Chunk-level request failed after retries."
         },
         {
           "source": "google_trends",
           "keyword": "NATO",
           "anchor_keyword": "Federal Reserve",
           "chunk_index": 0,
-          "score_mean_24h_raw": 58.86,
-          "score_last_raw": 66.0,
-          "anchor_mean_24h_raw": 5.69,
-          "anchor_last_raw": 8.0,
-          "score_mean_24h_anchor_normalized": 1033.66,
-          "score_last_anchor_normalized": 825.0,
-          "status": "ok",
-          "error": null,
-          "notes": "Anchor-normalized scores are rough cross-chunk calibration, not official globally comparable Google Trends scores."
+          "score_mean_24h_raw": null,
+          "score_last_raw": null,
+          "anchor_mean_24h_raw": null,
+          "anchor_last_raw": null,
+          "score_mean_24h_anchor_normalized": null,
+          "score_last_anchor_normalized": null,
+          "status": "error",
+          "error": "The request failed: Google returned a response with code 429",
+          "notes": "Chunk-level request failed after retries."
         },
         {
           "source": "google_trends",
           "keyword": "oil price",
           "anchor_keyword": "Federal Reserve",
           "chunk_index": 0,
-          "score_mean_24h_raw": 35.82,
-          "score_last_raw": 32.0,
-          "anchor_mean_24h_raw": 5.69,
-          "anchor_last_raw": 8.0,
-          "score_mean_24h_anchor_normalized": 629.07,
-          "score_last_anchor_normalized": 400.0,
-          "status": "ok",
-          "error": null,
-          "notes": "Anchor-normalized scores are rough cross-chunk calibration, not official globally comparable Google Trends scores."
+          "score_mean_24h_raw": null,
+          "score_last_raw": null,
+          "anchor_mean_24h_raw": null,
+          "anchor_last_raw": null,
+          "score_mean_24h_anchor_normalized": null,
+          "score_last_anchor_normalized": null,
+          "status": "error",
+          "error": "The request failed: Google returned a response with code 429",
+          "notes": "Chunk-level request failed after retries."
         },
         {
           "source": "google_trends",
           "keyword": "gold price",
           "anchor_keyword": "Federal Reserve",
           "chunk_index": 1,
-          "score_mean_24h_raw": 71.63,
-          "score_last_raw": 52.0,
-          "anchor_mean_24h_raw": 5.34,
-          "anchor_last_raw": 7.0,
-          "score_mean_24h_anchor_normalized": 1341.73,
-          "score_last_anchor_normalized": 742.86,
-          "status": "ok",
-          "error": null,
-          "notes": "Anchor-normalized scores are rough cross-chunk calibration, not official globally comparable Google Trends scores."
+          "score_mean_24h_raw": null,
+          "score_last_raw": null,
+          "anchor_mean_24h_raw": null,
+          "anchor_last_raw": null,
+          "score_mean_24h_anchor_normalized": null,
+          "score_last_anchor_normalized": null,
+          "status": "error",
+          "error": "The request failed: Google returned a response with code 429",
+          "notes": "Chunk-level request failed after retries."
         },
         {
           "source": "google_trends",
           "keyword": "recession",
           "anchor_keyword": "Federal Reserve",
           "chunk_index": 1,
-          "score_mean_24h_raw": 2.39,
-          "score_last_raw": 4.0,
-          "anchor_mean_24h_raw": 5.34,
-          "anchor_last_raw": 7.0,
-          "score_mean_24h_anchor_normalized": 44.85,
-          "score_last_anchor_normalized": 57.14,
-          "status": "ok",
-          "error": null,
-          "notes": "Anchor-normalized scores are rough cross-chunk calibration, not official globally comparable Google Trends scores."
+          "score_mean_24h_raw": null,
+          "score_last_raw": null,
+          "anchor_mean_24h_raw": null,
+          "anchor_last_raw": null,
+          "score_mean_24h_anchor_normalized": null,
+          "score_last_anchor_normalized": null,
+          "status": "error",
+          "error": "The request failed: Google returned a response with code 429",
+          "notes": "Chunk-level request failed after retries."
         },
         {
           "source": "google_trends",
           "keyword": "Trump tariffs",
           "anchor_keyword": "Federal Reserve",
           "chunk_index": 1,
-          "score_mean_24h_raw": 0.86,
-          "score_last_raw": 2.0,
-          "anchor_mean_24h_raw": 5.34,
-          "anchor_last_raw": 7.0,
-          "score_mean_24h_anchor_normalized": 16.13,
-          "score_last_anchor_normalized": 28.57,
-          "status": "ok",
-          "error": null,
-          "notes": "Anchor-normalized scores are rough cross-chunk calibration, not official globally comparable Google Trends scores."
+          "score_mean_24h_raw": null,
+          "score_last_raw": null,
+          "anchor_mean_24h_raw": null,
+          "anchor_last_raw": null,
+          "score_mean_24h_anchor_normalized": null,
+          "score_last_anchor_normalized": null,
+          "status": "error",
+          "error": "The request failed: Google returned a response with code 429",
+          "notes": "Chunk-level request failed after retries."
         },
         {
           "source": "google_trends",
           "keyword": "interest rate",
           "anchor_keyword": "Federal Reserve",
           "chunk_index": 1,
-          "score_mean_24h_raw": 18.47,
-          "score_last_raw": 19.0,
-          "anchor_mean_24h_raw": 5.34,
-          "anchor_last_raw": 7.0,
-          "score_mean_24h_anchor_normalized": 345.99,
-          "score_last_anchor_normalized": 271.43,
-          "status": "ok",
-          "error": null,
-          "notes": "Anchor-normalized scores are rough cross-chunk calibration, not official globally comparable Google Trends scores."
+          "score_mean_24h_raw": null,
+          "score_last_raw": null,
+          "anchor_mean_24h_raw": null,
+          "anchor_last_raw": null,
+          "score_mean_24h_anchor_normalized": null,
+          "score_last_anchor_normalized": null,
+          "status": "error",
+          "error": "The request failed: Google returned a response with code 429",
+          "notes": "Chunk-level request failed after retries."
         },
         {
           "source": "google_trends",
           "keyword": "inflation",
           "anchor_keyword": "Federal Reserve",
           "chunk_index": 2,
-          "score_mean_24h_raw": 73.66,
-          "score_last_raw": 94.0,
-          "anchor_mean_24h_raw": 25.21,
-          "anchor_last_raw": 34.0,
-          "score_mean_24h_anchor_normalized": 292.18,
-          "score_last_anchor_normalized": 276.47,
+          "score_mean_24h_raw": 62.68,
+          "score_last_raw": 55.0,
+          "anchor_mean_24h_raw": 20.04,
+          "anchor_last_raw": 20.0,
+          "score_mean_24h_anchor_normalized": 312.69,
+          "score_last_anchor_normalized": 275.0,
           "status": "ok",
           "error": null,
           "notes": "Anchor-normalized scores are rough cross-chunk calibration, not official globally comparable Google Trends scores."
@@ -882,11 +583,11 @@
           "keyword": "AI regulation",
           "anchor_keyword": "Federal Reserve",
           "chunk_index": 2,
-          "score_mean_24h_raw": 8.27,
+          "score_mean_24h_raw": 6.86,
           "score_last_raw": 0.0,
-          "anchor_mean_24h_raw": 25.21,
-          "anchor_last_raw": 34.0,
-          "score_mean_24h_anchor_normalized": 32.81,
+          "anchor_mean_24h_raw": 20.04,
+          "anchor_last_raw": 20.0,
+          "score_mean_24h_anchor_normalized": 34.23,
           "score_last_anchor_normalized": 0.0,
           "status": "ok",
           "error": null,
@@ -897,11 +598,11 @@
           "keyword": "chip export",
           "anchor_keyword": "Federal Reserve",
           "chunk_index": 2,
-          "score_mean_24h_raw": 0.03,
+          "score_mean_24h_raw": 0.04,
           "score_last_raw": 0.0,
-          "anchor_mean_24h_raw": 25.21,
-          "anchor_last_raw": 34.0,
-          "score_mean_24h_anchor_normalized": 0.13,
+          "anchor_mean_24h_raw": 20.04,
+          "anchor_last_raw": 20.0,
+          "score_mean_24h_anchor_normalized": 0.19,
           "score_last_anchor_normalized": 0.0,
           "status": "ok",
           "error": null,
@@ -912,12 +613,12 @@
           "keyword": "China economy",
           "anchor_keyword": "Federal Reserve",
           "chunk_index": 2,
-          "score_mean_24h_raw": 4.18,
-          "score_last_raw": 0.0,
-          "anchor_mean_24h_raw": 25.21,
-          "anchor_last_raw": 34.0,
-          "score_mean_24h_anchor_normalized": 16.57,
-          "score_last_anchor_normalized": 0.0,
+          "score_mean_24h_raw": 3.54,
+          "score_last_raw": 3.0,
+          "anchor_mean_24h_raw": 20.04,
+          "anchor_last_raw": 20.0,
+          "score_mean_24h_anchor_normalized": 17.66,
+          "score_last_anchor_normalized": 15.0,
           "status": "ok",
           "error": null,
           "notes": "Anchor-normalized scores are rough cross-chunk calibration, not official globally comparable Google Trends scores."
@@ -927,12 +628,12 @@
           "keyword": "China US",
           "anchor_keyword": "Federal Reserve",
           "chunk_index": 3,
-          "score_mean_24h_raw": 39.2,
-          "score_last_raw": 51.0,
-          "anchor_mean_24h_raw": 42.51,
-          "anchor_last_raw": 58.0,
-          "score_mean_24h_anchor_normalized": 92.21,
-          "score_last_anchor_normalized": 87.93,
+          "score_mean_24h_raw": 44.28,
+          "score_last_raw": 35.0,
+          "anchor_mean_24h_raw": 45.71,
+          "anchor_last_raw": 46.0,
+          "score_mean_24h_anchor_normalized": 96.89,
+          "score_last_anchor_normalized": 76.09,
           "status": "ok",
           "error": null,
           "notes": "Anchor-normalized scores are rough cross-chunk calibration, not official globally comparable Google Trends scores."
@@ -942,23 +643,52 @@
           "keyword": "OPEC",
           "anchor_keyword": "Federal Reserve",
           "chunk_index": 3,
-          "score_mean_24h_raw": 6.14,
+          "score_mean_24h_raw": 5.82,
           "score_last_raw": 0.0,
-          "anchor_mean_24h_raw": 42.51,
-          "anchor_last_raw": 58.0,
-          "score_mean_24h_anchor_normalized": 14.45,
+          "anchor_mean_24h_raw": 45.71,
+          "anchor_last_raw": 46.0,
+          "score_mean_24h_anchor_normalized": 12.74,
           "score_last_anchor_normalized": 0.0,
           "status": "ok",
           "error": null,
           "notes": "Anchor-normalized scores are rough cross-chunk calibration, not official globally comparable Google Trends scores."
         }
       ],
-      "errors": []
+      "errors": [
+        {
+          "source": "google_trends",
+          "chunk_index": 0,
+          "chunk": [
+            "Iran war",
+            "Ukraine war",
+            "NATO",
+            "oil price",
+            "Federal Reserve"
+          ],
+          "status": "error",
+          "error_type": "TooManyRequestsError",
+          "message": "The request failed: Google returned a response with code 429"
+        },
+        {
+          "source": "google_trends",
+          "chunk_index": 1,
+          "chunk": [
+            "gold price",
+            "recession",
+            "Trump tariffs",
+            "interest rate",
+            "Federal Reserve"
+          ],
+          "status": "error",
+          "error_type": "TooManyRequestsError",
+          "message": "The request failed: Google returned a response with code 429"
+        }
+      ]
     },
     "wikipedia_pageviews": {
-      "status": "ok",
+      "status": "partial",
       "meta": {
-        "date": "20260707",
+        "date": "20260708",
         "requested_pages": [
           "Strait_of_Hormuz",
           "Russo-Ukrainian_War",
@@ -974,28 +704,28 @@
         "dynamic_pages": []
       },
       "summary": {
-        "date": "20260707",
+        "date": "20260708",
         "total_rows": 10,
         "top_pages_by_views": [
           {
             "page": "Donald_Trump",
-            "views": 43429
+            "views": 46673
           },
           {
             "page": "NATO",
-            "views": 9672
+            "views": 13585
           },
           {
             "page": "Strait_of_Hormuz",
-            "views": 4535
+            "views": 7046
           },
           {
             "page": "Kevin_Warsh",
-            "views": 1656
+            "views": 2055
           },
           {
-            "page": "Semiconductor",
-            "views": 1649
+            "page": "Federal_Reserve",
+            "views": 1816
           }
         ]
       },
@@ -1003,387 +733,110 @@
         {
           "source": "wikipedia_pageviews",
           "page": "Strait_of_Hormuz",
-          "date": "20260707",
-          "views": 4535,
+          "date": "20260708",
+          "views": 7046,
           "status": "ok",
           "error": null
         },
         {
           "source": "wikipedia_pageviews",
           "page": "Russo-Ukrainian_War",
-          "date": "20260707",
-          "views": 1588,
-          "status": "ok",
-          "error": null
+          "date": "20260708",
+          "views": null,
+          "status": "error",
+          "error": "Request failed after 4 attempts: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/all-agents/Russo-Ukrainian_War/daily/20260708/20260708"
         },
         {
           "source": "wikipedia_pageviews",
           "page": "Federal_Reserve",
-          "date": "20260707",
-          "views": 1603,
+          "date": "20260708",
+          "views": 1816,
           "status": "ok",
           "error": null
         },
         {
           "source": "wikipedia_pageviews",
           "page": "Donald_Trump",
-          "date": "20260707",
-          "views": 43429,
+          "date": "20260708",
+          "views": 46673,
           "status": "ok",
           "error": null
         },
         {
           "source": "wikipedia_pageviews",
           "page": "OPEC",
-          "date": "20260707",
-          "views": 1532,
+          "date": "20260708",
+          "views": 1339,
           "status": "ok",
           "error": null
         },
         {
           "source": "wikipedia_pageviews",
           "page": "NATO",
-          "date": "20260707",
-          "views": 9672,
+          "date": "20260708",
+          "views": 13585,
           "status": "ok",
           "error": null
         },
         {
           "source": "wikipedia_pageviews",
           "page": "Artificial_intelligence_regulation",
-          "date": "20260707",
-          "views": 5,
+          "date": "20260708",
+          "views": 6,
           "status": "ok",
           "error": null
         },
         {
           "source": "wikipedia_pageviews",
           "page": "Kevin_Warsh",
-          "date": "20260707",
-          "views": 1656,
+          "date": "20260708",
+          "views": 2055,
           "status": "ok",
           "error": null
         },
         {
           "source": "wikipedia_pageviews",
           "page": "China%E2%80%93United_States_trade_war",
-          "date": "20260707",
-          "views": 833,
+          "date": "20260708",
+          "views": 704,
           "status": "ok",
           "error": null
         },
         {
           "source": "wikipedia_pageviews",
           "page": "Semiconductor",
-          "date": "20260707",
-          "views": 1649,
+          "date": "20260708",
+          "views": 1546,
           "status": "ok",
           "error": null
         }
       ],
-      "errors": []
+      "errors": [
+        {
+          "source": "wikipedia_pageviews",
+          "page": "Russo-Ukrainian_War",
+          "status": "error",
+          "error_type": "RuntimeError",
+          "message": "Request failed after 4 attempts: https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia/all-access/all-agents/Russo-Ukrainian_War/daily/20260708/20260708"
+        }
+      ]
     }
   },
   "delta_vs_previous_day": {
     "available": true,
-    "previous_date_utc": "2026-07-07",
-    "current_date_utc": "2026-07-08",
+    "previous_date_utc": "2026-07-08",
+    "current_date_utc": "2026-07-09",
     "comparison_type": "previous_snapshot",
     "sources": {
       "polymarket": {
         "comparison_key": "question",
-        "row_count": 23,
+        "row_count": 10,
         "data": [
           {
-            "question": "Will there be no change in Fed interest rates after the July 2026 meeting?",
+            "question": "Will Seyed Hossein Mousavian be head of state in Iran end of 2026?",
             "market_type": "binary",
             "volume_24h_delta": {
-              "current": 1359825.4386120008,
-              "previous": 627278.6330300004,
-              "absolute_change": 732546.8056,
-              "pct_change": 116.78,
-              "direction": "up"
-            },
-            "yes_price_delta": {
-              "current": 0.775,
-              "previous": 0.825,
-              "absolute_change": -0.05,
-              "pct_change": -6.06,
-              "direction": "down"
-            },
-            "is_new_market_vs_previous": false
-          },
-          {
-            "question": "Will Tucker Carlson win the 2028 US Presidential Election?",
-            "market_type": "binary",
-            "volume_24h_delta": {
-              "current": 907241.3480209992,
-              "previous": 648778.5757639908,
-              "absolute_change": 258462.7723,
-              "pct_change": 39.84,
-              "direction": "up"
-            },
-            "yes_price_delta": {
-              "current": 0.0205,
-              "previous": 0.0205,
-              "absolute_change": 0.0,
-              "pct_change": 0.0,
-              "direction": "flat"
-            },
-            "is_new_market_vs_previous": false
-          },
-          {
-            "question": "Will Pete Buttigieg win the 2028 US Presidential Election?",
-            "market_type": "binary",
-            "volume_24h_delta": {
-              "current": 888667.1576409945,
-              "previous": 844310.4185250025,
-              "absolute_change": 44356.7391,
-              "pct_change": 5.25,
-              "direction": "up"
-            },
-            "yes_price_delta": {
-              "current": 0.0235,
-              "previous": 0.0215,
-              "absolute_change": 0.002,
-              "pct_change": 9.3,
-              "direction": "up"
-            },
-            "is_new_market_vs_previous": false
-          },
-          {
-            "question": "Will Count Binface win the Clacton by-election?",
-            "market_type": "binary",
-            "volume_24h_delta": {
-              "current": 553280.8462400001,
-              "previous": null,
-              "absolute_change": null,
-              "pct_change": null,
-              "direction": "unknown"
-            },
-            "yes_price_delta": {
-              "current": 0.073,
-              "previous": null,
-              "absolute_change": null,
-              "pct_change": null,
-              "direction": "unknown"
-            },
-            "is_new_market_vs_previous": true
-          },
-          {
-            "question": "Strait of Hormuz traffic returns to normal by July 31?",
-            "market_type": "binary",
-            "volume_24h_delta": {
-              "current": 536181.6158070004,
-              "previous": 671750.2184170004,
-              "absolute_change": -135568.6026,
-              "pct_change": -20.18,
-              "direction": "down"
-            },
-            "yes_price_delta": {
-              "current": 0.045,
-              "previous": 0.055,
-              "absolute_change": -0.01,
-              "pct_change": -18.18,
-              "direction": "down"
-            },
-            "is_new_market_vs_previous": false
-          },
-          {
-            "question": "Will Iran announce withdrawal from MOU negotiations by July 31?",
-            "market_type": "binary",
-            "volume_24h_delta": {
-              "current": 420659.18521299964,
-              "previous": null,
-              "absolute_change": null,
-              "pct_change": null,
-              "direction": "unknown"
-            },
-            "yes_price_delta": {
-              "current": 0.235,
-              "previous": null,
-              "absolute_change": null,
-              "pct_change": null,
-              "direction": "unknown"
-            },
-            "is_new_market_vs_previous": true
-          },
-          {
-            "question": "Will the Fed increase interest rates by 25 bps after the July 2026 meeting?",
-            "market_type": "binary",
-            "volume_24h_delta": {
-              "current": 407331.80085399986,
-              "previous": null,
-              "absolute_change": null,
-              "pct_change": null,
-              "direction": "unknown"
-            },
-            "yes_price_delta": {
-              "current": 0.2185,
-              "previous": null,
-              "absolute_change": null,
-              "pct_change": null,
-              "direction": "unknown"
-            },
-            "is_new_market_vs_previous": true
-          },
-          {
-            "question": "US-Iran Final Nuclear Deal by August 31, 2026?",
-            "market_type": "binary",
-            "volume_24h_delta": {
-              "current": 402615.2817800001,
-              "previous": null,
-              "absolute_change": null,
-              "pct_change": null,
-              "direction": "unknown"
-            },
-            "yes_price_delta": {
-              "current": 0.125,
-              "previous": null,
-              "absolute_change": null,
-              "pct_change": null,
-              "direction": "unknown"
-            },
-            "is_new_market_vs_previous": true
-          },
-          {
-            "question": "Iran full airspace closure by July 15?",
-            "market_type": "binary",
-            "volume_24h_delta": {
-              "current": 373547.02645599993,
-              "previous": null,
-              "absolute_change": null,
-              "pct_change": null,
-              "direction": "unknown"
-            },
-            "yes_price_delta": {
-              "current": 0.2065,
-              "previous": null,
-              "absolute_change": null,
-              "pct_change": null,
-              "direction": "unknown"
-            },
-            "is_new_market_vs_previous": true
-          },
-          {
-            "question": "Strait of Hormuz traffic returns to normal by July 15?",
-            "market_type": "binary",
-            "volume_24h_delta": {
-              "current": 354819.84320300014,
-              "previous": 552178.1698729994,
-              "absolute_change": -197358.3267,
-              "pct_change": -35.74,
-              "direction": "down"
-            },
-            "yes_price_delta": {
-              "current": 0.0065,
-              "previous": 0.0115,
-              "absolute_change": -0.005,
-              "pct_change": -43.48,
-              "direction": "down"
-            },
-            "is_new_market_vs_previous": false
-          },
-          {
-            "question": "US-Iran Final Nuclear Deal by August 18, 2026?",
-            "market_type": "binary",
-            "volume_24h_delta": {
-              "current": 334444.0131189998,
-              "previous": null,
-              "absolute_change": null,
-              "pct_change": null,
-              "direction": "unknown"
-            },
-            "yes_price_delta": {
-              "current": 0.105,
-              "previous": null,
-              "absolute_change": null,
-              "pct_change": null,
-              "direction": "unknown"
-            },
-            "is_new_market_vs_previous": true
-          },
-          {
-            "question": "Will the U.S. invade Iran before 2027?",
-            "market_type": "binary",
-            "volume_24h_delta": {
-              "current": 294990.6194479998,
-              "previous": 280430.7935719997,
-              "absolute_change": 14559.8259,
-              "pct_change": 5.19,
-              "direction": "up"
-            },
-            "yes_price_delta": {
-              "current": 0.155,
-              "previous": 0.135,
-              "absolute_change": 0.02,
-              "pct_change": 14.81,
-              "direction": "up"
-            },
-            "is_new_market_vs_previous": false
-          },
-          {
-            "question": "Will Nigel Farage win the Clacton by-election?",
-            "market_type": "binary",
-            "volume_24h_delta": {
-              "current": 294279.5283190001,
-              "previous": null,
-              "absolute_change": null,
-              "pct_change": null,
-              "direction": "unknown"
-            },
-            "yes_price_delta": {
-              "current": 0.9025,
-              "previous": null,
-              "absolute_change": null,
-              "pct_change": null,
-              "direction": "unknown"
-            },
-            "is_new_market_vs_previous": true
-          },
-          {
-            "question": "Will the US announce a blockade on Iran by July 31?",
-            "market_type": "binary",
-            "volume_24h_delta": {
-              "current": 276883.7934700002,
-              "previous": null,
-              "absolute_change": null,
-              "pct_change": null,
-              "direction": "unknown"
-            },
-            "yes_price_delta": {
-              "current": 0.235,
-              "previous": null,
-              "absolute_change": null,
-              "pct_change": null,
-              "direction": "unknown"
-            },
-            "is_new_market_vs_previous": true
-          },
-          {
-            "question": "Will the Fed increase interest rates by 50+ bps after the July 2026 meeting?",
-            "market_type": "binary",
-            "volume_24h_delta": {
-              "current": 275789.36819,
-              "previous": 1137731.4486640003,
-              "absolute_change": -861942.0805,
-              "pct_change": -75.76,
-              "direction": "down"
-            },
-            "yes_price_delta": {
-              "current": 0.0035,
-              "previous": 0.0035,
-              "absolute_change": 0.0,
-              "pct_change": 0.0,
-              "direction": "flat"
-            },
-            "is_new_market_vs_previous": false
-          },
-          {
-            "question": "Will Mostafa Pourmohammadi be head of state in Iran end of 2026?",
-            "market_type": "binary",
-            "volume_24h_delta": {
-              "current": 273900.798333,
+              "current": 2390518.383333,
               "previous": null,
               "absolute_change": null,
               "pct_change": null,
@@ -1399,90 +852,33 @@
             "is_new_market_vs_previous": true
           },
           {
-            "question": "Strait of Hormuz traffic returns to normal by December 31?",
+            "question": "Will there be no change in Fed interest rates after the July 2026 meeting?",
             "market_type": "binary",
             "volume_24h_delta": {
-              "current": 215962.8971980001,
-              "previous": 236636.5077780001,
-              "absolute_change": -20673.6106,
-              "pct_change": -8.74,
+              "current": 579601.7199620015,
+              "previous": 1359825.4386120008,
+              "absolute_change": -780223.7186,
+              "pct_change": -57.38,
               "direction": "down"
             },
             "yes_price_delta": {
-              "current": 0.585,
-              "previous": 0.615,
-              "absolute_change": -0.03,
-              "pct_change": -4.88,
-              "direction": "down"
+              "current": 0.845,
+              "previous": 0.775,
+              "absolute_change": 0.07,
+              "pct_change": 9.03,
+              "direction": "up"
             },
             "is_new_market_vs_previous": false
-          },
-          {
-            "question": "Will Mohammad Khatami be head of state in Iran end of 2026?",
-            "market_type": "binary",
-            "volume_24h_delta": {
-              "current": 208589.86099999995,
-              "previous": null,
-              "absolute_change": null,
-              "pct_change": null,
-              "direction": "unknown"
-            },
-            "yes_price_delta": {
-              "current": 0.0015,
-              "previous": null,
-              "absolute_change": null,
-              "pct_change": null,
-              "direction": "unknown"
-            },
-            "is_new_market_vs_previous": true
-          },
-          {
-            "question": "Will Mahmoud Ahmadinejad be head of state in Iran end of 2026?",
-            "market_type": "binary",
-            "volume_24h_delta": {
-              "current": 204734.77933299995,
-              "previous": null,
-              "absolute_change": null,
-              "pct_change": null,
-              "direction": "unknown"
-            },
-            "yes_price_delta": {
-              "current": 0.0025,
-              "previous": null,
-              "absolute_change": null,
-              "pct_change": null,
-              "direction": "unknown"
-            },
-            "is_new_market_vs_previous": true
-          },
-          {
-            "question": "Will the Fed decrease interest rates by 25 bps after the July 2026 meeting?",
-            "market_type": "binary",
-            "volume_24h_delta": {
-              "current": 192047.960813,
-              "previous": null,
-              "absolute_change": null,
-              "pct_change": null,
-              "direction": "unknown"
-            },
-            "yes_price_delta": {
-              "current": 0.0055,
-              "previous": null,
-              "absolute_change": null,
-              "pct_change": null,
-              "direction": "unknown"
-            },
-            "is_new_market_vs_previous": true
           },
           {
             "question": "Will the Fed decrease interest rates by 50+ bps after the July 2026 meeting?",
             "market_type": "binary",
             "volume_24h_delta": {
-              "current": 178751.95100000003,
-              "previous": 315583.15433299995,
-              "absolute_change": -136831.2033,
-              "pct_change": -43.36,
-              "direction": "down"
+              "current": 526177.638,
+              "previous": 178751.95100000003,
+              "absolute_change": 347425.687,
+              "pct_change": 194.36,
+              "direction": "up"
             },
             "yes_price_delta": {
               "current": 0.0015,
@@ -1494,100 +890,195 @@
             "is_new_market_vs_previous": false
           },
           {
-            "question": "Iran charges Hormuz fees by July 15?",
+            "question": "Will Pete Buttigieg win the 2028 US Presidential Election?",
             "market_type": "binary",
             "volume_24h_delta": {
-              "current": 174371.20250199994,
-              "previous": null,
-              "absolute_change": null,
-              "pct_change": null,
-              "direction": "unknown"
+              "current": 261715.78782599978,
+              "previous": 888667.1576409945,
+              "absolute_change": -626951.3698,
+              "pct_change": -70.55,
+              "direction": "down"
             },
             "yes_price_delta": {
-              "current": 0.0445,
-              "previous": null,
-              "absolute_change": null,
-              "pct_change": null,
-              "direction": "unknown"
+              "current": 0.0235,
+              "previous": 0.0235,
+              "absolute_change": 0.0,
+              "pct_change": 0.0,
+              "direction": "flat"
             },
-            "is_new_market_vs_previous": true
+            "is_new_market_vs_previous": false
           },
           {
-            "question": "Will the Iranian regime fall before 2027?",
+            "question": "Will the Fed increase interest rates by 25 bps after the July 2026 meeting?",
             "market_type": "binary",
             "volume_24h_delta": {
-              "current": 148969.26289799996,
-              "previous": null,
-              "absolute_change": null,
-              "pct_change": null,
-              "direction": "unknown"
+              "current": 226266.675404,
+              "previous": 407331.80085399986,
+              "absolute_change": -181065.1254,
+              "pct_change": -44.45,
+              "direction": "down"
             },
             "yes_price_delta": {
-              "current": 0.085,
-              "previous": null,
-              "absolute_change": null,
-              "pct_change": null,
-              "direction": "unknown"
+              "current": 0.1475,
+              "previous": 0.2185,
+              "absolute_change": -0.071,
+              "pct_change": -32.49,
+              "direction": "down"
             },
-            "is_new_market_vs_previous": true
+            "is_new_market_vs_previous": false
+          },
+          {
+            "question": "Strait of Hormuz traffic returns to normal by July 31?",
+            "market_type": "binary",
+            "volume_24h_delta": {
+              "current": 216043.74423699998,
+              "previous": 536181.6158070004,
+              "absolute_change": -320137.8716,
+              "pct_change": -59.71,
+              "direction": "down"
+            },
+            "yes_price_delta": {
+              "current": 0.045,
+              "previous": 0.045,
+              "absolute_change": 0.0,
+              "pct_change": 0.0,
+              "direction": "flat"
+            },
+            "is_new_market_vs_previous": false
+          },
+          {
+            "question": "Will Count Binface win the Clacton by-election?",
+            "market_type": "binary",
+            "volume_24h_delta": {
+              "current": 199624.111672,
+              "previous": 553280.8462400001,
+              "absolute_change": -353656.7346,
+              "pct_change": -63.92,
+              "direction": "down"
+            },
+            "yes_price_delta": {
+              "current": 0.0825,
+              "previous": 0.073,
+              "absolute_change": 0.0095,
+              "pct_change": 13.01,
+              "direction": "up"
+            },
+            "is_new_market_vs_previous": false
+          },
+          {
+            "question": "Iran full airspace closure by July 15?",
+            "market_type": "binary",
+            "volume_24h_delta": {
+              "current": 192298.98696100005,
+              "previous": 373547.02645599993,
+              "absolute_change": -181248.0395,
+              "pct_change": -48.52,
+              "direction": "down"
+            },
+            "yes_price_delta": {
+              "current": 0.1315,
+              "previous": 0.2065,
+              "absolute_change": -0.075,
+              "pct_change": -36.32,
+              "direction": "down"
+            },
+            "is_new_market_vs_previous": false
+          },
+          {
+            "question": "Will the Fed decrease interest rates by 25 bps after the July 2026 meeting?",
+            "market_type": "binary",
+            "volume_24h_delta": {
+              "current": 183681.43524099997,
+              "previous": 192047.960813,
+              "absolute_change": -8366.5256,
+              "pct_change": -4.36,
+              "direction": "down"
+            },
+            "yes_price_delta": {
+              "current": 0.0055,
+              "previous": 0.0055,
+              "absolute_change": 0.0,
+              "pct_change": 0.0,
+              "direction": "flat"
+            },
+            "is_new_market_vs_previous": false
+          },
+          {
+            "question": "Will the U.S. invade Iran before 2027?",
+            "market_type": "binary",
+            "volume_24h_delta": {
+              "current": 177761.08989900036,
+              "previous": 294990.6194479998,
+              "absolute_change": -117229.5295,
+              "pct_change": -39.74,
+              "direction": "down"
+            },
+            "yes_price_delta": {
+              "current": 0.155,
+              "previous": 0.155,
+              "absolute_change": 0.0,
+              "pct_change": 0.0,
+              "direction": "flat"
+            },
+            "is_new_market_vs_previous": false
           }
         ],
         "summary": {
           "top_volume_risers": [
             {
-              "question": "Will there be no change in Fed interest rates after the July 2026 meeting?",
-              "absolute_change": 732546.8056,
-              "pct_change": 116.78
+              "question": "Will the Fed decrease interest rates by 50+ bps after the July 2026 meeting?",
+              "absolute_change": 347425.687,
+              "pct_change": 194.36
             },
             {
-              "question": "Will Tucker Carlson win the 2028 US Presidential Election?",
-              "absolute_change": 258462.7723,
-              "pct_change": 39.84
-            },
-            {
-              "question": "Will Pete Buttigieg win the 2028 US Presidential Election?",
-              "absolute_change": 44356.7391,
-              "pct_change": 5.25
+              "question": "Will the Fed decrease interest rates by 25 bps after the July 2026 meeting?",
+              "absolute_change": -8366.5256,
+              "pct_change": -4.36
             },
             {
               "question": "Will the U.S. invade Iran before 2027?",
-              "absolute_change": 14559.8259,
-              "pct_change": 5.19
+              "absolute_change": -117229.5295,
+              "pct_change": -39.74
             },
             {
-              "question": "Strait of Hormuz traffic returns to normal by December 31?",
-              "absolute_change": -20673.6106,
-              "pct_change": -8.74
+              "question": "Will the Fed increase interest rates by 25 bps after the July 2026 meeting?",
+              "absolute_change": -181065.1254,
+              "pct_change": -44.45
+            },
+            {
+              "question": "Iran full airspace closure by July 15?",
+              "absolute_change": -181248.0395,
+              "pct_change": -48.52
             }
           ],
           "top_volume_fallers": [
             {
-              "question": "Will the Fed increase interest rates by 50+ bps after the July 2026 meeting?",
-              "absolute_change": -861942.0805,
-              "pct_change": -75.76
+              "question": "Will there be no change in Fed interest rates after the July 2026 meeting?",
+              "absolute_change": -780223.7186,
+              "pct_change": -57.38
             },
             {
-              "question": "Strait of Hormuz traffic returns to normal by July 15?",
-              "absolute_change": -197358.3267,
-              "pct_change": -35.74
+              "question": "Will Pete Buttigieg win the 2028 US Presidential Election?",
+              "absolute_change": -626951.3698,
+              "pct_change": -70.55
             },
             {
-              "question": "Will the Fed decrease interest rates by 50+ bps after the July 2026 meeting?",
-              "absolute_change": -136831.2033,
-              "pct_change": -43.36
+              "question": "Will Count Binface win the Clacton by-election?",
+              "absolute_change": -353656.7346,
+              "pct_change": -63.92
             },
             {
               "question": "Strait of Hormuz traffic returns to normal by July 31?",
-              "absolute_change": -135568.6026,
-              "pct_change": -20.18
+              "absolute_change": -320137.8716,
+              "pct_change": -59.71
             },
             {
-              "question": "Strait of Hormuz traffic returns to normal by December 31?",
-              "absolute_change": -20673.6106,
-              "pct_change": -8.74
+              "question": "Iran full airspace closure by July 15?",
+              "absolute_change": -181248.0395,
+              "pct_change": -48.52
             }
           ],
-          "new_markets_vs_previous": 14
+          "new_markets_vs_previous": 1
         }
       },
       "google_trends": {
@@ -1597,161 +1088,161 @@
           {
             "keyword": "Iran war",
             "mean_anchor_normalized_delta": {
-              "current": 505.07,
-              "previous": 198.5,
-              "absolute_change": 306.57,
-              "pct_change": 154.44,
-              "direction": "up"
+              "current": null,
+              "previous": 505.07,
+              "absolute_change": null,
+              "pct_change": null,
+              "direction": "unknown"
             },
             "last_anchor_normalized_delta": {
-              "current": 425.0,
-              "previous": 314.29,
-              "absolute_change": 110.71,
-              "pct_change": 35.23,
-              "direction": "up"
+              "current": null,
+              "previous": 425.0,
+              "absolute_change": null,
+              "pct_change": null,
+              "direction": "unknown"
             },
             "is_new_keyword_vs_previous": false
           },
           {
             "keyword": "Ukraine war",
             "mean_anchor_normalized_delta": {
-              "current": 108.49,
-              "previous": 124.79,
-              "absolute_change": -16.3,
-              "pct_change": -13.06,
-              "direction": "down"
+              "current": null,
+              "previous": 108.49,
+              "absolute_change": null,
+              "pct_change": null,
+              "direction": "unknown"
             },
             "last_anchor_normalized_delta": {
-              "current": 87.5,
-              "previous": 114.29,
-              "absolute_change": -26.79,
-              "pct_change": -23.44,
-              "direction": "down"
+              "current": null,
+              "previous": 87.5,
+              "absolute_change": null,
+              "pct_change": null,
+              "direction": "unknown"
             },
             "is_new_keyword_vs_previous": false
           },
           {
             "keyword": "NATO",
             "mean_anchor_normalized_delta": {
-              "current": 1033.66,
-              "previous": 1062.39,
-              "absolute_change": -28.73,
-              "pct_change": -2.7,
-              "direction": "down"
+              "current": null,
+              "previous": 1033.66,
+              "absolute_change": null,
+              "pct_change": null,
+              "direction": "unknown"
             },
             "last_anchor_normalized_delta": {
-              "current": 825.0,
-              "previous": 928.57,
-              "absolute_change": -103.57,
-              "pct_change": -11.15,
-              "direction": "down"
+              "current": null,
+              "previous": 825.0,
+              "absolute_change": null,
+              "pct_change": null,
+              "direction": "unknown"
             },
             "is_new_keyword_vs_previous": false
           },
           {
             "keyword": "oil price",
             "mean_anchor_normalized_delta": {
-              "current": 629.07,
-              "previous": 486.72,
-              "absolute_change": 142.35,
-              "pct_change": 29.25,
-              "direction": "up"
+              "current": null,
+              "previous": 629.07,
+              "absolute_change": null,
+              "pct_change": null,
+              "direction": "unknown"
             },
             "last_anchor_normalized_delta": {
-              "current": 400.0,
-              "previous": 471.43,
-              "absolute_change": -71.43,
-              "pct_change": -15.15,
-              "direction": "down"
+              "current": null,
+              "previous": 400.0,
+              "absolute_change": null,
+              "pct_change": null,
+              "direction": "unknown"
             },
             "is_new_keyword_vs_previous": false
           },
           {
             "keyword": "gold price",
             "mean_anchor_normalized_delta": {
-              "current": 1341.73,
-              "previous": 1489.47,
-              "absolute_change": -147.74,
-              "pct_change": -9.92,
-              "direction": "down"
+              "current": null,
+              "previous": 1341.73,
+              "absolute_change": null,
+              "pct_change": null,
+              "direction": "unknown"
             },
             "last_anchor_normalized_delta": {
-              "current": 742.86,
-              "previous": 666.67,
-              "absolute_change": 76.19,
-              "pct_change": 11.43,
-              "direction": "up"
+              "current": null,
+              "previous": 742.86,
+              "absolute_change": null,
+              "pct_change": null,
+              "direction": "unknown"
             },
             "is_new_keyword_vs_previous": false
           },
           {
             "keyword": "recession",
             "mean_anchor_normalized_delta": {
-              "current": 44.85,
-              "previous": 52.12,
-              "absolute_change": -7.27,
-              "pct_change": -13.95,
-              "direction": "down"
+              "current": null,
+              "previous": 44.85,
+              "absolute_change": null,
+              "pct_change": null,
+              "direction": "unknown"
             },
             "last_anchor_normalized_delta": {
-              "current": 57.14,
-              "previous": 50.0,
-              "absolute_change": 7.14,
-              "pct_change": 14.28,
-              "direction": "up"
+              "current": null,
+              "previous": 57.14,
+              "absolute_change": null,
+              "pct_change": null,
+              "direction": "unknown"
             },
             "is_new_keyword_vs_previous": false
           },
           {
             "keyword": "Trump tariffs",
             "mean_anchor_normalized_delta": {
-              "current": 16.13,
-              "previous": 15.15,
-              "absolute_change": 0.98,
-              "pct_change": 6.47,
-              "direction": "up"
+              "current": null,
+              "previous": 16.13,
+              "absolute_change": null,
+              "pct_change": null,
+              "direction": "unknown"
             },
             "last_anchor_normalized_delta": {
-              "current": 28.57,
-              "previous": 16.67,
-              "absolute_change": 11.9,
-              "pct_change": 71.39,
-              "direction": "up"
+              "current": null,
+              "previous": 28.57,
+              "absolute_change": null,
+              "pct_change": null,
+              "direction": "unknown"
             },
             "is_new_keyword_vs_previous": false
           },
           {
             "keyword": "interest rate",
             "mean_anchor_normalized_delta": {
-              "current": 345.99,
-              "previous": 402.57,
-              "absolute_change": -56.58,
-              "pct_change": -14.05,
-              "direction": "down"
+              "current": null,
+              "previous": 345.99,
+              "absolute_change": null,
+              "pct_change": null,
+              "direction": "unknown"
             },
             "last_anchor_normalized_delta": {
-              "current": 271.43,
-              "previous": 250.0,
-              "absolute_change": 21.43,
-              "pct_change": 8.57,
-              "direction": "up"
+              "current": null,
+              "previous": 271.43,
+              "absolute_change": null,
+              "pct_change": null,
+              "direction": "unknown"
             },
             "is_new_keyword_vs_previous": false
           },
           {
             "keyword": "inflation",
             "mean_anchor_normalized_delta": {
-              "current": 292.18,
-              "previous": 354.63,
-              "absolute_change": -62.45,
-              "pct_change": -17.61,
-              "direction": "down"
+              "current": 312.69,
+              "previous": 292.18,
+              "absolute_change": 20.51,
+              "pct_change": 7.02,
+              "direction": "up"
             },
             "last_anchor_normalized_delta": {
-              "current": 276.47,
-              "previous": 320.83,
-              "absolute_change": -44.36,
-              "pct_change": -13.83,
+              "current": 275.0,
+              "previous": 276.47,
+              "absolute_change": -1.47,
+              "pct_change": -0.53,
               "direction": "down"
             },
             "is_new_keyword_vs_previous": false
@@ -1759,29 +1250,29 @@
           {
             "keyword": "AI regulation",
             "mean_anchor_normalized_delta": {
-              "current": 32.81,
-              "previous": 37.59,
-              "absolute_change": -4.78,
-              "pct_change": -12.72,
-              "direction": "down"
+              "current": 34.23,
+              "previous": 32.81,
+              "absolute_change": 1.42,
+              "pct_change": 4.33,
+              "direction": "up"
             },
             "last_anchor_normalized_delta": {
               "current": 0.0,
-              "previous": 37.5,
-              "absolute_change": -37.5,
-              "pct_change": -100.0,
-              "direction": "down"
+              "previous": 0.0,
+              "absolute_change": 0.0,
+              "pct_change": null,
+              "direction": "flat"
             },
             "is_new_keyword_vs_previous": false
           },
           {
             "keyword": "chip export",
             "mean_anchor_normalized_delta": {
-              "current": 0.13,
-              "previous": 0.86,
-              "absolute_change": -0.73,
-              "pct_change": -84.88,
-              "direction": "down"
+              "current": 0.19,
+              "previous": 0.13,
+              "absolute_change": 0.06,
+              "pct_change": 46.15,
+              "direction": "up"
             },
             "last_anchor_normalized_delta": {
               "current": 0.0,
@@ -1795,35 +1286,35 @@
           {
             "keyword": "China economy",
             "mean_anchor_normalized_delta": {
-              "current": 16.57,
-              "previous": 18.77,
-              "absolute_change": -2.2,
-              "pct_change": -11.72,
-              "direction": "down"
+              "current": 17.66,
+              "previous": 16.57,
+              "absolute_change": 1.09,
+              "pct_change": 6.58,
+              "direction": "up"
             },
             "last_anchor_normalized_delta": {
-              "current": 0.0,
-              "previous": 25.0,
-              "absolute_change": -25.0,
-              "pct_change": -100.0,
-              "direction": "down"
+              "current": 15.0,
+              "previous": 0.0,
+              "absolute_change": 15.0,
+              "pct_change": null,
+              "direction": "up"
             },
             "is_new_keyword_vs_previous": false
           },
           {
             "keyword": "China US",
             "mean_anchor_normalized_delta": {
-              "current": 92.21,
-              "previous": 103.19,
-              "absolute_change": -10.98,
-              "pct_change": -10.64,
-              "direction": "down"
+              "current": 96.89,
+              "previous": 92.21,
+              "absolute_change": 4.68,
+              "pct_change": 5.08,
+              "direction": "up"
             },
             "last_anchor_normalized_delta": {
-              "current": 87.93,
-              "previous": 94.44,
-              "absolute_change": -6.51,
-              "pct_change": -6.89,
+              "current": 76.09,
+              "previous": 87.93,
+              "absolute_change": -11.84,
+              "pct_change": -13.47,
               "direction": "down"
             },
             "is_new_keyword_vs_previous": false
@@ -1831,18 +1322,18 @@
           {
             "keyword": "OPEC",
             "mean_anchor_normalized_delta": {
-              "current": 14.45,
-              "previous": 28.55,
-              "absolute_change": -14.1,
-              "pct_change": -49.39,
+              "current": 12.74,
+              "previous": 14.45,
+              "absolute_change": -1.71,
+              "pct_change": -11.83,
               "direction": "down"
             },
             "last_anchor_normalized_delta": {
               "current": 0.0,
-              "previous": 22.22,
-              "absolute_change": -22.22,
-              "pct_change": -100.0,
-              "direction": "down"
+              "previous": 0.0,
+              "absolute_change": 0.0,
+              "pct_change": null,
+              "direction": "flat"
             },
             "is_new_keyword_vs_previous": false
           }
@@ -1850,56 +1341,56 @@
         "summary": {
           "top_risers": [
             {
-              "keyword": "Iran war",
-              "absolute_change": 306.57,
-              "pct_change": 154.44
+              "keyword": "inflation",
+              "absolute_change": 20.51,
+              "pct_change": 7.02
             },
             {
-              "keyword": "oil price",
-              "absolute_change": 142.35,
-              "pct_change": 29.25
+              "keyword": "China US",
+              "absolute_change": 4.68,
+              "pct_change": 5.08
             },
             {
-              "keyword": "Trump tariffs",
-              "absolute_change": 0.98,
-              "pct_change": 6.47
-            },
-            {
-              "keyword": "chip export",
-              "absolute_change": -0.73,
-              "pct_change": -84.88
+              "keyword": "AI regulation",
+              "absolute_change": 1.42,
+              "pct_change": 4.33
             },
             {
               "keyword": "China economy",
-              "absolute_change": -2.2,
-              "pct_change": -11.72
+              "absolute_change": 1.09,
+              "pct_change": 6.58
+            },
+            {
+              "keyword": "chip export",
+              "absolute_change": 0.06,
+              "pct_change": 46.15
             }
           ],
           "top_fallers": [
             {
-              "keyword": "gold price",
-              "absolute_change": -147.74,
-              "pct_change": -9.92
+              "keyword": "OPEC",
+              "absolute_change": -1.71,
+              "pct_change": -11.83
             },
             {
-              "keyword": "inflation",
-              "absolute_change": -62.45,
-              "pct_change": -17.61
+              "keyword": "chip export",
+              "absolute_change": 0.06,
+              "pct_change": 46.15
             },
             {
-              "keyword": "interest rate",
-              "absolute_change": -56.58,
-              "pct_change": -14.05
+              "keyword": "China economy",
+              "absolute_change": 1.09,
+              "pct_change": 6.58
             },
             {
-              "keyword": "NATO",
-              "absolute_change": -28.73,
-              "pct_change": -2.7
+              "keyword": "AI regulation",
+              "absolute_change": 1.42,
+              "pct_change": 4.33
             },
             {
-              "keyword": "Ukraine war",
-              "absolute_change": -16.3,
-              "pct_change": -13.06
+              "keyword": "China US",
+              "absolute_change": 4.68,
+              "pct_change": 5.08
             }
           ],
           "new_keywords_vs_previous": 0
@@ -1912,10 +1403,10 @@
           {
             "page": "Strait_of_Hormuz",
             "views_delta": {
-              "current": 4535,
-              "previous": 3039,
-              "absolute_change": 1496,
-              "pct_change": 49.23,
+              "current": 7046,
+              "previous": 4535,
+              "absolute_change": 2511,
+              "pct_change": 55.37,
               "direction": "up"
             },
             "is_new_page_vs_previous": false
@@ -1923,43 +1414,43 @@
           {
             "page": "Russo-Ukrainian_War",
             "views_delta": {
-              "current": 1588,
-              "previous": 1696,
-              "absolute_change": -108,
-              "pct_change": -6.37,
-              "direction": "down"
+              "current": null,
+              "previous": 1588,
+              "absolute_change": null,
+              "pct_change": null,
+              "direction": "unknown"
             },
             "is_new_page_vs_previous": false
           },
           {
             "page": "Federal_Reserve",
             "views_delta": {
-              "current": 1603,
-              "previous": 1685,
-              "absolute_change": -82,
-              "pct_change": -4.87,
-              "direction": "down"
+              "current": 1816,
+              "previous": 1603,
+              "absolute_change": 213,
+              "pct_change": 13.29,
+              "direction": "up"
             },
             "is_new_page_vs_previous": false
           },
           {
             "page": "Donald_Trump",
             "views_delta": {
-              "current": 43429,
-              "previous": 46204,
-              "absolute_change": -2775,
-              "pct_change": -6.01,
-              "direction": "down"
+              "current": 46673,
+              "previous": 43429,
+              "absolute_change": 3244,
+              "pct_change": 7.47,
+              "direction": "up"
             },
             "is_new_page_vs_previous": false
           },
           {
             "page": "OPEC",
             "views_delta": {
-              "current": 1532,
-              "previous": 1886,
-              "absolute_change": -354,
-              "pct_change": -18.77,
+              "current": 1339,
+              "previous": 1532,
+              "absolute_change": -193,
+              "pct_change": -12.6,
               "direction": "down"
             },
             "is_new_page_vs_previous": false
@@ -1967,10 +1458,10 @@
           {
             "page": "NATO",
             "views_delta": {
-              "current": 9672,
-              "previous": 6495,
-              "absolute_change": 3177,
-              "pct_change": 48.91,
+              "current": 13585,
+              "previous": 9672,
+              "absolute_change": 3913,
+              "pct_change": 40.46,
               "direction": "up"
             },
             "is_new_page_vs_previous": false
@@ -1978,44 +1469,44 @@
           {
             "page": "Artificial_intelligence_regulation",
             "views_delta": {
-              "current": 5,
-              "previous": 9,
-              "absolute_change": -4,
-              "pct_change": -44.44,
-              "direction": "down"
+              "current": 6,
+              "previous": 5,
+              "absolute_change": 1,
+              "pct_change": 20.0,
+              "direction": "up"
             },
             "is_new_page_vs_previous": false
           },
           {
             "page": "Kevin_Warsh",
             "views_delta": {
-              "current": 1656,
-              "previous": 2081,
-              "absolute_change": -425,
-              "pct_change": -20.42,
-              "direction": "down"
+              "current": 2055,
+              "previous": 1656,
+              "absolute_change": 399,
+              "pct_change": 24.09,
+              "direction": "up"
             },
             "is_new_page_vs_previous": false
           },
           {
             "page": "China%E2%80%93United_States_trade_war",
             "views_delta": {
-              "current": 833,
-              "previous": 667,
-              "absolute_change": 166,
-              "pct_change": 24.89,
-              "direction": "up"
+              "current": 704,
+              "previous": 833,
+              "absolute_change": -129,
+              "pct_change": -15.49,
+              "direction": "down"
             },
             "is_new_page_vs_previous": false
           },
           {
             "page": "Semiconductor",
             "views_delta": {
-              "current": 1649,
-              "previous": 1535,
-              "absolute_change": 114,
-              "pct_change": 7.43,
-              "direction": "up"
+              "current": 1546,
+              "previous": 1649,
+              "absolute_change": -103,
+              "pct_change": -6.25,
+              "direction": "down"
             },
             "is_new_page_vs_previous": false
           }
@@ -2024,55 +1515,55 @@
           "top_risers": [
             {
               "page": "NATO",
-              "absolute_change": 3177,
-              "pct_change": 48.91
+              "absolute_change": 3913,
+              "pct_change": 40.46
+            },
+            {
+              "page": "Donald_Trump",
+              "absolute_change": 3244,
+              "pct_change": 7.47
             },
             {
               "page": "Strait_of_Hormuz",
-              "absolute_change": 1496,
-              "pct_change": 49.23
+              "absolute_change": 2511,
+              "pct_change": 55.37
             },
             {
-              "page": "China%E2%80%93United_States_trade_war",
-              "absolute_change": 166,
-              "pct_change": 24.89
+              "page": "Kevin_Warsh",
+              "absolute_change": 399,
+              "pct_change": 24.09
             },
             {
-              "page": "Semiconductor",
-              "absolute_change": 114,
-              "pct_change": 7.43
-            },
-            {
-              "page": "Artificial_intelligence_regulation",
-              "absolute_change": -4,
-              "pct_change": -44.44
+              "page": "Federal_Reserve",
+              "absolute_change": 213,
+              "pct_change": 13.29
             }
           ],
           "top_fallers": [
             {
-              "page": "Donald_Trump",
-              "absolute_change": -2775,
-              "pct_change": -6.01
-            },
-            {
-              "page": "Kevin_Warsh",
-              "absolute_change": -425,
-              "pct_change": -20.42
-            },
-            {
               "page": "OPEC",
-              "absolute_change": -354,
-              "pct_change": -18.77
+              "absolute_change": -193,
+              "pct_change": -12.6
             },
             {
-              "page": "Russo-Ukrainian_War",
-              "absolute_change": -108,
-              "pct_change": -6.37
+              "page": "China%E2%80%93United_States_trade_war",
+              "absolute_change": -129,
+              "pct_change": -15.49
+            },
+            {
+              "page": "Semiconductor",
+              "absolute_change": -103,
+              "pct_change": -6.25
+            },
+            {
+              "page": "Artificial_intelligence_regulation",
+              "absolute_change": 1,
+              "pct_change": 20.0
             },
             {
               "page": "Federal_Reserve",
-              "absolute_change": -82,
-              "pct_change": -4.87
+              "absolute_change": 213,
+              "pct_change": 13.29
             }
           ],
           "new_pages_vs_previous": 0
@@ -2090,101 +1581,102 @@
   "summary": {
     "top_polymarket_questions": [
       {
+        "question": "Will Seyed Hossein Mousavian be head of state in Iran end of 2026?",
+        "volume_24h": 2390518.383333,
+        "yes_price": 0.002,
+        "market_type": "binary"
+      },
+      {
         "question": "Will there be no change in Fed interest rates after the July 2026 meeting?",
-        "volume_24h": 1359825.4386120008,
-        "yes_price": 0.775,
+        "volume_24h": 579601.7199620015,
+        "yes_price": 0.845,
         "market_type": "binary"
       },
       {
-        "question": "Will Tucker Carlson win the 2028 US Presidential Election?",
-        "volume_24h": 907241.3480209992,
-        "yes_price": 0.0205,
-        "market_type": "binary"
-      },
-      {
-        "question": "Will Pete Buttigieg win the 2028 US Presidential Election?",
-        "volume_24h": 888667.1576409945,
-        "yes_price": 0.0235,
+        "question": "Will the Fed decrease interest rates by 50+ bps after the July 2026 meeting?",
+        "volume_24h": 526177.638,
+        "yes_price": 0.0015,
         "market_type": "binary"
       }
     ],
     "top_filtered_noise_candidates": [
       {
         "question": "Will Ronaldo Cry at the World Cup?",
-        "volume_24h": 33614182.201999985,
+        "volume_24h": 37984548.334032,
         "yes_price": 0.9995,
         "market_type": "binary",
         "reason": "sports_or_match_noise"
       },
       {
-        "question": "Will Switzerland win the 2026 FIFA World Cup?",
-        "volume_24h": 6165634.183407011,
-        "yes_price": 0.0215,
-        "market_type": "binary",
-        "reason": "sports_or_match_noise"
+        "question": "France vs. Morocco: O/U 2.5",
+        "volume_24h": 20280781.465056017,
+        "yes_price": null,
+        "market_type": "non_binary",
+        "reason": "expired"
       },
       {
-        "question": "Will Mahmoud Abbas be the next leader out before 2027?",
-        "volume_24h": 3887995.1322709997,
-        "yes_price": 0.008,
+        "question": "Will France win on 2026-07-09?",
+        "volume_24h": 18150985.460323084,
+        "yes_price": 0.99875,
         "market_type": "binary",
-        "reason": "low_public_impact_or_unclear_relevance"
+        "reason": "expired"
       }
     ],
     "top_google_trends_keywords": [
       {
-        "keyword": "gold price",
-        "score_mean_24h_anchor_normalized": 1341.73,
-        "score_last_anchor_normalized": 742.86
+        "keyword": "inflation",
+        "score_mean_24h_anchor_normalized": 312.69,
+        "score_last_anchor_normalized": 275.0
       },
       {
-        "keyword": "NATO",
-        "score_mean_24h_anchor_normalized": 1033.66,
-        "score_last_anchor_normalized": 825.0
+        "keyword": "China US",
+        "score_mean_24h_anchor_normalized": 96.89,
+        "score_last_anchor_normalized": 76.09
       },
       {
-        "keyword": "oil price",
-        "score_mean_24h_anchor_normalized": 629.07,
-        "score_last_anchor_normalized": 400.0
+        "keyword": "AI regulation",
+        "score_mean_24h_anchor_normalized": 34.23,
+        "score_last_anchor_normalized": 0.0
       },
       {
-        "keyword": "Iran war",
-        "score_mean_24h_anchor_normalized": 505.07,
-        "score_last_anchor_normalized": 425.0
+        "keyword": "China economy",
+        "score_mean_24h_anchor_normalized": 17.66,
+        "score_last_anchor_normalized": 15.0
       },
       {
-        "keyword": "interest rate",
-        "score_mean_24h_anchor_normalized": 345.99,
-        "score_last_anchor_normalized": 271.43
+        "keyword": "OPEC",
+        "score_mean_24h_anchor_normalized": 12.74,
+        "score_last_anchor_normalized": 0.0
       }
     ],
     "top_wikipedia_pages": [
       {
         "page": "Donald_Trump",
-        "views": 43429
+        "views": 46673
       },
       {
         "page": "NATO",
-        "views": 9672
+        "views": 13585
       },
       {
         "page": "Strait_of_Hormuz",
-        "views": 4535
+        "views": 7046
       },
       {
         "page": "Kevin_Warsh",
-        "views": 1656
+        "views": 2055
       },
       {
-        "page": "Semiconductor",
-        "views": 1649
+        "page": "Federal_Reserve",
+        "views": 1816
       }
     ],
     "recurring_entities_across_sources": [
       "AI",
+      "China",
       "Iran",
       "NATO",
-      "Oil",
+      "OPEC",
       "Trump"
     ],
     "signal_strength_by_source": {
@@ -2193,16 +1685,16 @@
       "wikipedia_pageviews": "strong"
     },
     "narrative_hints": [
-      "Energy / oil-related attention is present.",
       "Trump-related political / tariff attention is present.",
       "Geopolitical / security attention is present.",
       "AI / regulation / chip attention is present.",
+      "China / US-China attention is present.",
       "Iran-related geopolitical attention is present."
     ],
     "momentum_hints": [
-      "Google Trends risers: Iran war (+306.57), oil price (+142.35), Trump tariffs (+0.98)",
-      "Wikipedia risers: NATO (+3177), Strait_of_Hormuz (+1496), China%E2%80%93United_States_trade_war (+166)",
-      "Polymarket volume risers: Will there be no change in Fed interest rates after the July 2026 meeting? (+732546.8056), Will Tucker Carlson win the 2028 US Presidential Election? (+258462.7723), Will Pete Buttigieg win the 2028 US Presidential Election? (+44356.7391)"
+      "Google Trends risers: inflation (+20.51), China US (+4.68), AI regulation (+1.42)",
+      "Wikipedia risers: NATO (+3913), Donald_Trump (+3244), Strait_of_Hormuz (+2511)",
+      "Polymarket volume risers: Will the Fed decrease interest rates by 50+ bps after the July 2026 meeting? (+347425.687), Will the Fed decrease interest rates by 25 bps after the July 2026 meeting? (-8366.5256), Will the U.S. invade Iran before 2027? (-117229.5295)"
     ],
     "prompt_ready_notes": [
       "Use recurring_entities_across_sources to identify themes confirmed by multiple datasets.",
