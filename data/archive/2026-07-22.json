@@ -1,0 +1,364 @@
+{
+  "schema_version": "1.2.0",
+  "date_utc": "2026-07-22",
+  "generated_at_utc": "2026-07-22T22:01:07Z",
+  "source_health": {
+    "polymarket": {
+      "status": "ok",
+      "row_count": 22,
+      "ok_count": 22,
+      "empty_count": 0,
+      "error_count": 0
+    },
+    "google_trends": {
+      "status": "ok",
+      "row_count": 14,
+      "ok_count": 14,
+      "empty_count": 0,
+      "error_count": 0
+    },
+    "wikipedia_pageviews": {
+      "status": "ok",
+      "row_count": 10,
+      "ok_count": 10,
+      "empty_count": 0,
+      "error_count": 0
+    }
+  },
+  "summary": {
+    "top_polymarket_questions": [
+      {
+        "question": "Will the Fed increase interest rates by 50+ bps after the July 2026 meeting?",
+        "volume_24h": 1243825.6890430008,
+        "yes_price": 0.0085,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will there be no change in Fed interest rates after the July 2026 meeting?",
+        "volume_24h": 1179117.228171012,
+        "yes_price": 0.7695,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will Vivek Ramaswamy win the 2028 US Presidential Election?",
+        "volume_24h": 555695.257495,
+        "yes_price": 0.0035,
+        "market_type": "binary"
+      }
+    ],
+    "top_filtered_noise_candidates": [
+      {
+        "question": "Will Trump be in the WC Champions Photo?",
+        "volume_24h": 7007238.997622002,
+        "yes_price": 0.9985,
+        "market_type": "binary",
+        "reason": "expired"
+      },
+      {
+        "question": "Will Demeke Mekonnen be the next Prime Minister of Ethiopia?",
+        "volume_24h": 2205272.9140000003,
+        "yes_price": 0.002,
+        "market_type": "binary",
+        "reason": "expired"
+      },
+      {
+        "question": "Counter-Strike: Team Falcons vs 100 Thieves (BO3) - BLAST Bounty Qualifier",
+        "volume_24h": 1416349.8518569986,
+        "yes_price": null,
+        "market_type": "non_binary",
+        "reason": "sports_or_match_noise"
+      }
+    ],
+    "top_google_trends_keywords": [
+      {
+        "keyword": "gold price",
+        "score_mean_24h_anchor_normalized": 1086.3,
+        "score_last_anchor_normalized": 307.14
+      },
+      {
+        "keyword": "oil price",
+        "score_mean_24h_anchor_normalized": 439.67,
+        "score_last_anchor_normalized": 184.21
+      },
+      {
+        "keyword": "Iran war",
+        "score_mean_24h_anchor_normalized": 414.09,
+        "score_last_anchor_normalized": 213.16
+      },
+      {
+        "keyword": "interest rate",
+        "score_mean_24h_anchor_normalized": 290.24,
+        "score_last_anchor_normalized": 107.14
+      },
+      {
+        "keyword": "inflation",
+        "score_mean_24h_anchor_normalized": 245.38,
+        "score_last_anchor_normalized": 113.85
+      }
+    ],
+    "top_wikipedia_pages": [
+      {
+        "page": "Donald_Trump",
+        "views": 44133
+      },
+      {
+        "page": "Strait_of_Hormuz",
+        "views": 5445
+      },
+      {
+        "page": "NATO",
+        "views": 3716
+      },
+      {
+        "page": "Kevin_Warsh",
+        "views": 1726
+      },
+      {
+        "page": "Federal_Reserve",
+        "views": 1645
+      }
+    ],
+    "recurring_entities_across_sources": [
+      "AI",
+      "Iran",
+      "NATO",
+      "Oil",
+      "Trump"
+    ],
+    "signal_strength_by_source": {
+      "polymarket": "strong",
+      "google_trends": "strong",
+      "wikipedia_pageviews": "strong"
+    },
+    "narrative_hints": [
+      "Energy / oil-related attention is present.",
+      "Trump-related political / tariff attention is present.",
+      "Geopolitical / security attention is present.",
+      "AI / regulation / chip attention is present.",
+      "Iran-related geopolitical attention is present."
+    ],
+    "momentum_hints": [
+      "Wikipedia risers: Semiconductor (+178), Strait_of_Hormuz (+135), Federal_Reserve (+83)",
+      "Polymarket volume risers: Israel x Iran ceasefire continues through July 22? (+342796.6478), Strait of Hormuz traffic returns to normal by July 31? (+182894.0035), Will WTI Crude Oil (WTI) hit (HIGH) $90 in July? (+173741.7917)"
+    ],
+    "prompt_ready_notes": [
+      "Use recurring_entities_across_sources to identify themes confirmed by multiple datasets.",
+      "Treat Google Trends anchor-normalized values as rough cross-chunk calibration, not exact absolute ranking.",
+      "Prefer entities that appear across at least 2 sources when writing the final sentiment brief.",
+      "Use delta_vs_previous_day to identify rising vs cooling attention.",
+      "If source health is partial or weak, explicitly say evidence is limited.",
+      "Use top_filtered_noise_candidates only for optional appendix / noise radar, not for the core macro radar."
+    ]
+  },
+  "top_signals": {
+    "polymarket": [
+      {
+        "question": "Will the Fed increase interest rates by 50+ bps after the July 2026 meeting?",
+        "volume_24h": 1243825.6890430008,
+        "yes_price": 0.0085,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will there be no change in Fed interest rates after the July 2026 meeting?",
+        "volume_24h": 1179117.228171012,
+        "yes_price": 0.7695,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will Vivek Ramaswamy win the 2028 US Presidential Election?",
+        "volume_24h": 555695.257495,
+        "yes_price": 0.0035,
+        "market_type": "binary"
+      },
+      {
+        "question": "Israel x Iran ceasefire continues through July 22?",
+        "volume_24h": 468542.71205700026,
+        "yes_price": 0.992,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will the Fed increase interest rates by 25 bps after the July 2026 meeting?",
+        "volume_24h": 445992.253162001,
+        "yes_price": 0.225,
+        "market_type": "binary"
+      }
+    ],
+    "google_trends": [
+      {
+        "keyword": "gold price",
+        "score_mean_24h_anchor_normalized": 1086.3,
+        "score_last_anchor_normalized": 307.14
+      },
+      {
+        "keyword": "oil price",
+        "score_mean_24h_anchor_normalized": 439.67,
+        "score_last_anchor_normalized": 184.21
+      },
+      {
+        "keyword": "Iran war",
+        "score_mean_24h_anchor_normalized": 414.09,
+        "score_last_anchor_normalized": 213.16
+      },
+      {
+        "keyword": "interest rate",
+        "score_mean_24h_anchor_normalized": 290.24,
+        "score_last_anchor_normalized": 107.14
+      },
+      {
+        "keyword": "inflation",
+        "score_mean_24h_anchor_normalized": 245.38,
+        "score_last_anchor_normalized": 113.85
+      }
+    ],
+    "wikipedia_pageviews": [
+      {
+        "page": "Donald_Trump",
+        "views": 44133
+      },
+      {
+        "page": "Strait_of_Hormuz",
+        "views": 5445
+      },
+      {
+        "page": "NATO",
+        "views": 3716
+      },
+      {
+        "page": "Kevin_Warsh",
+        "views": 1726
+      },
+      {
+        "page": "Federal_Reserve",
+        "views": 1645
+      }
+    ]
+  },
+  "delta_summary": {
+    "notes": [
+      "Comparison is against the previously committed output file in the repo.",
+      "If the workflow is re-run on the same UTC date, comparison_type may be same_day_rerun instead of true previous-day.",
+      "Use rise/fall signals as relative momentum indicators, not as causal proof."
+    ]
+  },
+  "delta_top_signals": {
+    "polymarket": {
+      "top_volume_risers": [
+        {
+          "question": "Israel x Iran ceasefire continues through July 22?",
+          "absolute_change": 342796.6478,
+          "pct_change": 272.61
+        },
+        {
+          "question": "Strait of Hormuz traffic returns to normal by July 31?",
+          "absolute_change": 182894.0035,
+          "pct_change": 78.29
+        },
+        {
+          "question": "Will WTI Crude Oil (WTI) hit (HIGH) $90 in July?",
+          "absolute_change": 173741.7917,
+          "pct_change": 129.26
+        },
+        {
+          "question": "Will the Fed increase interest rates by 50+ bps after the July 2026 meeting?",
+          "absolute_change": 150097.2893,
+          "pct_change": 13.72
+        },
+        {
+          "question": "Israel x Iran ceasefire continues through July 25?",
+          "absolute_change": 119125.4944,
+          "pct_change": 145.79
+        }
+      ],
+      "top_volume_fallers": [
+        {
+          "question": "Will the Fed increase interest rates by 25 bps after the July 2026 meeting?",
+          "absolute_change": -820137.9299,
+          "pct_change": -64.78
+        },
+        {
+          "question": "Will there be no change in Fed interest rates after the July 2026 meeting?",
+          "absolute_change": -736548.949,
+          "pct_change": -38.45
+        },
+        {
+          "question": "Will the Fed decrease interest rates by 50+ bps after the July 2026 meeting?",
+          "absolute_change": -461116.356,
+          "pct_change": -54.45
+        },
+        {
+          "question": "Will the Fed decrease interest rates by 25 bps after the July 2026 meeting?",
+          "absolute_change": -434849.3885,
+          "pct_change": -59.11
+        },
+        {
+          "question": "Will Iran announce withdrawal from MOU negotiations by July 31?",
+          "absolute_change": -46770.7238,
+          "pct_change": -34.66
+        }
+      ],
+      "new_markets_vs_previous": 6
+    },
+    "google_trends": {
+      "top_risers": [],
+      "top_fallers": [],
+      "new_keywords_vs_previous": 0
+    },
+    "wikipedia_pageviews": {
+      "top_risers": [
+        {
+          "page": "Semiconductor",
+          "absolute_change": 178,
+          "pct_change": 13.02
+        },
+        {
+          "page": "Strait_of_Hormuz",
+          "absolute_change": 135,
+          "pct_change": 2.54
+        },
+        {
+          "page": "Federal_Reserve",
+          "absolute_change": 83,
+          "pct_change": 5.31
+        },
+        {
+          "page": "Russo-Ukrainian_War",
+          "absolute_change": 48,
+          "pct_change": 3.04
+        },
+        {
+          "page": "Artificial_intelligence_regulation",
+          "absolute_change": -45,
+          "pct_change": -86.54
+        }
+      ],
+      "top_fallers": [
+        {
+          "page": "Donald_Trump",
+          "absolute_change": -7203,
+          "pct_change": -14.03
+        },
+        {
+          "page": "NATO",
+          "absolute_change": -108,
+          "pct_change": -2.82
+        },
+        {
+          "page": "OPEC",
+          "absolute_change": -92,
+          "pct_change": -8.04
+        },
+        {
+          "page": "Kevin_Warsh",
+          "absolute_change": -56,
+          "pct_change": -3.14
+        },
+        {
+          "page": "Artificial_intelligence_regulation",
+          "absolute_change": -45,
+          "pct_change": -86.54
+        }
+      ],
+      "new_pages_vs_previous": 0
+    }
+  }
+}
