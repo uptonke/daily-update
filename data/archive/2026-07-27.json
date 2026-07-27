@@ -1,0 +1,416 @@
+{
+  "schema_version": "1.2.0",
+  "date_utc": "2026-07-27",
+  "generated_at_utc": "2026-07-27T22:01:39Z",
+  "source_health": {
+    "polymarket": {
+      "status": "ok",
+      "row_count": 30,
+      "ok_count": 30,
+      "empty_count": 0,
+      "error_count": 0
+    },
+    "google_trends": {
+      "status": "partial",
+      "row_count": 14,
+      "ok_count": 6,
+      "empty_count": 0,
+      "error_count": 10
+    },
+    "wikipedia_pageviews": {
+      "status": "partial",
+      "row_count": 11,
+      "ok_count": 9,
+      "empty_count": 0,
+      "error_count": 4
+    }
+  },
+  "summary": {
+    "top_polymarket_questions": [
+      {
+        "question": "Will there be no change in Fed interest rates after the July 2026 meeting?",
+        "volume_24h": 2069799.581023001,
+        "yes_price": 0.7345,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will the Fed increase interest rates by 25 bps after the July 2026 meeting?",
+        "volume_24h": 1719994.474355,
+        "yes_price": 0.2655,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will the Fed decrease interest rates by 25 bps after the July 2026 meeting?",
+        "volume_24h": 1621131.8008619999,
+        "yes_price": 0.0015,
+        "market_type": "binary"
+      }
+    ],
+    "top_filtered_noise_candidates": [
+      {
+        "question": "Will Adanech Abiebie be the next Prime Minister of Ethiopia?",
+        "volume_24h": 1599054.65833,
+        "yes_price": 0.0025,
+        "market_type": "binary",
+        "reason": "expired"
+      },
+      {
+        "question": "Will Tom Cotton win the 2028 Republican presidential nomination?",
+        "volume_24h": 572416.474,
+        "yes_price": 0.0015,
+        "market_type": "binary",
+        "reason": "low_public_impact_or_unclear_relevance"
+      },
+      {
+        "question": "Mubadala Citi DC Open: Kei Nishikori vs Juncheng Shang",
+        "volume_24h": 443916.95227900095,
+        "yes_price": null,
+        "market_type": "non_binary",
+        "reason": "sports_or_match_noise"
+      }
+    ],
+    "top_google_trends_keywords": [
+      {
+        "keyword": "inflation",
+        "score_mean_24h_anchor_normalized": 212.3,
+        "score_last_anchor_normalized": 184.62
+      },
+      {
+        "keyword": "China US",
+        "score_mean_24h_anchor_normalized": 72.98,
+        "score_last_anchor_normalized": 78.49
+      },
+      {
+        "keyword": "AI regulation",
+        "score_mean_24h_anchor_normalized": 27.51,
+        "score_last_anchor_normalized": 21.15
+      },
+      {
+        "keyword": "China economy",
+        "score_mean_24h_anchor_normalized": 15.61,
+        "score_last_anchor_normalized": 13.46
+      },
+      {
+        "keyword": "OPEC",
+        "score_mean_24h_anchor_normalized": 10.17,
+        "score_last_anchor_normalized": 9.68
+      }
+    ],
+    "top_wikipedia_pages": [
+      {
+        "page": "Donald_Trump",
+        "views": 39511
+      },
+      {
+        "page": "NATO",
+        "views": 3963
+      },
+      {
+        "page": "Strait_of_Hormuz",
+        "views": 3899
+      },
+      {
+        "page": "Russo-Ukrainian_War",
+        "views": 1553
+      },
+      {
+        "page": "Semiconductor",
+        "views": 1361
+      }
+    ],
+    "recurring_entities_across_sources": [
+      "AI",
+      "China",
+      "NATO",
+      "OPEC",
+      "Trump"
+    ],
+    "signal_strength_by_source": {
+      "polymarket": "strong",
+      "google_trends": "strong",
+      "wikipedia_pageviews": "strong"
+    },
+    "narrative_hints": [
+      "Trump-related political / tariff attention is present.",
+      "Geopolitical / security attention is present.",
+      "AI / regulation / chip attention is present.",
+      "China / US-China attention is present."
+    ],
+    "momentum_hints": [
+      "Google Trends risers: China US (+2.64), AI regulation (+2.51), chip export (-0.12)",
+      "Wikipedia risers: Strait_of_Hormuz (+365), NATO (+241), Kevin_Warsh (+145)",
+      "Polymarket volume risers: Will there be no change in Fed interest rates after the July 2026 meeting? (+1364503.7878), Will the Fed decrease interest rates by 25 bps after the July 2026 meeting? (+1356855.2553), Will the Fed increase interest rates by 25 bps after the July 2026 meeting? (+1255018.0385)"
+    ],
+    "prompt_ready_notes": [
+      "Use recurring_entities_across_sources to identify themes confirmed by multiple datasets.",
+      "Treat Google Trends anchor-normalized values as rough cross-chunk calibration, not exact absolute ranking.",
+      "Prefer entities that appear across at least 2 sources when writing the final sentiment brief.",
+      "Use delta_vs_previous_day to identify rising vs cooling attention.",
+      "If source health is partial or weak, explicitly say evidence is limited.",
+      "Use top_filtered_noise_candidates only for optional appendix / noise radar, not for the core macro radar."
+    ]
+  },
+  "top_signals": {
+    "polymarket": [
+      {
+        "question": "Will there be no change in Fed interest rates after the July 2026 meeting?",
+        "volume_24h": 2069799.581023001,
+        "yes_price": 0.7345,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will the Fed increase interest rates by 25 bps after the July 2026 meeting?",
+        "volume_24h": 1719994.474355,
+        "yes_price": 0.2655,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will the Fed decrease interest rates by 25 bps after the July 2026 meeting?",
+        "volume_24h": 1621131.8008619999,
+        "yes_price": 0.0015,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will the Fed increase interest rates by 50+ bps after the July 2026 meeting?",
+        "volume_24h": 1227386.02661,
+        "yes_price": 0.0055,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will the Fed decrease interest rates by 50+ bps after the July 2026 meeting?",
+        "volume_24h": 933975.5439999998,
+        "yes_price": 0.0015,
+        "market_type": "binary"
+      }
+    ],
+    "google_trends": [
+      {
+        "keyword": "inflation",
+        "score_mean_24h_anchor_normalized": 212.3,
+        "score_last_anchor_normalized": 184.62
+      },
+      {
+        "keyword": "China US",
+        "score_mean_24h_anchor_normalized": 72.98,
+        "score_last_anchor_normalized": 78.49
+      },
+      {
+        "keyword": "AI regulation",
+        "score_mean_24h_anchor_normalized": 27.51,
+        "score_last_anchor_normalized": 21.15
+      },
+      {
+        "keyword": "China economy",
+        "score_mean_24h_anchor_normalized": 15.61,
+        "score_last_anchor_normalized": 13.46
+      },
+      {
+        "keyword": "OPEC",
+        "score_mean_24h_anchor_normalized": 10.17,
+        "score_last_anchor_normalized": 9.68
+      }
+    ],
+    "wikipedia_pageviews": [
+      {
+        "page": "Donald_Trump",
+        "views": 39511
+      },
+      {
+        "page": "NATO",
+        "views": 3963
+      },
+      {
+        "page": "Strait_of_Hormuz",
+        "views": 3899
+      },
+      {
+        "page": "Russo-Ukrainian_War",
+        "views": 1553
+      },
+      {
+        "page": "Semiconductor",
+        "views": 1361
+      }
+    ]
+  },
+  "delta_summary": {
+    "notes": [
+      "Comparison is against the previously committed output file in the repo.",
+      "If the workflow is re-run on the same UTC date, comparison_type may be same_day_rerun instead of true previous-day.",
+      "Use rise/fall signals as relative momentum indicators, not as causal proof."
+    ]
+  },
+  "delta_top_signals": {
+    "polymarket": {
+      "top_volume_risers": [
+        {
+          "question": "Will there be no change in Fed interest rates after the July 2026 meeting?",
+          "absolute_change": 1364503.7878,
+          "pct_change": 193.47
+        },
+        {
+          "question": "Will the Fed decrease interest rates by 25 bps after the July 2026 meeting?",
+          "absolute_change": 1356855.2553,
+          "pct_change": 513.42
+        },
+        {
+          "question": "Will the Fed increase interest rates by 25 bps after the July 2026 meeting?",
+          "absolute_change": 1255018.0385,
+          "pct_change": 269.91
+        },
+        {
+          "question": "Will the Fed increase interest rates by 50+ bps after the July 2026 meeting?",
+          "absolute_change": 756820.9158,
+          "pct_change": 160.83
+        },
+        {
+          "question": "US announces halt in Iran offensive operations by July 31?",
+          "absolute_change": 507546.0032,
+          "pct_change": 280.92
+        }
+      ],
+      "top_volume_fallers": [
+        {
+          "question": "Will the U.S. invade Iran before 2027?",
+          "absolute_change": -652775.5881,
+          "pct_change": -74.77
+        },
+        {
+          "question": "Strait of Hormuz traffic returns to normal by August 31?",
+          "absolute_change": -220948.912,
+          "pct_change": -43.19
+        },
+        {
+          "question": "Strait of Hormuz traffic returns to normal by July 31?",
+          "absolute_change": -219314.2023,
+          "pct_change": -49.12
+        },
+        {
+          "question": "Israel x Iran ceasefire continues through July 31?",
+          "absolute_change": -200380.5593,
+          "pct_change": -46.64
+        },
+        {
+          "question": "US announces end of Iranian blockade by July 31, 2026?",
+          "absolute_change": -77528.1335,
+          "pct_change": -51.43
+        }
+      ],
+      "new_markets_vs_previous": 13
+    },
+    "google_trends": {
+      "top_risers": [
+        {
+          "keyword": "China US",
+          "absolute_change": 2.64,
+          "pct_change": 3.75
+        },
+        {
+          "keyword": "AI regulation",
+          "absolute_change": 2.51,
+          "pct_change": 10.04
+        },
+        {
+          "keyword": "chip export",
+          "absolute_change": -0.12,
+          "pct_change": -60.0
+        },
+        {
+          "keyword": "OPEC",
+          "absolute_change": -2.17,
+          "pct_change": -17.59
+        },
+        {
+          "keyword": "China economy",
+          "absolute_change": -2.43,
+          "pct_change": -13.47
+        }
+      ],
+      "top_fallers": [
+        {
+          "keyword": "inflation",
+          "absolute_change": -7.25,
+          "pct_change": -3.3
+        },
+        {
+          "keyword": "China economy",
+          "absolute_change": -2.43,
+          "pct_change": -13.47
+        },
+        {
+          "keyword": "OPEC",
+          "absolute_change": -2.17,
+          "pct_change": -17.59
+        },
+        {
+          "keyword": "chip export",
+          "absolute_change": -0.12,
+          "pct_change": -60.0
+        },
+        {
+          "keyword": "AI regulation",
+          "absolute_change": 2.51,
+          "pct_change": 10.04
+        }
+      ],
+      "new_keywords_vs_previous": 0
+    },
+    "wikipedia_pageviews": {
+      "top_risers": [
+        {
+          "page": "Strait_of_Hormuz",
+          "absolute_change": 365,
+          "pct_change": 10.33
+        },
+        {
+          "page": "NATO",
+          "absolute_change": 241,
+          "pct_change": 6.48
+        },
+        {
+          "page": "Kevin_Warsh",
+          "absolute_change": 145,
+          "pct_change": 12.18
+        },
+        {
+          "page": "Semiconductor",
+          "absolute_change": 68,
+          "pct_change": 5.26
+        },
+        {
+          "page": "Russo-Ukrainian_War",
+          "absolute_change": 50,
+          "pct_change": 3.33
+        }
+      ],
+      "top_fallers": [
+        {
+          "page": "Donald_Trump",
+          "absolute_change": -6393,
+          "pct_change": -13.93
+        },
+        {
+          "page": "Federal_Reserve",
+          "absolute_change": -69,
+          "pct_change": -5.32
+        },
+        {
+          "page": "Artificial_intelligence_regulation",
+          "absolute_change": -5,
+          "pct_change": -38.46
+        },
+        {
+          "page": "China%E2%80%93United_States_trade_war",
+          "absolute_change": 45,
+          "pct_change": 4.92
+        },
+        {
+          "page": "Russo-Ukrainian_War",
+          "absolute_change": 50,
+          "pct_change": 3.33
+        }
+      ],
+      "new_pages_vs_previous": 1
+    }
+  }
+}
