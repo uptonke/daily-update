@@ -1,0 +1,395 @@
+{
+  "schema_version": "1.2.0",
+  "date_utc": "2026-07-31",
+  "generated_at_utc": "2026-07-31T22:02:07Z",
+  "source_health": {
+    "polymarket": {
+      "status": "ok",
+      "row_count": 29,
+      "ok_count": 29,
+      "empty_count": 0,
+      "error_count": 0
+    },
+    "google_trends": {
+      "status": "partial",
+      "row_count": 14,
+      "ok_count": 4,
+      "empty_count": 0,
+      "error_count": 13
+    },
+    "wikipedia_pageviews": {
+      "status": "partial",
+      "row_count": 11,
+      "ok_count": 8,
+      "empty_count": 0,
+      "error_count": 6
+    }
+  },
+  "summary": {
+    "top_polymarket_questions": [
+      {
+        "question": "Will the Fed decrease interest rates by 25 bps after the September 2026 meeting?",
+        "volume_24h": 783414.9731329986,
+        "yes_price": 0.0195,
+        "market_type": "binary"
+      },
+      {
+        "question": "US x Iran Effective Ceasefire by July 31?",
+        "volume_24h": 590454.048725995,
+        "yes_price": 0.085,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will Donald Trump publicly insult Vladimir Putin by July 31, 2026?",
+        "volume_24h": 575512.7648319998,
+        "yes_price": 0.008,
+        "market_type": "binary"
+      }
+    ],
+    "top_filtered_noise_candidates": [
+      {
+        "question": "Counter-Strike: paiN vs Astralis (BO3) - BLAST Bounty Playoffs",
+        "volume_24h": 2624760.2457820014,
+        "yes_price": null,
+        "market_type": "non_binary",
+        "reason": "sports_or_match_noise"
+      },
+      {
+        "question": "Dota 2: Xtreme Gaming vs LGD Gaming (BO3) - Games of the Future Group D",
+        "volume_24h": 1603917.9844610004,
+        "yes_price": null,
+        "market_type": "non_binary",
+        "reason": "sports_or_match_noise"
+      },
+      {
+        "question": "Mubadala Citi DC Open: Diana Shnaider vs Liudmila Samsonova",
+        "volume_24h": 903971.0375760001,
+        "yes_price": null,
+        "market_type": "non_binary",
+        "reason": "sports_or_match_noise"
+      }
+    ],
+    "top_google_trends_keywords": [
+      {
+        "keyword": "gold price",
+        "score_mean_24h_anchor_normalized": 1543.69,
+        "score_last_anchor_normalized": 814.29
+      },
+      {
+        "keyword": "interest rate",
+        "score_mean_24h_anchor_normalized": 450.0,
+        "score_last_anchor_normalized": 242.86
+      },
+      {
+        "keyword": "recession",
+        "score_mean_24h_anchor_normalized": 55.15,
+        "score_last_anchor_normalized": 42.86
+      },
+      {
+        "keyword": "Trump tariffs",
+        "score_mean_24h_anchor_normalized": 35.57,
+        "score_last_anchor_normalized": 28.57
+      }
+    ],
+    "top_wikipedia_pages": [
+      {
+        "page": "Donald_Trump",
+        "views": 36792
+      },
+      {
+        "page": "NATO",
+        "views": 3775
+      },
+      {
+        "page": "Strait_of_Hormuz",
+        "views": 3422
+      },
+      {
+        "page": "Federal_Reserve",
+        "views": 2438
+      },
+      {
+        "page": "Russo-Ukrainian_War",
+        "views": 1780
+      }
+    ],
+    "recurring_entities_across_sources": [
+      "AI",
+      "Iran",
+      "NATO",
+      "Trump"
+    ],
+    "signal_strength_by_source": {
+      "polymarket": "strong",
+      "google_trends": "strong",
+      "wikipedia_pageviews": "strong"
+    },
+    "narrative_hints": [
+      "Trump-related political / tariff attention is present.",
+      "Geopolitical / security attention is present.",
+      "AI / regulation / chip attention is present.",
+      "Iran-related geopolitical attention is present."
+    ],
+    "momentum_hints": [
+      "Google Trends risers: gold price (+735.07), interest rate (+167.18), Trump tariffs (+21.65)",
+      "Wikipedia risers: China%E2%80%93United_States_trade_war (+123), Artificial_intelligence_regulation (-9), NATO (-10)",
+      "Polymarket volume risers: Will the Fed decrease interest rates by 25 bps after the September 2026 meeting? (+310120.2131), Will WTI Crude Oil (WTI) hit (HIGH) $90 in July? (+287761.1238), Will Donald Trump publicly insult Vladimir Putin by July 31, 2026? (+262862.2565)"
+    ],
+    "prompt_ready_notes": [
+      "Use recurring_entities_across_sources to identify themes confirmed by multiple datasets.",
+      "Treat Google Trends anchor-normalized values as rough cross-chunk calibration, not exact absolute ranking.",
+      "Prefer entities that appear across at least 2 sources when writing the final sentiment brief.",
+      "Use delta_vs_previous_day to identify rising vs cooling attention.",
+      "If source health is partial or weak, explicitly say evidence is limited.",
+      "Use top_filtered_noise_candidates only for optional appendix / noise radar, not for the core macro radar."
+    ]
+  },
+  "top_signals": {
+    "polymarket": [
+      {
+        "question": "Will the Fed decrease interest rates by 25 bps after the September 2026 meeting?",
+        "volume_24h": 783414.9731329986,
+        "yes_price": 0.0195,
+        "market_type": "binary"
+      },
+      {
+        "question": "US x Iran Effective Ceasefire by July 31?",
+        "volume_24h": 590454.048725995,
+        "yes_price": 0.085,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will Donald Trump publicly insult Vladimir Putin by July 31, 2026?",
+        "volume_24h": 575512.7648319998,
+        "yes_price": 0.008,
+        "market_type": "binary"
+      },
+      {
+        "question": "Israel x Iran ceasefire continues through July 31?",
+        "volume_24h": 380179.74550300004,
+        "yes_price": 0.996,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will WTI Crude Oil (WTI) hit (HIGH) $90 in July?",
+        "volume_24h": 374332.9564710001,
+        "yes_price": 0.002,
+        "market_type": "binary"
+      }
+    ],
+    "google_trends": [
+      {
+        "keyword": "gold price",
+        "score_mean_24h_anchor_normalized": 1543.69,
+        "score_last_anchor_normalized": 814.29
+      },
+      {
+        "keyword": "interest rate",
+        "score_mean_24h_anchor_normalized": 450.0,
+        "score_last_anchor_normalized": 242.86
+      },
+      {
+        "keyword": "recession",
+        "score_mean_24h_anchor_normalized": 55.15,
+        "score_last_anchor_normalized": 42.86
+      },
+      {
+        "keyword": "Trump tariffs",
+        "score_mean_24h_anchor_normalized": 35.57,
+        "score_last_anchor_normalized": 28.57
+      }
+    ],
+    "wikipedia_pageviews": [
+      {
+        "page": "Donald_Trump",
+        "views": 36792
+      },
+      {
+        "page": "NATO",
+        "views": 3775
+      },
+      {
+        "page": "Strait_of_Hormuz",
+        "views": 3422
+      },
+      {
+        "page": "Federal_Reserve",
+        "views": 2438
+      },
+      {
+        "page": "Russo-Ukrainian_War",
+        "views": 1780
+      }
+    ]
+  },
+  "delta_summary": {
+    "notes": [
+      "Comparison is against the previously committed output file in the repo.",
+      "If the workflow is re-run on the same UTC date, comparison_type may be same_day_rerun instead of true previous-day.",
+      "Use rise/fall signals as relative momentum indicators, not as causal proof."
+    ]
+  },
+  "delta_top_signals": {
+    "polymarket": {
+      "top_volume_risers": [
+        {
+          "question": "Will the Fed decrease interest rates by 25 bps after the September 2026 meeting?",
+          "absolute_change": 310120.2131,
+          "pct_change": 65.52
+        },
+        {
+          "question": "Will WTI Crude Oil (WTI) hit (HIGH) $90 in July?",
+          "absolute_change": 287761.1238,
+          "pct_change": 332.4
+        },
+        {
+          "question": "Will Donald Trump publicly insult Vladimir Putin by July 31, 2026?",
+          "absolute_change": 262862.2565,
+          "pct_change": 84.08
+        },
+        {
+          "question": "Israel x Iran ceasefire continues through July 31?",
+          "absolute_change": 193459.7034,
+          "pct_change": 103.61
+        },
+        {
+          "question": "Israel x Iran ceasefire continues through August 2?",
+          "absolute_change": 168162.0841,
+          "pct_change": 254.44
+        }
+      ],
+      "top_volume_fallers": [
+        {
+          "question": "Will the U.S. invade Iran before 2027?",
+          "absolute_change": -1384911.1026,
+          "pct_change": -79.99
+        },
+        {
+          "question": "Will there be no change in Fed interest rates after the September 2026 meeting?",
+          "absolute_change": -1300082.9479,
+          "pct_change": -84.7
+        },
+        {
+          "question": "Strait of Hormuz traffic returns to normal by August 31?",
+          "absolute_change": -346168.4043,
+          "pct_change": -80.43
+        },
+        {
+          "question": "Will the Fed increase interest rates by 25 bps after the September 2026 meeting?",
+          "absolute_change": -173870.9984,
+          "pct_change": -33.56
+        },
+        {
+          "question": "Will the Fed decrease interest rates by 50+ bps after the September 2026 meeting?",
+          "absolute_change": -98947.9895,
+          "pct_change": -38.28
+        }
+      ],
+      "new_markets_vs_previous": 13
+    },
+    "google_trends": {
+      "top_risers": [
+        {
+          "keyword": "gold price",
+          "absolute_change": 735.07,
+          "pct_change": 90.9
+        },
+        {
+          "keyword": "interest rate",
+          "absolute_change": 167.18,
+          "pct_change": 59.11
+        },
+        {
+          "keyword": "Trump tariffs",
+          "absolute_change": 21.65,
+          "pct_change": 155.53
+        },
+        {
+          "keyword": "recession",
+          "absolute_change": -7.44,
+          "pct_change": -11.89
+        }
+      ],
+      "top_fallers": [
+        {
+          "keyword": "recession",
+          "absolute_change": -7.44,
+          "pct_change": -11.89
+        },
+        {
+          "keyword": "Trump tariffs",
+          "absolute_change": 21.65,
+          "pct_change": 155.53
+        },
+        {
+          "keyword": "interest rate",
+          "absolute_change": 167.18,
+          "pct_change": 59.11
+        },
+        {
+          "keyword": "gold price",
+          "absolute_change": 735.07,
+          "pct_change": 90.9
+        }
+      ],
+      "new_keywords_vs_previous": 0
+    },
+    "wikipedia_pageviews": {
+      "top_risers": [
+        {
+          "page": "China%E2%80%93United_States_trade_war",
+          "absolute_change": 123,
+          "pct_change": 15.65
+        },
+        {
+          "page": "Artificial_intelligence_regulation",
+          "absolute_change": -9,
+          "pct_change": -64.29
+        },
+        {
+          "page": "NATO",
+          "absolute_change": -10,
+          "pct_change": -0.26
+        },
+        {
+          "page": "Strait_of_Hormuz",
+          "absolute_change": -183,
+          "pct_change": -5.08
+        },
+        {
+          "page": "Semiconductor",
+          "absolute_change": -257,
+          "pct_change": -16.54
+        }
+      ],
+      "top_fallers": [
+        {
+          "page": "Donald_Trump",
+          "absolute_change": -2568,
+          "pct_change": -6.52
+        },
+        {
+          "page": "Federal_Reserve",
+          "absolute_change": -410,
+          "pct_change": -14.4
+        },
+        {
+          "page": "Semiconductor",
+          "absolute_change": -257,
+          "pct_change": -16.54
+        },
+        {
+          "page": "Strait_of_Hormuz",
+          "absolute_change": -183,
+          "pct_change": -5.08
+        },
+        {
+          "page": "NATO",
+          "absolute_change": -10,
+          "pct_change": -0.26
+        }
+      ],
+      "new_pages_vs_previous": 0
+    }
+  }
+}
