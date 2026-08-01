@@ -1,0 +1,310 @@
+{
+  "schema_version": "1.2.0",
+  "date_utc": "2026-08-01",
+  "generated_at_utc": "2026-08-01T22:01:23Z",
+  "source_health": {
+    "polymarket": {
+      "status": "ok",
+      "row_count": 20,
+      "ok_count": 20,
+      "empty_count": 0,
+      "error_count": 0
+    },
+    "google_trends": {
+      "status": "partial",
+      "row_count": 14,
+      "ok_count": 0,
+      "empty_count": 0,
+      "error_count": 18
+    },
+    "wikipedia_pageviews": {
+      "status": "ok",
+      "row_count": 10,
+      "ok_count": 10,
+      "empty_count": 0,
+      "error_count": 0
+    }
+  },
+  "summary": {
+    "top_polymarket_questions": [
+      {
+        "question": "Israel x Iran ceasefire continues through August 2?",
+        "volume_24h": 1088089.2257950017,
+        "yes_price": 0.765,
+        "market_type": "binary"
+      },
+      {
+        "question": "Israel x Iran ceasefire continues through August 1?",
+        "volume_24h": 1038250.9825130006,
+        "yes_price": 0.994,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will the U.S. invade Iran before 2027?",
+        "volume_24h": 881928.1551700005,
+        "yes_price": 0.255,
+        "market_type": "binary"
+      }
+    ],
+    "top_filtered_noise_candidates": [
+      {
+        "question": "St. Louis Cardinals vs. Toronto Blue Jays",
+        "volume_24h": 1207833.824377001,
+        "yes_price": null,
+        "market_type": "non_binary",
+        "reason": "sports_or_match_noise"
+      },
+      {
+        "question": "LoL: Karmine Corp vs Natus Vincere - Game 2 Winner",
+        "volume_24h": 921872.490041,
+        "yes_price": null,
+        "market_type": "non_binary",
+        "reason": "sports_or_match_noise"
+      },
+      {
+        "question": "LoL: Karmine Corp vs Natus Vincere - Game 1 Winner",
+        "volume_24h": 870874.7966879988,
+        "yes_price": null,
+        "market_type": "non_binary",
+        "reason": "sports_or_match_noise"
+      }
+    ],
+    "top_google_trends_keywords": [],
+    "top_wikipedia_pages": [
+      {
+        "page": "Donald_Trump",
+        "views": 35063
+      },
+      {
+        "page": "Kevin_Warsh",
+        "views": 4855
+      },
+      {
+        "page": "NATO",
+        "views": 4155
+      },
+      {
+        "page": "Strait_of_Hormuz",
+        "views": 3123
+      },
+      {
+        "page": "Federal_Reserve",
+        "views": 1849
+      }
+    ],
+    "recurring_entities_across_sources": [
+      "AI",
+      "Iran",
+      "NATO",
+      "Trump"
+    ],
+    "signal_strength_by_source": {
+      "polymarket": "strong",
+      "google_trends": "weak",
+      "wikipedia_pageviews": "strong"
+    },
+    "narrative_hints": [
+      "Trump-related political / tariff attention is present.",
+      "Geopolitical / security attention is present.",
+      "AI / regulation / chip attention is present.",
+      "Iran-related geopolitical attention is present."
+    ],
+    "momentum_hints": [
+      "Wikipedia risers: NATO (+380), Artificial_intelligence_regulation (-1), Semiconductor (-65)",
+      "Polymarket volume risers: Israel x Iran ceasefire continues through August 2? (+853835.1462), Will the U.S. invade Iran before 2027? (+535474.7251), Will the Democratic Party control the Senate after the 2026 Midterm elections? (+56037.5102)"
+    ],
+    "prompt_ready_notes": [
+      "Use recurring_entities_across_sources to identify themes confirmed by multiple datasets.",
+      "Treat Google Trends anchor-normalized values as rough cross-chunk calibration, not exact absolute ranking.",
+      "Prefer entities that appear across at least 2 sources when writing the final sentiment brief.",
+      "Use delta_vs_previous_day to identify rising vs cooling attention.",
+      "If source health is partial or weak, explicitly say evidence is limited.",
+      "Use top_filtered_noise_candidates only for optional appendix / noise radar, not for the core macro radar."
+    ]
+  },
+  "top_signals": {
+    "polymarket": [
+      {
+        "question": "Israel x Iran ceasefire continues through August 2?",
+        "volume_24h": 1088089.2257950017,
+        "yes_price": 0.765,
+        "market_type": "binary"
+      },
+      {
+        "question": "Israel x Iran ceasefire continues through August 1?",
+        "volume_24h": 1038250.9825130006,
+        "yes_price": 0.994,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will the U.S. invade Iran before 2027?",
+        "volume_24h": 881928.1551700005,
+        "yes_price": 0.255,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will China invade Taiwan by September 30, 2026?",
+        "volume_24h": 324551.859355,
+        "yes_price": 0.013,
+        "market_type": "binary"
+      },
+      {
+        "question": "Israel x Iran ceasefire continues through August 3?",
+        "volume_24h": 227932.83804999993,
+        "yes_price": 0.675,
+        "market_type": "binary"
+      }
+    ],
+    "google_trends": [],
+    "wikipedia_pageviews": [
+      {
+        "page": "Donald_Trump",
+        "views": 35063
+      },
+      {
+        "page": "Kevin_Warsh",
+        "views": 4855
+      },
+      {
+        "page": "NATO",
+        "views": 4155
+      },
+      {
+        "page": "Strait_of_Hormuz",
+        "views": 3123
+      },
+      {
+        "page": "Federal_Reserve",
+        "views": 1849
+      }
+    ]
+  },
+  "delta_summary": {
+    "notes": [
+      "Comparison is against the previously committed output file in the repo.",
+      "If the workflow is re-run on the same UTC date, comparison_type may be same_day_rerun instead of true previous-day.",
+      "Use rise/fall signals as relative momentum indicators, not as causal proof."
+    ]
+  },
+  "delta_top_signals": {
+    "polymarket": {
+      "top_volume_risers": [
+        {
+          "question": "Israel x Iran ceasefire continues through August 2?",
+          "absolute_change": 853835.1462,
+          "pct_change": 364.49
+        },
+        {
+          "question": "Will the U.S. invade Iran before 2027?",
+          "absolute_change": 535474.7251,
+          "pct_change": 154.56
+        },
+        {
+          "question": "Will the Democratic Party control the Senate after the 2026 Midterm elections?",
+          "absolute_change": 56037.5102,
+          "pct_change": 47.89
+        },
+        {
+          "question": "Israel x Iran ceasefire continues through August 31?",
+          "absolute_change": 47245.7373,
+          "pct_change": 63.67
+        },
+        {
+          "question": "Strait of Hormuz traffic returns to normal by August 31?",
+          "absolute_change": 40945.7657,
+          "pct_change": 48.62
+        }
+      ],
+      "top_volume_fallers": [
+        {
+          "question": "Will the Fed increase interest rates by 50+ bps after the September 2026 meeting?",
+          "absolute_change": -152267.7084,
+          "pct_change": -65.12
+        },
+        {
+          "question": "Iran leadership change by August 31?",
+          "absolute_change": -48320.1404,
+          "pct_change": -19.15
+        },
+        {
+          "question": "Israel x Iran ceasefire continues through August 15?",
+          "absolute_change": 12720.4006,
+          "pct_change": 15.41
+        },
+        {
+          "question": "Strait of Hormuz traffic returns to normal by August 31?",
+          "absolute_change": 40945.7657,
+          "pct_change": 48.62
+        },
+        {
+          "question": "Israel x Iran ceasefire continues through August 31?",
+          "absolute_change": 47245.7373,
+          "pct_change": 63.67
+        }
+      ],
+      "new_markets_vs_previous": 12
+    },
+    "google_trends": {
+      "top_risers": [],
+      "top_fallers": [],
+      "new_keywords_vs_previous": 0
+    },
+    "wikipedia_pageviews": {
+      "top_risers": [
+        {
+          "page": "NATO",
+          "absolute_change": 380,
+          "pct_change": 10.07
+        },
+        {
+          "page": "Artificial_intelligence_regulation",
+          "absolute_change": -1,
+          "pct_change": -20.0
+        },
+        {
+          "page": "Semiconductor",
+          "absolute_change": -65,
+          "pct_change": -5.01
+        },
+        {
+          "page": "Russo-Ukrainian_War",
+          "absolute_change": -174,
+          "pct_change": -9.78
+        },
+        {
+          "page": "China%E2%80%93United_States_trade_war",
+          "absolute_change": -187,
+          "pct_change": -20.57
+        }
+      ],
+      "top_fallers": [
+        {
+          "page": "Donald_Trump",
+          "absolute_change": -1729,
+          "pct_change": -4.7
+        },
+        {
+          "page": "Federal_Reserve",
+          "absolute_change": -589,
+          "pct_change": -24.16
+        },
+        {
+          "page": "Strait_of_Hormuz",
+          "absolute_change": -299,
+          "pct_change": -8.74
+        },
+        {
+          "page": "China%E2%80%93United_States_trade_war",
+          "absolute_change": -187,
+          "pct_change": -20.57
+        },
+        {
+          "page": "Russo-Ukrainian_War",
+          "absolute_change": -174,
+          "pct_change": -9.78
+        }
+      ],
+      "new_pages_vs_previous": 0
+    }
+  }
+}
