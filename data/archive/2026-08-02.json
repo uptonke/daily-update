@@ -1,0 +1,310 @@
+{
+  "schema_version": "1.2.0",
+  "date_utc": "2026-08-02",
+  "generated_at_utc": "2026-08-02T22:01:22Z",
+  "source_health": {
+    "polymarket": {
+      "status": "ok",
+      "row_count": 30,
+      "ok_count": 30,
+      "empty_count": 0,
+      "error_count": 0
+    },
+    "google_trends": {
+      "status": "partial",
+      "row_count": 14,
+      "ok_count": 0,
+      "empty_count": 0,
+      "error_count": 18
+    },
+    "wikipedia_pageviews": {
+      "status": "ok",
+      "row_count": 10,
+      "ok_count": 10,
+      "empty_count": 0,
+      "error_count": 0
+    }
+  },
+  "summary": {
+    "top_polymarket_questions": [
+      {
+        "question": "Will the U.S. invade Iran before 2027?",
+        "volume_24h": 2476351.3074480016,
+        "yes_price": 0.195,
+        "market_type": "binary"
+      },
+      {
+        "question": "Israel x Iran ceasefire continues through August 2?",
+        "volume_24h": 1193054.8978229987,
+        "yes_price": 0.9975,
+        "market_type": "binary"
+      },
+      {
+        "question": "Strait of Hormuz traffic returns to normal by August 31?",
+        "volume_24h": 1123544.4043160002,
+        "yes_price": 0.135,
+        "market_type": "binary"
+      }
+    ],
+    "top_filtered_noise_candidates": [
+      {
+        "question": "Mubadala Citi DC Open: Jessica Pegula vs Alexandra Eala",
+        "volume_24h": 1589491.752173999,
+        "yes_price": null,
+        "market_type": "non_binary",
+        "reason": "sports_or_match_noise"
+      },
+      {
+        "question": "LoL: Fnatic vs Movistar KOI (BO3) - LEC Regular Season",
+        "volume_24h": 1061121.6079820008,
+        "yes_price": null,
+        "market_type": "non_binary",
+        "reason": "sports_or_match_noise"
+      },
+      {
+        "question": "LoL: Fnatic vs Movistar KOI - Game 2 Winner",
+        "volume_24h": 1038361.6220520001,
+        "yes_price": null,
+        "market_type": "non_binary",
+        "reason": "expired"
+      }
+    ],
+    "top_google_trends_keywords": [],
+    "top_wikipedia_pages": [
+      {
+        "page": "Donald_Trump",
+        "views": 33813
+      },
+      {
+        "page": "NATO",
+        "views": 3663
+      },
+      {
+        "page": "Kevin_Warsh",
+        "views": 2891
+      },
+      {
+        "page": "Strait_of_Hormuz",
+        "views": 2778
+      },
+      {
+        "page": "Russo-Ukrainian_War",
+        "views": 1584
+      }
+    ],
+    "recurring_entities_across_sources": [
+      "AI",
+      "Iran",
+      "NATO",
+      "Trump"
+    ],
+    "signal_strength_by_source": {
+      "polymarket": "strong",
+      "google_trends": "weak",
+      "wikipedia_pageviews": "strong"
+    },
+    "narrative_hints": [
+      "Trump-related political / tariff attention is present.",
+      "Geopolitical / security attention is present.",
+      "AI / regulation / chip attention is present.",
+      "Iran-related geopolitical attention is present."
+    ],
+    "momentum_hints": [
+      "Wikipedia risers: Artificial_intelligence_regulation (+1), Russo-Ukrainian_War (-22), China%E2%80%93United_States_trade_war (-28)",
+      "Polymarket volume risers: Will the U.S. invade Iran before 2027? (+1594423.1523), Strait of Hormuz traffic returns to normal by August 31? (+998388.5), Strait of Hormuz traffic returns to normal by August 15? (+529415.9223)"
+    ],
+    "prompt_ready_notes": [
+      "Use recurring_entities_across_sources to identify themes confirmed by multiple datasets.",
+      "Treat Google Trends anchor-normalized values as rough cross-chunk calibration, not exact absolute ranking.",
+      "Prefer entities that appear across at least 2 sources when writing the final sentiment brief.",
+      "Use delta_vs_previous_day to identify rising vs cooling attention.",
+      "If source health is partial or weak, explicitly say evidence is limited.",
+      "Use top_filtered_noise_candidates only for optional appendix / noise radar, not for the core macro radar."
+    ]
+  },
+  "top_signals": {
+    "polymarket": [
+      {
+        "question": "Will the U.S. invade Iran before 2027?",
+        "volume_24h": 2476351.3074480016,
+        "yes_price": 0.195,
+        "market_type": "binary"
+      },
+      {
+        "question": "Israel x Iran ceasefire continues through August 2?",
+        "volume_24h": 1193054.8978229987,
+        "yes_price": 0.9975,
+        "market_type": "binary"
+      },
+      {
+        "question": "Strait of Hormuz traffic returns to normal by August 31?",
+        "volume_24h": 1123544.4043160002,
+        "yes_price": 0.135,
+        "market_type": "binary"
+      },
+      {
+        "question": "Strait of Hormuz traffic returns to normal by August 15?",
+        "volume_24h": 627093.2157509993,
+        "yes_price": 0.035,
+        "market_type": "binary"
+      },
+      {
+        "question": "Israel x Iran ceasefire continues through August 3?",
+        "volume_24h": 558607.5100969998,
+        "yes_price": 0.99,
+        "market_type": "binary"
+      }
+    ],
+    "google_trends": [],
+    "wikipedia_pageviews": [
+      {
+        "page": "Donald_Trump",
+        "views": 33813
+      },
+      {
+        "page": "NATO",
+        "views": 3663
+      },
+      {
+        "page": "Kevin_Warsh",
+        "views": 2891
+      },
+      {
+        "page": "Strait_of_Hormuz",
+        "views": 2778
+      },
+      {
+        "page": "Russo-Ukrainian_War",
+        "views": 1584
+      }
+    ]
+  },
+  "delta_summary": {
+    "notes": [
+      "Comparison is against the previously committed output file in the repo.",
+      "If the workflow is re-run on the same UTC date, comparison_type may be same_day_rerun instead of true previous-day.",
+      "Use rise/fall signals as relative momentum indicators, not as causal proof."
+    ]
+  },
+  "delta_top_signals": {
+    "polymarket": {
+      "top_volume_risers": [
+        {
+          "question": "Will the U.S. invade Iran before 2027?",
+          "absolute_change": 1594423.1523,
+          "pct_change": 180.79
+        },
+        {
+          "question": "Strait of Hormuz traffic returns to normal by August 31?",
+          "absolute_change": 998388.5,
+          "pct_change": 797.72
+        },
+        {
+          "question": "Strait of Hormuz traffic returns to normal by August 15?",
+          "absolute_change": 529415.9223,
+          "pct_change": 542.01
+        },
+        {
+          "question": "Israel x Iran ceasefire continues through August 3?",
+          "absolute_change": 330674.672,
+          "pct_change": 145.08
+        },
+        {
+          "question": "Israel x Iran ceasefire continues through August 9?",
+          "absolute_change": 186293.1304,
+          "pct_change": 214.74
+        }
+      ],
+      "top_volume_fallers": [
+        {
+          "question": "Israel x Iran ceasefire continues through August 31?",
+          "absolute_change": 39652.0123,
+          "pct_change": 32.65
+        },
+        {
+          "question": "Israel x Iran ceasefire continues through August 15?",
+          "absolute_change": 47643.2143,
+          "pct_change": 50.02
+        },
+        {
+          "question": "Will the Fed increase interest rates by 50+ bps after the September 2026 meeting?",
+          "absolute_change": 62772.8481,
+          "pct_change": 76.98
+        },
+        {
+          "question": "US-Iran Final Nuclear Deal by August 31, 2026?",
+          "absolute_change": 79744.7058,
+          "pct_change": 105.32
+        },
+        {
+          "question": "Israel x Iran ceasefire continues through August 2?",
+          "absolute_change": 104965.672,
+          "pct_change": 9.65
+        }
+      ],
+      "new_markets_vs_previous": 19
+    },
+    "google_trends": {
+      "top_risers": [],
+      "top_fallers": [],
+      "new_keywords_vs_previous": 0
+    },
+    "wikipedia_pageviews": {
+      "top_risers": [
+        {
+          "page": "Artificial_intelligence_regulation",
+          "absolute_change": 1,
+          "pct_change": 25.0
+        },
+        {
+          "page": "Russo-Ukrainian_War",
+          "absolute_change": -22,
+          "pct_change": -1.37
+        },
+        {
+          "page": "China%E2%80%93United_States_trade_war",
+          "absolute_change": -28,
+          "pct_change": -3.88
+        },
+        {
+          "page": "Semiconductor",
+          "absolute_change": -40,
+          "pct_change": -3.25
+        },
+        {
+          "page": "OPEC",
+          "absolute_change": -184,
+          "pct_change": -17.07
+        }
+      ],
+      "top_fallers": [
+        {
+          "page": "Kevin_Warsh",
+          "absolute_change": -1964,
+          "pct_change": -40.45
+        },
+        {
+          "page": "Donald_Trump",
+          "absolute_change": -1250,
+          "pct_change": -3.57
+        },
+        {
+          "page": "NATO",
+          "absolute_change": -492,
+          "pct_change": -11.84
+        },
+        {
+          "page": "Federal_Reserve",
+          "absolute_change": -372,
+          "pct_change": -20.12
+        },
+        {
+          "page": "Strait_of_Hormuz",
+          "absolute_change": -345,
+          "pct_change": -11.05
+        }
+      ],
+      "new_pages_vs_previous": 0
+    }
+  }
+}
