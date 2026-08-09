@@ -1,0 +1,417 @@
+{
+  "schema_version": "1.2.0",
+  "date_utc": "2026-08-09",
+  "generated_at_utc": "2026-08-09T22:01:34Z",
+  "source_health": {
+    "polymarket": {
+      "status": "ok",
+      "row_count": 30,
+      "ok_count": 30,
+      "empty_count": 0,
+      "error_count": 0
+    },
+    "google_trends": {
+      "status": "ok",
+      "row_count": 14,
+      "ok_count": 14,
+      "empty_count": 0,
+      "error_count": 0
+    },
+    "wikipedia_pageviews": {
+      "status": "partial",
+      "row_count": 10,
+      "ok_count": 9,
+      "empty_count": 0,
+      "error_count": 2
+    }
+  },
+  "summary": {
+    "top_polymarket_questions": [
+      {
+        "question": "Strait of Hormuz traffic returns to normal by August 31?",
+        "volume_24h": 757540.9093529994,
+        "yes_price": 0.045,
+        "market_type": "binary"
+      },
+      {
+        "question": "Strait of Hormuz traffic returns to normal by August 15?",
+        "volume_24h": 372803.917236,
+        "yes_price": 0.0025,
+        "market_type": "binary"
+      },
+      {
+        "question": "Israel x Iran ceasefire continues through August 9?",
+        "volume_24h": 344447.18452899996,
+        "yes_price": 0.9985,
+        "market_type": "binary"
+      }
+    ],
+    "top_filtered_noise_candidates": [
+      {
+        "question": "National Bank Open: Alina Korneeva vs Coco Gauff",
+        "volume_24h": 1442997.4662669997,
+        "yes_price": null,
+        "market_type": "non_binary",
+        "reason": "sports_or_match_noise"
+      },
+      {
+        "question": "Will Adanech Abiebie be the next Prime Minister of Ethiopia?",
+        "volume_24h": 980498.98,
+        "yes_price": 0.003,
+        "market_type": "binary",
+        "reason": "expired"
+      },
+      {
+        "question": "Detroit Tigers vs. San Francisco Giants",
+        "volume_24h": 655578.8980419995,
+        "yes_price": null,
+        "market_type": "non_binary",
+        "reason": "sports_or_match_noise"
+      }
+    ],
+    "top_google_trends_keywords": [
+      {
+        "keyword": "gold price",
+        "score_mean_24h_anchor_normalized": 1665.24,
+        "score_last_anchor_normalized": 1233.33
+      },
+      {
+        "keyword": "oil price",
+        "score_mean_24h_anchor_normalized": 442.99,
+        "score_last_anchor_normalized": 440.0
+      },
+      {
+        "keyword": "Iran war",
+        "score_mean_24h_anchor_normalized": 441.53,
+        "score_last_anchor_normalized": 500.0
+      },
+      {
+        "keyword": "interest rate",
+        "score_mean_24h_anchor_normalized": 418.72,
+        "score_last_anchor_normalized": 300.0
+      },
+      {
+        "keyword": "NATO",
+        "score_mean_24h_anchor_normalized": 386.14,
+        "score_last_anchor_normalized": 290.0
+      }
+    ],
+    "top_wikipedia_pages": [
+      {
+        "page": "Donald_Trump",
+        "views": 34577
+      },
+      {
+        "page": "NATO",
+        "views": 4341
+      },
+      {
+        "page": "Strait_of_Hormuz",
+        "views": 3786
+      },
+      {
+        "page": "Kevin_Warsh",
+        "views": 1864
+      },
+      {
+        "page": "Russo-Ukrainian_War",
+        "views": 1591
+      }
+    ],
+    "recurring_entities_across_sources": [
+      "AI",
+      "Iran",
+      "NATO",
+      "Oil",
+      "Trump"
+    ],
+    "signal_strength_by_source": {
+      "polymarket": "strong",
+      "google_trends": "strong",
+      "wikipedia_pageviews": "strong"
+    },
+    "narrative_hints": [
+      "Energy / oil-related attention is present.",
+      "Trump-related political / tariff attention is present.",
+      "Geopolitical / security attention is present.",
+      "AI / regulation / chip attention is present.",
+      "Iran-related geopolitical attention is present."
+    ],
+    "momentum_hints": [
+      "Google Trends risers: inflation (+17.74), AI regulation (+13.43), China economy (+10.51)",
+      "Wikipedia risers: Artificial_intelligence_regulation (+2), NATO (-1), Donald_Trump (-16)",
+      "Polymarket volume risers: Will there be no change in Fed interest rates after the September 2026 meeting? (+120577.1652), US announces end of Iranian blockade by August 15, 2026? (+70536.8293), Strait of Hormuz traffic returns to normal by September 30? (+45621.3092)"
+    ],
+    "prompt_ready_notes": [
+      "Use recurring_entities_across_sources to identify themes confirmed by multiple datasets.",
+      "Treat Google Trends anchor-normalized values as rough cross-chunk calibration, not exact absolute ranking.",
+      "Prefer entities that appear across at least 2 sources when writing the final sentiment brief.",
+      "Use delta_vs_previous_day to identify rising vs cooling attention.",
+      "If source health is partial or weak, explicitly say evidence is limited.",
+      "Use top_filtered_noise_candidates only for optional appendix / noise radar, not for the core macro radar."
+    ]
+  },
+  "top_signals": {
+    "polymarket": [
+      {
+        "question": "Strait of Hormuz traffic returns to normal by August 31?",
+        "volume_24h": 757540.9093529994,
+        "yes_price": 0.045,
+        "market_type": "binary"
+      },
+      {
+        "question": "Strait of Hormuz traffic returns to normal by August 15?",
+        "volume_24h": 372803.917236,
+        "yes_price": 0.0025,
+        "market_type": "binary"
+      },
+      {
+        "question": "Israel x Iran ceasefire continues through August 9?",
+        "volume_24h": 344447.18452899996,
+        "yes_price": 0.9985,
+        "market_type": "binary"
+      },
+      {
+        "question": "US announces end of Iranian blockade by August 9, 2026?",
+        "volume_24h": 317417.6298440007,
+        "yes_price": 0.0015,
+        "market_type": "binary"
+      },
+      {
+        "question": "US announces end of Iranian blockade by August 15, 2026?",
+        "volume_24h": 260165.47863299985,
+        "yes_price": 0.135,
+        "market_type": "binary"
+      }
+    ],
+    "google_trends": [
+      {
+        "keyword": "gold price",
+        "score_mean_24h_anchor_normalized": 1665.24,
+        "score_last_anchor_normalized": 1233.33
+      },
+      {
+        "keyword": "oil price",
+        "score_mean_24h_anchor_normalized": 442.99,
+        "score_last_anchor_normalized": 440.0
+      },
+      {
+        "keyword": "Iran war",
+        "score_mean_24h_anchor_normalized": 441.53,
+        "score_last_anchor_normalized": 500.0
+      },
+      {
+        "keyword": "interest rate",
+        "score_mean_24h_anchor_normalized": 418.72,
+        "score_last_anchor_normalized": 300.0
+      },
+      {
+        "keyword": "NATO",
+        "score_mean_24h_anchor_normalized": 386.14,
+        "score_last_anchor_normalized": 290.0
+      }
+    ],
+    "wikipedia_pageviews": [
+      {
+        "page": "Donald_Trump",
+        "views": 34577
+      },
+      {
+        "page": "NATO",
+        "views": 4341
+      },
+      {
+        "page": "Strait_of_Hormuz",
+        "views": 3786
+      },
+      {
+        "page": "Kevin_Warsh",
+        "views": 1864
+      },
+      {
+        "page": "Russo-Ukrainian_War",
+        "views": 1591
+      }
+    ]
+  },
+  "delta_summary": {
+    "notes": [
+      "Comparison is against the previously committed output file in the repo.",
+      "If the workflow is re-run on the same UTC date, comparison_type may be same_day_rerun instead of true previous-day.",
+      "Use rise/fall signals as relative momentum indicators, not as causal proof."
+    ]
+  },
+  "delta_top_signals": {
+    "polymarket": {
+      "top_volume_risers": [
+        {
+          "question": "Will there be no change in Fed interest rates after the September 2026 meeting?",
+          "absolute_change": 120577.1652,
+          "pct_change": 114.79
+        },
+        {
+          "question": "US announces end of Iranian blockade by August 15, 2026?",
+          "absolute_change": 70536.8293,
+          "pct_change": 37.2
+        },
+        {
+          "question": "Strait of Hormuz traffic returns to normal by September 30?",
+          "absolute_change": 45621.3092,
+          "pct_change": 41.73
+        },
+        {
+          "question": "Will the Fed increase interest rates by 25 bps after the September 2026 meeting?",
+          "absolute_change": 45619.2909,
+          "pct_change": 45.65
+        },
+        {
+          "question": "Israel x Iran ceasefire continues through August 9?",
+          "absolute_change": 44128.185,
+          "pct_change": 14.69
+        }
+      ],
+      "top_volume_fallers": [
+        {
+          "question": "Will the Fed increase interest rates by 50+ bps after the September 2026 meeting?",
+          "absolute_change": -171069.7208,
+          "pct_change": -60.12
+        },
+        {
+          "question": "Strait of Hormuz traffic returns to normal by August 31?",
+          "absolute_change": -149886.473,
+          "pct_change": -16.52
+        },
+        {
+          "question": "Will the U.S. invade Iran before 2027?",
+          "absolute_change": -140049.479,
+          "pct_change": -60.65
+        },
+        {
+          "question": "Will the Fed decrease interest rates by 50+ bps after the September 2026 meeting?",
+          "absolute_change": -115646.9038,
+          "pct_change": -60.91
+        },
+        {
+          "question": "Will the Fed decrease interest rates by 25 bps after the September 2026 meeting?",
+          "absolute_change": -105997.3445,
+          "pct_change": -31.44
+        }
+      ],
+      "new_markets_vs_previous": 13
+    },
+    "google_trends": {
+      "top_risers": [
+        {
+          "keyword": "inflation",
+          "absolute_change": 17.74,
+          "pct_change": 5.17
+        },
+        {
+          "keyword": "AI regulation",
+          "absolute_change": 13.43,
+          "pct_change": 49.38
+        },
+        {
+          "keyword": "China economy",
+          "absolute_change": 10.51,
+          "pct_change": 49.53
+        },
+        {
+          "keyword": "Trump tariffs",
+          "absolute_change": 6.09,
+          "pct_change": 22.17
+        },
+        {
+          "keyword": "OPEC",
+          "absolute_change": 2.84,
+          "pct_change": 22.52
+        }
+      ],
+      "top_fallers": [
+        {
+          "keyword": "gold price",
+          "absolute_change": -213.34,
+          "pct_change": -11.36
+        },
+        {
+          "keyword": "NATO",
+          "absolute_change": -153.32,
+          "pct_change": -28.42
+        },
+        {
+          "keyword": "interest rate",
+          "absolute_change": -43.47,
+          "pct_change": -9.41
+        },
+        {
+          "keyword": "oil price",
+          "absolute_change": -26.72,
+          "pct_change": -5.69
+        },
+        {
+          "keyword": "Ukraine war",
+          "absolute_change": -7.64,
+          "pct_change": -5.2
+        }
+      ],
+      "new_keywords_vs_previous": 0
+    },
+    "wikipedia_pageviews": {
+      "top_risers": [
+        {
+          "page": "Artificial_intelligence_regulation",
+          "absolute_change": 2,
+          "pct_change": 33.33
+        },
+        {
+          "page": "NATO",
+          "absolute_change": -1,
+          "pct_change": -0.02
+        },
+        {
+          "page": "Donald_Trump",
+          "absolute_change": -16,
+          "pct_change": -0.05
+        },
+        {
+          "page": "Russo-Ukrainian_War",
+          "absolute_change": -28,
+          "pct_change": -1.73
+        },
+        {
+          "page": "Federal_Reserve",
+          "absolute_change": -47,
+          "pct_change": -3.04
+        }
+      ],
+      "top_fallers": [
+        {
+          "page": "Strait_of_Hormuz",
+          "absolute_change": -336,
+          "pct_change": -8.15
+        },
+        {
+          "page": "Semiconductor",
+          "absolute_change": -300,
+          "pct_change": -22.66
+        },
+        {
+          "page": "China%E2%80%93United_States_trade_war",
+          "absolute_change": -139,
+          "pct_change": -17.44
+        },
+        {
+          "page": "Federal_Reserve",
+          "absolute_change": -47,
+          "pct_change": -3.04
+        },
+        {
+          "page": "Russo-Ukrainian_War",
+          "absolute_change": -28,
+          "pct_change": -1.73
+        }
+      ],
+      "new_pages_vs_previous": 0
+    }
+  }
+}
