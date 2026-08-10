@@ -1,0 +1,356 @@
+{
+  "schema_version": "1.2.0",
+  "date_utc": "2026-08-10",
+  "generated_at_utc": "2026-08-10T22:01:26Z",
+  "source_health": {
+    "polymarket": {
+      "status": "ok",
+      "row_count": 30,
+      "ok_count": 30,
+      "empty_count": 0,
+      "error_count": 0
+    },
+    "google_trends": {
+      "status": "partial",
+      "row_count": 14,
+      "ok_count": 2,
+      "empty_count": 0,
+      "error_count": 15
+    },
+    "wikipedia_pageviews": {
+      "status": "ok",
+      "row_count": 10,
+      "ok_count": 10,
+      "empty_count": 0,
+      "error_count": 0
+    }
+  },
+  "summary": {
+    "top_polymarket_questions": [
+      {
+        "question": "Will the Fed increase interest rates by 25 bps after the September 2026 meeting?",
+        "volume_24h": 929259.4789359998,
+        "yes_price": 0.435,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will the Fed increase interest rates by 50+ bps after the September 2026 meeting?",
+        "volume_24h": 688219.7291369995,
+        "yes_price": 0.0055,
+        "market_type": "binary"
+      },
+      {
+        "question": "Strait of Hormuz traffic returns to normal by August 15?",
+        "volume_24h": 638925.6496610001,
+        "yes_price": 0.0035,
+        "market_type": "binary"
+      }
+    ],
+    "top_filtered_noise_candidates": [
+      {
+        "question": "National Bank Open: Diana Shnaider vs Iga Swiatek",
+        "volume_24h": 1601495.917018999,
+        "yes_price": null,
+        "market_type": "non_binary",
+        "reason": "sports_or_match_noise"
+      },
+      {
+        "question": "Will Josh Stein win the 2028 Democratic presidential nomination?",
+        "volume_24h": 741982.958,
+        "yes_price": 0.0015,
+        "market_type": "binary",
+        "reason": "low_public_impact_or_unclear_relevance"
+      },
+      {
+        "question": "Will Adanech Abiebie be the next Prime Minister of Ethiopia?",
+        "volume_24h": 678369.296,
+        "yes_price": 0.0055,
+        "market_type": "binary",
+        "reason": "expired"
+      }
+    ],
+    "top_google_trends_keywords": [
+      {
+        "keyword": "China US",
+        "score_mean_24h_anchor_normalized": 142.76,
+        "score_last_anchor_normalized": 88.89
+      },
+      {
+        "keyword": "OPEC",
+        "score_mean_24h_anchor_normalized": 20.68,
+        "score_last_anchor_normalized": 11.11
+      }
+    ],
+    "top_wikipedia_pages": [
+      {
+        "page": "Donald_Trump",
+        "views": 37209
+      },
+      {
+        "page": "NATO",
+        "views": 4608
+      },
+      {
+        "page": "Strait_of_Hormuz",
+        "views": 4573
+      },
+      {
+        "page": "Russo-Ukrainian_War",
+        "views": 1658
+      },
+      {
+        "page": "Kevin_Warsh",
+        "views": 1602
+      }
+    ],
+    "recurring_entities_across_sources": [
+      "AI",
+      "China",
+      "NATO",
+      "OPEC",
+      "Trump"
+    ],
+    "signal_strength_by_source": {
+      "polymarket": "strong",
+      "google_trends": "weak",
+      "wikipedia_pageviews": "strong"
+    },
+    "narrative_hints": [
+      "Trump-related political / tariff attention is present.",
+      "Geopolitical / security attention is present.",
+      "AI / regulation / chip attention is present.",
+      "China / US-China attention is present."
+    ],
+    "momentum_hints": [
+      "Google Trends risers: China US (+24.07), OPEC (+5.23)",
+      "Wikipedia risers: Donald_Trump (+2632), Strait_of_Hormuz (+787), NATO (+267)",
+      "Polymarket volume risers: Will the Fed increase interest rates by 25 bps after the September 2026 meeting? (+783715.5468), Will the Fed increase interest rates by 50+ bps after the September 2026 meeting? (+574724.4913), Will the Fed decrease interest rates by 50+ bps after the September 2026 meeting? (+509330.3106)"
+    ],
+    "prompt_ready_notes": [
+      "Use recurring_entities_across_sources to identify themes confirmed by multiple datasets.",
+      "Treat Google Trends anchor-normalized values as rough cross-chunk calibration, not exact absolute ranking.",
+      "Prefer entities that appear across at least 2 sources when writing the final sentiment brief.",
+      "Use delta_vs_previous_day to identify rising vs cooling attention.",
+      "If source health is partial or weak, explicitly say evidence is limited.",
+      "Use top_filtered_noise_candidates only for optional appendix / noise radar, not for the core macro radar."
+    ]
+  },
+  "top_signals": {
+    "polymarket": [
+      {
+        "question": "Will the Fed increase interest rates by 25 bps after the September 2026 meeting?",
+        "volume_24h": 929259.4789359998,
+        "yes_price": 0.435,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will the Fed increase interest rates by 50+ bps after the September 2026 meeting?",
+        "volume_24h": 688219.7291369995,
+        "yes_price": 0.0055,
+        "market_type": "binary"
+      },
+      {
+        "question": "Strait of Hormuz traffic returns to normal by August 15?",
+        "volume_24h": 638925.6496610001,
+        "yes_price": 0.0035,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will the Fed decrease interest rates by 25 bps after the September 2026 meeting?",
+        "volume_24h": 638652.3924899999,
+        "yes_price": 0.0155,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will the Fed decrease interest rates by 50+ bps after the September 2026 meeting?",
+        "volume_24h": 583559.679766,
+        "yes_price": 0.0085,
+        "market_type": "binary"
+      }
+    ],
+    "google_trends": [
+      {
+        "keyword": "China US",
+        "score_mean_24h_anchor_normalized": 142.76,
+        "score_last_anchor_normalized": 88.89
+      },
+      {
+        "keyword": "OPEC",
+        "score_mean_24h_anchor_normalized": 20.68,
+        "score_last_anchor_normalized": 11.11
+      }
+    ],
+    "wikipedia_pageviews": [
+      {
+        "page": "Donald_Trump",
+        "views": 37209
+      },
+      {
+        "page": "NATO",
+        "views": 4608
+      },
+      {
+        "page": "Strait_of_Hormuz",
+        "views": 4573
+      },
+      {
+        "page": "Russo-Ukrainian_War",
+        "views": 1658
+      },
+      {
+        "page": "Kevin_Warsh",
+        "views": 1602
+      }
+    ]
+  },
+  "delta_summary": {
+    "notes": [
+      "Comparison is against the previously committed output file in the repo.",
+      "If the workflow is re-run on the same UTC date, comparison_type may be same_day_rerun instead of true previous-day.",
+      "Use rise/fall signals as relative momentum indicators, not as causal proof."
+    ]
+  },
+  "delta_top_signals": {
+    "polymarket": {
+      "top_volume_risers": [
+        {
+          "question": "Will the Fed increase interest rates by 25 bps after the September 2026 meeting?",
+          "absolute_change": 783715.5468,
+          "pct_change": 538.47
+        },
+        {
+          "question": "Will the Fed increase interest rates by 50+ bps after the September 2026 meeting?",
+          "absolute_change": 574724.4913,
+          "pct_change": 506.39
+        },
+        {
+          "question": "Will the Fed decrease interest rates by 50+ bps after the September 2026 meeting?",
+          "absolute_change": 509330.3106,
+          "pct_change": 686.16
+        },
+        {
+          "question": "Will the Fed decrease interest rates by 25 bps after the September 2026 meeting?",
+          "absolute_change": 407508.8764,
+          "pct_change": 176.3
+        },
+        {
+          "question": "Will there be no change in Fed interest rates after the September 2026 meeting?",
+          "absolute_change": 357864.3252,
+          "pct_change": 158.61
+        }
+      ],
+      "top_volume_fallers": [
+        {
+          "question": "Strait of Hormuz traffic returns to normal by August 31?",
+          "absolute_change": -208744.3406,
+          "pct_change": -27.56
+        },
+        {
+          "question": "Will the Iranian regime fall before 2027?",
+          "absolute_change": -102169.2058,
+          "pct_change": -50.18
+        },
+        {
+          "question": "US announces end of Iranian blockade by August 31, 2026?",
+          "absolute_change": -59420.1016,
+          "pct_change": -27.61
+        },
+        {
+          "question": "Strait of Hormuz traffic returns to normal by September 30?",
+          "absolute_change": -53221.9023,
+          "pct_change": -34.35
+        },
+        {
+          "question": "Trump out as President by August 31?",
+          "absolute_change": -36551.7105,
+          "pct_change": -25.04
+        }
+      ],
+      "new_markets_vs_previous": 8
+    },
+    "google_trends": {
+      "top_risers": [
+        {
+          "keyword": "China US",
+          "absolute_change": 24.07,
+          "pct_change": 20.28
+        },
+        {
+          "keyword": "OPEC",
+          "absolute_change": 5.23,
+          "pct_change": 33.85
+        }
+      ],
+      "top_fallers": [
+        {
+          "keyword": "OPEC",
+          "absolute_change": 5.23,
+          "pct_change": 33.85
+        },
+        {
+          "keyword": "China US",
+          "absolute_change": 24.07,
+          "pct_change": 20.28
+        }
+      ],
+      "new_keywords_vs_previous": 0
+    },
+    "wikipedia_pageviews": {
+      "top_risers": [
+        {
+          "page": "Donald_Trump",
+          "absolute_change": 2632,
+          "pct_change": 7.61
+        },
+        {
+          "page": "Strait_of_Hormuz",
+          "absolute_change": 787,
+          "pct_change": 20.79
+        },
+        {
+          "page": "NATO",
+          "absolute_change": 267,
+          "pct_change": 6.15
+        },
+        {
+          "page": "Semiconductor",
+          "absolute_change": 224,
+          "pct_change": 21.88
+        },
+        {
+          "page": "Russo-Ukrainian_War",
+          "absolute_change": 67,
+          "pct_change": 4.21
+        }
+      ],
+      "top_fallers": [
+        {
+          "page": "Kevin_Warsh",
+          "absolute_change": -262,
+          "pct_change": -14.06
+        },
+        {
+          "page": "Federal_Reserve",
+          "absolute_change": -127,
+          "pct_change": -8.48
+        },
+        {
+          "page": "Artificial_intelligence_regulation",
+          "absolute_change": -1,
+          "pct_change": -12.5
+        },
+        {
+          "page": "China%E2%80%93United_States_trade_war",
+          "absolute_change": 4,
+          "pct_change": 0.61
+        },
+        {
+          "page": "Russo-Ukrainian_War",
+          "absolute_change": 67,
+          "pct_change": 4.21
+        }
+      ],
+      "new_pages_vs_previous": 0
+    }
+  }
+}
