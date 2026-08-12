@@ -1,0 +1,308 @@
+{
+  "schema_version": "1.2.0",
+  "date_utc": "2026-08-12",
+  "generated_at_utc": "2026-08-12T22:01:55Z",
+  "source_health": {
+    "polymarket": {
+      "status": "ok",
+      "row_count": 24,
+      "ok_count": 24,
+      "empty_count": 0,
+      "error_count": 0
+    },
+    "google_trends": {
+      "status": "partial",
+      "row_count": 14,
+      "ok_count": 0,
+      "empty_count": 0,
+      "error_count": 18
+    },
+    "wikipedia_pageviews": {
+      "status": "partial",
+      "row_count": 11,
+      "ok_count": 9,
+      "empty_count": 0,
+      "error_count": 4
+    }
+  },
+  "summary": {
+    "top_polymarket_questions": [
+      {
+        "question": "Will the Fed decrease interest rates by 25 bps after the September 2026 meeting?",
+        "volume_24h": 1112149.4819970003,
+        "yes_price": 0.0135,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will there be no change in Fed interest rates after the September 2026 meeting?",
+        "volume_24h": 887238.5058380003,
+        "yes_price": 0.665,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will the Fed increase interest rates by 50+ bps after the September 2026 meeting?",
+        "volume_24h": 790625.930482,
+        "yes_price": 0.0045,
+        "market_type": "binary"
+      }
+    ],
+    "top_filtered_noise_candidates": [
+      {
+        "question": "Will Paris Saint-Germain win on 2026-08-12?",
+        "volume_24h": 4928696.656472,
+        "yes_price": 0.9995,
+        "market_type": "binary",
+        "reason": "expired"
+      },
+      {
+        "question": "Paris Saint-Germain vs. Aston Villa: O/U 3.5",
+        "volume_24h": 994610.1516829989,
+        "yes_price": null,
+        "market_type": "non_binary",
+        "reason": "expired"
+      },
+      {
+        "question": "Will Adanech Abiebie be the next Prime Minister of Ethiopia?",
+        "volume_24h": 979930.115333,
+        "yes_price": 0.006,
+        "market_type": "binary",
+        "reason": "expired"
+      }
+    ],
+    "top_google_trends_keywords": [],
+    "top_wikipedia_pages": [
+      {
+        "page": "Donald_Trump",
+        "views": 47871
+      },
+      {
+        "page": "NATO",
+        "views": 4350
+      },
+      {
+        "page": "Strait_of_Hormuz",
+        "views": 4279
+      },
+      {
+        "page": "Kevin_Warsh",
+        "views": 1938
+      },
+      {
+        "page": "Federal_Reserve",
+        "views": 1706
+      }
+    ],
+    "recurring_entities_across_sources": [
+      "AI",
+      "NATO",
+      "Trump"
+    ],
+    "signal_strength_by_source": {
+      "polymarket": "strong",
+      "google_trends": "weak",
+      "wikipedia_pageviews": "strong"
+    },
+    "narrative_hints": [
+      "Trump-related political / tariff attention is present.",
+      "Geopolitical / security attention is present.",
+      "AI / regulation / chip attention is present."
+    ],
+    "momentum_hints": [
+      "Wikipedia risers: Donald_Trump (+12900), NATO (+194), Semiconductor (+59)",
+      "Polymarket volume risers: Will the Fed decrease interest rates by 25 bps after the September 2026 meeting? (+742352.8949), Will there be no change in Fed interest rates after the September 2026 meeting? (+707829.5339), Will the Fed increase interest rates by 50+ bps after the September 2026 meeting? (+683188.5037)"
+    ],
+    "prompt_ready_notes": [
+      "Use recurring_entities_across_sources to identify themes confirmed by multiple datasets.",
+      "Treat Google Trends anchor-normalized values as rough cross-chunk calibration, not exact absolute ranking.",
+      "Prefer entities that appear across at least 2 sources when writing the final sentiment brief.",
+      "Use delta_vs_previous_day to identify rising vs cooling attention.",
+      "If source health is partial or weak, explicitly say evidence is limited.",
+      "Use top_filtered_noise_candidates only for optional appendix / noise radar, not for the core macro radar."
+    ]
+  },
+  "top_signals": {
+    "polymarket": [
+      {
+        "question": "Will the Fed decrease interest rates by 25 bps after the September 2026 meeting?",
+        "volume_24h": 1112149.4819970003,
+        "yes_price": 0.0135,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will there be no change in Fed interest rates after the September 2026 meeting?",
+        "volume_24h": 887238.5058380003,
+        "yes_price": 0.665,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will the Fed increase interest rates by 50+ bps after the September 2026 meeting?",
+        "volume_24h": 790625.930482,
+        "yes_price": 0.0045,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will the Fed increase interest rates by 25 bps after the September 2026 meeting?",
+        "volume_24h": 580231.636355,
+        "yes_price": 0.325,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will the Fed decrease interest rates by 50+ bps after the September 2026 meeting?",
+        "volume_24h": 555798.7468549998,
+        "yes_price": 0.0055,
+        "market_type": "binary"
+      }
+    ],
+    "google_trends": [],
+    "wikipedia_pageviews": [
+      {
+        "page": "Donald_Trump",
+        "views": 47871
+      },
+      {
+        "page": "NATO",
+        "views": 4350
+      },
+      {
+        "page": "Strait_of_Hormuz",
+        "views": 4279
+      },
+      {
+        "page": "Kevin_Warsh",
+        "views": 1938
+      },
+      {
+        "page": "Federal_Reserve",
+        "views": 1706
+      }
+    ]
+  },
+  "delta_summary": {
+    "notes": [
+      "Comparison is against the previously committed output file in the repo.",
+      "If the workflow is re-run on the same UTC date, comparison_type may be same_day_rerun instead of true previous-day.",
+      "Use rise/fall signals as relative momentum indicators, not as causal proof."
+    ]
+  },
+  "delta_top_signals": {
+    "polymarket": {
+      "top_volume_risers": [
+        {
+          "question": "Will the Fed decrease interest rates by 25 bps after the September 2026 meeting?",
+          "absolute_change": 742352.8949,
+          "pct_change": 200.75
+        },
+        {
+          "question": "Will there be no change in Fed interest rates after the September 2026 meeting?",
+          "absolute_change": 707829.5339,
+          "pct_change": 394.53
+        },
+        {
+          "question": "Will the Fed increase interest rates by 50+ bps after the September 2026 meeting?",
+          "absolute_change": 683188.5037,
+          "pct_change": 635.89
+        },
+        {
+          "question": "Will the Fed decrease interest rates by 50+ bps after the September 2026 meeting?",
+          "absolute_change": 200038.0243,
+          "pct_change": 56.23
+        },
+        {
+          "question": "Will Count Binface win the Clacton by-election?",
+          "absolute_change": 116657.3911,
+          "pct_change": 63.82
+        }
+      ],
+      "top_volume_fallers": [
+        {
+          "question": "Strait of Hormuz traffic returns to normal by September 30?",
+          "absolute_change": -299877.5337,
+          "pct_change": -80.03
+        },
+        {
+          "question": "Strait of Hormuz traffic returns to normal by August 31?",
+          "absolute_change": -261498.4773,
+          "pct_change": -40.27
+        },
+        {
+          "question": "Strait of Hormuz traffic returns to normal by August 15?",
+          "absolute_change": -166422.7564,
+          "pct_change": -39.28
+        },
+        {
+          "question": "US announces end of Iranian blockade by August 15, 2026?",
+          "absolute_change": -122919.5745,
+          "pct_change": -34.84
+        },
+        {
+          "question": "US announces end of Iranian blockade by August 31, 2026?",
+          "absolute_change": -95505.9143,
+          "pct_change": -49.74
+        }
+      ],
+      "new_markets_vs_previous": 7
+    },
+    "google_trends": {
+      "top_risers": [],
+      "top_fallers": [],
+      "new_keywords_vs_previous": 0
+    },
+    "wikipedia_pageviews": {
+      "top_risers": [
+        {
+          "page": "Donald_Trump",
+          "absolute_change": 12900,
+          "pct_change": 36.89
+        },
+        {
+          "page": "NATO",
+          "absolute_change": 194,
+          "pct_change": 4.67
+        },
+        {
+          "page": "Semiconductor",
+          "absolute_change": 59,
+          "pct_change": 4.92
+        },
+        {
+          "page": "China%E2%80%93United_States_trade_war",
+          "absolute_change": -42,
+          "pct_change": -5.37
+        },
+        {
+          "page": "OPEC",
+          "absolute_change": -45,
+          "pct_change": -3.9
+        }
+      ],
+      "top_fallers": [
+        {
+          "page": "Kevin_Warsh",
+          "absolute_change": -474,
+          "pct_change": -19.65
+        },
+        {
+          "page": "Strait_of_Hormuz",
+          "absolute_change": -458,
+          "pct_change": -9.67
+        },
+        {
+          "page": "Federal_Reserve",
+          "absolute_change": -145,
+          "pct_change": -7.83
+        },
+        {
+          "page": "OPEC",
+          "absolute_change": -45,
+          "pct_change": -3.9
+        },
+        {
+          "page": "China%E2%80%93United_States_trade_war",
+          "absolute_change": -42,
+          "pct_change": -5.37
+        }
+      ],
+      "new_pages_vs_previous": 1
+    }
+  }
+}
