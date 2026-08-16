@@ -1,0 +1,298 @@
+{
+  "schema_version": "1.2.0",
+  "date_utc": "2026-08-16",
+  "generated_at_utc": "2026-08-16T22:03:09Z",
+  "source_health": {
+    "polymarket": {
+      "status": "ok",
+      "row_count": 20,
+      "ok_count": 20,
+      "empty_count": 0,
+      "error_count": 0
+    },
+    "google_trends": {
+      "status": "partial",
+      "row_count": 14,
+      "ok_count": 4,
+      "empty_count": 0,
+      "error_count": 13
+    },
+    "wikipedia_pageviews": {
+      "status": "partial",
+      "row_count": 10,
+      "ok_count": 0,
+      "empty_count": 0,
+      "error_count": 20
+    }
+  },
+  "summary": {
+    "top_polymarket_questions": [
+      {
+        "question": "Strait of Hormuz traffic returns to normal by August 31?",
+        "volume_24h": 254051.69078200002,
+        "yes_price": 0.0115,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will Romeu Zema win the 2026 Brazilian presidential election?",
+        "volume_24h": 222509.738,
+        "yes_price": 0.0015,
+        "market_type": "binary"
+      },
+      {
+        "question": "US announces end of Iranian blockade by August 31, 2026?",
+        "volume_24h": 217864.132452,
+        "yes_price": 0.155,
+        "market_type": "binary"
+      }
+    ],
+    "top_filtered_noise_candidates": [
+      {
+        "question": "Will Adanech Abiebie be the next Prime Minister of Ethiopia?",
+        "volume_24h": 1036295.333,
+        "yes_price": 0.006,
+        "market_type": "binary",
+        "reason": "expired"
+      },
+      {
+        "question": "Milwaukee Brewers vs. Los Angeles Dodgers",
+        "volume_24h": 774118.7458979997,
+        "yes_price": null,
+        "market_type": "non_binary",
+        "reason": "sports_or_match_noise"
+      },
+      {
+        "question": "Cincinnati Open: Marta Kostyuk vs Sofia Kenin",
+        "volume_24h": 729180.1969370005,
+        "yes_price": null,
+        "market_type": "non_binary",
+        "reason": "sports_or_match_noise"
+      }
+    ],
+    "top_google_trends_keywords": [
+      {
+        "keyword": "inflation",
+        "score_mean_24h_anchor_normalized": 445.64,
+        "score_last_anchor_normalized": 364.0
+      },
+      {
+        "keyword": "China economy",
+        "score_mean_24h_anchor_normalized": 40.19,
+        "score_last_anchor_normalized": 36.0
+      },
+      {
+        "keyword": "AI regulation",
+        "score_mean_24h_anchor_normalized": 35.81,
+        "score_last_anchor_normalized": 24.0
+      },
+      {
+        "keyword": "chip export",
+        "score_mean_24h_anchor_normalized": 0.11,
+        "score_last_anchor_normalized": 0.0
+      }
+    ],
+    "top_wikipedia_pages": [],
+    "recurring_entities_across_sources": [
+      "AI",
+      "China",
+      "Iran"
+    ],
+    "signal_strength_by_source": {
+      "polymarket": "strong",
+      "google_trends": "strong",
+      "wikipedia_pageviews": "weak"
+    },
+    "narrative_hints": [
+      "AI / regulation / chip attention is present.",
+      "China / US-China attention is present.",
+      "Iran-related geopolitical attention is present."
+    ],
+    "momentum_hints": [
+      "Google Trends risers: inflation (+41.29), China economy (+7.08), AI regulation (+2.99)",
+      "Polymarket volume risers: Will the Fed decrease interest rates by 25 bps after the September 2026 meeting? (+69513.7199), Will Romeu Zema win the 2026 Brazilian presidential election? (+56739.1117), Will Luiz Inácio Lula da Silva win the 2026 Brazilian presidential election? (+47332.2907)"
+    ],
+    "prompt_ready_notes": [
+      "Use recurring_entities_across_sources to identify themes confirmed by multiple datasets.",
+      "Treat Google Trends anchor-normalized values as rough cross-chunk calibration, not exact absolute ranking.",
+      "Prefer entities that appear across at least 2 sources when writing the final sentiment brief.",
+      "Use delta_vs_previous_day to identify rising vs cooling attention.",
+      "If source health is partial or weak, explicitly say evidence is limited.",
+      "Use top_filtered_noise_candidates only for optional appendix / noise radar, not for the core macro radar."
+    ]
+  },
+  "top_signals": {
+    "polymarket": [
+      {
+        "question": "Strait of Hormuz traffic returns to normal by August 31?",
+        "volume_24h": 254051.69078200002,
+        "yes_price": 0.0115,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will Romeu Zema win the 2026 Brazilian presidential election?",
+        "volume_24h": 222509.738,
+        "yes_price": 0.0015,
+        "market_type": "binary"
+      },
+      {
+        "question": "US announces end of Iranian blockade by August 31, 2026?",
+        "volume_24h": 217864.132452,
+        "yes_price": 0.155,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will the Fed decrease interest rates by 25 bps after the September 2026 meeting?",
+        "volume_24h": 185737.17252999998,
+        "yes_price": 0.0125,
+        "market_type": "binary"
+      },
+      {
+        "question": "Israel x Iran ceasefire continues through August 31?",
+        "volume_24h": 160693.29006700002,
+        "yes_price": 0.955,
+        "market_type": "binary"
+      }
+    ],
+    "google_trends": [
+      {
+        "keyword": "inflation",
+        "score_mean_24h_anchor_normalized": 445.64,
+        "score_last_anchor_normalized": 364.0
+      },
+      {
+        "keyword": "China economy",
+        "score_mean_24h_anchor_normalized": 40.19,
+        "score_last_anchor_normalized": 36.0
+      },
+      {
+        "keyword": "AI regulation",
+        "score_mean_24h_anchor_normalized": 35.81,
+        "score_last_anchor_normalized": 24.0
+      },
+      {
+        "keyword": "chip export",
+        "score_mean_24h_anchor_normalized": 0.11,
+        "score_last_anchor_normalized": 0.0
+      }
+    ],
+    "wikipedia_pageviews": []
+  },
+  "delta_summary": {
+    "notes": [
+      "Comparison is against the previously committed output file in the repo.",
+      "If the workflow is re-run on the same UTC date, comparison_type may be same_day_rerun instead of true previous-day.",
+      "Use rise/fall signals as relative momentum indicators, not as causal proof."
+    ]
+  },
+  "delta_top_signals": {
+    "polymarket": {
+      "top_volume_risers": [
+        {
+          "question": "Will the Fed decrease interest rates by 25 bps after the September 2026 meeting?",
+          "absolute_change": 69513.7199,
+          "pct_change": 59.81
+        },
+        {
+          "question": "Will Romeu Zema win the 2026 Brazilian presidential election?",
+          "absolute_change": 56739.1117,
+          "pct_change": 34.23
+        },
+        {
+          "question": "Will Luiz Inácio Lula da Silva win the 2026 Brazilian presidential election?",
+          "absolute_change": 47332.2907,
+          "pct_change": 68.29
+        },
+        {
+          "question": "US announces end of Iranian blockade by August 31, 2026?",
+          "absolute_change": 41020.3407,
+          "pct_change": 23.2
+        },
+        {
+          "question": "Strait of Hormuz traffic returns to normal by September 30?",
+          "absolute_change": 25362.741,
+          "pct_change": 20.06
+        }
+      ],
+      "top_volume_fallers": [
+        {
+          "question": "Strait of Hormuz traffic returns to normal by August 31?",
+          "absolute_change": -320052.1893,
+          "pct_change": -55.75
+        },
+        {
+          "question": "US-Iran 60 day negotiation period extended?",
+          "absolute_change": -45194.7486,
+          "pct_change": -42.0
+        },
+        {
+          "question": "Israel x Iran ceasefire continues through August 31?",
+          "absolute_change": -2286.8539,
+          "pct_change": -1.4
+        },
+        {
+          "question": "Will Renan Santos win the 2026 Brazilian presidential election?",
+          "absolute_change": 10017.3375,
+          "pct_change": 10.92
+        },
+        {
+          "question": "US announces end of Iranian blockade by August 22, 2026?",
+          "absolute_change": 19247.6625,
+          "pct_change": 15.44
+        }
+      ],
+      "new_markets_vs_previous": 10
+    },
+    "google_trends": {
+      "top_risers": [
+        {
+          "keyword": "inflation",
+          "absolute_change": 41.29,
+          "pct_change": 10.21
+        },
+        {
+          "keyword": "China economy",
+          "absolute_change": 7.08,
+          "pct_change": 21.38
+        },
+        {
+          "keyword": "AI regulation",
+          "absolute_change": 2.99,
+          "pct_change": 9.11
+        },
+        {
+          "keyword": "chip export",
+          "absolute_change": 0.11,
+          "pct_change": null
+        }
+      ],
+      "top_fallers": [
+        {
+          "keyword": "chip export",
+          "absolute_change": 0.11,
+          "pct_change": null
+        },
+        {
+          "keyword": "AI regulation",
+          "absolute_change": 2.99,
+          "pct_change": 9.11
+        },
+        {
+          "keyword": "China economy",
+          "absolute_change": 7.08,
+          "pct_change": 21.38
+        },
+        {
+          "keyword": "inflation",
+          "absolute_change": 41.29,
+          "pct_change": 10.21
+        }
+      ],
+      "new_keywords_vs_previous": 0
+    },
+    "wikipedia_pageviews": {
+      "top_risers": [],
+      "top_fallers": [],
+      "new_pages_vs_previous": 0
+    }
+  }
+}
