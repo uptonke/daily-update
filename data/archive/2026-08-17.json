@@ -1,0 +1,311 @@
+{
+  "schema_version": "1.2.0",
+  "date_utc": "2026-08-17",
+  "generated_at_utc": "2026-08-17T22:01:23Z",
+  "source_health": {
+    "polymarket": {
+      "status": "ok",
+      "row_count": 30,
+      "ok_count": 30,
+      "empty_count": 0,
+      "error_count": 0
+    },
+    "google_trends": {
+      "status": "partial",
+      "row_count": 14,
+      "ok_count": 6,
+      "empty_count": 0,
+      "error_count": 10
+    },
+    "wikipedia_pageviews": {
+      "status": "ok",
+      "row_count": 10,
+      "ok_count": 10,
+      "empty_count": 0,
+      "error_count": 0
+    }
+  },
+  "summary": {
+    "top_polymarket_questions": [
+      {
+        "question": "Will Pablo Marçal win the 2026 Brazilian presidential election?",
+        "volume_24h": 1194906.7575919996,
+        "yes_price": 0.0085,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will the Fed increase interest rates by 25 bps after the September 2026 meeting?",
+        "volume_24h": 544283.1565779999,
+        "yes_price": 0.285,
+        "market_type": "binary"
+      },
+      {
+        "question": "US-Iran 60 day negotiation period extended?",
+        "volume_24h": 490261.5955419997,
+        "yes_price": 0.056,
+        "market_type": "binary"
+      }
+    ],
+    "top_filtered_noise_candidates": [
+      {
+        "question": "St. Louis Cardinals vs. Cincinnati Reds",
+        "volume_24h": 824581.929479,
+        "yes_price": null,
+        "market_type": "non_binary",
+        "reason": "sports_or_match_noise"
+      },
+      {
+        "question": "Cincinnati Open: Sorana Cirstea vs Anna Kalinskaya",
+        "volume_24h": 704077.2011210008,
+        "yes_price": null,
+        "market_type": "non_binary",
+        "reason": "sports_or_match_noise"
+      },
+      {
+        "question": "Cincinnati Open: Arthur Fery vs Alex de Minaur",
+        "volume_24h": 663011.6680150002,
+        "yes_price": null,
+        "market_type": "non_binary",
+        "reason": "sports_or_match_noise"
+      }
+    ],
+    "top_google_trends_keywords": [
+      {
+        "keyword": "gold price",
+        "score_mean_24h_anchor_normalized": 1886.92,
+        "score_last_anchor_normalized": 1625.0
+      },
+      {
+        "keyword": "interest rate",
+        "score_mean_24h_anchor_normalized": 523.99,
+        "score_last_anchor_normalized": 500.0
+      },
+      {
+        "keyword": "China US",
+        "score_mean_24h_anchor_normalized": 153.93,
+        "score_last_anchor_normalized": 173.33
+      },
+      {
+        "keyword": "recession",
+        "score_mean_24h_anchor_normalized": 78.82,
+        "score_last_anchor_normalized": 75.0
+      },
+      {
+        "keyword": "Trump tariffs",
+        "score_mean_24h_anchor_normalized": 33.18,
+        "score_last_anchor_normalized": 25.0
+      }
+    ],
+    "top_wikipedia_pages": [
+      {
+        "page": "Donald_Trump",
+        "views": 31719
+      },
+      {
+        "page": "Strait_of_Hormuz",
+        "views": 4687
+      },
+      {
+        "page": "NATO",
+        "views": 4039
+      },
+      {
+        "page": "Russo-Ukrainian_War",
+        "views": 1688
+      },
+      {
+        "page": "Federal_Reserve",
+        "views": 1622
+      }
+    ],
+    "recurring_entities_across_sources": [
+      "AI",
+      "China",
+      "Iran",
+      "NATO",
+      "Trump"
+    ],
+    "signal_strength_by_source": {
+      "polymarket": "strong",
+      "google_trends": "strong",
+      "wikipedia_pageviews": "strong"
+    },
+    "narrative_hints": [
+      "Trump-related political / tariff attention is present.",
+      "Geopolitical / security attention is present.",
+      "AI / regulation / chip attention is present.",
+      "China / US-China attention is present.",
+      "Iran-related geopolitical attention is present."
+    ],
+    "momentum_hints": [
+      "Polymarket volume risers: US-Iran 60 day negotiation period extended? (+427850.7888), Will United Russia (ER) gain the most seats in the next Russian parliamentary election? (+208983.6957), Will the Fed decrease interest rates by 25 bps after the September 2026 meeting? (+152012.0408)"
+    ],
+    "prompt_ready_notes": [
+      "Use recurring_entities_across_sources to identify themes confirmed by multiple datasets.",
+      "Treat Google Trends anchor-normalized values as rough cross-chunk calibration, not exact absolute ranking.",
+      "Prefer entities that appear across at least 2 sources when writing the final sentiment brief.",
+      "Use delta_vs_previous_day to identify rising vs cooling attention.",
+      "If source health is partial or weak, explicitly say evidence is limited.",
+      "Use top_filtered_noise_candidates only for optional appendix / noise radar, not for the core macro radar."
+    ]
+  },
+  "top_signals": {
+    "polymarket": [
+      {
+        "question": "Will Pablo Marçal win the 2026 Brazilian presidential election?",
+        "volume_24h": 1194906.7575919996,
+        "yes_price": 0.0085,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will the Fed increase interest rates by 25 bps after the September 2026 meeting?",
+        "volume_24h": 544283.1565779999,
+        "yes_price": 0.285,
+        "market_type": "binary"
+      },
+      {
+        "question": "US-Iran 60 day negotiation period extended?",
+        "volume_24h": 490261.5955419997,
+        "yes_price": 0.056,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will there be no change in Fed interest rates after the September 2026 meeting?",
+        "volume_24h": 367795.86120399996,
+        "yes_price": 0.705,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will WTI Crude Oil (WTI) hit (HIGH) $85 in August?",
+        "volume_24h": 365975.81366299995,
+        "yes_price": 0.9995,
+        "market_type": "binary"
+      }
+    ],
+    "google_trends": [
+      {
+        "keyword": "gold price",
+        "score_mean_24h_anchor_normalized": 1886.92,
+        "score_last_anchor_normalized": 1625.0
+      },
+      {
+        "keyword": "interest rate",
+        "score_mean_24h_anchor_normalized": 523.99,
+        "score_last_anchor_normalized": 500.0
+      },
+      {
+        "keyword": "China US",
+        "score_mean_24h_anchor_normalized": 153.93,
+        "score_last_anchor_normalized": 173.33
+      },
+      {
+        "keyword": "recession",
+        "score_mean_24h_anchor_normalized": 78.82,
+        "score_last_anchor_normalized": 75.0
+      },
+      {
+        "keyword": "Trump tariffs",
+        "score_mean_24h_anchor_normalized": 33.18,
+        "score_last_anchor_normalized": 25.0
+      }
+    ],
+    "wikipedia_pageviews": [
+      {
+        "page": "Donald_Trump",
+        "views": 31719
+      },
+      {
+        "page": "Strait_of_Hormuz",
+        "views": 4687
+      },
+      {
+        "page": "NATO",
+        "views": 4039
+      },
+      {
+        "page": "Russo-Ukrainian_War",
+        "views": 1688
+      },
+      {
+        "page": "Federal_Reserve",
+        "views": 1622
+      }
+    ]
+  },
+  "delta_summary": {
+    "notes": [
+      "Comparison is against the previously committed output file in the repo.",
+      "If the workflow is re-run on the same UTC date, comparison_type may be same_day_rerun instead of true previous-day.",
+      "Use rise/fall signals as relative momentum indicators, not as causal proof."
+    ]
+  },
+  "delta_top_signals": {
+    "polymarket": {
+      "top_volume_risers": [
+        {
+          "question": "US-Iran 60 day negotiation period extended?",
+          "absolute_change": 427850.7888,
+          "pct_change": 685.54
+        },
+        {
+          "question": "Will United Russia (ER) gain the most seats in the next Russian parliamentary election?",
+          "absolute_change": 208983.6957,
+          "pct_change": 367.15
+        },
+        {
+          "question": "Will the Fed decrease interest rates by 25 bps after the September 2026 meeting?",
+          "absolute_change": 152012.0408,
+          "pct_change": 81.84
+        },
+        {
+          "question": "Strait of Hormuz traffic returns to normal by September 30?",
+          "absolute_change": 101938.071,
+          "pct_change": 67.17
+        },
+        {
+          "question": "Will Renan Santos win the 2026 Brazilian presidential election?",
+          "absolute_change": 42251.2314,
+          "pct_change": 41.51
+        }
+      ],
+      "top_volume_fallers": [
+        {
+          "question": "Will Romeu Zema win the 2026 Brazilian presidential election?",
+          "absolute_change": -109581.6848,
+          "pct_change": -49.25
+        },
+        {
+          "question": "US announces end of Iranian blockade by August 31, 2026?",
+          "absolute_change": -78419.3251,
+          "pct_change": -35.99
+        },
+        {
+          "question": "Israel x Iran ceasefire continues through August 31?",
+          "absolute_change": -39025.2787,
+          "pct_change": -24.29
+        },
+        {
+          "question": "Will Flávio Bolsonaro win the 2026 Brazilian presidential election?",
+          "absolute_change": 2729.7107,
+          "pct_change": 2.69
+        },
+        {
+          "question": "Strait of Hormuz traffic returns to normal by August 31?",
+          "absolute_change": 8915.0511,
+          "pct_change": 3.51
+        }
+      ],
+      "new_markets_vs_previous": 18
+    },
+    "google_trends": {
+      "top_risers": [],
+      "top_fallers": [],
+      "new_keywords_vs_previous": 0
+    },
+    "wikipedia_pageviews": {
+      "top_risers": [],
+      "top_fallers": [],
+      "new_pages_vs_previous": 0
+    }
+  }
+}
