@@ -1,0 +1,417 @@
+{
+  "schema_version": "1.2.0",
+  "date_utc": "2026-09-17",
+  "generated_at_utc": "2026-09-17T22:01:01Z",
+  "source_health": {
+    "polymarket": {
+      "status": "ok",
+      "row_count": 21,
+      "ok_count": 21,
+      "empty_count": 0,
+      "error_count": 0
+    },
+    "google_trends": {
+      "status": "ok",
+      "row_count": 14,
+      "ok_count": 14,
+      "empty_count": 0,
+      "error_count": 0
+    },
+    "wikipedia_pageviews": {
+      "status": "ok",
+      "row_count": 10,
+      "ok_count": 10,
+      "empty_count": 0,
+      "error_count": 0
+    }
+  },
+  "summary": {
+    "top_polymarket_questions": [
+      {
+        "question": "Will China invade Taiwan by end of 2026?",
+        "volume_24h": 586637.1242010001,
+        "yes_price": 0.045,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will there be no change in Fed interest rates after the October 2026 meeting?",
+        "volume_24h": 579224.678383,
+        "yes_price": 0.485,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will United Russia (ER) gain the most seats in the next Russian parliamentary election?",
+        "volume_24h": 441135.933888,
+        "yes_price": 0.765,
+        "market_type": "binary"
+      }
+    ],
+    "top_filtered_noise_candidates": [
+      {
+        "question": "Lions vs. Bills",
+        "volume_24h": 6936334.121089014,
+        "yes_price": null,
+        "market_type": "non_binary",
+        "reason": "sports_or_match_noise"
+      },
+      {
+        "question": "Will Manchester City FC win on 2026-09-17?",
+        "volume_24h": 1977503.6408880001,
+        "yes_price": 0.9995,
+        "market_type": "binary",
+        "reason": "expired"
+      },
+      {
+        "question": "Will AFC Bournemouth win on 2026-09-17?",
+        "volume_24h": 880786.2393060001,
+        "yes_price": 0.9995,
+        "market_type": "binary",
+        "reason": "expired"
+      }
+    ],
+    "top_google_trends_keywords": [
+      {
+        "keyword": "gold price",
+        "score_mean_24h_anchor_normalized": 458.02,
+        "score_last_anchor_normalized": 575.0
+      },
+      {
+        "keyword": "interest rate",
+        "score_mean_24h_anchor_normalized": 300.49,
+        "score_last_anchor_normalized": 537.5
+      },
+      {
+        "keyword": "oil price",
+        "score_mean_24h_anchor_normalized": 215.7,
+        "score_last_anchor_normalized": 325.0
+      },
+      {
+        "keyword": "inflation",
+        "score_mean_24h_anchor_normalized": 177.88,
+        "score_last_anchor_normalized": 400.0
+      },
+      {
+        "keyword": "NATO",
+        "score_mean_24h_anchor_normalized": 128.5,
+        "score_last_anchor_normalized": 190.0
+      }
+    ],
+    "top_wikipedia_pages": [
+      {
+        "page": "Donald_Trump",
+        "views": 44304
+      },
+      {
+        "page": "Kevin_Warsh",
+        "views": 32015
+      },
+      {
+        "page": "Federal_Reserve",
+        "views": 5014
+      },
+      {
+        "page": "NATO",
+        "views": 4971
+      },
+      {
+        "page": "Strait_of_Hormuz",
+        "views": 3626
+      }
+    ],
+    "recurring_entities_across_sources": [
+      "AI",
+      "China",
+      "NATO",
+      "Oil",
+      "Trump"
+    ],
+    "signal_strength_by_source": {
+      "polymarket": "strong",
+      "google_trends": "strong",
+      "wikipedia_pageviews": "strong"
+    },
+    "narrative_hints": [
+      "Energy / oil-related attention is present.",
+      "Trump-related political / tariff attention is present.",
+      "Geopolitical / security attention is present.",
+      "AI / regulation / chip attention is present.",
+      "China / US-China attention is present."
+    ],
+    "momentum_hints": [
+      "Google Trends risers: gold price (+122.01), interest rate (+81.57), inflation (+58.52)",
+      "Wikipedia risers: Kevin_Warsh (+27790), Federal_Reserve (+2907), Strait_of_Hormuz (+243)",
+      "Polymarket volume risers: Will China invade Taiwan by end of 2026? (+523642.189), Will the Fed decrease interest rates by 25 bps after the October 2026 meeting? (+112469.0742), Will United Russia (ER) win the most seats in the next Russian parliamentary election? (+65880.3416)"
+    ],
+    "prompt_ready_notes": [
+      "Use recurring_entities_across_sources to identify themes confirmed by multiple datasets.",
+      "Treat Google Trends anchor-normalized values as rough cross-chunk calibration, not exact absolute ranking.",
+      "Prefer entities that appear across at least 2 sources when writing the final sentiment brief.",
+      "Use delta_vs_previous_day to identify rising vs cooling attention.",
+      "If source health is partial or weak, explicitly say evidence is limited.",
+      "Use top_filtered_noise_candidates only for optional appendix / noise radar, not for the core macro radar."
+    ]
+  },
+  "top_signals": {
+    "polymarket": [
+      {
+        "question": "Will China invade Taiwan by end of 2026?",
+        "volume_24h": 586637.1242010001,
+        "yes_price": 0.045,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will there be no change in Fed interest rates after the October 2026 meeting?",
+        "volume_24h": 579224.678383,
+        "yes_price": 0.485,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will United Russia (ER) gain the most seats in the next Russian parliamentary election?",
+        "volume_24h": 441135.933888,
+        "yes_price": 0.765,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will the Fed increase interest rates by 25 bps after the October 2026 meeting?",
+        "volume_24h": 314350.4676130001,
+        "yes_price": 0.495,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will the Fed decrease interest rates by 25 bps after the October 2026 meeting?",
+        "volume_24h": 313650.50005,
+        "yes_price": 0.0065,
+        "market_type": "binary"
+      }
+    ],
+    "google_trends": [
+      {
+        "keyword": "gold price",
+        "score_mean_24h_anchor_normalized": 458.02,
+        "score_last_anchor_normalized": 575.0
+      },
+      {
+        "keyword": "interest rate",
+        "score_mean_24h_anchor_normalized": 300.49,
+        "score_last_anchor_normalized": 537.5
+      },
+      {
+        "keyword": "oil price",
+        "score_mean_24h_anchor_normalized": 215.7,
+        "score_last_anchor_normalized": 325.0
+      },
+      {
+        "keyword": "inflation",
+        "score_mean_24h_anchor_normalized": 177.88,
+        "score_last_anchor_normalized": 400.0
+      },
+      {
+        "keyword": "NATO",
+        "score_mean_24h_anchor_normalized": 128.5,
+        "score_last_anchor_normalized": 190.0
+      }
+    ],
+    "wikipedia_pageviews": [
+      {
+        "page": "Donald_Trump",
+        "views": 44304
+      },
+      {
+        "page": "Kevin_Warsh",
+        "views": 32015
+      },
+      {
+        "page": "Federal_Reserve",
+        "views": 5014
+      },
+      {
+        "page": "NATO",
+        "views": 4971
+      },
+      {
+        "page": "Strait_of_Hormuz",
+        "views": 3626
+      }
+    ]
+  },
+  "delta_summary": {
+    "notes": [
+      "Comparison is against the previously committed output file in the repo.",
+      "If the workflow is re-run on the same UTC date, comparison_type may be same_day_rerun instead of true previous-day.",
+      "Use rise/fall signals as relative momentum indicators, not as causal proof."
+    ]
+  },
+  "delta_top_signals": {
+    "polymarket": {
+      "top_volume_risers": [
+        {
+          "question": "Will China invade Taiwan by end of 2026?",
+          "absolute_change": 523642.189,
+          "pct_change": 831.24
+        },
+        {
+          "question": "Will the Fed decrease interest rates by 25 bps after the October 2026 meeting?",
+          "absolute_change": 112469.0742,
+          "pct_change": 55.9
+        },
+        {
+          "question": "Will United Russia (ER) win the most seats in the next Russian parliamentary election?",
+          "absolute_change": 65880.3416,
+          "pct_change": 67.61
+        },
+        {
+          "question": "Will New People (NL) gain the most seats in the next Russian parliamentary election?",
+          "absolute_change": 34914.5678,
+          "pct_change": 33.43
+        },
+        {
+          "question": "Will the Fed decrease interest rates by 50+ bps after the October 2026 meeting?",
+          "absolute_change": -14292.1659,
+          "pct_change": -5.29
+        }
+      ],
+      "top_volume_fallers": [
+        {
+          "question": "Will United Russia (ER) gain the most seats in the next Russian parliamentary election?",
+          "absolute_change": -447495.2007,
+          "pct_change": -50.36
+        },
+        {
+          "question": "Will the Fed increase interest rates by 25 bps after the October 2026 meeting?",
+          "absolute_change": -328443.7041,
+          "pct_change": -51.1
+        },
+        {
+          "question": "Will there be no change in Fed interest rates after the October 2026 meeting?",
+          "absolute_change": -222952.2964,
+          "pct_change": -27.79
+        },
+        {
+          "question": "Will A Just Russia – For Truth (SRZP) gain the most seats in the next Russian parliamentary election?",
+          "absolute_change": -127053.892,
+          "pct_change": -45.61
+        },
+        {
+          "question": "Will the U.S. invade Iran before 2027?",
+          "absolute_change": -61384.0206,
+          "pct_change": -27.78
+        }
+      ],
+      "new_markets_vs_previous": 8
+    },
+    "google_trends": {
+      "top_risers": [
+        {
+          "keyword": "gold price",
+          "absolute_change": 122.01,
+          "pct_change": 36.31
+        },
+        {
+          "keyword": "interest rate",
+          "absolute_change": 81.57,
+          "pct_change": 37.26
+        },
+        {
+          "keyword": "inflation",
+          "absolute_change": 58.52,
+          "pct_change": 49.03
+        },
+        {
+          "keyword": "NATO",
+          "absolute_change": 48.17,
+          "pct_change": 59.97
+        },
+        {
+          "keyword": "oil price",
+          "absolute_change": 46.6,
+          "pct_change": 27.56
+        }
+      ],
+      "top_fallers": [
+        {
+          "keyword": "chip export",
+          "absolute_change": -0.07,
+          "pct_change": -58.33
+        },
+        {
+          "keyword": "OPEC",
+          "absolute_change": 2.5,
+          "pct_change": 51.76
+        },
+        {
+          "keyword": "AI regulation",
+          "absolute_change": 3.63,
+          "pct_change": 42.06
+        },
+        {
+          "keyword": "China economy",
+          "absolute_change": 3.71,
+          "pct_change": 101.92
+        },
+        {
+          "keyword": "Trump tariffs",
+          "absolute_change": 7.89,
+          "pct_change": 130.2
+        }
+      ],
+      "new_keywords_vs_previous": 0
+    },
+    "wikipedia_pageviews": {
+      "top_risers": [
+        {
+          "page": "Kevin_Warsh",
+          "absolute_change": 27790,
+          "pct_change": 657.75
+        },
+        {
+          "page": "Federal_Reserve",
+          "absolute_change": 2907,
+          "pct_change": 137.97
+        },
+        {
+          "page": "Strait_of_Hormuz",
+          "absolute_change": 243,
+          "pct_change": 7.18
+        },
+        {
+          "page": "Russo-Ukrainian_War",
+          "absolute_change": 62,
+          "pct_change": 4.21
+        },
+        {
+          "page": "Semiconductor",
+          "absolute_change": 47,
+          "pct_change": 3.49
+        }
+      ],
+      "top_fallers": [
+        {
+          "page": "Donald_Trump",
+          "absolute_change": -4548,
+          "pct_change": -9.31
+        },
+        {
+          "page": "China%E2%80%93United_States_trade_war",
+          "absolute_change": -614,
+          "pct_change": -42.17
+        },
+        {
+          "page": "NATO",
+          "absolute_change": -203,
+          "pct_change": -3.92
+        },
+        {
+          "page": "OPEC",
+          "absolute_change": -62,
+          "pct_change": -3.88
+        },
+        {
+          "page": "Artificial_intelligence_regulation",
+          "absolute_change": -1,
+          "pct_change": -16.67
+        }
+      ],
+      "new_pages_vs_previous": 0
+    }
+  }
+}
