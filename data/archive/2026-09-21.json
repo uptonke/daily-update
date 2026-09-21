@@ -1,0 +1,417 @@
+{
+  "schema_version": "1.2.0",
+  "date_utc": "2026-09-21",
+  "generated_at_utc": "2026-09-21T22:01:00Z",
+  "source_health": {
+    "polymarket": {
+      "status": "ok",
+      "row_count": 30,
+      "ok_count": 30,
+      "empty_count": 0,
+      "error_count": 0
+    },
+    "google_trends": {
+      "status": "ok",
+      "row_count": 14,
+      "ok_count": 14,
+      "empty_count": 0,
+      "error_count": 0
+    },
+    "wikipedia_pageviews": {
+      "status": "ok",
+      "row_count": 10,
+      "ok_count": 10,
+      "empty_count": 0,
+      "error_count": 0
+    }
+  },
+  "summary": {
+    "top_polymarket_questions": [
+      {
+        "question": "Will Glenn Youngkin win the 2028 US Presidential Election?",
+        "volume_24h": 681865.009,
+        "yes_price": 0.0015,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will the Fed increase interest rates by 25 bps after the October 2026 meeting?",
+        "volume_24h": 443643.38113200007,
+        "yes_price": 0.525,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will Flávio Bolsonaro win the 2026 Brazilian presidential election?",
+        "volume_24h": 282667.9441470001,
+        "yes_price": 0.6085,
+        "market_type": "binary"
+      }
+    ],
+    "top_filtered_noise_candidates": [
+      {
+        "question": "Giants vs. Rams: O/U 47.5",
+        "volume_24h": 1112121.052429,
+        "yes_price": null,
+        "market_type": "non_binary",
+        "reason": "sports_or_match_noise"
+      },
+      {
+        "question": "Giants vs. Rams",
+        "volume_24h": 572102.490669,
+        "yes_price": null,
+        "market_type": "non_binary",
+        "reason": "sports_or_match_noise"
+      },
+      {
+        "question": "Will Shakhtar Donetsk win the 2026-27 UEFA Champions League Championship?",
+        "volume_24h": 459737.12,
+        "yes_price": 0.0015,
+        "market_type": "binary",
+        "reason": "low_public_impact_or_unclear_relevance"
+      }
+    ],
+    "top_google_trends_keywords": [
+      {
+        "keyword": "gold price",
+        "score_mean_24h_anchor_normalized": 341.15,
+        "score_last_anchor_normalized": 400.0
+      },
+      {
+        "keyword": "oil price",
+        "score_mean_24h_anchor_normalized": 265.12,
+        "score_last_anchor_normalized": 384.21
+      },
+      {
+        "keyword": "inflation",
+        "score_mean_24h_anchor_normalized": 259.35,
+        "score_last_anchor_normalized": 306.25
+      },
+      {
+        "keyword": "interest rate",
+        "score_mean_24h_anchor_normalized": 243.07,
+        "score_last_anchor_normalized": 390.0
+      },
+      {
+        "keyword": "Iran war",
+        "score_mean_24h_anchor_normalized": 151.85,
+        "score_last_anchor_normalized": 247.37
+      }
+    ],
+    "top_wikipedia_pages": [
+      {
+        "page": "Donald_Trump",
+        "views": 36231
+      },
+      {
+        "page": "NATO",
+        "views": 5377
+      },
+      {
+        "page": "Strait_of_Hormuz",
+        "views": 3148
+      },
+      {
+        "page": "Kevin_Warsh",
+        "views": 2651
+      },
+      {
+        "page": "Russo-Ukrainian_War",
+        "views": 1984
+      }
+    ],
+    "recurring_entities_across_sources": [
+      "AI",
+      "Iran",
+      "NATO",
+      "Oil",
+      "Trump"
+    ],
+    "signal_strength_by_source": {
+      "polymarket": "strong",
+      "google_trends": "strong",
+      "wikipedia_pageviews": "strong"
+    },
+    "narrative_hints": [
+      "Energy / oil-related attention is present.",
+      "Trump-related political / tariff attention is present.",
+      "Geopolitical / security attention is present.",
+      "AI / regulation / chip attention is present.",
+      "Iran-related geopolitical attention is present."
+    ],
+    "momentum_hints": [
+      "Google Trends risers: oil price (+52.46), AI regulation (+5.85), gold price (+4.1)",
+      "Wikipedia risers: Russo-Ukrainian_War (+300), Strait_of_Hormuz (+143), NATO (-43)",
+      "Polymarket volume risers: US announces end of Iranian blockade by September 30, 2026? (+21163.395), Will the Fed decrease interest rates by 50+ bps after the October 2026 meeting? (-1210.4767), Will China invade Taiwan by end of 2026? (-21512.7341)"
+    ],
+    "prompt_ready_notes": [
+      "Use recurring_entities_across_sources to identify themes confirmed by multiple datasets.",
+      "Treat Google Trends anchor-normalized values as rough cross-chunk calibration, not exact absolute ranking.",
+      "Prefer entities that appear across at least 2 sources when writing the final sentiment brief.",
+      "Use delta_vs_previous_day to identify rising vs cooling attention.",
+      "If source health is partial or weak, explicitly say evidence is limited.",
+      "Use top_filtered_noise_candidates only for optional appendix / noise radar, not for the core macro radar."
+    ]
+  },
+  "top_signals": {
+    "polymarket": [
+      {
+        "question": "Will Glenn Youngkin win the 2028 US Presidential Election?",
+        "volume_24h": 681865.009,
+        "yes_price": 0.0015,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will the Fed increase interest rates by 25 bps after the October 2026 meeting?",
+        "volume_24h": 443643.38113200007,
+        "yes_price": 0.525,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will Flávio Bolsonaro win the 2026 Brazilian presidential election?",
+        "volume_24h": 282667.9441470001,
+        "yes_price": 0.6085,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will the U.S. invade Iran before 2027?",
+        "volume_24h": 253115.854728,
+        "yes_price": 0.155,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will Luiz Inácio Lula da Silva win the 2026 Brazilian presidential election?",
+        "volume_24h": 230722.84583599996,
+        "yes_price": 0.385,
+        "market_type": "binary"
+      }
+    ],
+    "google_trends": [
+      {
+        "keyword": "gold price",
+        "score_mean_24h_anchor_normalized": 341.15,
+        "score_last_anchor_normalized": 400.0
+      },
+      {
+        "keyword": "oil price",
+        "score_mean_24h_anchor_normalized": 265.12,
+        "score_last_anchor_normalized": 384.21
+      },
+      {
+        "keyword": "inflation",
+        "score_mean_24h_anchor_normalized": 259.35,
+        "score_last_anchor_normalized": 306.25
+      },
+      {
+        "keyword": "interest rate",
+        "score_mean_24h_anchor_normalized": 243.07,
+        "score_last_anchor_normalized": 390.0
+      },
+      {
+        "keyword": "Iran war",
+        "score_mean_24h_anchor_normalized": 151.85,
+        "score_last_anchor_normalized": 247.37
+      }
+    ],
+    "wikipedia_pageviews": [
+      {
+        "page": "Donald_Trump",
+        "views": 36231
+      },
+      {
+        "page": "NATO",
+        "views": 5377
+      },
+      {
+        "page": "Strait_of_Hormuz",
+        "views": 3148
+      },
+      {
+        "page": "Kevin_Warsh",
+        "views": 2651
+      },
+      {
+        "page": "Russo-Ukrainian_War",
+        "views": 1984
+      }
+    ]
+  },
+  "delta_summary": {
+    "notes": [
+      "Comparison is against the previously committed output file in the repo.",
+      "If the workflow is re-run on the same UTC date, comparison_type may be same_day_rerun instead of true previous-day.",
+      "Use rise/fall signals as relative momentum indicators, not as causal proof."
+    ]
+  },
+  "delta_top_signals": {
+    "polymarket": {
+      "top_volume_risers": [
+        {
+          "question": "US announces end of Iranian blockade by September 30, 2026?",
+          "absolute_change": 21163.395,
+          "pct_change": 17.9
+        },
+        {
+          "question": "Will the Fed decrease interest rates by 50+ bps after the October 2026 meeting?",
+          "absolute_change": -1210.4767,
+          "pct_change": -0.96
+        },
+        {
+          "question": "Will China invade Taiwan by end of 2026?",
+          "absolute_change": -21512.7341,
+          "pct_change": -16.49
+        },
+        {
+          "question": "Israel x Iran ceasefire continues through September 30?",
+          "absolute_change": -26980.5799,
+          "pct_change": -19.6
+        },
+        {
+          "question": "Russia Elections: United Russia Wins Every Region?",
+          "absolute_change": -28418.9176,
+          "pct_change": -16.25
+        }
+      ],
+      "top_volume_fallers": [
+        {
+          "question": "Will the U.S. invade Iran before 2027?",
+          "absolute_change": -123462.2108,
+          "pct_change": -32.79
+        },
+        {
+          "question": "US x Iran ceasefire continues through September 25?",
+          "absolute_change": -111280.6999,
+          "pct_change": -60.17
+        },
+        {
+          "question": "US x Iran ceasefire continues through September 30?",
+          "absolute_change": -34594.2136,
+          "pct_change": -23.19
+        },
+        {
+          "question": "Russia Elections: United Russia Wins Every Region?",
+          "absolute_change": -28418.9176,
+          "pct_change": -16.25
+        },
+        {
+          "question": "Israel x Iran ceasefire continues through September 30?",
+          "absolute_change": -26980.5799,
+          "pct_change": -19.6
+        }
+      ],
+      "new_markets_vs_previous": 22
+    },
+    "google_trends": {
+      "top_risers": [
+        {
+          "keyword": "oil price",
+          "absolute_change": 52.46,
+          "pct_change": 24.67
+        },
+        {
+          "keyword": "AI regulation",
+          "absolute_change": 5.85,
+          "pct_change": 18.79
+        },
+        {
+          "keyword": "gold price",
+          "absolute_change": 4.1,
+          "pct_change": 1.22
+        },
+        {
+          "keyword": "OPEC",
+          "absolute_change": 2.69,
+          "pct_change": 57.36
+        },
+        {
+          "keyword": "chip export",
+          "absolute_change": 0.1,
+          "pct_change": 41.67
+        }
+      ],
+      "top_fallers": [
+        {
+          "keyword": "Iran war",
+          "absolute_change": -44.85,
+          "pct_change": -22.8
+        },
+        {
+          "keyword": "NATO",
+          "absolute_change": -41.72,
+          "pct_change": -24.07
+        },
+        {
+          "keyword": "inflation",
+          "absolute_change": -28.58,
+          "pct_change": -9.93
+        },
+        {
+          "keyword": "recession",
+          "absolute_change": -16.4,
+          "pct_change": -22.83
+        },
+        {
+          "keyword": "interest rate",
+          "absolute_change": -15.95,
+          "pct_change": -6.16
+        }
+      ],
+      "new_keywords_vs_previous": 0
+    },
+    "wikipedia_pageviews": {
+      "top_risers": [
+        {
+          "page": "Russo-Ukrainian_War",
+          "absolute_change": 300,
+          "pct_change": 17.81
+        },
+        {
+          "page": "Strait_of_Hormuz",
+          "absolute_change": 143,
+          "pct_change": 4.76
+        },
+        {
+          "page": "NATO",
+          "absolute_change": -43,
+          "pct_change": -0.79
+        },
+        {
+          "page": "OPEC",
+          "absolute_change": -61,
+          "pct_change": -4.61
+        },
+        {
+          "page": "Semiconductor",
+          "absolute_change": -83,
+          "pct_change": -7.2
+        }
+      ],
+      "top_fallers": [
+        {
+          "page": "Donald_Trump",
+          "absolute_change": -2600,
+          "pct_change": -6.7
+        },
+        {
+          "page": "Kevin_Warsh",
+          "absolute_change": -441,
+          "pct_change": -14.26
+        },
+        {
+          "page": "Federal_Reserve",
+          "absolute_change": -232,
+          "pct_change": -11.63
+        },
+        {
+          "page": "Artificial_intelligence_regulation",
+          "absolute_change": -128,
+          "pct_change": -95.52
+        },
+        {
+          "page": "China%E2%80%93United_States_trade_war",
+          "absolute_change": -117,
+          "pct_change": -13.96
+        }
+      ],
+      "new_pages_vs_previous": 0
+    }
+  }
+}
