@@ -1,0 +1,398 @@
+{
+  "schema_version": "1.2.0",
+  "date_utc": "2026-09-28",
+  "generated_at_utc": "2026-09-28T22:01:14Z",
+  "source_health": {
+    "polymarket": {
+      "status": "ok",
+      "row_count": 29,
+      "ok_count": 29,
+      "empty_count": 0,
+      "error_count": 0
+    },
+    "google_trends": {
+      "status": "partial",
+      "row_count": 14,
+      "ok_count": 6,
+      "empty_count": 0,
+      "error_count": 10
+    },
+    "wikipedia_pageviews": {
+      "status": "ok",
+      "row_count": 10,
+      "ok_count": 10,
+      "empty_count": 0,
+      "error_count": 0
+    }
+  },
+  "summary": {
+    "top_polymarket_questions": [
+      {
+        "question": "Will there be no change in Fed interest rates after the October 2026 meeting?",
+        "volume_24h": 246285.05107800005,
+        "yes_price": 0.305,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will the Fed increase interest rates by 25 bps after the October 2026 meeting?",
+        "volume_24h": 243889.9179770001,
+        "yes_price": 0.685,
+        "market_type": "binary"
+      },
+      {
+        "question": "US x Iran ceasefire continues through September 30?",
+        "volume_24h": 223218.4183600001,
+        "yes_price": 0.968,
+        "market_type": "binary"
+      }
+    ],
+    "top_filtered_noise_candidates": [
+      {
+        "question": "Will France win on 2026-09-28?",
+        "volume_24h": 4230888.069596998,
+        "yes_price": 0.9995,
+        "market_type": "binary",
+        "reason": "expired"
+      },
+      {
+        "question": "Eagles vs. Bears",
+        "volume_24h": 1530340.5475040018,
+        "yes_price": null,
+        "market_type": "non_binary",
+        "reason": "sports_or_match_noise"
+      },
+      {
+        "question": "Will Belgium win on 2026-09-28?",
+        "volume_24h": 1484766.6065700003,
+        "yes_price": 0.0005,
+        "market_type": "binary",
+        "reason": "expired"
+      }
+    ],
+    "top_google_trends_keywords": [
+      {
+        "keyword": "gold price",
+        "score_mean_24h_anchor_normalized": 1648.53,
+        "score_last_anchor_normalized": 866.67
+      },
+      {
+        "keyword": "interest rate",
+        "score_mean_24h_anchor_normalized": 600.13,
+        "score_last_anchor_normalized": 500.0
+      },
+      {
+        "keyword": "China US",
+        "score_mean_24h_anchor_normalized": 137.3,
+        "score_last_anchor_normalized": 100.0
+      },
+      {
+        "keyword": "recession",
+        "score_mean_24h_anchor_normalized": 64.93,
+        "score_last_anchor_normalized": 83.33
+      },
+      {
+        "keyword": "OPEC",
+        "score_mean_24h_anchor_normalized": 45.37,
+        "score_last_anchor_normalized": 14.29
+      }
+    ],
+    "top_wikipedia_pages": [
+      {
+        "page": "Donald_Trump",
+        "views": 36456
+      },
+      {
+        "page": "NATO",
+        "views": 3935
+      },
+      {
+        "page": "Strait_of_Hormuz",
+        "views": 3246
+      },
+      {
+        "page": "Russo-Ukrainian_War",
+        "views": 1585
+      },
+      {
+        "page": "Federal_Reserve",
+        "views": 1335
+      }
+    ],
+    "recurring_entities_across_sources": [
+      "AI",
+      "China",
+      "Iran",
+      "NATO",
+      "OPEC",
+      "Trump"
+    ],
+    "signal_strength_by_source": {
+      "polymarket": "strong",
+      "google_trends": "strong",
+      "wikipedia_pageviews": "strong"
+    },
+    "narrative_hints": [
+      "Trump-related political / tariff attention is present.",
+      "Geopolitical / security attention is present.",
+      "AI / regulation / chip attention is present.",
+      "China / US-China attention is present.",
+      "Iran-related geopolitical attention is present."
+    ],
+    "momentum_hints": [
+      "Google Trends risers: gold price (+443.45), OPEC (+32.08), recession (+1.72)",
+      "Wikipedia risers: Federal_Reserve (+108), Kevin_Warsh (+84), NATO (+74)",
+      "Polymarket volume risers: US announces end of Iranian blockade by September 30, 2026? (+111853.4309), Strait of Hormuz traffic returns to normal by September 30? (-179974.5011), US x Iran ceasefire continues through September 30? (-181651.5305)"
+    ],
+    "prompt_ready_notes": [
+      "Use recurring_entities_across_sources to identify themes confirmed by multiple datasets.",
+      "Treat Google Trends anchor-normalized values as rough cross-chunk calibration, not exact absolute ranking.",
+      "Prefer entities that appear across at least 2 sources when writing the final sentiment brief.",
+      "Use delta_vs_previous_day to identify rising vs cooling attention.",
+      "If source health is partial or weak, explicitly say evidence is limited.",
+      "Use top_filtered_noise_candidates only for optional appendix / noise radar, not for the core macro radar."
+    ]
+  },
+  "top_signals": {
+    "polymarket": [
+      {
+        "question": "Will there be no change in Fed interest rates after the October 2026 meeting?",
+        "volume_24h": 246285.05107800005,
+        "yes_price": 0.305,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will the Fed increase interest rates by 25 bps after the October 2026 meeting?",
+        "volume_24h": 243889.9179770001,
+        "yes_price": 0.685,
+        "market_type": "binary"
+      },
+      {
+        "question": "US x Iran ceasefire continues through September 30?",
+        "volume_24h": 223218.4183600001,
+        "yes_price": 0.968,
+        "market_type": "binary"
+      },
+      {
+        "question": "US announces end of Iranian blockade by September 30, 2026?",
+        "volume_24h": 214598.365253,
+        "yes_price": 0.0325,
+        "market_type": "binary"
+      },
+      {
+        "question": "US announces end of Iranian blockade by October 31, 2026?",
+        "volume_24h": 201199.66499000002,
+        "yes_price": 0.295,
+        "market_type": "binary"
+      }
+    ],
+    "google_trends": [
+      {
+        "keyword": "gold price",
+        "score_mean_24h_anchor_normalized": 1648.53,
+        "score_last_anchor_normalized": 866.67
+      },
+      {
+        "keyword": "interest rate",
+        "score_mean_24h_anchor_normalized": 600.13,
+        "score_last_anchor_normalized": 500.0
+      },
+      {
+        "keyword": "China US",
+        "score_mean_24h_anchor_normalized": 137.3,
+        "score_last_anchor_normalized": 100.0
+      },
+      {
+        "keyword": "recession",
+        "score_mean_24h_anchor_normalized": 64.93,
+        "score_last_anchor_normalized": 83.33
+      },
+      {
+        "keyword": "OPEC",
+        "score_mean_24h_anchor_normalized": 45.37,
+        "score_last_anchor_normalized": 14.29
+      }
+    ],
+    "wikipedia_pageviews": [
+      {
+        "page": "Donald_Trump",
+        "views": 36456
+      },
+      {
+        "page": "NATO",
+        "views": 3935
+      },
+      {
+        "page": "Strait_of_Hormuz",
+        "views": 3246
+      },
+      {
+        "page": "Russo-Ukrainian_War",
+        "views": 1585
+      },
+      {
+        "page": "Federal_Reserve",
+        "views": 1335
+      }
+    ]
+  },
+  "delta_summary": {
+    "notes": [
+      "Comparison is against the previously committed output file in the repo.",
+      "If the workflow is re-run on the same UTC date, comparison_type may be same_day_rerun instead of true previous-day.",
+      "Use rise/fall signals as relative momentum indicators, not as causal proof."
+    ]
+  },
+  "delta_top_signals": {
+    "polymarket": {
+      "top_volume_risers": [
+        {
+          "question": "US announces end of Iranian blockade by September 30, 2026?",
+          "absolute_change": 111853.4309,
+          "pct_change": 108.87
+        },
+        {
+          "question": "Strait of Hormuz traffic returns to normal by September 30?",
+          "absolute_change": -179974.5011,
+          "pct_change": -70.5
+        },
+        {
+          "question": "US x Iran ceasefire continues through September 30?",
+          "absolute_change": -181651.5305,
+          "pct_change": -44.87
+        }
+      ],
+      "top_volume_fallers": [
+        {
+          "question": "US x Iran ceasefire continues through September 30?",
+          "absolute_change": -181651.5305,
+          "pct_change": -44.87
+        },
+        {
+          "question": "Strait of Hormuz traffic returns to normal by September 30?",
+          "absolute_change": -179974.5011,
+          "pct_change": -70.5
+        },
+        {
+          "question": "US announces end of Iranian blockade by September 30, 2026?",
+          "absolute_change": 111853.4309,
+          "pct_change": 108.87
+        }
+      ],
+      "new_markets_vs_previous": 26
+    },
+    "google_trends": {
+      "top_risers": [
+        {
+          "keyword": "gold price",
+          "absolute_change": 443.45,
+          "pct_change": 36.8
+        },
+        {
+          "keyword": "OPEC",
+          "absolute_change": 32.08,
+          "pct_change": 241.38
+        },
+        {
+          "keyword": "recession",
+          "absolute_change": 1.72,
+          "pct_change": 2.72
+        },
+        {
+          "keyword": "China US",
+          "absolute_change": -21.83,
+          "pct_change": -13.72
+        },
+        {
+          "keyword": "Trump tariffs",
+          "absolute_change": -22.38,
+          "pct_change": -50.28
+        }
+      ],
+      "top_fallers": [
+        {
+          "keyword": "interest rate",
+          "absolute_change": -199.97,
+          "pct_change": -24.99
+        },
+        {
+          "keyword": "Trump tariffs",
+          "absolute_change": -22.38,
+          "pct_change": -50.28
+        },
+        {
+          "keyword": "China US",
+          "absolute_change": -21.83,
+          "pct_change": -13.72
+        },
+        {
+          "keyword": "recession",
+          "absolute_change": 1.72,
+          "pct_change": 2.72
+        },
+        {
+          "keyword": "OPEC",
+          "absolute_change": 32.08,
+          "pct_change": 241.38
+        }
+      ],
+      "new_keywords_vs_previous": 0
+    },
+    "wikipedia_pageviews": {
+      "top_risers": [
+        {
+          "page": "Federal_Reserve",
+          "absolute_change": 108,
+          "pct_change": 8.8
+        },
+        {
+          "page": "Kevin_Warsh",
+          "absolute_change": 84,
+          "pct_change": 7.2
+        },
+        {
+          "page": "NATO",
+          "absolute_change": 74,
+          "pct_change": 1.92
+        },
+        {
+          "page": "China%E2%80%93United_States_trade_war",
+          "absolute_change": 63,
+          "pct_change": 6.73
+        },
+        {
+          "page": "Semiconductor",
+          "absolute_change": 62,
+          "pct_change": 5.83
+        }
+      ],
+      "top_fallers": [
+        {
+          "page": "Donald_Trump",
+          "absolute_change": -3140,
+          "pct_change": -7.93
+        },
+        {
+          "page": "Strait_of_Hormuz",
+          "absolute_change": -251,
+          "pct_change": -7.18
+        },
+        {
+          "page": "Russo-Ukrainian_War",
+          "absolute_change": -94,
+          "pct_change": -5.6
+        },
+        {
+          "page": "OPEC",
+          "absolute_change": -81,
+          "pct_change": -7.18
+        },
+        {
+          "page": "Artificial_intelligence_regulation",
+          "absolute_change": -2,
+          "pct_change": -50.0
+        }
+      ],
+      "new_pages_vs_previous": 0
+    }
+  }
+}
