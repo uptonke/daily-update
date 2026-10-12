@@ -1,0 +1,365 @@
+{
+  "schema_version": "1.2.0",
+  "date_utc": "2026-10-12",
+  "generated_at_utc": "2026-10-12T22:01:17Z",
+  "source_health": {
+    "polymarket": {
+      "status": "ok",
+      "row_count": 24,
+      "ok_count": 24,
+      "empty_count": 0,
+      "error_count": 0
+    },
+    "google_trends": {
+      "status": "partial",
+      "row_count": 14,
+      "ok_count": 6,
+      "empty_count": 0,
+      "error_count": 10
+    },
+    "wikipedia_pageviews": {
+      "status": "ok",
+      "row_count": 10,
+      "ok_count": 10,
+      "empty_count": 0,
+      "error_count": 0
+    }
+  },
+  "summary": {
+    "top_polymarket_questions": [
+      {
+        "question": "Will the Fed decrease interest rates by 25 bps after the October 2026 meeting?",
+        "volume_24h": 492630.1911399999,
+        "yes_price": 0.005,
+        "market_type": "binary"
+      },
+      {
+        "question": "US x Iran ceasefire continues through October 12?",
+        "volume_24h": 490206.87976400007,
+        "yes_price": 0.999,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will the U.S. invade Iran before 2027?",
+        "volume_24h": 397151.8878689999,
+        "yes_price": 0.175,
+        "market_type": "binary"
+      }
+    ],
+    "top_filtered_noise_candidates": [
+      {
+        "question": "Spread: Rams (-3.5)",
+        "volume_24h": 1170760.525301,
+        "yes_price": null,
+        "market_type": "non_binary",
+        "reason": "sports_or_match_noise"
+      },
+      {
+        "question": "Los Angeles Dodgers vs. Milwaukee Brewers",
+        "volume_24h": 829115.8454359999,
+        "yes_price": null,
+        "market_type": "non_binary",
+        "reason": "sports_or_match_noise"
+      },
+      {
+        "question": "2026 Balance of Power: D Senate, R House",
+        "volume_24h": 578390.4844550001,
+        "yes_price": 0.0095,
+        "market_type": "binary",
+        "reason": "low_public_impact_or_unclear_relevance"
+      }
+    ],
+    "top_google_trends_keywords": [
+      {
+        "keyword": "inflation",
+        "score_mean_24h_anchor_normalized": 466.69,
+        "score_last_anchor_normalized": 489.47
+      },
+      {
+        "keyword": "China US",
+        "score_mean_24h_anchor_normalized": 89.59,
+        "score_last_anchor_normalized": 97.73
+      },
+      {
+        "keyword": "OPEC",
+        "score_mean_24h_anchor_normalized": 17.49,
+        "score_last_anchor_normalized": 0.0
+      },
+      {
+        "keyword": "AI regulation",
+        "score_mean_24h_anchor_normalized": 11.26,
+        "score_last_anchor_normalized": 0.0
+      },
+      {
+        "keyword": "China economy",
+        "score_mean_24h_anchor_normalized": 8.76,
+        "score_last_anchor_normalized": 0.0
+      }
+    ],
+    "top_wikipedia_pages": [
+      {
+        "page": "Donald_Trump",
+        "views": 48827
+      },
+      {
+        "page": "NATO",
+        "views": 3397
+      },
+      {
+        "page": "Strait_of_Hormuz",
+        "views": 2520
+      },
+      {
+        "page": "Russo-Ukrainian_War",
+        "views": 2395
+      },
+      {
+        "page": "Federal_Reserve",
+        "views": 1315
+      }
+    ],
+    "recurring_entities_across_sources": [
+      "AI",
+      "China",
+      "Iran",
+      "NATO",
+      "OPEC",
+      "Trump"
+    ],
+    "signal_strength_by_source": {
+      "polymarket": "strong",
+      "google_trends": "strong",
+      "wikipedia_pageviews": "strong"
+    },
+    "narrative_hints": [
+      "Trump-related political / tariff attention is present.",
+      "Geopolitical / security attention is present.",
+      "AI / regulation / chip attention is present.",
+      "China / US-China attention is present.",
+      "Iran-related geopolitical attention is present."
+    ],
+    "momentum_hints": [
+      "Wikipedia risers: Donald_Trump (+5016), Strait_of_Hormuz (+302), Russo-Ukrainian_War (+203)",
+      "Polymarket volume risers: Will the Fed decrease interest rates by 25 bps after the October 2026 meeting? (+341013.1201), Will Raphael Warnock win the 2028 Democratic presidential nomination? (+303052.7687), Will the Fed increase interest rates by 25 bps after the October 2026 meeting? (+259642.8347)"
+    ],
+    "prompt_ready_notes": [
+      "Use recurring_entities_across_sources to identify themes confirmed by multiple datasets.",
+      "Treat Google Trends anchor-normalized values as rough cross-chunk calibration, not exact absolute ranking.",
+      "Prefer entities that appear across at least 2 sources when writing the final sentiment brief.",
+      "Use delta_vs_previous_day to identify rising vs cooling attention.",
+      "If source health is partial or weak, explicitly say evidence is limited.",
+      "Use top_filtered_noise_candidates only for optional appendix / noise radar, not for the core macro radar."
+    ]
+  },
+  "top_signals": {
+    "polymarket": [
+      {
+        "question": "Will the Fed decrease interest rates by 25 bps after the October 2026 meeting?",
+        "volume_24h": 492630.1911399999,
+        "yes_price": 0.005,
+        "market_type": "binary"
+      },
+      {
+        "question": "US x Iran ceasefire continues through October 12?",
+        "volume_24h": 490206.87976400007,
+        "yes_price": 0.999,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will the U.S. invade Iran before 2027?",
+        "volume_24h": 397151.8878689999,
+        "yes_price": 0.175,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will Raphael Warnock win the 2028 Democratic presidential nomination?",
+        "volume_24h": 375101.702231,
+        "yes_price": 0.018,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will the Fed increase interest rates by 25 bps after the October 2026 meeting?",
+        "volume_24h": 338464.11524499994,
+        "yes_price": 0.195,
+        "market_type": "binary"
+      }
+    ],
+    "google_trends": [
+      {
+        "keyword": "inflation",
+        "score_mean_24h_anchor_normalized": 466.69,
+        "score_last_anchor_normalized": 489.47
+      },
+      {
+        "keyword": "China US",
+        "score_mean_24h_anchor_normalized": 89.59,
+        "score_last_anchor_normalized": 97.73
+      },
+      {
+        "keyword": "OPEC",
+        "score_mean_24h_anchor_normalized": 17.49,
+        "score_last_anchor_normalized": 0.0
+      },
+      {
+        "keyword": "AI regulation",
+        "score_mean_24h_anchor_normalized": 11.26,
+        "score_last_anchor_normalized": 0.0
+      },
+      {
+        "keyword": "China economy",
+        "score_mean_24h_anchor_normalized": 8.76,
+        "score_last_anchor_normalized": 0.0
+      }
+    ],
+    "wikipedia_pageviews": [
+      {
+        "page": "Donald_Trump",
+        "views": 48827
+      },
+      {
+        "page": "NATO",
+        "views": 3397
+      },
+      {
+        "page": "Strait_of_Hormuz",
+        "views": 2520
+      },
+      {
+        "page": "Russo-Ukrainian_War",
+        "views": 2395
+      },
+      {
+        "page": "Federal_Reserve",
+        "views": 1315
+      }
+    ]
+  },
+  "delta_summary": {
+    "notes": [
+      "Comparison is against the previously committed output file in the repo.",
+      "If the workflow is re-run on the same UTC date, comparison_type may be same_day_rerun instead of true previous-day.",
+      "Use rise/fall signals as relative momentum indicators, not as causal proof."
+    ]
+  },
+  "delta_top_signals": {
+    "polymarket": {
+      "top_volume_risers": [
+        {
+          "question": "Will the Fed decrease interest rates by 25 bps after the October 2026 meeting?",
+          "absolute_change": 341013.1201,
+          "pct_change": 224.92
+        },
+        {
+          "question": "Will Raphael Warnock win the 2028 Democratic presidential nomination?",
+          "absolute_change": 303052.7687,
+          "pct_change": 420.62
+        },
+        {
+          "question": "Will the Fed increase interest rates by 25 bps after the October 2026 meeting?",
+          "absolute_change": 259642.8347,
+          "pct_change": 329.41
+        },
+        {
+          "question": "US x Iran ceasefire continues through October 12?",
+          "absolute_change": 158524.4786,
+          "pct_change": 47.79
+        },
+        {
+          "question": "Will the U.S. invade Iran before 2027?",
+          "absolute_change": 132347.4224,
+          "pct_change": 49.98
+        }
+      ],
+      "top_volume_fallers": [
+        {
+          "question": "Will David Lisnard win the 2027 French presidential election?",
+          "absolute_change": -118465.6487,
+          "pct_change": -59.01
+        },
+        {
+          "question": "Israel x Iran ceasefire continues through October 15?",
+          "absolute_change": -95771.7187,
+          "pct_change": -55.31
+        },
+        {
+          "question": "Will there be no Hormuz agreement?",
+          "absolute_change": -50842.9539,
+          "pct_change": -29.69
+        },
+        {
+          "question": "Will Aleksandar Vučić – United Serbia win the most seats in the 2026 Serbian parliamentary election?",
+          "absolute_change": -25024.4085,
+          "pct_change": -26.63
+        },
+        {
+          "question": "US announces end of Iranian blockade by October 31, 2026?",
+          "absolute_change": -12858.5646,
+          "pct_change": -12.12
+        }
+      ],
+      "new_markets_vs_previous": 8
+    },
+    "google_trends": {
+      "top_risers": [],
+      "top_fallers": [],
+      "new_keywords_vs_previous": 0
+    },
+    "wikipedia_pageviews": {
+      "top_risers": [
+        {
+          "page": "Donald_Trump",
+          "absolute_change": 5016,
+          "pct_change": 11.45
+        },
+        {
+          "page": "Strait_of_Hormuz",
+          "absolute_change": 302,
+          "pct_change": 13.62
+        },
+        {
+          "page": "Russo-Ukrainian_War",
+          "absolute_change": 203,
+          "pct_change": 9.26
+        },
+        {
+          "page": "OPEC",
+          "absolute_change": 40,
+          "pct_change": 4.31
+        },
+        {
+          "page": "Semiconductor",
+          "absolute_change": 19,
+          "pct_change": 1.89
+        }
+      ],
+      "top_fallers": [
+        {
+          "page": "Federal_Reserve",
+          "absolute_change": -132,
+          "pct_change": -9.12
+        },
+        {
+          "page": "Kevin_Warsh",
+          "absolute_change": -52,
+          "pct_change": -5.46
+        },
+        {
+          "page": "NATO",
+          "absolute_change": -34,
+          "pct_change": -0.99
+        },
+        {
+          "page": "Artificial_intelligence_regulation",
+          "absolute_change": -4,
+          "pct_change": -57.14
+        },
+        {
+          "page": "China%E2%80%93United_States_trade_war",
+          "absolute_change": 3,
+          "pct_change": 0.38
+        }
+      ],
+      "new_pages_vs_previous": 0
+    }
+  }
+}
