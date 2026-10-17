@@ -1,0 +1,316 @@
+{
+  "schema_version": "1.2.0",
+  "date_utc": "2026-10-17",
+  "generated_at_utc": "2026-10-17T22:03:07Z",
+  "source_health": {
+    "polymarket": {
+      "status": "ok",
+      "row_count": 26,
+      "ok_count": 26,
+      "empty_count": 0,
+      "error_count": 0
+    },
+    "google_trends": {
+      "status": "partial",
+      "row_count": 14,
+      "ok_count": 10,
+      "empty_count": 0,
+      "error_count": 5
+    },
+    "wikipedia_pageviews": {
+      "status": "partial",
+      "row_count": 10,
+      "ok_count": 0,
+      "empty_count": 0,
+      "error_count": 20
+    }
+  },
+  "summary": {
+    "top_polymarket_questions": [
+      {
+        "question": "US x Iran ceasefire continues through October 17?",
+        "volume_24h": 399602.308484,
+        "yes_price": 0.999,
+        "market_type": "binary"
+      },
+      {
+        "question": "US x Iran ceasefire continues through October 31?",
+        "volume_24h": 378842.07615399995,
+        "yes_price": 0.805,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will there be no Hormuz agreement?",
+        "volume_24h": 242247.518484,
+        "yes_price": 0.9065,
+        "market_type": "binary"
+      }
+    ],
+    "top_filtered_noise_candidates": [
+      {
+        "question": "LoL: MVK Esports vs FURIA Esports - Game 3 Winner",
+        "volume_24h": 1883219.909619998,
+        "yes_price": null,
+        "market_type": "non_binary",
+        "reason": "sports_or_match_noise"
+      },
+      {
+        "question": "LoL: MVK Esports vs FURIA Esports - Game 2 Winner",
+        "volume_24h": 1510049.7410070016,
+        "yes_price": null,
+        "market_type": "non_binary",
+        "reason": "expired"
+      },
+      {
+        "question": "LoL: MVK Esports vs FURIA Esports (BO5) - Worlds Play-In",
+        "volume_24h": 1441974.9505750006,
+        "yes_price": null,
+        "market_type": "non_binary",
+        "reason": "sports_or_match_noise"
+      }
+    ],
+    "top_google_trends_keywords": [
+      {
+        "keyword": "gold price",
+        "score_mean_24h_anchor_normalized": 3654.7,
+        "score_last_anchor_normalized": 3400.0
+      },
+      {
+        "keyword": "interest rate",
+        "score_mean_24h_anchor_normalized": 1208.39,
+        "score_last_anchor_normalized": 1500.0
+      },
+      {
+        "keyword": "inflation",
+        "score_mean_24h_anchor_normalized": 856.7,
+        "score_last_anchor_normalized": 1600.0
+      },
+      {
+        "keyword": "China US",
+        "score_mean_24h_anchor_normalized": 187.49,
+        "score_last_anchor_normalized": 300.0
+      },
+      {
+        "keyword": "recession",
+        "score_mean_24h_anchor_normalized": 144.97,
+        "score_last_anchor_normalized": 200.0
+      }
+    ],
+    "top_wikipedia_pages": [],
+    "recurring_entities_across_sources": [
+      "China",
+      "Iran"
+    ],
+    "signal_strength_by_source": {
+      "polymarket": "strong",
+      "google_trends": "strong",
+      "wikipedia_pageviews": "weak"
+    },
+    "narrative_hints": [
+      "China / US-China attention is present.",
+      "Iran-related geopolitical attention is present."
+    ],
+    "momentum_hints": [
+      "Google Trends risers: gold price (+860.46), interest rate (+296.61), inflation (+94.92)",
+      "Polymarket volume risers: US x Iran ceasefire continues through October 17? (+180147.8099), Will the Democratic Party control the House after the 2026 Midterm elections? (+90852.1314), Will the Republican Party control the Senate after the 2026 Midterm elections? (+78539.7548)"
+    ],
+    "prompt_ready_notes": [
+      "Use recurring_entities_across_sources to identify themes confirmed by multiple datasets.",
+      "Treat Google Trends anchor-normalized values as rough cross-chunk calibration, not exact absolute ranking.",
+      "Prefer entities that appear across at least 2 sources when writing the final sentiment brief.",
+      "Use delta_vs_previous_day to identify rising vs cooling attention.",
+      "If source health is partial or weak, explicitly say evidence is limited.",
+      "Use top_filtered_noise_candidates only for optional appendix / noise radar, not for the core macro radar."
+    ]
+  },
+  "top_signals": {
+    "polymarket": [
+      {
+        "question": "US x Iran ceasefire continues through October 17?",
+        "volume_24h": 399602.308484,
+        "yes_price": 0.999,
+        "market_type": "binary"
+      },
+      {
+        "question": "US x Iran ceasefire continues through October 31?",
+        "volume_24h": 378842.07615399995,
+        "yes_price": 0.805,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will there be no Hormuz agreement?",
+        "volume_24h": 242247.518484,
+        "yes_price": 0.9065,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will the Democratic Party control the House after the 2026 Midterm elections?",
+        "volume_24h": 228794.29249499997,
+        "yes_price": 0.905,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will the Fed increase interest rates by 50+ bps after the October 2026 meeting?",
+        "volume_24h": 211223.374333,
+        "yes_price": 0.0035,
+        "market_type": "binary"
+      }
+    ],
+    "google_trends": [
+      {
+        "keyword": "gold price",
+        "score_mean_24h_anchor_normalized": 3654.7,
+        "score_last_anchor_normalized": 3400.0
+      },
+      {
+        "keyword": "interest rate",
+        "score_mean_24h_anchor_normalized": 1208.39,
+        "score_last_anchor_normalized": 1500.0
+      },
+      {
+        "keyword": "inflation",
+        "score_mean_24h_anchor_normalized": 856.7,
+        "score_last_anchor_normalized": 1600.0
+      },
+      {
+        "keyword": "China US",
+        "score_mean_24h_anchor_normalized": 187.49,
+        "score_last_anchor_normalized": 300.0
+      },
+      {
+        "keyword": "recession",
+        "score_mean_24h_anchor_normalized": 144.97,
+        "score_last_anchor_normalized": 200.0
+      }
+    ],
+    "wikipedia_pageviews": []
+  },
+  "delta_summary": {
+    "notes": [
+      "Comparison is against the previously committed output file in the repo.",
+      "If the workflow is re-run on the same UTC date, comparison_type may be same_day_rerun instead of true previous-day.",
+      "Use rise/fall signals as relative momentum indicators, not as causal proof."
+    ]
+  },
+  "delta_top_signals": {
+    "polymarket": {
+      "top_volume_risers": [
+        {
+          "question": "US x Iran ceasefire continues through October 17?",
+          "absolute_change": 180147.8099,
+          "pct_change": 82.09
+        },
+        {
+          "question": "Will the Democratic Party control the House after the 2026 Midterm elections?",
+          "absolute_change": 90852.1314,
+          "pct_change": 65.86
+        },
+        {
+          "question": "Will the Republican Party control the Senate after the 2026 Midterm elections?",
+          "absolute_change": 78539.7548,
+          "pct_change": 120.33
+        },
+        {
+          "question": "Will Flávio Bolsonaro win the second round of the 2026 Brazilian presidential election by 8–12%?",
+          "absolute_change": 60253.0642,
+          "pct_change": 45.98
+        },
+        {
+          "question": "US x Iran ceasefire continues through October 18?",
+          "absolute_change": 43776.3354,
+          "pct_change": 35.27
+        }
+      ],
+      "top_volume_fallers": [
+        {
+          "question": "Will there be no change in Fed interest rates after the October 2026 meeting?",
+          "absolute_change": -440487.015,
+          "pct_change": -85.46
+        },
+        {
+          "question": "Will the U.S. invade Iran before 2027?",
+          "absolute_change": -248233.3197,
+          "pct_change": -74.27
+        },
+        {
+          "question": "US announces end of Iranian blockade by October 31, 2026?",
+          "absolute_change": -203539.0034,
+          "pct_change": -77.62
+        },
+        {
+          "question": "Israel x Iran ceasefire continues through October 21?",
+          "absolute_change": -119555.4851,
+          "pct_change": -59.49
+        },
+        {
+          "question": "Will the Fed increase interest rates by 50+ bps after the October 2026 meeting?",
+          "absolute_change": -92056.4297,
+          "pct_change": -30.35
+        }
+      ],
+      "new_markets_vs_previous": 11
+    },
+    "google_trends": {
+      "top_risers": [
+        {
+          "keyword": "gold price",
+          "absolute_change": 860.46,
+          "pct_change": 30.79
+        },
+        {
+          "keyword": "interest rate",
+          "absolute_change": 296.61,
+          "pct_change": 32.53
+        },
+        {
+          "keyword": "inflation",
+          "absolute_change": 94.92,
+          "pct_change": 12.46
+        },
+        {
+          "keyword": "China US",
+          "absolute_change": 44.0,
+          "pct_change": 30.66
+        },
+        {
+          "keyword": "recession",
+          "absolute_change": 36.7,
+          "pct_change": 33.9
+        }
+      ],
+      "top_fallers": [
+        {
+          "keyword": "AI regulation",
+          "absolute_change": -6.9,
+          "pct_change": -32.7
+        },
+        {
+          "keyword": "OPEC",
+          "absolute_change": -6.46,
+          "pct_change": -31.79
+        },
+        {
+          "keyword": "China economy",
+          "absolute_change": -3.18,
+          "pct_change": -19.17
+        },
+        {
+          "keyword": "chip export",
+          "absolute_change": -0.88,
+          "pct_change": -100.0
+        },
+        {
+          "keyword": "Trump tariffs",
+          "absolute_change": 18.39,
+          "pct_change": 386.34
+        }
+      ],
+      "new_keywords_vs_previous": 0
+    },
+    "wikipedia_pageviews": {
+      "top_risers": [],
+      "top_fallers": [],
+      "new_pages_vs_previous": 0
+    }
+  }
+}
