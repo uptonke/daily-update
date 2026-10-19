@@ -1,0 +1,363 @@
+{
+  "schema_version": "1.2.0",
+  "date_utc": "2026-10-19",
+  "generated_at_utc": "2026-10-19T22:01:30Z",
+  "source_health": {
+    "polymarket": {
+      "status": "ok",
+      "row_count": 30,
+      "ok_count": 30,
+      "empty_count": 0,
+      "error_count": 0
+    },
+    "google_trends": {
+      "status": "partial",
+      "row_count": 14,
+      "ok_count": 6,
+      "empty_count": 0,
+      "error_count": 10
+    },
+    "wikipedia_pageviews": {
+      "status": "ok",
+      "row_count": 10,
+      "ok_count": 10,
+      "empty_count": 0,
+      "error_count": 0
+    }
+  },
+  "summary": {
+    "top_polymarket_questions": [
+      {
+        "question": "Will the Fed decrease interest rates by 50+ bps after the October 2026 meeting?",
+        "volume_24h": 1249817.17,
+        "yes_price": 0.0005,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will there be no change in Fed interest rates after the October 2026 meeting?",
+        "volume_24h": 812650.8537389999,
+        "yes_price": 0.845,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will the Fed decrease interest rates by 25 bps after the October 2026 meeting?",
+        "volume_24h": 798163.063663,
+        "yes_price": 0.0035,
+        "market_type": "binary"
+      }
+    ],
+    "top_filtered_noise_candidates": [
+      {
+        "question": "Al Hilal Saudi Club vs. Al Hazem SC: O/U 0.5",
+        "volume_24h": 571930.1147400001,
+        "yes_price": null,
+        "market_type": "non_binary",
+        "reason": "expired"
+      },
+      {
+        "question": "Will Flávio Bolsonaro win the 2026 Brazilian presidential election?",
+        "volume_24h": 475169.283389,
+        "yes_price": 0.7685,
+        "market_type": "binary",
+        "reason": "expired"
+      },
+      {
+        "question": "Will Shakhtar Donetsk win the 2026-27 UEFA Champions League Championship?",
+        "volume_24h": 437124.656306,
+        "yes_price": 0.0015,
+        "market_type": "binary",
+        "reason": "low_public_impact_or_unclear_relevance"
+      }
+    ],
+    "top_google_trends_keywords": [
+      {
+        "keyword": "inflation",
+        "score_mean_24h_anchor_normalized": 902.81,
+        "score_last_anchor_normalized": 910.0
+      },
+      {
+        "keyword": "China US",
+        "score_mean_24h_anchor_normalized": 190.16,
+        "score_last_anchor_normalized": 296.67
+      },
+      {
+        "keyword": "OPEC",
+        "score_mean_24h_anchor_normalized": 26.73,
+        "score_last_anchor_normalized": 53.33
+      },
+      {
+        "keyword": "China economy",
+        "score_mean_24h_anchor_normalized": 23.85,
+        "score_last_anchor_normalized": 70.0
+      },
+      {
+        "keyword": "AI regulation",
+        "score_mean_24h_anchor_normalized": 7.14,
+        "score_last_anchor_normalized": 0.0
+      }
+    ],
+    "top_wikipedia_pages": [
+      {
+        "page": "Donald_Trump",
+        "views": 38907
+      },
+      {
+        "page": "NATO",
+        "views": 3688
+      },
+      {
+        "page": "Russo-Ukrainian_War",
+        "views": 2367
+      },
+      {
+        "page": "Strait_of_Hormuz",
+        "views": 2144
+      },
+      {
+        "page": "Kevin_Warsh",
+        "views": 1210
+      }
+    ],
+    "recurring_entities_across_sources": [
+      "AI",
+      "China",
+      "NATO",
+      "OPEC",
+      "Trump"
+    ],
+    "signal_strength_by_source": {
+      "polymarket": "strong",
+      "google_trends": "strong",
+      "wikipedia_pageviews": "strong"
+    },
+    "narrative_hints": [
+      "Trump-related political / tariff attention is present.",
+      "Geopolitical / security attention is present.",
+      "AI / regulation / chip attention is present.",
+      "China / US-China attention is present."
+    ],
+    "momentum_hints": [
+      "Google Trends risers: OPEC (+15.1), China economy (+11.34), AI regulation (+0.32)",
+      "Polymarket volume risers: Will the Fed decrease interest rates by 50+ bps after the October 2026 meeting? (+1154542.539), Will there be no change in Fed interest rates after the October 2026 meeting? (+745560.4344), Will the Fed decrease interest rates by 25 bps after the October 2026 meeting? (+667709.7873)"
+    ],
+    "prompt_ready_notes": [
+      "Use recurring_entities_across_sources to identify themes confirmed by multiple datasets.",
+      "Treat Google Trends anchor-normalized values as rough cross-chunk calibration, not exact absolute ranking.",
+      "Prefer entities that appear across at least 2 sources when writing the final sentiment brief.",
+      "Use delta_vs_previous_day to identify rising vs cooling attention.",
+      "If source health is partial or weak, explicitly say evidence is limited.",
+      "Use top_filtered_noise_candidates only for optional appendix / noise radar, not for the core macro radar."
+    ]
+  },
+  "top_signals": {
+    "polymarket": [
+      {
+        "question": "Will the Fed decrease interest rates by 50+ bps after the October 2026 meeting?",
+        "volume_24h": 1249817.17,
+        "yes_price": 0.0005,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will there be no change in Fed interest rates after the October 2026 meeting?",
+        "volume_24h": 812650.8537389999,
+        "yes_price": 0.845,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will the Fed decrease interest rates by 25 bps after the October 2026 meeting?",
+        "volume_24h": 798163.063663,
+        "yes_price": 0.0035,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will the Fed increase interest rates by 25 bps after the October 2026 meeting?",
+        "volume_24h": 710784.911677,
+        "yes_price": 0.145,
+        "market_type": "binary"
+      },
+      {
+        "question": "US x Iran ceasefire continues through October 31?",
+        "volume_24h": 621552.020762,
+        "yes_price": 0.795,
+        "market_type": "binary"
+      }
+    ],
+    "google_trends": [
+      {
+        "keyword": "inflation",
+        "score_mean_24h_anchor_normalized": 902.81,
+        "score_last_anchor_normalized": 910.0
+      },
+      {
+        "keyword": "China US",
+        "score_mean_24h_anchor_normalized": 190.16,
+        "score_last_anchor_normalized": 296.67
+      },
+      {
+        "keyword": "OPEC",
+        "score_mean_24h_anchor_normalized": 26.73,
+        "score_last_anchor_normalized": 53.33
+      },
+      {
+        "keyword": "China economy",
+        "score_mean_24h_anchor_normalized": 23.85,
+        "score_last_anchor_normalized": 70.0
+      },
+      {
+        "keyword": "AI regulation",
+        "score_mean_24h_anchor_normalized": 7.14,
+        "score_last_anchor_normalized": 0.0
+      }
+    ],
+    "wikipedia_pageviews": [
+      {
+        "page": "Donald_Trump",
+        "views": 38907
+      },
+      {
+        "page": "NATO",
+        "views": 3688
+      },
+      {
+        "page": "Russo-Ukrainian_War",
+        "views": 2367
+      },
+      {
+        "page": "Strait_of_Hormuz",
+        "views": 2144
+      },
+      {
+        "page": "Kevin_Warsh",
+        "views": 1210
+      }
+    ]
+  },
+  "delta_summary": {
+    "notes": [
+      "Comparison is against the previously committed output file in the repo.",
+      "If the workflow is re-run on the same UTC date, comparison_type may be same_day_rerun instead of true previous-day.",
+      "Use rise/fall signals as relative momentum indicators, not as causal proof."
+    ]
+  },
+  "delta_top_signals": {
+    "polymarket": {
+      "top_volume_risers": [
+        {
+          "question": "Will the Fed decrease interest rates by 50+ bps after the October 2026 meeting?",
+          "absolute_change": 1154542.539,
+          "pct_change": 1211.8
+        },
+        {
+          "question": "Will there be no change in Fed interest rates after the October 2026 meeting?",
+          "absolute_change": 745560.4344,
+          "pct_change": 1111.28
+        },
+        {
+          "question": "Will the Fed decrease interest rates by 25 bps after the October 2026 meeting?",
+          "absolute_change": 667709.7873,
+          "pct_change": 511.84
+        },
+        {
+          "question": "Will the Fed increase interest rates by 25 bps after the October 2026 meeting?",
+          "absolute_change": 564748.7758,
+          "pct_change": 386.72
+        },
+        {
+          "question": "US x Iran ceasefire continues through October 22?",
+          "absolute_change": 490939.0572,
+          "pct_change": 390.72
+        }
+      ],
+      "top_volume_fallers": [
+        {
+          "question": "Israel x Iran ceasefire continues through October 31?",
+          "absolute_change": -29431.1148,
+          "pct_change": -24.26
+        },
+        {
+          "question": "Strait of Hormuz traffic returns to normal by October 31?",
+          "absolute_change": -7218.3808,
+          "pct_change": -9.19
+        },
+        {
+          "question": "Will Aleksandar Vučić – United Serbia win the most seats in the 2026 Serbian parliamentary election?",
+          "absolute_change": 12426.5364,
+          "pct_change": 19.81
+        },
+        {
+          "question": "Israel x Iran ceasefire continues through October 21?",
+          "absolute_change": 12496.6267,
+          "pct_change": 9.09
+        },
+        {
+          "question": "Will the Democratic Party control the House after the 2026 Midterm elections?",
+          "absolute_change": 23609.2789,
+          "pct_change": 31.3
+        }
+      ],
+      "new_markets_vs_previous": 12
+    },
+    "google_trends": {
+      "top_risers": [
+        {
+          "keyword": "OPEC",
+          "absolute_change": 15.1,
+          "pct_change": 129.84
+        },
+        {
+          "keyword": "China economy",
+          "absolute_change": 11.34,
+          "pct_change": 90.65
+        },
+        {
+          "keyword": "AI regulation",
+          "absolute_change": 0.32,
+          "pct_change": 4.69
+        },
+        {
+          "keyword": "chip export",
+          "absolute_change": -0.03,
+          "pct_change": -8.57
+        },
+        {
+          "keyword": "China US",
+          "absolute_change": -45.86,
+          "pct_change": -19.43
+        }
+      ],
+      "top_fallers": [
+        {
+          "keyword": "inflation",
+          "absolute_change": -239.01,
+          "pct_change": -20.93
+        },
+        {
+          "keyword": "China US",
+          "absolute_change": -45.86,
+          "pct_change": -19.43
+        },
+        {
+          "keyword": "chip export",
+          "absolute_change": -0.03,
+          "pct_change": -8.57
+        },
+        {
+          "keyword": "AI regulation",
+          "absolute_change": 0.32,
+          "pct_change": 4.69
+        },
+        {
+          "keyword": "China economy",
+          "absolute_change": 11.34,
+          "pct_change": 90.65
+        }
+      ],
+      "new_keywords_vs_previous": 0
+    },
+    "wikipedia_pageviews": {
+      "top_risers": [],
+      "top_fallers": [],
+      "new_pages_vs_previous": 0
+    }
+  }
+}
