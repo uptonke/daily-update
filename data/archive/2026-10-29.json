@@ -1,0 +1,415 @@
+{
+  "schema_version": "1.2.0",
+  "date_utc": "2026-10-29",
+  "generated_at_utc": "2026-10-29T22:01:17Z",
+  "source_health": {
+    "polymarket": {
+      "status": "ok",
+      "row_count": 26,
+      "ok_count": 26,
+      "empty_count": 0,
+      "error_count": 0
+    },
+    "google_trends": {
+      "status": "ok",
+      "row_count": 14,
+      "ok_count": 14,
+      "empty_count": 0,
+      "error_count": 0
+    },
+    "wikipedia_pageviews": {
+      "status": "ok",
+      "row_count": 10,
+      "ok_count": 10,
+      "empty_count": 0,
+      "error_count": 0
+    }
+  },
+  "summary": {
+    "top_polymarket_questions": [
+      {
+        "question": "Will the Republican Party control the House after the 2026 Midterm elections?",
+        "volume_24h": 2518454.469039001,
+        "yes_price": 0.075,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will the Democratic Party control the House after the 2026 Midterm elections?",
+        "volume_24h": 2321571.5345269996,
+        "yes_price": 0.925,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will JD Vance win the 2028 US Presidential Election?",
+        "volume_24h": 713148.9333220001,
+        "yes_price": 0.1625,
+        "market_type": "binary"
+      }
+    ],
+    "top_filtered_noise_candidates": [
+      {
+        "question": "Will Benjamin Netanyahu be the next Prime Minister of Israel?",
+        "volume_24h": 1951433.318848,
+        "yes_price": 0.42,
+        "market_type": "binary",
+        "reason": "expired"
+      },
+      {
+        "question": "LoL: Karmine Corp vs CTBC Flying Oyster - Game 2 Winner",
+        "volume_24h": 1548009.5961930016,
+        "yes_price": null,
+        "market_type": "non_binary",
+        "reason": "sports_or_match_noise"
+      },
+      {
+        "question": "Will Likud win the most seats in the 2026 Israeli legislative election?",
+        "volume_24h": 1312288.784003,
+        "yes_price": 0.988,
+        "market_type": "binary",
+        "reason": "expired"
+      }
+    ],
+    "top_google_trends_keywords": [
+      {
+        "keyword": "gold price",
+        "score_mean_24h_anchor_normalized": 2057.11,
+        "score_last_anchor_normalized": 1400.0
+      },
+      {
+        "keyword": "interest rate",
+        "score_mean_24h_anchor_normalized": 663.87,
+        "score_last_anchor_normalized": 650.0
+      },
+      {
+        "keyword": "oil price",
+        "score_mean_24h_anchor_normalized": 602.01,
+        "score_last_anchor_normalized": 533.33
+      },
+      {
+        "keyword": "inflation",
+        "score_mean_24h_anchor_normalized": 425.36,
+        "score_last_anchor_normalized": 437.5
+      },
+      {
+        "keyword": "NATO",
+        "score_mean_24h_anchor_normalized": 310.52,
+        "score_last_anchor_normalized": 466.67
+      }
+    ],
+    "top_wikipedia_pages": [
+      {
+        "page": "Donald_Trump",
+        "views": 43815
+      },
+      {
+        "page": "Kevin_Warsh",
+        "views": 8138
+      },
+      {
+        "page": "NATO",
+        "views": 3979
+      },
+      {
+        "page": "Russo-Ukrainian_War",
+        "views": 2802
+      },
+      {
+        "page": "Strait_of_Hormuz",
+        "views": 2143
+      }
+    ],
+    "recurring_entities_across_sources": [
+      "AI",
+      "NATO",
+      "Oil",
+      "Trump"
+    ],
+    "signal_strength_by_source": {
+      "polymarket": "strong",
+      "google_trends": "strong",
+      "wikipedia_pageviews": "strong"
+    },
+    "narrative_hints": [
+      "Energy / oil-related attention is present.",
+      "Trump-related political / tariff attention is present.",
+      "Geopolitical / security attention is present.",
+      "AI / regulation / chip attention is present."
+    ],
+    "momentum_hints": [
+      "Google Trends risers: gold price (+485.59), oil price (+129.77), NATO (+89.68)",
+      "Wikipedia risers: Kevin_Warsh (+6420), Federal_Reserve (+741), Semiconductor (+463)",
+      "Polymarket volume risers: Will the Democratic Party control the House after the 2026 Midterm elections? (+1571095.5823), Will the Republican Party control the House after the 2026 Midterm elections? (+1478900.2608), Strait of Hormuz traffic returns to normal by October 31? (+369966.3357)"
+    ],
+    "prompt_ready_notes": [
+      "Use recurring_entities_across_sources to identify themes confirmed by multiple datasets.",
+      "Treat Google Trends anchor-normalized values as rough cross-chunk calibration, not exact absolute ranking.",
+      "Prefer entities that appear across at least 2 sources when writing the final sentiment brief.",
+      "Use delta_vs_previous_day to identify rising vs cooling attention.",
+      "If source health is partial or weak, explicitly say evidence is limited.",
+      "Use top_filtered_noise_candidates only for optional appendix / noise radar, not for the core macro radar."
+    ]
+  },
+  "top_signals": {
+    "polymarket": [
+      {
+        "question": "Will the Republican Party control the House after the 2026 Midterm elections?",
+        "volume_24h": 2518454.469039001,
+        "yes_price": 0.075,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will the Democratic Party control the House after the 2026 Midterm elections?",
+        "volume_24h": 2321571.5345269996,
+        "yes_price": 0.925,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will JD Vance win the 2028 US Presidential Election?",
+        "volume_24h": 713148.9333220001,
+        "yes_price": 0.1625,
+        "market_type": "binary"
+      },
+      {
+        "question": "Strait of Hormuz traffic returns to normal by October 31?",
+        "volume_24h": 506067.3021309999,
+        "yes_price": 0.0005,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will there be no change in Fed interest rates after the December 2026 meeting?",
+        "volume_24h": 462569.091639,
+        "yes_price": 0.245,
+        "market_type": "binary"
+      }
+    ],
+    "google_trends": [
+      {
+        "keyword": "gold price",
+        "score_mean_24h_anchor_normalized": 2057.11,
+        "score_last_anchor_normalized": 1400.0
+      },
+      {
+        "keyword": "interest rate",
+        "score_mean_24h_anchor_normalized": 663.87,
+        "score_last_anchor_normalized": 650.0
+      },
+      {
+        "keyword": "oil price",
+        "score_mean_24h_anchor_normalized": 602.01,
+        "score_last_anchor_normalized": 533.33
+      },
+      {
+        "keyword": "inflation",
+        "score_mean_24h_anchor_normalized": 425.36,
+        "score_last_anchor_normalized": 437.5
+      },
+      {
+        "keyword": "NATO",
+        "score_mean_24h_anchor_normalized": 310.52,
+        "score_last_anchor_normalized": 466.67
+      }
+    ],
+    "wikipedia_pageviews": [
+      {
+        "page": "Donald_Trump",
+        "views": 43815
+      },
+      {
+        "page": "Kevin_Warsh",
+        "views": 8138
+      },
+      {
+        "page": "NATO",
+        "views": 3979
+      },
+      {
+        "page": "Russo-Ukrainian_War",
+        "views": 2802
+      },
+      {
+        "page": "Strait_of_Hormuz",
+        "views": 2143
+      }
+    ]
+  },
+  "delta_summary": {
+    "notes": [
+      "Comparison is against the previously committed output file in the repo.",
+      "If the workflow is re-run on the same UTC date, comparison_type may be same_day_rerun instead of true previous-day.",
+      "Use rise/fall signals as relative momentum indicators, not as causal proof."
+    ]
+  },
+  "delta_top_signals": {
+    "polymarket": {
+      "top_volume_risers": [
+        {
+          "question": "Will the Democratic Party control the House after the 2026 Midterm elections?",
+          "absolute_change": 1571095.5823,
+          "pct_change": 209.35
+        },
+        {
+          "question": "Will the Republican Party control the House after the 2026 Midterm elections?",
+          "absolute_change": 1478900.2608,
+          "pct_change": 142.26
+        },
+        {
+          "question": "Strait of Hormuz traffic returns to normal by October 31?",
+          "absolute_change": 369966.3357,
+          "pct_change": 271.83
+        },
+        {
+          "question": "US x Iran ceasefire continues through October 31?",
+          "absolute_change": 115142.3517,
+          "pct_change": 49.46
+        },
+        {
+          "question": "Will there be no change in Fed interest rates after the December 2026 meeting?",
+          "absolute_change": 31552.2369,
+          "pct_change": 7.32
+        }
+      ],
+      "top_volume_fallers": [
+        {
+          "question": "Will the Democratic Party control the Senate after the 2026 Midterm elections?",
+          "absolute_change": -244030.2631,
+          "pct_change": -48.07
+        },
+        {
+          "question": "Israel x Iran ceasefire continues through October 31?",
+          "absolute_change": -220438.4065,
+          "pct_change": -57.8
+        },
+        {
+          "question": "Will the Republican Party control the Senate after the 2026 Midterm elections?",
+          "absolute_change": -168077.8348,
+          "pct_change": -41.99
+        },
+        {
+          "question": "Will the Fed decrease interest rates by 25 bps after the December 2026 meeting?",
+          "absolute_change": -156463.307,
+          "pct_change": -45.12
+        },
+        {
+          "question": "Will the Fed decrease interest rates by 50+ bps after the December 2026 meeting?",
+          "absolute_change": -61257.6738,
+          "pct_change": -17.58
+        }
+      ],
+      "new_markets_vs_previous": 12
+    },
+    "google_trends": {
+      "top_risers": [
+        {
+          "keyword": "gold price",
+          "absolute_change": 485.59,
+          "pct_change": 30.9
+        },
+        {
+          "keyword": "oil price",
+          "absolute_change": 129.77,
+          "pct_change": 27.48
+        },
+        {
+          "keyword": "NATO",
+          "absolute_change": 89.68,
+          "pct_change": 40.61
+        },
+        {
+          "keyword": "Iran war",
+          "absolute_change": 79.86,
+          "pct_change": 35.15
+        },
+        {
+          "keyword": "inflation",
+          "absolute_change": 75.47,
+          "pct_change": 21.57
+        }
+      ],
+      "top_fallers": [
+        {
+          "keyword": "Trump tariffs",
+          "absolute_change": -0.75,
+          "pct_change": -44.64
+        },
+        {
+          "keyword": "chip export",
+          "absolute_change": -0.16,
+          "pct_change": -100.0
+        },
+        {
+          "keyword": "AI regulation",
+          "absolute_change": 1.42,
+          "pct_change": 51.45
+        },
+        {
+          "keyword": "China economy",
+          "absolute_change": 2.5,
+          "pct_change": 31.21
+        },
+        {
+          "keyword": "OPEC",
+          "absolute_change": 3.07,
+          "pct_change": 32.08
+        }
+      ],
+      "new_keywords_vs_previous": 0
+    },
+    "wikipedia_pageviews": {
+      "top_risers": [
+        {
+          "page": "Kevin_Warsh",
+          "absolute_change": 6420,
+          "pct_change": 373.69
+        },
+        {
+          "page": "Federal_Reserve",
+          "absolute_change": 741,
+          "pct_change": 53.62
+        },
+        {
+          "page": "Semiconductor",
+          "absolute_change": 463,
+          "pct_change": 36.37
+        },
+        {
+          "page": "Artificial_intelligence_regulation",
+          "absolute_change": -3,
+          "pct_change": -30.0
+        },
+        {
+          "page": "China%E2%80%93United_States_trade_war",
+          "absolute_change": -6,
+          "pct_change": -0.75
+        }
+      ],
+      "top_fallers": [
+        {
+          "page": "Donald_Trump",
+          "absolute_change": -4008,
+          "pct_change": -8.38
+        },
+        {
+          "page": "Russo-Ukrainian_War",
+          "absolute_change": -231,
+          "pct_change": -7.62
+        },
+        {
+          "page": "Strait_of_Hormuz",
+          "absolute_change": -226,
+          "pct_change": -9.54
+        },
+        {
+          "page": "NATO",
+          "absolute_change": -191,
+          "pct_change": -4.58
+        },
+        {
+          "page": "OPEC",
+          "absolute_change": -7,
+          "pct_change": -0.59
+        }
+      ],
+      "new_pages_vs_previous": 0
+    }
+  }
+}
