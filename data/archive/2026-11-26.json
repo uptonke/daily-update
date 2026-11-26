@@ -1,0 +1,415 @@
+{
+  "schema_version": "1.2.0",
+  "date_utc": "2026-11-26",
+  "generated_at_utc": "2026-11-26T22:01:17Z",
+  "source_health": {
+    "polymarket": {
+      "status": "ok",
+      "row_count": 17,
+      "ok_count": 17,
+      "empty_count": 0,
+      "error_count": 0
+    },
+    "google_trends": {
+      "status": "ok",
+      "row_count": 14,
+      "ok_count": 14,
+      "empty_count": 0,
+      "error_count": 0
+    },
+    "wikipedia_pageviews": {
+      "status": "ok",
+      "row_count": 10,
+      "ok_count": 10,
+      "empty_count": 0,
+      "error_count": 0
+    }
+  },
+  "summary": {
+    "top_polymarket_questions": [
+      {
+        "question": "Will Chiang Wan-an win the next Taipei Mayor election?",
+        "volume_24h": 416393.399169,
+        "yes_price": 0.625,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will Puma Shen win the next Taipei Mayor election?",
+        "volume_24h": 382912.11783799995,
+        "yes_price": 0.3905,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will the Fed decrease interest rates by 50+ bps after the December 2026 meeting?",
+        "volume_24h": 381168.716488,
+        "yes_price": 0.0015,
+        "market_type": "binary"
+      }
+    ],
+    "top_filtered_noise_candidates": [
+      {
+        "question": "Yokohama: Ryo Ono vs Lennon Roark Jones",
+        "volume_24h": 3187776.709832,
+        "yes_price": null,
+        "market_type": "non_binary",
+        "reason": "sports_or_match_noise"
+      },
+      {
+        "question": "Will the price of Bitcoin be between $60,000 and $62,000 on November 27?",
+        "volume_24h": 2023424.122195,
+        "yes_price": 0.585,
+        "market_type": "binary",
+        "reason": "low_public_impact_or_unclear_relevance"
+      },
+      {
+        "question": "New NVIDIA CEO named by December 31, 2026?",
+        "volume_24h": 1880319.76,
+        "yes_price": 0.9995,
+        "market_type": "binary",
+        "reason": "low_public_impact_or_unclear_relevance"
+      }
+    ],
+    "top_google_trends_keywords": [
+      {
+        "keyword": "gold price",
+        "score_mean_24h_anchor_normalized": 52468.75,
+        "score_last_anchor_normalized": null
+      },
+      {
+        "keyword": "interest rate",
+        "score_mean_24h_anchor_normalized": 5393.75,
+        "score_last_anchor_normalized": null
+      },
+      {
+        "keyword": "oil price",
+        "score_mean_24h_anchor_normalized": 1728.7,
+        "score_last_anchor_normalized": 975.0
+      },
+      {
+        "keyword": "NATO",
+        "score_mean_24h_anchor_normalized": 1381.83,
+        "score_last_anchor_normalized": 1350.0
+      },
+      {
+        "keyword": "inflation",
+        "score_mean_24h_anchor_normalized": 1344.24,
+        "score_last_anchor_normalized": 1180.0
+      }
+    ],
+    "top_wikipedia_pages": [
+      {
+        "page": "Donald_Trump",
+        "views": 40711
+      },
+      {
+        "page": "NATO",
+        "views": 4368
+      },
+      {
+        "page": "Russo-Ukrainian_War",
+        "views": 1808
+      },
+      {
+        "page": "Strait_of_Hormuz",
+        "views": 1789
+      },
+      {
+        "page": "Semiconductor",
+        "views": 1620
+      }
+    ],
+    "recurring_entities_across_sources": [
+      "AI",
+      "NATO",
+      "Oil",
+      "Trump"
+    ],
+    "signal_strength_by_source": {
+      "polymarket": "strong",
+      "google_trends": "strong",
+      "wikipedia_pageviews": "strong"
+    },
+    "narrative_hints": [
+      "Energy / oil-related attention is present.",
+      "Trump-related political / tariff attention is present.",
+      "Geopolitical / security attention is present.",
+      "AI / regulation / chip attention is present."
+    ],
+    "momentum_hints": [
+      "Google Trends risers: gold price (+36695.73), interest rate (+3806.45), recession (+726.49)",
+      "Wikipedia risers: Russo-Ukrainian_War (+114), Kevin_Warsh (+20), Artificial_intelligence_regulation (+5)",
+      "Polymarket volume risers: Will Puma Shen win the next Taipei Mayor election? (+190985.2896), Will Chiang Wan-an win the next Taipei Mayor election? (+144053.2727), Will the Fed decrease interest rates by 50+ bps after the December 2026 meeting? (+98181.1305)"
+    ],
+    "prompt_ready_notes": [
+      "Use recurring_entities_across_sources to identify themes confirmed by multiple datasets.",
+      "Treat Google Trends anchor-normalized values as rough cross-chunk calibration, not exact absolute ranking.",
+      "Prefer entities that appear across at least 2 sources when writing the final sentiment brief.",
+      "Use delta_vs_previous_day to identify rising vs cooling attention.",
+      "If source health is partial or weak, explicitly say evidence is limited.",
+      "Use top_filtered_noise_candidates only for optional appendix / noise radar, not for the core macro radar."
+    ]
+  },
+  "top_signals": {
+    "polymarket": [
+      {
+        "question": "Will Chiang Wan-an win the next Taipei Mayor election?",
+        "volume_24h": 416393.399169,
+        "yes_price": 0.625,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will Puma Shen win the next Taipei Mayor election?",
+        "volume_24h": 382912.11783799995,
+        "yes_price": 0.3905,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will the Fed decrease interest rates by 50+ bps after the December 2026 meeting?",
+        "volume_24h": 381168.716488,
+        "yes_price": 0.0015,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will the Fed increase interest rates by 25 bps after the December 2026 meeting?",
+        "volume_24h": 268945.717705,
+        "yes_price": 0.935,
+        "market_type": "binary"
+      },
+      {
+        "question": "Will the Fed increase interest rates by 50+ bps after the December 2026 meeting?",
+        "volume_24h": 268350.025544,
+        "yes_price": 0.0215,
+        "market_type": "binary"
+      }
+    ],
+    "google_trends": [
+      {
+        "keyword": "gold price",
+        "score_mean_24h_anchor_normalized": 52468.75,
+        "score_last_anchor_normalized": null
+      },
+      {
+        "keyword": "interest rate",
+        "score_mean_24h_anchor_normalized": 5393.75,
+        "score_last_anchor_normalized": null
+      },
+      {
+        "keyword": "oil price",
+        "score_mean_24h_anchor_normalized": 1728.7,
+        "score_last_anchor_normalized": 975.0
+      },
+      {
+        "keyword": "NATO",
+        "score_mean_24h_anchor_normalized": 1381.83,
+        "score_last_anchor_normalized": 1350.0
+      },
+      {
+        "keyword": "inflation",
+        "score_mean_24h_anchor_normalized": 1344.24,
+        "score_last_anchor_normalized": 1180.0
+      }
+    ],
+    "wikipedia_pageviews": [
+      {
+        "page": "Donald_Trump",
+        "views": 40711
+      },
+      {
+        "page": "NATO",
+        "views": 4368
+      },
+      {
+        "page": "Russo-Ukrainian_War",
+        "views": 1808
+      },
+      {
+        "page": "Strait_of_Hormuz",
+        "views": 1789
+      },
+      {
+        "page": "Semiconductor",
+        "views": 1620
+      }
+    ]
+  },
+  "delta_summary": {
+    "notes": [
+      "Comparison is against the previously committed output file in the repo.",
+      "If the workflow is re-run on the same UTC date, comparison_type may be same_day_rerun instead of true previous-day.",
+      "Use rise/fall signals as relative momentum indicators, not as causal proof."
+    ]
+  },
+  "delta_top_signals": {
+    "polymarket": {
+      "top_volume_risers": [
+        {
+          "question": "Will Puma Shen win the next Taipei Mayor election?",
+          "absolute_change": 190985.2896,
+          "pct_change": 99.51
+        },
+        {
+          "question": "Will Chiang Wan-an win the next Taipei Mayor election?",
+          "absolute_change": 144053.2727,
+          "pct_change": 52.89
+        },
+        {
+          "question": "Will the Fed decrease interest rates by 50+ bps after the December 2026 meeting?",
+          "absolute_change": 98181.1305,
+          "pct_change": 34.69
+        },
+        {
+          "question": "Israel x Iran ceasefire continues through November 30?",
+          "absolute_change": 82735.6943,
+          "pct_change": 79.24
+        },
+        {
+          "question": "Will the Iranian regime fall before 2027?",
+          "absolute_change": -68190.5211,
+          "pct_change": -46.18
+        }
+      ],
+      "top_volume_fallers": [
+        {
+          "question": "Will there be no change in Fed interest rates after the December 2026 meeting?",
+          "absolute_change": -1903006.1921,
+          "pct_change": -90.17
+        },
+        {
+          "question": "Will the Fed increase interest rates by 50+ bps after the December 2026 meeting?",
+          "absolute_change": -1208737.4467,
+          "pct_change": -81.83
+        },
+        {
+          "question": "Will the Fed increase interest rates by 25 bps after the December 2026 meeting?",
+          "absolute_change": -578983.2956,
+          "pct_change": -68.28
+        },
+        {
+          "question": "Will the Fed decrease interest rates by 25 bps after the December 2026 meeting?",
+          "absolute_change": -560267.9268,
+          "pct_change": -76.47
+        },
+        {
+          "question": "Will David Lisnard win the 2027 French presidential election?",
+          "absolute_change": -162807.8756,
+          "pct_change": -63.38
+        }
+      ],
+      "new_markets_vs_previous": 7
+    },
+    "google_trends": {
+      "top_risers": [
+        {
+          "keyword": "gold price",
+          "absolute_change": 36695.73,
+          "pct_change": 232.65
+        },
+        {
+          "keyword": "interest rate",
+          "absolute_change": 3806.45,
+          "pct_change": 239.81
+        },
+        {
+          "keyword": "recession",
+          "absolute_change": 726.49,
+          "pct_change": 238.38
+        },
+        {
+          "keyword": "Trump tariffs",
+          "absolute_change": 520.34,
+          "pct_change": 262.25
+        },
+        {
+          "keyword": "oil price",
+          "absolute_change": 400.7,
+          "pct_change": 30.17
+        }
+      ],
+      "top_fallers": [
+        {
+          "keyword": "inflation",
+          "absolute_change": -292.48,
+          "pct_change": -17.87
+        },
+        {
+          "keyword": "AI regulation",
+          "absolute_change": -2.11,
+          "pct_change": -32.41
+        },
+        {
+          "keyword": "chip export",
+          "absolute_change": -0.07,
+          "pct_change": -13.46
+        },
+        {
+          "keyword": "China economy",
+          "absolute_change": 0.02,
+          "pct_change": 0.24
+        },
+        {
+          "keyword": "OPEC",
+          "absolute_change": 18.85,
+          "pct_change": 44.15
+        }
+      ],
+      "new_keywords_vs_previous": 0
+    },
+    "wikipedia_pageviews": {
+      "top_risers": [
+        {
+          "page": "Russo-Ukrainian_War",
+          "absolute_change": 114,
+          "pct_change": 6.73
+        },
+        {
+          "page": "Kevin_Warsh",
+          "absolute_change": 20,
+          "pct_change": 1.61
+        },
+        {
+          "page": "Artificial_intelligence_regulation",
+          "absolute_change": 5,
+          "pct_change": 166.67
+        },
+        {
+          "page": "OPEC",
+          "absolute_change": -20,
+          "pct_change": -1.56
+        },
+        {
+          "page": "Federal_Reserve",
+          "absolute_change": -206,
+          "pct_change": -12.55
+        }
+      ],
+      "top_fallers": [
+        {
+          "page": "Donald_Trump",
+          "absolute_change": -3101,
+          "pct_change": -7.08
+        },
+        {
+          "page": "NATO",
+          "absolute_change": -416,
+          "pct_change": -8.7
+        },
+        {
+          "page": "Strait_of_Hormuz",
+          "absolute_change": -376,
+          "pct_change": -17.37
+        },
+        {
+          "page": "Semiconductor",
+          "absolute_change": -309,
+          "pct_change": -16.02
+        },
+        {
+          "page": "China%E2%80%93United_States_trade_war",
+          "absolute_change": -216,
+          "pct_change": -18.7
+        }
+      ],
+      "new_pages_vs_previous": 0
+    }
+  }
+}
